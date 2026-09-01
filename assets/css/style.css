@@ -693,13 +693,323 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   7. RESPONSIVE BREAKPOINTS
+   7. SERVICES SECTIONS STYLES (SECTIONS 3, 4 & 5)
+   -------------------------------------------------------------------------- */
+.text-white {
+  color: var(--text-white) !important;
+}
+
+.text-dark {
+  color: var(--text-dark) !important;
+}
+
+.text-muted-dark {
+  color: var(--text-muted-dark) !important;
+}
+
+.text-muted-light {
+  color: var(--text-muted-light) !important;
+}
+
+.text-cyan-light {
+  color: #38bdf8 !important;
+}
+
+.section-badge-dark {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0, 180, 216, 0.12);
+  border: 1px solid rgba(0, 180, 216, 0.3);
+  color: var(--text-cyan);
+  padding: 6px 16px;
+  border-radius: var(--border-radius-pill);
+  font-family: var(--font-family);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 18px;
+}
+
+.service-sub-badge {
+  display: inline-block;
+  font-family: var(--font-family);
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--text-cyan);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.section-header-center {
+  text-align: center;
+  max-width: 820px;
+  margin: 0 auto 70px;
+}
+
+.section-intro-text {
+  font-family: var(--font-family);
+  font-size: 16px;
+  line-height: 1.75;
+  margin-top: 16px;
+}
+
+.services-overview-section {
+  position: relative;
+  background-color: var(--bg-dark);
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+.ecommerce-enterprise-section {
+  position: relative;
+  background-color: var(--bg-light);
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+.api-integration-section {
+  position: relative;
+  background-color: var(--bg-dark);
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+.service-split-row {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  margin-top: 70px;
+}
+
+.service-split-row-reverse {
+  flex-direction: row-reverse;
+}
+
+.service-col-content {
+  flex: 1.1;
+}
+
+.service-col-visual {
+  flex: 0.9;
+}
+
+.service-block-title {
+  font-family: var(--font-family);
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.28;
+  margin-bottom: 14px;
+  letter-spacing: -0.3px;
+}
+
+.service-block-desc {
+  font-family: var(--font-family);
+  font-size: 15.5px;
+  line-height: 1.75;
+  margin-bottom: 20px;
+}
+
+.service-caps-box {
+  border-radius: var(--border-radius-card);
+  padding: 24px 26px;
+  margin: 22px 0;
+}
+
+.dark-caps-box {
+  background: rgba(14, 34, 70, 0.65);
+  border: 1px solid rgba(0, 180, 216, 0.22);
+}
+
+.light-caps-box {
+  background: var(--bg-light-alt);
+  border: 1px solid var(--border-light);
+}
+
+.service-list-heading {
+  font-family: var(--font-family);
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.service-list-heading-dark {
+  font-family: var(--font-family);
+  font-size: 15.5px;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 14px;
+}
+
+.service-caps-grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 20px;
+  font-family: var(--font-family);
+}
+
+.cap-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.cap-check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background: rgba(16, 185, 129, 0.2);
+  border: 1px solid #10b981;
+  border-radius: 50%;
+  color: #10b981;
+  font-size: 11px;
+  flex-shrink: 0;
+}
+
+.cap-check-cyan {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background: rgba(0, 180, 216, 0.12);
+  border: 1px solid var(--btn-primary);
+  border-radius: 50%;
+  color: var(--btn-primary);
+  font-size: 11px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.service-highlight-note {
+  font-family: var(--font-family);
+  font-size: 14.5px;
+  font-weight: 500;
+  line-height: 1.65;
+  margin: 20px 0 26px;
+  border-left: 3px solid var(--text-cyan);
+  padding-left: 14px;
+}
+
+.service-highlight-note-light {
+  font-family: var(--font-family);
+  font-size: 14.5px;
+  font-weight: 500;
+  color: var(--text-dark);
+  line-height: 1.65;
+  margin: 20px 0 26px;
+  border-left: 3px solid var(--btn-primary);
+  padding-left: 14px;
+}
+
+.service-btn-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+}
+
+.service-image-card {
+  margin: 0;
+  border-radius: var(--border-radius-card);
+  overflow: hidden;
+  box-shadow: var(--shadow-card-elevated);
+  border: 1px solid var(--border-dark);
+  background: var(--bg-dark-card);
+}
+
+.service-image-card-light {
+  margin: 0;
+  border-radius: var(--border-radius-card);
+  overflow: hidden;
+  box-shadow: var(--shadow-card-elevated);
+  border: 1px solid var(--border-light);
+  background: #ffffff;
+}
+
+.service-feature-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.4s ease-in-out;
+}
+
+.service-image-card:hover .service-feature-img,
+.service-image-card-light:hover .service-feature-img {
+  transform: scale(1.025);
+}
+
+/* API Outcomes Component */
+.api-outcomes-wrapper {
+  margin: 24px 0;
+}
+
+.api-outcomes-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 14px;
+}
+
+.api-outcome-card {
+  background: rgba(14, 34, 70, 0.65);
+  border: 1px solid rgba(0, 180, 216, 0.2);
+  border-radius: 12px;
+  padding: 18px 16px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  transition: all 0.3s ease;
+}
+
+.api-outcome-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--btn-primary);
+  box-shadow: 0 10px 25px rgba(0, 180, 216, 0.15);
+}
+
+.api-outcome-icon {
+  font-size: 22px;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 180, 216, 0.12);
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.api-outcome-title {
+  font-family: var(--font-family);
+  font-size: 14.5px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.api-outcome-desc {
+  font-family: var(--font-family);
+  font-size: 12.5px;
+  line-height: 1.5;
+}
+
+/* --------------------------------------------------------------------------
+   8. RESPONSIVE BREAKPOINTS
    -------------------------------------------------------------------------- */
 @media screen and (max-width: 1024px) {
   .hero-section-flex,
   .hero-grid,
-  .experience-flex {
-    flex-direction: column;
+  .experience-flex,
+  .service-split-row,
+  .service-split-row-reverse {
+    flex-direction: column !important;
     grid-template-columns: 1fr;
     gap: 40px;
   }
@@ -707,16 +1017,18 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   .hero-col-1, 
   .hero-col-2,
   .experience-col-content,
-  .experience-col-visual {
+  .experience-col-visual,
+  .service-col-content,
+  .service-col-visual {
     width: 100%;
     padding: 0;
   }
 
-  .hero-section {
-    padding: 70px 0 60px;
-  }
-
-  .digital-experience-section {
+  .hero-section,
+  .digital-experience-section,
+  .services-overview-section,
+  .ecommerce-enterprise-section,
+  .api-integration-section {
     padding: 70px 0 60px;
   }
 
@@ -728,7 +1040,13 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
     font-size: 28px;
   }
 
-  .experience-benefit-list {
+  .service-block-title {
+    font-size: 24px;
+  }
+
+  .experience-benefit-list,
+  .service-caps-grid,
+  .api-outcomes-grid {
     grid-template-columns: 1fr;
   }
 
@@ -752,18 +1070,24 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
     font-size: 24px;
   }
 
+  .service-block-title {
+    font-size: 22px;
+  }
+
   .form-row-2col {
     grid-template-columns: 1fr;
     gap: 16px;
   }
 
   .hero-form-card,
-  .experience-solutions-box {
-    padding: 24px 18px;
+  .experience-solutions-box,
+  .service-caps-box {
+    padding: 22px 16px;
   }
 
   .hero-actions,
-  .experience-actions {
+  .experience-actions,
+  .service-btn-wrap {
     flex-direction: column;
     width: 100%;
   }
