@@ -1395,6 +1395,307 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
+   SPLIDE SLIDER STYLES & CONTROLS (Active <= 991px, Pure Grid on Desktop)
+   -------------------------------------------------------------------------- */
+/* CRITICAL FIX: Splide CDN sets visibility:hidden by default until initialized. 
+   We must force visibility: visible so desktop grid is 100% visible without Splide mounting. */
+.splide,
+.splide.tech-stack-slider,
+.splide.industries-slider,
+.tech-stack-slider,
+.industries-slider {
+  visibility: visible !important;
+  position: relative;
+  width: 100%;
+}
+
+.splide__track {
+  position: relative;
+  width: 100%;
+}
+
+.splide__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.splide__slide {
+  height: auto;
+  display: flex;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.splide__slide .tech-card,
+.splide__slide .industry-card {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  margin-bottom: 0;
+}
+
+/* Tech Stack Slider (Dark Theme Controls) */
+.tech-stack-slider {
+  margin-bottom: 50px;
+}
+
+.tech-stack-slider .splide__arrows {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.tech-stack-slider .splide__arrow {
+  position: static;
+  transform: none;
+  width: 44px;
+  height: 44px;
+  background: rgba(14, 34, 70, 0.9);
+  border: 1px solid rgba(0, 180, 216, 0.35);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  opacity: 1;
+}
+
+.tech-stack-slider .splide__arrow svg {
+  fill: var(--btn-cyan);
+  width: 16px;
+  height: 16px;
+  transition: fill 0.25s ease;
+}
+
+.tech-stack-slider .splide__arrow:hover:not(:disabled) {
+  background: var(--btn-primary);
+  border-color: var(--btn-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 136, 255, 0.4);
+}
+
+.tech-stack-slider .splide__arrow:hover:not(:disabled) svg {
+  fill: #ffffff;
+}
+
+.tech-stack-slider .splide__arrow:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.tech-stack-slider .splide__pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 18px;
+  padding: 0;
+  position: static;
+}
+
+.tech-stack-slider .splide__pagination__page {
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  border: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tech-stack-slider .splide__pagination__page.is-active {
+  width: 26px;
+  border-radius: 6px;
+  background: var(--btn-cyan);
+  box-shadow: 0 0 10px rgba(0, 180, 216, 0.6);
+  transform: none;
+}
+
+/* Canadian Industries Slider (Light Theme Controls) */
+.industries-slider {
+  margin-bottom: 70px;
+}
+
+.industries-slider .splide__arrows {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.industries-slider .splide__arrow {
+  position: static;
+  transform: none;
+  width: 44px;
+  height: 44px;
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  transition: all 0.25s ease;
+  opacity: 1;
+}
+
+.industries-slider .splide__arrow svg {
+  fill: var(--btn-primary);
+  width: 16px;
+  height: 16px;
+  transition: fill 0.25s ease;
+}
+
+.industries-slider .splide__arrow:hover:not(:disabled) {
+  background: var(--btn-primary);
+  border-color: var(--btn-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(0, 136, 255, 0.3);
+}
+
+.industries-slider .splide__arrow:hover:not(:disabled) svg {
+  fill: #ffffff;
+}
+
+.industries-slider .splide__arrow:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.industries-slider .splide__pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 18px;
+  padding: 0;
+  position: static;
+}
+
+.industries-slider .splide__pagination__page {
+  width: 10px;
+  height: 10px;
+  background: #cbd5e1;
+  border-radius: 50%;
+  border: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.industries-slider .splide__pagination__page.is-active {
+  width: 26px;
+  border-radius: 6px;
+  background: var(--btn-primary);
+  box-shadow: 0 2px 10px rgba(0, 136, 255, 0.4);
+  transform: none;
+}
+
+/* --------------------------------------------------------------------------
+   DESKTOP OVERRIDES (> 991px) - PURE ORIGINAL GRID, ZERO SLIDER ARTIFACTS
+   -------------------------------------------------------------------------- */
+@media screen and (min-width: 992px) {
+  .splide,
+  .tech-stack-slider,
+  .industries-slider {
+    visibility: visible !important;
+  }
+
+  .tech-stack-slider .splide__track,
+  .industries-slider .splide__track {
+    overflow: visible !important;
+    position: static !important;
+  }
+
+  .tech-stack-slider .splide__list,
+  .tech-stack-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 24px !important;
+    transform: none !important;
+    margin-bottom: 50px !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .industries-slider .splide__list,
+  .industries-grid {
+    display: grid !important;
+    grid-template-columns: repeat(5, 1fr) !important;
+    gap: 20px !important;
+    transform: none !important;
+    margin-bottom: 70px !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .tech-stack-slider .splide__slide,
+  .industries-slider .splide__slide {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    height: auto !important;
+    flex: none !important;
+    display: block !important;
+  }
+
+  .tech-stack-slider .splide__arrows,
+  .tech-stack-slider .splide__pagination,
+  .industries-slider .splide__arrows,
+  .industries-slider .splide__pagination {
+    display: none !important;
+  }
+}
+
+/* Medium Desktop / Laptops (992px - 1200px) */
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .tech-stack-slider .splide__list,
+  .tech-stack-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
+  }
+
+  .industries-slider .splide__list,
+  .industries-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 16px !important;
+  }
+}
+
+/* Tablet & Mobile (<= 991px): Splide is active */
+@media screen and (max-width: 991px) {
+  .tech-stack-slider .splide__track,
+  .industries-slider .splide__track {
+    overflow: hidden !important;
+    position: relative !important;
+  }
+
+  .tech-stack-slider .splide__list,
+  .industries-slider .splide__list {
+    display: flex !important;
+    margin-bottom: 0 !important;
+  }
+
+  .tech-stack-slider .splide__slide,
+  .industries-slider .splide__slide {
+    display: flex !important;
+    height: auto !important;
+    box-sizing: border-box !important;
+    flex-shrink: 0 !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
    13. SECTION 10: TRUSTED TECH PARTNER (DARK)
    -------------------------------------------------------------------------- */
 .trusted-partner-section {
@@ -2238,15 +2539,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
     line-height: 1.65;
   }
 
-  .tech-stack-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-
-  .industries-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-  }
 
   .process-steps-grid {
     grid-template-columns: 1fr;
@@ -2352,9 +2644,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
     font-size: 20px;
   }
 
-  .industries-grid {
-    grid-template-columns: 1fr;
-  }
 
   .form-row-2col {
     grid-template-columns: 1fr;

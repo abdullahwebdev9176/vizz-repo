@@ -49,4 +49,82 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // =========================================================================
+  // RESPONSIVE SPLIDE SLIDERS (ACTIVE <= 991px, DESTROYED ON DESKTOP > 991px)
+  // =========================================================================
+  let techSplide = null;
+  let industriesSplide = null;
+
+  function initResponsiveSplides() {
+    const isMobileOrTablet = window.innerWidth <= 991;
+
+    // 1. Tech Stack Slider (Under 991px: 2 cards; <= 576px: 1 card)
+    const techEl = document.getElementById('tech-stack-slider');
+    if (techEl && typeof Splide !== 'undefined') {
+      if (isMobileOrTablet) {
+        if (!techSplide) {
+          techSplide = new Splide('#tech-stack-slider', {
+            type: 'slide',
+            perPage: 2,
+            gap: '20px',
+            arrows: true,
+            pagination: true,
+            speed: 500,
+            breakpoints: {
+              576: {
+                perPage: 1,
+                gap: '14px',
+              }
+            }
+          });
+          techSplide.mount();
+        }
+      } else {
+        if (techSplide) {
+          techSplide.destroy();
+          techSplide = null;
+        }
+      }
+    }
+
+    // 2. Canadian Industries Slider (Under 991px: 2 cards; <= 576px: 1 card)
+    const industriesEl = document.getElementById('industries-slider');
+    if (industriesEl && typeof Splide !== 'undefined') {
+      if (isMobileOrTablet) {
+        if (!industriesSplide) {
+          industriesSplide = new Splide('#industries-slider', {
+            type: 'slide',
+            perPage: 2,
+            gap: '16px',
+            arrows: true,
+            pagination: true,
+            speed: 500,
+            breakpoints: {
+              576: {
+                perPage: 1,
+                gap: '14px',
+              }
+            }
+          });
+          industriesSplide.mount();
+        }
+      } else {
+        if (industriesSplide) {
+          industriesSplide.destroy();
+          industriesSplide = null;
+        }
+      }
+    }
+  }
+
+  // Initial call on DOM ready
+  initResponsiveSplides();
+
+  // Re-check and toggle on window resize with debounce
+  let resizeTimeout = null;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(initResponsiveSplides, 150);
+  });
 });
