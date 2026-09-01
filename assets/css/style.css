@@ -2523,12 +2523,123 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   }
 }
 
-/* Tablets Portrait / Phablets (<= 768px) */
-@media screen and (max-width: 768px) {
-  :root {
-    --max-width-container: 100%;
+/* Medium Tablets & Mobile Screens (<= 991px) - Center-Aligned Content Layout */
+@media screen and (max-width: 991px) {
+  .left-align-text, .partner-pillar-item{
+    text-align: left !important;
+  }
+  /* Hero Section Center Alignment */
+  .hero-col-1 {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
+  .hero-badge {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-title {
+    text-align: center;
+  }
+
+  .hero-description,
+  .hero-description-secondary {
+    text-align: center;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-highlights {
+    align-items: flex-start;
+    display: inline-flex;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+  }
+
+  .hero-actions {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .hero-form-card {
+    max-width: 580px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Content Column Sections (Digital Experience, Ecommerce, APIs, Why Invest, Industries, Dedicated Devs) */
+  .experience-col-content,
+  .service-col-content,
+  .why-invest-col-content,
+  .industry-showcase-content,
+  .bottom-contact-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-sub-badge {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: inline-block;
+  }
+
+  .service-block-title {
+    text-align: center;
+    width: 100%;
+  }
+
+  .service-block-desc,
+  .experience-lead-desc,
+  .why-invest-desc,
+  .bottom-contact-desc {
+    text-align: center;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .experience-benefit-list,
+  .service-caps-grid,
+  .api-outcomes-grid,
+  .why-invest-cards-grid,
+  .developer-perks-grid {
+    text-align: left;
+    width: 100%;
+  }
+
+  .experience-actions,
+  .service-btn-wrap,
+  .why-invest-actions {
+    justify-content: center;
+    display: flex;
+    width: 100%;
+  }
+
+  .contact-info-list {
+    width: 100%;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contact-guarantees-row {
+    justify-content: center;
+  }
+}
+
+/* Tablets Portrait / Phablets (<= 768px) */
+@media screen and (max-width: 768px) {
+  .form-row-2col {
+    gap: 0;
+  }
   .vizz-container {
     padding-left: 18px;
     padding-right: 18px;
@@ -2672,7 +2783,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 
   .form-row-2col {
     grid-template-columns: 1fr;
-    gap: 14px;
   }
 
   .form-group {
