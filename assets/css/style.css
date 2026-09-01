@@ -1,0 +1,484 @@
+/* ==========================================================================
+   VIZZ WEB DESIGN SYSTEM & STYLESHEET (Poppins Font & Core Colors)
+   Based on vizz-file Design Standards & Frontend Rules
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. GOOGLE FONT: POPPINS IMPORT
+   -------------------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* --------------------------------------------------------------------------
+   2. CORE COLOR PALETTE & CSS VARIABLES
+   -------------------------------------------------------------------------- */
+:root {
+  /* 🔤 Typography & Font Family */
+  --font-family: 'Poppins', sans-serif;
+
+  /* 🔘 Button & Accent Colors */
+  --btn-primary: #17a1fe;
+  --btn-primary-hover: #006ed4;
+  --btn-cyan: #00b4d8;
+  --btn-color: #17a1fe;
+  --btn-color-hover: #ffffff;
+  --white-color: #ffffff;
+
+  /* 🌌 Background Colors */
+  --bg-dark: #07152b;
+  --bg-dark-card: #0e2246;
+  --bg-light: #ffffff;
+  --bg-light-alt: #f4f8fc;
+
+  /* ✍️ Font / Text Colors */
+  --text-white: #ffffff;
+  --text-dark: #0b1a30;
+  --text-muted-dark: #cbd5e1;
+  --text-muted-light: #4a5568;
+  --text-cyan: #00b4d8;
+
+  /* UI Borders & Radii */
+  --border-radius-pill: 10px;
+  --border-radius-card: 16px;
+  --border-radius-input: 8px;
+  --border-light: #e2e8f0;
+  --border-dark: #1b3252;
+
+  /* Shadows */
+  --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.05);
+  --shadow-card-elevated: 0 20px 45px rgba(0, 0, 0, 0.28);
+  --shadow-btn: 0 8px 25px rgba(0, 136, 255, 0.35);
+
+  /* Layout */
+  --max-width-container: calc(100% - 20%);
+}
+
+/* --------------------------------------------------------------------------
+   3. GLOBAL BASE, RESETS & TYPOGRAPHY
+   -------------------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-family);
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-light);
+  color: var(--text-muted-light);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Headings Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family);
+  color: var(--text-dark);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+/* Text Elements Typography */
+p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
+  font-family: var(--font-family);
+}
+
+.vizz-container {
+  width: 100%;
+  max-width: var(--max-width-container);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* Utility Highlights */
+.text-highlight-cyan {
+  font-family: var(--font-family);
+  color: var(--text-cyan);
+  background: linear-gradient(90deg, #00b4d8 0%, #22d3ee 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.w-100 {
+  width: 100%;
+}
+.hero-section-flex {
+  display: flex;
+  gap: 40px;
+}
+/* --------------------------------------------------------------------------
+   4. BUTTON COMPONENTS
+   -------------------------------------------------------------------------- */
+.btn-primary-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px !important;
+  padding-right: 30px !important;
+  padding-bottom: 10px !important;
+  padding-left: 30px !important;
+  border-radius: 10px !important;
+  background: var(--btn-color);
+  border: 1px solid var(--btn-color);
+  color: var(--white-color) !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  font-family: 'Poppins', sans-serif !important;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: var(--shadow-btn);
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+}
+
+.btn-primary-pill:hover {
+  background: var(--btn-color-hover);
+  border: 1px solid var(--btn-color);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0, 136, 255, 0.5);
+  color: var(--btn-color) !important;
+}
+
+.btn-primary-pill:active {
+  transform: translateY(0);
+}
+
+.btn-secondary-pill,
+.btn-outline-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px !important;
+  padding-right: 30px !important;
+  padding-bottom: 10px !important;
+  padding-left: 30px !important;
+  border-radius: 10px !important;
+  background: var(--white-color);
+  border: 1px solid var(--btn-color);
+  color: var(--btn-color) !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  font-family: 'Poppins', sans-serif !important;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: var(--shadow-btn);
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+}
+
+.btn-secondary-pill:hover,
+.btn-outline-pill:hover {
+  background: var(--btn-color);
+  border: 1px solid var(--btn-color);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0, 136, 255, 0.5);
+  color: var(--white-color) !important;
+}
+
+.btn-secondary-pill:active,
+.btn-outline-pill:active {
+  transform: translateY(0);
+}
+
+/* --------------------------------------------------------------------------
+   5. HERO SECTION STYLES
+   -------------------------------------------------------------------------- */
+.hero-section {
+  position: relative;
+  background: linear-gradient(135deg, var(--bg-dark) 0%, #0b1b36 60%, #081d3f 100%);
+  padding: 100px 0 90px;
+  overflow: hidden;
+}
+
+/* Glowing Background Accents */
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: -15%;
+  left: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(0, 180, 216, 0.18) 0%, rgba(7, 21, 43, 0) 70%);
+  pointer-events: none;
+  border-radius: 50%;
+}
+
+.hero-section::after {
+  content: '';
+  position: absolute;
+  bottom: -20%;
+  right: -10%;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(0, 136, 255, 0.15) 0%, rgba(7, 21, 43, 0) 70%);
+  pointer-events: none;
+  border-radius: 50%;
+}
+
+.hero-grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 48px;
+  align-items: center;
+}
+
+/* Hero Left Column (Content) */
+.hero-col-1, .hero-col-2 {
+  width: 50%;
+  padding: 12px;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0, 180, 216, 0.12);
+  border: 1px solid rgba(0, 180, 216, 0.3);
+  color: var(--text-cyan);
+  padding: 6px 16px;
+  border-radius: var(--border-radius-pill);
+  font-family: var(--font-family);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+}
+
+.hero-badge-icon {
+  width: 8px;
+  height: 8px;
+  background-color: var(--text-cyan);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--text-cyan);
+}
+
+/* Single H1 on the entire page */
+.hero-title {
+  font-family: var(--font-family);
+  font-size: 44px;
+  font-weight: 600;
+  line-height: 1.22;
+  color: var(--text-white);
+  margin-bottom: 22px;
+  letter-spacing: -0.5px;
+}
+
+.hero-description {
+  font-family: var(--font-family);
+  font-size: 15.5px;
+  line-height: 1.75;
+  color: var(--text-muted-dark);
+  margin-bottom: 16px;
+}
+
+.hero-description-secondary {
+  font-family: var(--font-family);
+  font-size: 15px;
+  line-height: 1.7;
+  color: #94a3b8;
+  margin-bottom: 28px;
+}
+
+/* Hero Key Features List */
+.hero-highlights {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 32px;
+  font-family: var(--font-family);
+}
+
+.hero-highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-family);
+  font-size: 14.5px;
+  font-weight: 500;
+  color: #e2e8f0;
+}
+
+.check-icon-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  background: rgba(16, 185, 129, 0.2);
+  border: 1px solid #10b981;
+  border-radius: 50%;
+  color: #10b981;
+  font-size: 11px;
+  flex-shrink: 0;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+}
+
+/* Hero Right Column (Form Card) */
+.hero-form-card {
+  background: var(--bg-light);
+  border-radius: var(--border-radius-card);
+  box-shadow: var(--shadow-card-elevated);
+  padding: 36px 32px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  position: relative;
+  font-family: var(--font-family);
+}
+
+.form-card-header {
+  margin-bottom: 22px;
+  text-align: left;
+}
+
+.form-card-title {
+  font-family: var(--font-family);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 6px;
+}
+
+.form-card-subtitle {
+  font-family: var(--font-family);
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+/* Form Controls */
+.lead-capture-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-family: var(--font-family);
+}
+
+.form-row-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+  font-family: var(--font-family);
+}
+
+.form-label {
+  font-family: var(--font-family);
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.form-label .required-star {
+  color: #ef4444;
+  margin-left: 2px;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 14px;
+  font-family: var(--font-family);
+  color: var(--text-dark);
+  background-color: var(--bg-light-alt);
+  border: 1px solid var(--border-light);
+  border-radius: var(--border-radius-input);
+  transition: all 0.2s ease-in-out;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  font-family: var(--font-family);
+  color: #94a3b8;
+  font-size: 13.5px;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  background-color: var(--bg-light);
+  border-color: var(--btn-primary);
+  box-shadow: 0 0 0 3.5px rgba(0, 136, 255, 0.15);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 85px;
+}
+
+.form-privacy-note {
+  font-family: var(--font-family);
+  font-size: 12px;
+  color: #64748b;
+  text-align: center;
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+/* --------------------------------------------------------------------------
+   6. RESPONSIVE BREAKPOINTS
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .hero-section {
+    padding: 70px 0 60px;
+  }
+
+  .hero-title {
+    font-size: 36px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .hero-title {
+    font-size: 28px;
+  }
+
+  .form-row-2col {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .hero-form-card {
+    padding: 26px 20px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-primary-pill,
+  .btn-outline-pill {
+    width: 100%;
+  }
+}
