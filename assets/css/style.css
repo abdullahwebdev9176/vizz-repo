@@ -1445,7 +1445,85 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   14. SECTION 11: FINAL CALL TO ACTION (DARK)
+   14. SECTION 11: DEVELOPMENT APPROACH & PROCESS (LIGHT)
+   -------------------------------------------------------------------------- */
+.process-section {
+  position: relative;
+  background-color: var(--bg-light-alt);
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+.process-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 50px;
+}
+
+.process-step-card {
+  background: var(--bg-light);
+  border: 1px solid var(--border-light);
+  border-radius: var(--border-radius-card);
+  padding: 32px 26px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+}
+
+.process-step-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--btn-primary);
+  box-shadow: 0 14px 35px rgba(0, 136, 255, 0.14);
+}
+
+.process-step-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.process-step-number {
+  font-family: var(--font-family);
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--btn-primary);
+  opacity: 0.85;
+  line-height: 1;
+}
+
+.process-step-icon {
+  font-size: 22px;
+  width: 44px;
+  height: 44px;
+  background: rgba(0, 180, 216, 0.1);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.process-step-title {
+  font-family: var(--font-family);
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+  line-height: 1.35;
+}
+
+.process-step-desc {
+  font-family: var(--font-family);
+  font-size: 13.5px;
+  color: var(--text-muted-light);
+  line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   15. SECTION 12: FINAL CALL TO ACTION (DARK)
    -------------------------------------------------------------------------- */
 .final-cta-section {
   position: relative;
@@ -1467,7 +1545,7 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   15. RESPONSIVE BREAKPOINTS
+   16. RESPONSIVE BREAKPOINTS
    -------------------------------------------------------------------------- */
 @media screen and (max-width: 1200px) {
   .tech-stack-grid {
@@ -1476,6 +1554,10 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 
   .industries-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .process-steps-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -1516,6 +1598,7 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   .cta-banner-section,
   .industries-section,
   .trusted-partner-section,
+  .process-section,
   .final-cta-section {
     padding: 70px 0 60px;
   }
@@ -1524,7 +1607,8 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
     padding: 30px 20px;
   }
 
-  .industries-grid {
+  .industries-grid,
+  .process-steps-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -1575,7 +1659,8 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 
 @media screen and (max-width: 640px) {
   .tech-stack-grid,
-  .industries-grid {
+  .industries-grid,
+  .process-steps-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1605,7 +1690,8 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   .service-caps-box,
   .invest-card,
   .tech-card,
-  .industry-card {
+  .industry-card,
+  .process-step-card {
     padding: 20px 16px;
   }
 
