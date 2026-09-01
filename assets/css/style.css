@@ -1001,14 +1001,197 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   8. RESPONSIVE BREAKPOINTS
+   8. SECTION 6: WHY BUSINESSES INVEST IN CANADA
+   -------------------------------------------------------------------------- */
+.why-invest-section {
+  position: relative;
+  background-color: var(--bg-light-alt);
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+.why-invest-flex {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.why-invest-col-content {
+  flex: 1.15;
+}
+
+.why-invest-col-visual {
+  flex: 0.85;
+}
+
+.why-invest-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin: 28px 0 32px;
+}
+
+.invest-card {
+  background: var(--bg-light);
+  border: 1px solid var(--border-light);
+  border-radius: var(--border-radius-card);
+  padding: 20px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  box-shadow: var(--shadow-card);
+  transition: all 0.3s ease;
+}
+
+.invest-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--btn-primary);
+  box-shadow: 0 12px 30px rgba(0, 136, 255, 0.12);
+}
+
+.invest-icon-box {
+  font-size: 22px;
+  width: 44px;
+  height: 44px;
+  background: rgba(0, 180, 216, 0.1);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.invest-card-title {
+  font-family: var(--font-family);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 6px;
+}
+
+.invest-card-desc {
+  font-family: var(--font-family);
+  font-size: 13px;
+  color: var(--text-muted-light);
+  line-height: 1.55;
+}
+
+.why-invest-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+}
+
+.why-invest-visual-wrapper {
+  position: relative;
+  border-radius: var(--border-radius-card);
+  padding: 10px;
+}
+
+/* --------------------------------------------------------------------------
+   9. SECTION 7: BOTTOM CALL TO ACTION BANNER (DARK)
+   -------------------------------------------------------------------------- */
+.cta-banner-section {
+  position: relative;
+  background: linear-gradient(135deg, var(--bg-dark) 0%, #0a1c38 60%, #061935 100%);
+  padding: 100px 0 110px;
+  overflow: hidden;
+}
+
+.cta-banner-card {
+  position: relative;
+  background: radial-gradient(circle at top center, rgba(0, 180, 216, 0.15) 0%, rgba(14, 34, 70, 0.7) 70%);
+  border: 1px solid rgba(0, 180, 216, 0.3);
+  border-radius: 20px;
+  padding: 60px 48px;
+  text-align: center;
+  max-width: 960px;
+  margin: 0 auto;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+}
+
+.cta-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0, 180, 216, 0.15);
+  border: 1px solid rgba(0, 180, 216, 0.35);
+  color: var(--text-cyan);
+  padding: 6px 18px;
+  border-radius: var(--border-radius-pill);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 22px;
+}
+
+.cta-title {
+  font-family: var(--font-family);
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--text-white);
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+}
+
+.cta-description {
+  font-family: var(--font-family);
+  font-size: 16.5px;
+  color: var(--text-muted-dark);
+  line-height: 1.75;
+  max-width: 780px;
+  margin: 0 auto 36px;
+}
+
+.cta-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.btn-large {
+  padding: 13px 36px !important;
+  font-size: 15px !important;
+}
+
+.cta-trust-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 28px;
+  margin-top: 10px;
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #e2e8f0;
+  font-size: 13.5px;
+  font-weight: 500;
+}
+
+.trust-check {
+  color: #10b981;
+  font-weight: 700;
+}
+
+/* --------------------------------------------------------------------------
+   10. RESPONSIVE BREAKPOINTS
    -------------------------------------------------------------------------- */
 @media screen and (max-width: 1024px) {
   .hero-section-flex,
   .hero-grid,
   .experience-flex,
   .service-split-row,
-  .service-split-row-reverse {
+  .service-split-row-reverse,
+  .why-invest-flex {
     flex-direction: column !important;
     grid-template-columns: 1fr;
     gap: 40px;
@@ -1019,7 +1202,9 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   .experience-col-content,
   .experience-col-visual,
   .service-col-content,
-  .service-col-visual {
+  .service-col-visual,
+  .why-invest-col-content,
+  .why-invest-col-visual {
     width: 100%;
     padding: 0;
   }
@@ -1028,7 +1213,9 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   .digital-experience-section,
   .services-overview-section,
   .ecommerce-enterprise-section,
-  .api-integration-section {
+  .api-integration-section,
+  .why-invest-section,
+  .cta-banner-section {
     padding: 70px 0 60px;
   }
 
@@ -1040,14 +1227,29 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
     font-size: 28px;
   }
 
+  .cta-title {
+    font-size: 30px;
+  }
+
   .service-block-title {
     font-size: 24px;
   }
 
   .experience-benefit-list,
   .service-caps-grid,
-  .api-outcomes-grid {
+  .api-outcomes-grid,
+  .why-invest-cards-grid {
     grid-template-columns: 1fr;
+  }
+
+  .cta-banner-card {
+    padding: 40px 24px;
+  }
+
+  .cta-trust-row {
+    flex-direction: column;
+    gap: 14px;
+    align-items: center;
   }
 
   .top-floating-card {
@@ -1070,6 +1272,10 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
     font-size: 24px;
   }
 
+  .cta-title {
+    font-size: 24px;
+  }
+
   .service-block-title {
     font-size: 22px;
   }
@@ -1081,20 +1287,24 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 
   .hero-form-card,
   .experience-solutions-box,
-  .service-caps-box {
-    padding: 22px 16px;
+  .service-caps-box,
+  .invest-card {
+    padding: 20px 16px;
   }
 
   .hero-actions,
   .experience-actions,
-  .service-btn-wrap {
+  .service-btn-wrap,
+  .why-invest-actions,
+  .cta-actions {
     flex-direction: column;
     width: 100%;
   }
 
   .btn-primary-pill,
   .btn-secondary-pill,
-  .btn-outline-pill {
+  .btn-outline-pill,
+  .btn-large {
     width: 100%;
   }
 
@@ -1103,7 +1313,8 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
     margin-top: 12px;
   }
 
-  .experience-visual-wrapper {
+  .experience-visual-wrapper,
+  .why-invest-visual-wrapper {
     padding: 0;
   }
 }
