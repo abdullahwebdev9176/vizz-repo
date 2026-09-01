@@ -1183,8 +1183,134 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   10. RESPONSIVE BREAKPOINTS
+   10. SECTION 7: MODERN AI-DRIVEN TECH STACK (DARK)
    -------------------------------------------------------------------------- */
+.tech-stack-section {
+  position: relative;
+  background-color: var(--bg-dark);
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+.tech-stack-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 50px;
+}
+
+.tech-card {
+  background: rgba(14, 34, 70, 0.65);
+  border: 1px solid rgba(0, 180, 216, 0.2);
+  border-radius: var(--border-radius-card);
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease-in-out;
+  backdrop-filter: blur(8px);
+}
+
+.tech-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--btn-primary);
+  box-shadow: 0 14px 35px rgba(0, 136, 255, 0.2);
+  background: rgba(14, 34, 70, 0.85);
+}
+
+.tech-card-highlight {
+  border-color: rgba(0, 180, 216, 0.45);
+  background: linear-gradient(135deg, rgba(14, 34, 70, 0.85) 0%, rgba(8, 29, 63, 0.95) 100%);
+  box-shadow: 0 8px 30px rgba(0, 180, 216, 0.15);
+}
+
+.tech-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.tech-card-icon {
+  font-size: 20px;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 180, 216, 0.12);
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.highlight-icon {
+  background: rgba(0, 180, 216, 0.25);
+  box-shadow: 0 0 12px rgba(0, 180, 216, 0.4);
+}
+
+.tech-card-title {
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.tech-tags-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tech-tag {
+  display: inline-block;
+  font-family: var(--font-family);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-muted-dark);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 5px 11px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.tech-tag:hover {
+  background: rgba(0, 180, 216, 0.15);
+  border-color: var(--btn-primary);
+  color: var(--white-color);
+  transform: translateY(-1px);
+}
+
+.highlight-tag {
+  color: #38bdf8;
+  background: rgba(0, 180, 216, 0.1);
+  border-color: rgba(0, 180, 216, 0.3);
+}
+
+.highlight-tag:hover {
+  background: rgba(0, 180, 216, 0.25);
+  border-color: #38bdf8;
+  color: var(--white-color);
+}
+
+.tech-stack-cta-wrap {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+}
+
+/* --------------------------------------------------------------------------
+   11. RESPONSIVE BREAKPOINTS
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 1200px) {
+  .tech-stack-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .hero-section-flex,
   .hero-grid,
@@ -1215,6 +1341,7 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   .ecommerce-enterprise-section,
   .api-integration-section,
   .why-invest-section,
+  .tech-stack-section,
   .cta-banner-section {
     padding: 70px 0 60px;
   }
@@ -1264,6 +1391,10 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 }
 
 @media screen and (max-width: 640px) {
+  .tech-stack-grid {
+    grid-template-columns: 1fr;
+  }
+
   .hero-title {
     font-size: 28px;
   }
@@ -1288,7 +1419,8 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   .hero-form-card,
   .experience-solutions-box,
   .service-caps-box,
-  .invest-card {
+  .invest-card,
+  .tech-card {
     padding: 20px 16px;
   }
 
@@ -1296,6 +1428,7 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   .experience-actions,
   .service-btn-wrap,
   .why-invest-actions,
+  .tech-stack-cta-wrap,
   .cta-actions {
     flex-direction: column;
     width: 100%;
