@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
             type: 'slide',
             perPage: 2,
             gap: '20px',
-            arrows: true,
+            arrows: false,
             pagination: true,
             speed: 500,
             breakpoints: {
@@ -96,8 +96,8 @@ document.addEventListener('DOMContentLoaded', () => {
           industriesSplide = new Splide('#industries-slider', {
             type: 'slide',
             perPage: 2,
-            gap: '16px',
-            arrows: true,
+            gap: '20px',
+            arrows: false,
             pagination: true,
             speed: 500,
             breakpoints: {

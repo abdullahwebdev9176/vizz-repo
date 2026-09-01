@@ -1218,6 +1218,9 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   flex-direction: column;
   transition: all 0.3s ease-in-out;
   backdrop-filter: blur(8px);
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .tech-card:hover {
@@ -1270,10 +1273,14 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .tech-tag {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   font-family: var(--font-family);
   font-size: 12px;
   font-weight: 500;
@@ -1283,6 +1290,8 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   padding: 5px 11px;
   border-radius: 6px;
   transition: all 0.2s ease;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .tech-tag:hover {
@@ -1407,11 +1416,15 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   visibility: visible !important;
   position: relative;
   width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .splide__track {
   position: relative;
   width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .splide__list {
@@ -1419,20 +1432,26 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   margin: 0;
   padding: 0;
   list-style: none;
+  box-sizing: border-box;
+  min-width: 0;
 }
 
 .splide__slide {
   height: auto;
   display: flex;
-  box-sizing: border-box;
-  flex-shrink: 0;
+  box-sizing: border-box !important;
+  flex-shrink: 0 !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
 }
 
 .splide__slide .tech-card,
 .splide__slide .industry-card {
-  width: 100%;
+  width: 100% !important;
+  max-width: 100% !important;
   height: 100%;
-  box-sizing: border-box;
+  box-sizing: border-box !important;
+  min-width: 0 !important;
   margin-bottom: 0;
 }
 
@@ -1678,12 +1697,18 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   .industries-slider .splide__track {
     overflow: hidden !important;
     position: relative !important;
+    padding: 8px 0 !important;
   }
 
   .tech-stack-slider .splide__list,
-  .industries-slider .splide__list {
+  .industries-slider .splide__list,
+  .tech-stack-slider .tech-stack-grid,
+  .industries-slider .industries-grid {
     display: flex !important;
+    gap: 0 !important; /* CRITICAL FIX: Zero out CSS flex gap so Splide margin calculations are pixel-perfect */
     margin-bottom: 0 !important;
+    min-width: 0 !important;
+    width: auto !important;
   }
 
   .tech-stack-slider .splide__slide,
@@ -1692,6 +1717,16 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
     height: auto !important;
     box-sizing: border-box !important;
     flex-shrink: 0 !important;
+    min-width: 0 !important;
+    max-width: none !important;
+  }
+
+  .tech-stack-slider .tech-card,
+  .industries-slider .industry-card {
+    min-width: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
   }
 }
 
@@ -2356,16 +2391,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 
   .hero-form-card {
     padding: 30px 24px;
-  }
-
-  .tech-stack-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-
-  .industries-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
   }
 
   .process-steps-grid {
