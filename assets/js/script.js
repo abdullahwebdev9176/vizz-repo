@@ -55,6 +55,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // =========================================================================
   let techSplide = null;
   let industriesSplide = null;
+  let processSplide = null;
+  let caseStudiesSplide = null;
 
   function initResponsiveSplides() {
     const isMobileOrTablet = window.innerWidth <= 991;
@@ -113,6 +115,64 @@ document.addEventListener('DOMContentLoaded', () => {
         if (industriesSplide) {
           industriesSplide.destroy();
           industriesSplide = null;
+        }
+      }
+    }
+
+    // 3. Process Steps Slider (Under 991px: 2 cards; <= 576px: 1 card)
+    const processEl = document.getElementById('process-slider');
+    if (processEl && typeof Splide !== 'undefined') {
+      if (isMobileOrTablet) {
+        if (!processSplide) {
+          processSplide = new Splide('#process-slider', {
+            type: 'slide',
+            perPage: 2,
+            gap: '20px',
+            arrows: false,
+            pagination: true,
+            speed: 500,
+            breakpoints: {
+              576: {
+                perPage: 1,
+                gap: '14px',
+              }
+            }
+          });
+          processSplide.mount();
+        }
+      } else {
+        if (processSplide) {
+          processSplide.destroy();
+          processSplide = null;
+        }
+      }
+    }
+
+    // 4. Case Studies Slider (Under 991px: 2 cards; <= 576px: 1 card)
+    const caseStudiesEl = document.getElementById('case-studies-slider');
+    if (caseStudiesEl && typeof Splide !== 'undefined') {
+      if (isMobileOrTablet) {
+        if (!caseStudiesSplide) {
+          caseStudiesSplide = new Splide('#case-studies-slider', {
+            type: 'slide',
+            perPage: 2,
+            gap: '20px',
+            arrows: false,
+            pagination: true,
+            speed: 500,
+            breakpoints: {
+              576: {
+                perPage: 1,
+                gap: '14px',
+              }
+            }
+          });
+          caseStudiesSplide.mount();
+        }
+      } else {
+        if (caseStudiesSplide) {
+          caseStudiesSplide.destroy();
+          caseStudiesSplide = null;
         }
       }
     }

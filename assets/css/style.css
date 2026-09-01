@@ -1411,8 +1411,12 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 .splide,
 .splide.tech-stack-slider,
 .splide.industries-slider,
+.splide.process-slider,
+.splide.case-studies-slider,
 .tech-stack-slider,
-.industries-slider {
+.industries-slider,
+.process-slider,
+.case-studies-slider {
   visibility: visible !important;
   position: relative;
   width: 100%;
@@ -1446,7 +1450,9 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 }
 
 .splide__slide .tech-card,
-.splide__slide .industry-card {
+.splide__slide .industry-card,
+.splide__slide .process-step-card,
+.splide__slide .case-study-card {
   width: 100% !important;
   max-width: 100% !important;
   height: 100%;
@@ -1620,6 +1626,84 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   transform: none;
 }
 
+/* Process Slider (Light Theme Controls) */
+.process-slider {
+  margin-bottom: 50px;
+}
+
+.process-slider .splide__arrows {
+  display: none;
+}
+
+.process-slider .splide__pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 24px;
+  padding: 0;
+  position: static;
+}
+
+.process-slider .splide__pagination__page {
+  width: 10px;
+  height: 10px;
+  background: #cbd5e1;
+  border-radius: 50%;
+  border: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.process-slider .splide__pagination__page.is-active {
+  width: 26px;
+  border-radius: 6px;
+  background: var(--btn-primary);
+  box-shadow: 0 2px 10px rgba(0, 136, 255, 0.4);
+  transform: none;
+}
+
+/* Case Studies Slider (Dark Theme Controls) */
+.case-studies-slider {
+  margin-top: 40px;
+}
+
+.case-studies-slider .splide__arrows {
+  display: none;
+}
+
+.case-studies-slider .splide__pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 24px;
+  padding: 0;
+  position: static;
+}
+
+.case-studies-slider .splide__pagination__page {
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  border: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.case-studies-slider .splide__pagination__page.is-active {
+  width: 26px;
+  border-radius: 6px;
+  background: var(--btn-primary);
+  box-shadow: 0 2px 12px rgba(0, 180, 216, 0.5);
+  transform: none;
+}
+
 
 /* --------------------------------------------------------------------------
    13. SECTION 10: TRUSTED TECH PARTNER (DARK)
@@ -1708,6 +1792,9 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   position: relative;
   transition: all 0.3s ease-in-out;
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .process-step-card:hover {
@@ -1812,6 +1899,9 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   flex-direction: column;
   transition: all 0.3s ease-in-out;
   backdrop-filter: blur(8px);
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .case-study-card:hover {
@@ -2176,12 +2266,16 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 @media screen and (min-width: 992px) {
   .splide,
   .tech-stack-slider,
-  .industries-slider {
+  .industries-slider,
+  .process-slider,
+  .case-studies-slider {
     visibility: visible !important;
   }
 
   .tech-stack-slider .splide__track,
-  .industries-slider .splide__track {
+  .industries-slider .splide__track,
+  .process-slider .splide__track,
+  .case-studies-slider .splide__track {
     overflow: visible !important;
     position: static !important;
   }
@@ -2208,8 +2302,32 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
     height: auto !important;
   }
 
+  .process-slider .splide__list,
+  .process-steps-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 24px !important;
+    transform: none !important;
+    margin-bottom: 50px !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .case-studies-slider .splide__list,
+  .case-studies-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 26px !important;
+    transform: none !important;
+    margin-top: 40px !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
   .tech-stack-slider .splide__slide,
-  .industries-slider .splide__slide {
+  .industries-slider .splide__slide,
+  .process-slider .splide__slide,
+  .case-studies-slider .splide__slide {
     width: 100% !important;
     max-width: 100% !important;
     margin: 0 !important;
@@ -2221,7 +2339,11 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   .tech-stack-slider .splide__arrows,
   .tech-stack-slider .splide__pagination,
   .industries-slider .splide__arrows,
-  .industries-slider .splide__pagination {
+  .industries-slider .splide__pagination,
+  .process-slider .splide__arrows,
+  .process-slider .splide__pagination,
+  .case-studies-slider .splide__arrows,
+  .case-studies-slider .splide__pagination {
     display: none !important;
   }
 }
@@ -2350,14 +2472,16 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
     gap: 16px !important;
   }
 
+  .process-slider .splide__list,
   .process-steps-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
   }
 
+  .case-studies-slider .splide__list,
   .case-studies-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
   }
 
   .industry-showcase-split {
@@ -2492,7 +2616,9 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 
   /* Splide Sliders Active Configuration */
   .tech-stack-slider .splide__track,
-  .industries-slider .splide__track {
+  .industries-slider .splide__track,
+  .process-slider .splide__track,
+  .case-studies-slider .splide__track {
     overflow: hidden !important;
     position: relative !important;
     padding: 8px 0 !important;
@@ -2500,17 +2626,24 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 
   .tech-stack-slider .splide__list,
   .industries-slider .splide__list,
+  .process-slider .splide__list,
+  .case-studies-slider .splide__list,
   .tech-stack-slider .tech-stack-grid,
-  .industries-slider .industries-grid {
+  .industries-slider .industries-grid,
+  .process-slider .process-steps-grid,
+  .case-studies-slider .case-studies-grid {
     display: flex !important;
     gap: 0 !important; /* CRITICAL: Zero out CSS flex gap so Splide margin calculations are pixel-perfect */
     margin-bottom: 0 !important;
+    margin-top: 0 !important;
     min-width: 0 !important;
     width: auto !important;
   }
 
   .tech-stack-slider .splide__slide,
-  .industries-slider .splide__slide {
+  .industries-slider .splide__slide,
+  .process-slider .splide__slide,
+  .case-studies-slider .splide__slide {
     display: flex !important;
     height: auto !important;
     box-sizing: border-box !important;
@@ -2520,7 +2653,9 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   }
 
   .tech-stack-slider .tech-card,
-  .industries-slider .industry-card {
+  .industries-slider .industry-card,
+  .process-slider .process-step-card,
+  .case-studies-slider .case-study-card {
     min-width: 0 !important;
     width: 100% !important;
     max-width: 100% !important;
@@ -2677,16 +2812,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
     line-height: 1.65;
   }
 
-
-  .process-steps-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-
-  .case-studies-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
 
   .experience-benefit-list,
   .service-caps-grid,
