@@ -1620,115 +1620,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   transform: none;
 }
 
-/* --------------------------------------------------------------------------
-   DESKTOP OVERRIDES (> 991px) - PURE ORIGINAL GRID, ZERO SLIDER ARTIFACTS
-   -------------------------------------------------------------------------- */
-@media screen and (min-width: 992px) {
-  .splide,
-  .tech-stack-slider,
-  .industries-slider {
-    visibility: visible !important;
-  }
-
-  .tech-stack-slider .splide__track,
-  .industries-slider .splide__track {
-    overflow: visible !important;
-    position: static !important;
-  }
-
-  .tech-stack-slider .splide__list,
-  .tech-stack-grid {
-    display: grid !important;
-    grid-template-columns: repeat(4, 1fr) !important;
-    gap: 24px !important;
-    transform: none !important;
-    margin-bottom: 50px !important;
-    width: 100% !important;
-    height: auto !important;
-  }
-
-  .industries-slider .splide__list,
-  .industries-grid {
-    display: grid !important;
-    grid-template-columns: repeat(5, 1fr) !important;
-    gap: 20px !important;
-    transform: none !important;
-    margin-bottom: 70px !important;
-    width: 100% !important;
-    height: auto !important;
-  }
-
-  .tech-stack-slider .splide__slide,
-  .industries-slider .splide__slide {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 !important;
-    height: auto !important;
-    flex: none !important;
-    display: block !important;
-  }
-
-  .tech-stack-slider .splide__arrows,
-  .tech-stack-slider .splide__pagination,
-  .industries-slider .splide__arrows,
-  .industries-slider .splide__pagination {
-    display: none !important;
-  }
-}
-
-/* Medium Desktop / Laptops (992px - 1200px) */
-@media screen and (min-width: 992px) and (max-width: 1200px) {
-  .tech-stack-slider .splide__list,
-  .tech-stack-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 20px !important;
-  }
-
-  .industries-slider .splide__list,
-  .industries-grid {
-    grid-template-columns: repeat(3, 1fr) !important;
-    gap: 16px !important;
-  }
-}
-
-/* Tablet & Mobile (<= 991px): Splide is active */
-@media screen and (max-width: 991px) {
-  .tech-stack-slider .splide__track,
-  .industries-slider .splide__track {
-    overflow: hidden !important;
-    position: relative !important;
-    padding: 8px 0 !important;
-  }
-
-  .tech-stack-slider .splide__list,
-  .industries-slider .splide__list,
-  .tech-stack-slider .tech-stack-grid,
-  .industries-slider .industries-grid {
-    display: flex !important;
-    gap: 0 !important; /* CRITICAL FIX: Zero out CSS flex gap so Splide margin calculations are pixel-perfect */
-    margin-bottom: 0 !important;
-    min-width: 0 !important;
-    width: auto !important;
-  }
-
-  .tech-stack-slider .splide__slide,
-  .industries-slider .splide__slide {
-    display: flex !important;
-    height: auto !important;
-    box-sizing: border-box !important;
-    flex-shrink: 0 !important;
-    min-width: 0 !important;
-    max-width: none !important;
-  }
-
-  .tech-stack-slider .tech-card,
-  .industries-slider .industry-card {
-    min-width: 0 !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-  }
-}
 
 /* --------------------------------------------------------------------------
    13. SECTION 10: TRUSTED TECH PARTNER (DARK)
@@ -2278,8 +2169,62 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   19. COMPREHENSIVE RESPONSIVE SYSTEM (1600px to Mobile-First)
+   19. CONSOLIDATED RESPONSIVE SYSTEM (Single Definition Per Breakpoint)
    -------------------------------------------------------------------------- */
+
+/* DESKTOP OVERRIDES (>= 992px) - Pure Grid System, Slider Inactive */
+@media screen and (min-width: 992px) {
+  .splide,
+  .tech-stack-slider,
+  .industries-slider {
+    visibility: visible !important;
+  }
+
+  .tech-stack-slider .splide__track,
+  .industries-slider .splide__track {
+    overflow: visible !important;
+    position: static !important;
+  }
+
+  .tech-stack-slider .splide__list,
+  .tech-stack-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 24px !important;
+    transform: none !important;
+    margin-bottom: 50px !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .industries-slider .splide__list,
+  .industries-grid {
+    display: grid !important;
+    grid-template-columns: repeat(5, 1fr) !important;
+    gap: 20px !important;
+    transform: none !important;
+    margin-bottom: 70px !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .tech-stack-slider .splide__slide,
+  .industries-slider .splide__slide {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    height: auto !important;
+    flex: none !important;
+    display: block !important;
+  }
+
+  .tech-stack-slider .splide__arrows,
+  .tech-stack-slider .splide__pagination,
+  .industries-slider .splide__arrows,
+  .industries-slider .splide__pagination {
+    display: none !important;
+  }
+}
 
 /* Large Desktops / Laptops (<= 1600px) */
 @media screen and (max-width: 1600px) {
@@ -2393,6 +2338,18 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
     padding: 30px 24px;
   }
 
+  .tech-stack-slider .splide__list,
+  .tech-stack-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
+  }
+
+  .industries-slider .splide__list,
+  .industries-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 16px !important;
+  }
+
   .process-steps-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
@@ -2413,7 +2370,7 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   }
 }
 
-/* Portrait Tablets & Large Phones (<= 1024px) */
+/* Portrait Tablets & Large Displays (<= 1024px) */
 @media screen and (max-width: 1024px) {
   :root {
     --max-width-container: 92%;
@@ -2446,12 +2403,14 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
     width: 100%;
     flex: none;
   }
+
   .cta-banner-section {
     padding-top: 0 !important;
   }
+
   .case-studies-block {
     padding-top: 50px;
-}
+  }
 
   .experience-image-figure,
   .service-image-card,
@@ -2523,11 +2482,51 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   }
 }
 
-/* Medium Tablets & Mobile Screens (<= 991px) - Center-Aligned Content Layout */
+/* Medium Tablets & Mobile Screens (<= 991px) - Splide Active & Center Alignment */
 @media screen and (max-width: 991px) {
-  .left-align-text, .partner-pillar-item{
+
+  .left-align-text, 
+  .partner-pillar-item {
     text-align: left !important;
   }
+
+  /* Splide Sliders Active Configuration */
+  .tech-stack-slider .splide__track,
+  .industries-slider .splide__track {
+    overflow: hidden !important;
+    position: relative !important;
+    padding: 8px 0 !important;
+  }
+
+  .tech-stack-slider .splide__list,
+  .industries-slider .splide__list,
+  .tech-stack-slider .tech-stack-grid,
+  .industries-slider .industries-grid {
+    display: flex !important;
+    gap: 0 !important; /* CRITICAL: Zero out CSS flex gap so Splide margin calculations are pixel-perfect */
+    margin-bottom: 0 !important;
+    min-width: 0 !important;
+    width: auto !important;
+  }
+
+  .tech-stack-slider .splide__slide,
+  .industries-slider .splide__slide {
+    display: flex !important;
+    height: auto !important;
+    box-sizing: border-box !important;
+    flex-shrink: 0 !important;
+    min-width: 0 !important;
+    max-width: none !important;
+  }
+
+  .tech-stack-slider .tech-card,
+  .industries-slider .industry-card {
+    min-width: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
   /* Hero Section Center Alignment */
   .hero-col-1 {
     text-align: center;
@@ -2637,6 +2636,9 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 
 /* Tablets Portrait / Phablets (<= 768px) */
 @media screen and (max-width: 768px) {
+  :root {
+    --max-width-container: 100%;
+  }
   .form-row-2col {
     gap: 0;
   }
