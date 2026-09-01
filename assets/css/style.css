@@ -1385,7 +1385,67 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   13. SECTION 10: FINAL CALL TO ACTION (DARK)
+   13. SECTION 10: TRUSTED TECH PARTNER (DARK)
+   -------------------------------------------------------------------------- */
+.trusted-partner-section {
+  position: relative;
+  background-color: var(--bg-dark);
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+.partner-pillars-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 24px 0 28px;
+}
+
+.partner-pillar-item {
+  background: rgba(14, 34, 70, 0.6);
+  border: 1px solid rgba(0, 180, 216, 0.2);
+  border-radius: 12px;
+  padding: 16px 18px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  transition: all 0.3s ease-in-out;
+}
+
+.partner-pillar-item:hover {
+  transform: translateX(5px);
+  background: rgba(14, 34, 70, 0.85);
+  border-color: var(--btn-primary);
+  box-shadow: 0 10px 25px rgba(0, 136, 255, 0.16);
+}
+
+.pillar-icon {
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 180, 216, 0.12);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.pillar-title {
+  font-family: var(--font-family);
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.pillar-desc {
+  font-family: var(--font-family);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* --------------------------------------------------------------------------
+   14. SECTION 11: FINAL CALL TO ACTION (DARK)
    -------------------------------------------------------------------------- */
 .final-cta-section {
   position: relative;
@@ -1407,7 +1467,7 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   14. RESPONSIVE BREAKPOINTS
+   15. RESPONSIVE BREAKPOINTS
    -------------------------------------------------------------------------- */
 @media screen and (max-width: 1200px) {
   .tech-stack-grid {
@@ -1455,6 +1515,7 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   .tech-stack-section,
   .cta-banner-section,
   .industries-section,
+  .trusted-partner-section,
   .final-cta-section {
     padding: 70px 0 60px;
   }
