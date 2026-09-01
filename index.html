@@ -1714,6 +1714,192 @@
       </div>
     </section>
 
+    <!-- ==================== SECTION 14: BOTTOM CONTACT SECTION (DARK OVERLAY) ==================== -->
+    <section class="bottom-contact-section" id="contact-us" aria-label="Contact Vizz Web - Custom Web Development Canada">
+      <div class="vizz-container">
+        
+        <div class="bottom-contact-flex">
+          
+          <!-- LEFT COLUMN: CONTACT DETAILS & VALUE PROPOSITION -->
+          <div class="bottom-contact-content">
+            <!-- <div class="section-badge-dark">
+              <span class="badge-dot-cyan" aria-hidden="true"></span>
+              <span>Let's Collaborate</span>
+            </div> -->
+
+            <h2 class="section-title text-white">
+              Let’s Build Your Next <br><span class="text-highlight-cyan">Web Project Together</span>
+            </h2>
+
+            <p class="section-lead-text text-muted-dark">
+              Have a project in mind or want to explore how custom web development can accelerate your business? Connect with our Canadian team for a tailored proposal, technical architecture review, and strategic roadmap.
+            </p>
+
+            <div class="contact-info-list" aria-label="Direct Contact Channels">
+              
+              <div class="contact-info-card">
+                <div class="contact-icon-box" aria-hidden="true">📧</div>
+                <div>
+                  <h3 class="contact-info-title text-white">Email Us Directly</h3>
+                  <p class="contact-info-val">
+                    <a href="mailto:contact@vizzweb.com" class="contact-channel-link" aria-label="Send an email to Vizz Web" title="Email Vizz Web">contact@vizzweb.com</a>
+                  </p>
+                </div>
+              </div>
+
+              <div class="contact-info-card">
+                <div class="contact-icon-box" aria-hidden="true">📞</div>
+                <div>
+                  <h3 class="contact-info-title text-white">Call Our Team</h3>
+                  <p class="contact-info-val">
+                    <a href="tel:+18005558499" class="contact-channel-link" aria-label="Call Vizz Web phone support" title="Call Us">+1 (800) 555-VIZZ</a>
+                  </p>
+                </div>
+              </div>
+
+              <div class="contact-info-card">
+                <div class="contact-icon-box" aria-hidden="true">📍</div>
+                <div>
+                  <h3 class="contact-info-title text-white">Canadian Offices</h3>
+                  <p class="contact-info-desc text-muted-dark">Toronto, ON &amp; Vancouver, BC, Canada</p>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="contact-guarantees-row">
+              <div class="contact-guarantee-item">
+                <span class="guarantee-check" aria-hidden="true">✓</span>
+                <span>Strict NDA &amp; Confidentiality</span>
+              </div>
+              <div class="contact-guarantee-item">
+                <span class="guarantee-check" aria-hidden="true">✓</span>
+                <span>24-Hour Turnaround</span>
+              </div>
+              <div class="contact-guarantee-item">
+                <span class="guarantee-check" aria-hidden="true">✓</span>
+                <span>Free Technical Audit</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT COLUMN: LEAD CAPTURE FORM -->
+          <div class="bottom-contact-form-wrapper">
+            <div class="hero-form-card" id="contact-form">
+              <div class="form-card-header">
+                <h3 class="form-card-title">Send Us A Message</h3>
+                <p class="form-card-subtitle">Fill out the details below and our team will get back to you promptly.</p>
+              </div>
+
+              <form action="/submit-inquiry" method="POST" class="lead-capture-form" aria-label="Bottom Contact Form">
+                
+                <!-- First Name & Last Name (2-Column Row) -->
+                <div class="form-row-2col">
+                  <div class="form-group">
+                    <label for="contact-fname" class="form-label">
+                      First Name <span class="required-star" aria-hidden="true">*</span>
+                    </label>
+                    <input 
+                      type="text" 
+                      id="contact-fname" 
+                      name="fname" 
+                      class="form-input" 
+                      placeholder="e.g. Sarah" 
+                      required 
+                      aria-required="true"
+                      autocomplete="given-name"
+                    >
+                  </div>
+
+                  <div class="form-group">
+                    <label for="contact-lname" class="form-label">
+                      Last Name <span class="required-star" aria-hidden="true">*</span>
+                    </label>
+                    <input 
+                      type="text" 
+                      id="contact-lname" 
+                      name="lname" 
+                      class="form-input" 
+                      placeholder="e.g. Jenkins" 
+                      required 
+                      aria-required="true"
+                      autocomplete="family-name"
+                    >
+                  </div>
+                </div>
+
+                <!-- Email Field -->
+                <div class="form-group">
+                  <label for="contact-email" class="form-label">
+                    Work Email <span class="required-star" aria-hidden="true">*</span>
+                  </label>
+                  <input 
+                    type="email" 
+                    id="contact-email" 
+                    name="email" 
+                    class="form-input" 
+                    placeholder="sarah@company.com" 
+                    required 
+                    aria-required="true"
+                    autocomplete="email"
+                  >
+                </div>
+
+                <!-- Phone Field -->
+                <div class="form-group">
+                  <label for="contact-phone" class="form-label">
+                    Phone Number <span class="required-star" aria-hidden="true">*</span>
+                  </label>
+                  <input 
+                    type="tel" 
+                    id="contact-phone" 
+                    name="phone" 
+                    class="form-input" 
+                    placeholder="+1 (555) 000-0000" 
+                    required 
+                    aria-required="true"
+                    autocomplete="tel"
+                  >
+                </div>
+
+                <!-- Comments Field -->
+                <div class="form-group">
+                  <label for="contact-comments" class="form-label">
+                    Comments &amp; Project Details <span class="required-star" aria-hidden="true">*</span>
+                  </label>
+                  <textarea 
+                    id="contact-comments" 
+                    name="comments" 
+                    class="form-textarea" 
+                    rows="3" 
+                    placeholder="Describe your web development goals, features, or timeline..." 
+                    required 
+                    aria-required="true"
+                  ></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <button 
+                  type="submit" 
+                  class="btn-primary-pill w-100" 
+                  aria-label="Submit project consultation request" 
+                  title="Submit Request"
+                >
+                  Submit Request
+                </button>
+
+                <p class="form-privacy-note">
+                  <span aria-hidden="true">🔒</span> Your information is 100% confidential and secure.
+                </p>
+              </form>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
   </main>
 
   <script src="assets/js/script.js" defer></script>
