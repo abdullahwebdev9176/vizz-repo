@@ -65,6 +65,7 @@
 html {
   scroll-behavior: smooth;
   font-family: var(--font-family);
+  overflow-x: hidden;
 }
 
 body {
@@ -74,6 +75,13 @@ body {
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* Headings Typography */
@@ -1932,26 +1940,158 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   19. RESPONSIVE BREAKPOINTS
+   19. COMPREHENSIVE RESPONSIVE SYSTEM (1600px to Mobile-First)
    -------------------------------------------------------------------------- */
+
+/* Large Desktops / Laptops (<= 1600px) */
+@media screen and (max-width: 1600px) {
+  :root {
+    --max-width-container: 1360px;
+  }
+  
+  .hero-section-flex {
+    gap: 36px;
+  }
+  
+  .hero-title {
+    font-size: 44px;
+  }
+  
+  .section-title {
+    font-size: 34px;
+  }
+  
+  .cta-title {
+    font-size: 36px;
+  }
+  
+  .tech-stack-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  
+  .industries-grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+  }
+  
+  .process-steps-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .case-studies-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+}
+
+/* Standard Desktops / Laptops (<= 1440px) */
+@media screen and (max-width: 1440px) {
+  :root {
+    --max-width-container: 1240px;
+  }
+  
+  .hero-section {
+    padding: 85px 0 90px;
+  }
+  
+  .hero-title {
+    font-size: 40px;
+  }
+  
+  .hero-description {
+    font-size: 15.5px;
+  }
+  
+  .hero-col-1 {
+    flex: 1.1;
+  }
+  
+  .hero-col-2 {
+    flex: 0.9;
+  }
+  
+  .section-title {
+    font-size: 32px;
+  }
+  
+  .service-block-title {
+    font-size: 26px;
+  }
+  
+  .experience-featured-img,
+  .service-feature-img {
+    max-height: 420px;
+    object-fit: cover;
+  }
+  
+  .top-floating-card {
+    top: 15px;
+    right: 15px;
+  }
+  
+  .bottom-floating-card {
+    bottom: 15px;
+    left: 15px;
+  }
+}
+
+/* Medium Laptops & Landscape Tablets (<= 1200px) */
 @media screen and (max-width: 1200px) {
+  :root {
+    --max-width-container: 94%;
+  }
+
+  .hero-section-flex {
+    gap: 30px;
+  }
+
+  .hero-title {
+    font-size: 36px;
+  }
+
+  .hero-form-card {
+    padding: 30px 24px;
+  }
+
   .tech-stack-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
 
   .industries-grid {
     grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
   }
 
-  .process-steps-grid,
+  .process-steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
   .case-studies-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .industry-showcase-split {
+    padding: 32px 28px;
+    gap: 30px;
+  }
+  
+  .bottom-contact-flex {
+    gap: 40px;
   }
 }
 
+/* Portrait Tablets & Large Phones (<= 1024px) */
 @media screen and (max-width: 1024px) {
+  :root {
+    --max-width-container: 92%;
+  }
+
   .hero-section-flex,
-  .hero-grid,
   .experience-flex,
   .service-split-row,
   .service-split-row-reverse,
@@ -1959,7 +2099,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   .industry-showcase-split,
   .bottom-contact-flex {
     flex-direction: column !important;
-    grid-template-columns: 1fr;
     gap: 40px;
   }
 
@@ -1976,7 +2115,22 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   .bottom-contact-content,
   .bottom-contact-form-wrapper {
     width: 100%;
+    flex: none;
     padding: 0;
+  }
+
+  .experience-image-figure,
+  .service-image-card,
+  .service-image-card-light {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .experience-featured-img,
+  .service-feature-img {
+    width: 100%;
+    height: auto;
+    max-height: none;
   }
 
   .hero-section,
@@ -1994,21 +2148,11 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   .faq-section,
   .final-cta-section,
   .bottom-contact-section {
-    padding: 70px 0 60px;
-  }
-
-  .industry-showcase-split {
-    padding: 30px 20px;
-  }
-
-  .industries-grid,
-  .process-steps-grid,
-  .case-studies-grid {
-    grid-template-columns: repeat(2, 1fr);
+    padding: 70px 0;
   }
 
   .hero-title {
-    font-size: 36px;
+    font-size: 34px;
   }
 
   .section-title {
@@ -2026,69 +2170,197 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   .experience-benefit-list,
   .service-caps-grid,
   .api-outcomes-grid,
-  .why-invest-cards-grid {
-    grid-template-columns: 1fr;
+  .why-invest-cards-grid,
+  .developer-perks-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
   }
 
   .cta-banner-card,
   .final-cta-card {
-    padding: 40px 24px;
+    padding: 45px 30px;
   }
 
   .cta-trust-row {
-    flex-direction: column;
-    gap: 14px;
-    align-items: center;
-  }
-
-  .top-floating-card {
-    top: 10px;
-    right: 10px;
-  }
-
-  .bottom-floating-card {
-    bottom: 10px;
-    left: 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
   }
 }
 
-@media screen and (max-width: 640px) {
-  .tech-stack-grid,
-  .industries-grid,
-  .process-steps-grid,
-  .case-studies-grid,
-  .developer-perks-grid {
-    grid-template-columns: 1fr;
+/* Tablets Portrait / Phablets (<= 768px) */
+@media screen and (max-width: 768px) {
+  :root {
+    --max-width-container: 100%;
+  }
+
+  .vizz-container {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .hero-section {
+    padding: 60px 0 65px;
   }
 
   .hero-title {
-    font-size: 28px;
+    font-size: 30px;
+    line-height: 1.3;
   }
 
   .section-title {
-    font-size: 24px;
+    font-size: 26px;
+    line-height: 1.3;
   }
 
   .cta-title {
-    font-size: 24px;
+    font-size: 26px;
+    line-height: 1.3;
   }
 
   .service-block-title {
     font-size: 22px;
   }
 
-  .faq-question-btn {
-    padding: 18px 16px;
+  .hero-description,
+  .section-lead-text,
+  .cta-description {
     font-size: 15px;
+    line-height: 1.65;
   }
 
-  .faq-answer-content {
-    padding: 0 16px 18px;
+  .tech-stack-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .industries-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .process-steps-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .case-studies-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .experience-benefit-list,
+  .service-caps-grid,
+  .api-outcomes-grid,
+  .why-invest-cards-grid,
+  .developer-perks-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .experience-floating-card {
+    position: static;
+    margin-top: 14px;
+    width: 100%;
+  }
+
+  .experience-visual-wrapper,
+  .why-invest-visual-wrapper {
+    padding: 0;
+  }
+
+  .faq-accordion-wrapper {
+    margin-bottom: 35px;
+  }
+
+  .faq-question-btn {
+    padding: 18px 18px;
+    font-size: 15.5px;
+  }
+
+  .cta-banner-card,
+  .final-cta-card {
+    padding: 35px 20px;
+    border-radius: 18px;
+  }
+
+  .contact-info-card {
+    padding: 14px 16px;
+  }
+}
+
+/* Mobile First Standard Devices (<= 480px) */
+@media screen and (max-width: 480px) {
+  .vizz-container {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .hero-section,
+  .digital-experience-section,
+  .services-overview-section,
+  .ecommerce-enterprise-section,
+  .api-integration-section,
+  .why-invest-section,
+  .tech-stack-section,
+  .cta-banner-section,
+  .industries-section,
+  .trusted-partner-section,
+  .process-section,
+  .dedicated-dev-section,
+  .faq-section,
+  .final-cta-section,
+  .bottom-contact-section {
+    padding: 50px 0;
+  }
+
+  .hero-badge,
+  .section-badge-light,
+  .section-badge-dark,
+  .service-sub-badge,
+  .cta-badge {
+    font-size: 12px;
+    padding: 5px 14px;
+    margin-bottom: 16px;
+  }
+
+  .hero-title {
+    font-size: 26px;
+    letter-spacing: -0.3px;
+  }
+
+  .section-title {
+    font-size: 23px;
+    letter-spacing: -0.3px;
+  }
+
+  .cta-title {
+    font-size: 23px;
+    letter-spacing: -0.3px;
+  }
+
+  .service-block-title {
+    font-size: 20px;
+  }
+
+  .industries-grid {
+    grid-template-columns: 1fr;
   }
 
   .form-row-2col {
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: 14px;
+  }
+
+  .form-group {
+    margin-bottom: 14px;
+  }
+
+  .form-input,
+  .form-textarea {
+    font-size: 14px;
+    padding: 12px 14px;
   }
 
   .hero-form-card,
@@ -2099,8 +2371,10 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   .industry-card,
   .process-step-card,
   .case-study-card,
-  .contact-info-card {
-    padding: 20px 16px;
+  .contact-info-card,
+  .partner-pillar-item {
+    padding: 18px 14px;
+    border-radius: 12px;
   }
 
   .hero-actions,
@@ -2112,22 +2386,78 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   .contact-guarantees-row {
     flex-direction: column;
     width: 100%;
+    gap: 12px;
   }
 
   .btn-primary-pill,
   .btn-secondary-pill,
   .btn-outline-pill,
   .btn-large {
-    width: 100%;
+    width: 100% !important;
+    text-align: center;
+    justify-content: center;
+    font-size: 13.5px !important;
+    padding: 12px 20px !important;
   }
 
-  .experience-floating-card {
-    position: static;
-    margin-top: 12px;
+  .faq-question-btn {
+    padding: 16px 14px;
+    font-size: 14.5px;
+    gap: 10px;
   }
 
-  .experience-visual-wrapper,
-  .why-invest-visual-wrapper {
-    padding: 0;
+  .faq-icon {
+    width: 28px;
+    height: 28px;
+    font-size: 18px;
+  }
+
+  .faq-answer-content {
+    padding: 0 14px 16px;
+  }
+
+  .faq-answer-content p {
+    font-size: 13.5px;
+  }
+
+  .cta-banner-card,
+  .final-cta-card {
+    padding: 30px 14px;
+  }
+
+  .cta-trust-row {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .trust-item,
+  .contact-guarantee-item {
+    font-size: 12.5px;
+  }
+
+  .industry-showcase-split {
+    padding: 24px 16px;
+  }
+}
+
+/* Extra Small Mobile Screens (<= 360px) */
+@media screen and (max-width: 360px) {
+  .hero-title {
+    font-size: 23px;
+  }
+
+  .section-title {
+    font-size: 21px;
+  }
+
+  .cta-title {
+    font-size: 21px;
+  }
+
+  .btn-primary-pill,
+  .btn-secondary-pill {
+    font-size: 12.5px !important;
+    padding: 10px 16px !important;
   }
 }
