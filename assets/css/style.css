@@ -788,7 +788,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   display: flex;
   align-items: center;
   gap: 60px;
-  margin-top: 70px;
 }
 
 .service-split-row-reverse {
@@ -1100,10 +1099,13 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 /* --------------------------------------------------------------------------
    9. SECTION 7: CALL TO ACTION BANNER (LIGHT THEME)
    -------------------------------------------------------------------------- */
+   .hire-dedicated-block {
+    padding-bottom: 80px;
+   }
 .cta-banner-section {
   position: relative;
   background-color: var(--bg-light-alt);
-  padding: 100px 0;
+  padding: 0 0 100px 0;
   overflow: hidden;
 }
 
@@ -2100,6 +2102,7 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   .bottom-contact-flex {
     flex-direction: column !important;
     gap: 40px;
+    margin-top: 0;
   }
 
   .hero-col-1, 
@@ -2116,8 +2119,13 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   .bottom-contact-form-wrapper {
     width: 100%;
     flex: none;
-    padding: 0;
   }
+  .cta-banner-section {
+    padding-top: 0 !important;
+  }
+  .case-studies-block {
+    padding-top: 50px;
+}
 
   .experience-image-figure,
   .service-image-card,
