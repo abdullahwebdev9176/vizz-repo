@@ -1,10 +1,11 @@
 /**
- * Vizz Web Solutions - Healthcare Page Script
+ * Vizz Web Solutions - Healthcare Page Dedicated Responsive Sliders & Scripts
  * Page: healthcare.html
  * Functionality:
- * 1. Smooth-scrolling lead form triggers with auto input focus.
- * 2. Multi-Slider Manager with Splide.js (Active <= 991px, Destroyed on Desktop > 991px).
- * 3. Accessible Single-Open FAQ Accordion with ARIA state management.
+ * 1. Activates Splide.js sliders on mobile & tablet (<= 991px).
+ * 2. Automatically destroys sliders on desktop (> 991px) to preserve native CSS grid layouts.
+ * 3. Smooth-scrolling lead form triggers with auto input focus.
+ * 4. Accessible Single-Open FAQ Accordion with ARIA state management.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -35,85 +36,155 @@ document.addEventListener('DOMContentLoaded', () => {
   // =========================================================================
   // 2. MULTI-SLIDER RESPONSIVE MANAGER (Active <= 991px, Destroyed on Desktop)
   // =========================================================================
-  const sliderSelectors = [
-    { selector: '#healthcare-services-slider', perPageTablet: 2, perPageMobile: 1 },
-    { selector: '#clinical-workflows-slider', perPageTablet: 1, perPageMobile: 1 },
-    { selector: '#operations-deck-slider', perPageTablet: 2, perPageMobile: 1 },
-    { selector: '#connected-health-slider', perPageTablet: 2, perPageMobile: 1 },
-    { selector: '#development-process-slider', perPageTablet: 2, perPageMobile: 1 },
-    { selector: '#health-sectors-slider', perPageTablet: 2, perPageMobile: 1 },
-    { selector: '#tech-stack-slider', perPageTablet: 2, perPageMobile: 1 },
-    { selector: '#cost-factors-slider', perPageTablet: 2, perPageMobile: 1 },
+  const sliderConfigs = [
+    {
+      id: 'healthcare-services-slider',
+      perPageTablet: 2,
+      perPageMobile: 1,
+      gapTablet: '20px',
+      gapMobile: '14px',
+    },
+    {
+      id: 'clinical-workflows-slider',
+      perPageTablet: 1,
+      perPageMobile: 1,
+      gapTablet: '20px',
+      gapMobile: '14px',
+    },
+    {
+      id: 'operations-deck-slider',
+      perPageTablet: 2,
+      perPageMobile: 1,
+      gapTablet: '20px',
+      gapMobile: '14px',
+    },
+    {
+      id: 'connected-health-slider',
+      perPageTablet: 2,
+      perPageMobile: 1,
+      gapTablet: '20px',
+      gapMobile: '14px',
+    },
+    {
+      id: 'development-process-slider',
+      perPageTablet: 2,
+      perPageMobile: 1,
+      gapTablet: '20px',
+      gapMobile: '14px',
+    },
+    {
+      id: 'health-sectors-slider',
+      perPageTablet: 3,
+      perPageMobile: 2,
+      gapTablet: '16px',
+      gapMobile: '12px',
+      extraBreakpoints: {
+        576: {
+          perPage: 1,
+          gap: '12px',
+        },
+      },
+    },
+    {
+      id: 'tech-stack-slider',
+      perPageTablet: 2,
+      perPageMobile: 1,
+      gapTablet: '18px',
+      gapMobile: '14px',
+    },
+    {
+      id: 'cost-factors-slider',
+      perPageTablet: 2,
+      perPageMobile: 1,
+      gapTablet: '20px',
+      gapMobile: '14px',
+    },
   ];
 
-  const sliderInstances = new Map();
+  // Map to hold active Splide instances
+  const activeSplideInstances = {};
 
-  function initOrDestroySliders() {
+  /**
+   * Initializes or destroys sliders based on current viewport width
+   */
+  function handleResponsiveSliders() {
     const isMobileOrTablet = window.innerWidth <= 991;
 
-    if (typeof Splide === 'undefined') {
-      return;
-    }
-
-    sliderSelectors.forEach((cfg) => {
-      const el = document.querySelector(cfg.selector);
-      if (!el) return;
-
-      const hasInstance = sliderInstances.has(cfg.selector);
+    sliderConfigs.forEach((config) => {
+      const sliderElement = document.getElementById(config.id);
+      if (!sliderElement || typeof Splide === 'undefined') {
+        return;
+      }
 
       if (isMobileOrTablet) {
-        if (!hasInstance) {
+        // Mount Splide if not already active
+        if (!activeSplideInstances[config.id]) {
           try {
-            // Clean up any stray pagination DOM elements before mounting
-            const existingPaginations = el.querySelectorAll('.splide__pagination');
+            // Remove any leftover duplicate pagination elements before mounting
+            const existingPaginations = sliderElement.querySelectorAll('.splide__pagination');
             existingPaginations.forEach((p) => p.remove());
 
-            const splide = new Splide(cfg.selector, {
+            const breakpointsConfig = {
+              767: {
+                perPage: config.perPageMobile,
+                gap: config.gapMobile,
+              },
+            };
+
+            if (config.extraBreakpoints) {
+              Object.assign(breakpointsConfig, config.extraBreakpoints);
+            }
+
+            const splideInstance = new Splide(`#${config.id}`, {
               type: 'slide',
-              perPage: cfg.perPageTablet,
-              gap: '20px',
+              perPage: config.perPageTablet,
+              gap: config.gapTablet,
               arrows: false,
               pagination: true,
               speed: 450,
-              breakpoints: {
-                767: {
-                  perPage: cfg.perPageMobile,
-                  gap: '16px',
-                },
-              },
+              drag: true,
+              snap: true,
+              flickPower: 400,
+              keyboard: false,
+              breakpoints: breakpointsConfig,
             });
 
-            splide.mount();
-            sliderInstances.set(cfg.selector, splide);
+            splideInstance.mount();
+            activeSplideInstances[config.id] = splideInstance;
           } catch (err) {
-            console.warn(`Error initializing slider for ${cfg.selector}:`, err);
+            console.warn(`[Splide] Error mounting slider #${config.id}:`, err);
           }
         }
       } else {
-        if (hasInstance) {
+        // Destroy Splide if active on desktop > 991px
+        if (activeSplideInstances[config.id]) {
           try {
-            const splide = sliderInstances.get(cfg.selector);
-            if (splide) {
-              splide.destroy(true);
-            }
+            activeSplideInstances[config.id].destroy(true);
           } catch (err) {
-            console.warn(`Error destroying slider for ${cfg.selector}:`, err);
+            console.warn(`[Splide] Error destroying slider #${config.id}:`, err);
           }
-          sliderInstances.delete(cfg.selector);
+          delete activeSplideInstances[config.id];
         }
+
+        // Clean up any remaining pagination elements on desktop
+        const strayPaginations = sliderElement.querySelectorAll('.splide__pagination');
+        strayPaginations.forEach((p) => p.remove());
       }
     });
   }
 
-  // Initial execution
-  initOrDestroySliders();
+  // Initial execution on DOM ready
+  handleResponsiveSliders();
 
-  // Debounced resize handler
+  // Debounced listener on window resize & orientationchange
   let resizeTimer = null;
-  window.addEventListener('resize', () => {
+  const onWindowResize = () => {
     clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(initOrDestroySliders, 150);
-  });
+    resizeTimer = setTimeout(handleResponsiveSliders, 120);
+  };
+
+  window.addEventListener('resize', onWindowResize, { passive: true });
+  window.addEventListener('orientationchange', onWindowResize, { passive: true });
 
   // =========================================================================
   // 3. ACCESSIBLE SINGLE-OPEN FAQ ACCORDION

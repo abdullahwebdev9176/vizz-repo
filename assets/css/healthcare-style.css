@@ -2,7 +2,7 @@
    VIZZ WEB SOLUTIONS - HEALTHCARE DEDICATED STYLESHEET
    Page: healthcare.html
    Focus: Healthcare Software Development with Agentic AI & Smart Automation
-   Design Philosophy: Mobile-First, Centered Typography on Mobile, Responsive Sliders (<= 991px), Desktop CSS Grids, Accessible Accordion & Performance
+   Design Philosophy: Mobile-First Responsive Architecture, Native Desktop Grids (>= 992px), Touch Sliders (<= 991px), Rich Aesthetics & SEO Compliance
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -11,7 +11,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 /* --------------------------------------------------------------------------
-   2. CORE COLOR PALETTE & DESIGN SYSTEM TOKENS
+   2. CORE COLOR PALETTE & DESIGN SYSTEM TOKENS (Mobile-First Variables)
    -------------------------------------------------------------------------- */
 :root {
   /* 🔤 Typography & Font Family */
@@ -52,7 +52,7 @@
   --border-cyan-glow: rgba(0, 180, 216, 0.4);
 
   /* Shadows */
-  --shadow-card: 0 6px 24px rgba(0, 0, 0, 0.06);
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.05);
   --shadow-card-elevated: 0 16px 36px rgba(0, 0, 0, 0.22);
   --shadow-btn: 0 8px 25px rgba(0, 136, 255, 0.35);
 
@@ -84,7 +84,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   3. BASE RESETS & TYPOGRAPHY
+   3. BASE RESETS & MOBILE-FIRST TYPOGRAPHY
    -------------------------------------------------------------------------- */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -226,6 +226,8 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   text-align: center;
   max-width: 880px;
   margin: 0 auto 32px auto;
+  position: relative;
+  z-index: 2;
 }
 
 @media screen and (min-width: 992px) {
@@ -273,7 +275,7 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   4. BUTTON STANDARDS (Mandatory Design Tokens)
+   4. BUTTON COMPONENTS
    -------------------------------------------------------------------------- */
 .btn-primary-pill {
   display: inline-flex;
@@ -812,113 +814,15 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   7. MULTI-SLIDER & RESPONSIVE CAROUSEL ENGINE (<= 991px Slider, > 991px CSS Grid)
-   -------------------------------------------------------------------------- */
-
-/* When Splide is active (Mobile / Tablet <= 991px) */
-@media screen and (max-width: 991px) {
-  .responsive-section-slider .splide__track {
-    overflow: hidden;
-    padding: 8px 0 16px 0;
-  }
-
-  .responsive-section-slider .splide__list {
-    display: flex !important;
-    gap: 0 !important;
-  }
-
-  .responsive-section-slider .splide__slide {
-    flex-shrink: 0;
-    box-sizing: border-box;
-    display: flex;
-    height: auto;
-  }
-
-  .responsive-section-slider .splide__slide > article,
-  .responsive-section-slider .splide__slide > div {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .responsive-section-slider .splide__pagination {
-    position: relative;
-    bottom: auto;
-    margin-top: 24px;
-    display: flex !important;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    padding: 0;
-    list-style: none;
-  }
-
-  .responsive-section-slider .splide__pagination__page {
-    width: 8px;
-    height: 8px;
-    background: rgba(0, 180, 216, 0.25);
-    border-radius: 50%;
-    transition: all 0.3s ease;
-    opacity: 1;
-    border: none;
-    cursor: pointer;
-  }
-
-  /* Dark section pagination dots */
-  .services-section .splide__pagination__page,
-  .bento-clinical-section .splide__pagination__page,
-  .operations-deck-section .splide__pagination__page,
-  .connected-health-section .splide__pagination__page,
-  .health-sectors-section .splide__pagination__page,
-  .tech-stack-section .splide__pagination__page {
-    background: rgba(255, 255, 255, 0.25);
-  }
-
-  .responsive-section-slider .splide__pagination__page.is-active {
-    background: var(--btn-color) !important;
-    width: 24px;
-    border-radius: 10px;
-  }
-}
-
-/* When Splide is destroyed (Desktop >= 992px) */
-@media screen and (min-width: 992px) {
-  .responsive-section-slider .splide__track {
-    overflow: visible !important;
-  }
-
-  .responsive-section-slider .splide__list {
-    transform: none !important;
-    width: 100% !important;
-  }
-
-  .responsive-section-slider .splide__slide {
-    width: auto !important;
-    height: auto !important;
-  }
-
-  .responsive-section-slider .splide__pagination {
-    display: none !important;
-  }
-}
-
-/* --------------------------------------------------------------------------
-   8. SECTION 3: COMPREHENSIVE SERVICES GRID (Dark)
+   7. SECTION 3: COMPREHENSIVE SERVICES (Cards Base Styles)
    -------------------------------------------------------------------------- */
 .services-section {
   background: var(--bg-dark);
   padding: var(--section-padding);
   border-top: 1px solid var(--border-dark);
   border-bottom: 1px solid var(--border-dark);
-}
-
-@media screen and (min-width: 992px) {
-  .services-grid-8 {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-  }
+  position: relative;
+  overflow: hidden;
 }
 
 .service-card-item {
@@ -936,6 +840,7 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 @media screen and (min-width: 992px) {
   .service-card-item {
     text-align: left;
+    padding: 26px 22px;
   }
 }
 
@@ -988,6 +893,8 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 .service-section-cta {
   text-align: center;
   margin-top: 32px;
+  position: relative;
+  z-index: 2;
 }
 
 @media screen and (min-width: 992px) {
@@ -997,26 +904,15 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   9. BENTO-STYLE CLINICAL PLATFORMS (Dark Asymmetric Bento)
+   8. SECTION 8: BENTO CLINICAL CARDS BASE STYLES
    -------------------------------------------------------------------------- */
 .bento-clinical-section {
   background: var(--bg-dark-alt);
   padding: var(--section-padding);
   border-top: 1px solid var(--border-dark);
   border-bottom: 1px solid var(--border-dark);
-}
-
-@media screen and (min-width: 992px) {
-  .bento-grid-3 {
-    display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    grid-template-rows: auto auto;
-    gap: 24px;
-  }
-  
-  .bento-slide-featured {
-    grid-row: span 2;
-  }
+  position: relative;
+  overflow: hidden;
 }
 
 .bento-card {
@@ -1139,7 +1035,7 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   10. HOSPITAL & PATIENT PORTAL ECOSYSTEM (Light Two-Column Interactive)
+   9. SECTION 9: HOSPITAL & PATIENT PORTAL (Light Dual Interactive)
    -------------------------------------------------------------------------- */
 .hospital-portal-section {
   background: var(--bg-light);
@@ -1222,21 +1118,15 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   11. 3-COLUMN OPERATIONS DECK (Dark Distinct Trio)
+   10. SECTION 10: 3-COLUMN OPERATIONS DECK BASE STYLES
    -------------------------------------------------------------------------- */
 .operations-deck-section {
   background: var(--bg-dark);
   padding: var(--section-padding);
   border-top: 1px solid var(--border-dark);
   border-bottom: 1px solid var(--border-dark);
-}
-
-@media screen and (min-width: 992px) {
-  .operations-deck-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-  }
+  position: relative;
+  overflow: hidden;
 }
 
 .deck-card {
@@ -1324,7 +1214,7 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   12. LABS, LIMS & MEDICAL DEVICES (Light Specialized Grid)
+   11. SECTION 11: LABS, LIMS & MEDICAL DEVICES (Light)
    -------------------------------------------------------------------------- */
 .lims-devices-section {
   background: var(--bg-light-alt);
@@ -1395,7 +1285,7 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   13. CONNECTED HEALTH TECH PARADIGMS (Dark Futuristic 5-Card Grid)
+   12. SECTION 12: CONNECTED HEALTH TECH (5-Card Base Styles)
    -------------------------------------------------------------------------- */
 .connected-health-section {
   background: var(--bg-dark-deep);
@@ -1405,18 +1295,8 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   padding: var(--section-padding);
   border-top: 1px solid var(--border-dark);
   border-bottom: 1px solid var(--border-dark);
-}
-
-@media screen and (min-width: 992px) {
-  .connected-health-grid-5 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-  }
-  
-  .connected-slide-featured {
-    grid-column: span 2;
-  }
+  position: relative;
+  overflow: hidden;
 }
 
 .connected-card {
@@ -1520,19 +1400,13 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   14. DEVELOPMENT PROCESS ROADMAP (Light Stepper Grid)
+   13. SECTION 13: DEVELOPMENT PROCESS (6-Step Base Styles)
    -------------------------------------------------------------------------- */
 .process-section {
   background: var(--bg-light);
   padding: var(--section-padding);
-}
-
-@media screen and (min-width: 992px) {
-  .process-grid-6 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-  }
+  position: relative;
+  overflow: hidden;
 }
 
 .process-step-card {
@@ -1603,21 +1477,15 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   15. TRANSFORMING HEALTH SYSTEMS / SECTORS (Dark 3x3 Ecosystem)
+   14. SECTION 14: TRANSFORMING HEALTH SYSTEMS (9 Sectors Base Styles)
    -------------------------------------------------------------------------- */
 .health-sectors-section {
   background: var(--bg-dark);
   padding: var(--section-padding);
   border-top: 1px solid var(--border-dark);
   border-bottom: 1px solid var(--border-dark);
-}
-
-@media screen and (min-width: 992px) {
-  .sectors-grid-9 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  }
+  position: relative;
+  overflow: hidden;
 }
 
 .sector-card {
@@ -1682,7 +1550,7 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   16. REFINED SECTION: WHY HEALTHCARE TEAMS PARTNER WITH US
+   15. SECTION 15: WHY HEALTHCARE TEAMS PARTNER WITH US
    -------------------------------------------------------------------------- */
 .why-partner-section {
   background: var(--bg-light);
@@ -1794,7 +1662,7 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   17. TECHNOLOGIES WE USE MATRIX (Dark 4x2 Category Grid)
+   16. SECTION 16: TECHNOLOGIES WE USE MATRIX BASE STYLES
    -------------------------------------------------------------------------- */
 .tech-stack-section {
   background: var(--bg-dark-alt);
@@ -1804,14 +1672,8 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   padding: var(--section-padding);
   border-top: 1px solid var(--border-dark);
   border-bottom: 1px solid var(--border-dark);
-}
-
-@media screen and (min-width: 992px) {
-  .tech-grid-8 {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
-  }
+  position: relative;
+  overflow: hidden;
 }
 
 .tech-category-card {
@@ -1911,19 +1773,13 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   18. KEY COST FACTORS IN HEALTHCARE (Light 4x2 Grid)
+   17. SECTION 17: KEY COST FACTORS BASE STYLES
    -------------------------------------------------------------------------- */
 .cost-factors-section {
   background: var(--bg-light-alt);
   padding: var(--section-padding);
-}
-
-@media screen and (min-width: 992px) {
-  .cost-factors-grid-8 {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
-  }
+  position: relative;
+  overflow: hidden;
 }
 
 .cost-factor-card {
@@ -1996,7 +1852,7 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   19. SECTION 19: FREQUENTLY ASKED QUESTIONS (FAQS - ACCESSIBLE ACCORDION)
+   18. SECTION 18: FREQUENTLY ASKED QUESTIONS (FAQS - ACCESSIBLE ACCORDION)
    -------------------------------------------------------------------------- */
 .faq-section {
   position: relative;
@@ -2135,7 +1991,7 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   20. DEEP DIVE FEATURE SECTIONS
+   19. DEEP DIVE FEATURE SECTIONS (Sections 4, 5, 6, 7)
    -------------------------------------------------------------------------- */
 .feature-split-section {
   padding: var(--section-padding);
@@ -2268,7 +2124,7 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   21. MID-PAGE HIGH-IMPACT CTA BANNER
+   20. MID-PAGE HIGH-IMPACT CTA BANNER
    -------------------------------------------------------------------------- */
 .mid-page-cta-section {
   background: linear-gradient(135deg, #07152b 0%, #0e2246 50%, #07152b 100%);
@@ -2332,5 +2188,275 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   .mid-cta-actions {
     flex-direction: row;
     gap: 16px;
+  }
+}
+
+/* ==========================================================================
+   21. MOBILE & TABLET SLIDER OVERRIDES (<= 991px)
+   ========================================================================== */
+@media screen and (max-width: 991px) {
+  #healthcare-services-slider .splide__track,
+  #clinical-workflows-slider .splide__track,
+  #operations-deck-slider .splide__track,
+  #connected-health-slider .splide__track,
+  #development-process-slider .splide__track,
+  #health-sectors-slider .splide__track,
+  #tech-stack-slider .splide__track,
+  #cost-factors-slider .splide__track {
+    overflow: hidden !important;
+    position: relative !important;
+    width: 100% !important;
+    padding: 6px 0 !important;
+  }
+
+  #healthcare-services-slider .splide__list,
+  #clinical-workflows-slider .splide__list,
+  #operations-deck-slider .splide__list,
+  #connected-health-slider .splide__list,
+  #development-process-slider .splide__list,
+  #health-sectors-slider .splide__list,
+  #tech-stack-slider .splide__list,
+  #cost-factors-slider .splide__list {
+    display: flex !important;
+    gap: 0 !important;
+    grid-template-columns: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    width: auto !important;
+  }
+
+  #healthcare-services-slider .splide__slide,
+  #clinical-workflows-slider .splide__slide,
+  #operations-deck-slider .splide__slide,
+  #connected-health-slider .splide__slide,
+  #development-process-slider .splide__slide,
+  #health-sectors-slider .splide__slide,
+  #tech-stack-slider .splide__slide,
+  #cost-factors-slider .splide__slide {
+    display: flex !important;
+    flex-direction: column !important;
+    flex-shrink: 0 !important;
+    box-sizing: border-box !important;
+    height: auto !important;
+    min-width: 0 !important;
+  }
+
+  .responsive-section-slider .splide__slide > article,
+  .responsive-section-slider .splide__slide > div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .responsive-section-slider .splide__pagination {
+    position: relative;
+    bottom: auto;
+    margin-top: 24px;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 0;
+    list-style: none;
+  }
+
+  .responsive-section-slider .splide__pagination__page {
+    width: 8px;
+    height: 8px;
+    background: rgba(0, 180, 216, 0.25);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    opacity: 1;
+    border: none;
+    cursor: pointer;
+  }
+
+  .services-section .splide__pagination__page,
+  .bento-clinical-section .splide__pagination__page,
+  .operations-deck-section .splide__pagination__page,
+  .connected-health-section .splide__pagination__page,
+  .health-sectors-section .splide__pagination__page,
+  .tech-stack-section .splide__pagination__page {
+    background: rgba(255, 255, 255, 0.25);
+  }
+
+  .responsive-section-slider .splide__pagination__page.is-active {
+    background: var(--btn-color) !important;
+    width: 24px;
+    border-radius: 10px;
+  }
+}
+
+/* ==========================================================================
+   22. DESKTOP OVERRIDES (>= 992px) - PURE NATIVE GRID SYSTEM, SLIDER INACTIVE
+   ========================================================================== */
+@media screen and (min-width: 992px) {
+  #healthcare-services-slider,
+  #clinical-workflows-slider,
+  #operations-deck-slider,
+  #connected-health-slider,
+  #development-process-slider,
+  #health-sectors-slider,
+  #tech-stack-slider,
+  #cost-factors-slider {
+    visibility: visible !important;
+  }
+
+  #healthcare-services-slider .splide__track,
+  #clinical-workflows-slider .splide__track,
+  #operations-deck-slider .splide__track,
+  #connected-health-slider .splide__track,
+  #development-process-slider .splide__track,
+  #health-sectors-slider .splide__track,
+  #tech-stack-slider .splide__track,
+  #cost-factors-slider .splide__track {
+    overflow: visible !important;
+    position: static !important;
+    width: 100% !important;
+    padding: 0 !important;
+  }
+
+  /* 1. Services 8-Grid (4 Columns Desktop) */
+  #healthcare-services-slider .splide__list,
+  .services-grid-8 {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 20px !important;
+    transform: none !important;
+    margin: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* 2. Bento Clinical 3-Grid (Asymmetric Desktop Bento) */
+  #clinical-workflows-slider .splide__list,
+  .bento-grid-3 {
+    display: grid !important;
+    grid-template-columns: 1.2fr 1fr !important;
+    grid-template-rows: auto auto !important;
+    gap: 24px !important;
+    transform: none !important;
+    margin: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  #clinical-workflows-slider .bento-slide-featured {
+    grid-row: span 2 !important;
+  }
+
+  /* 3. Operations Deck 3-Grid */
+  #operations-deck-slider .splide__list,
+  .operations-deck-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 24px !important;
+    transform: none !important;
+    margin: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* 4. Connected Health 5-Grid */
+  #connected-health-slider .splide__list,
+  .connected-health-grid-5 {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 24px !important;
+    transform: none !important;
+    margin: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  #connected-health-slider .connected-slide-featured {
+    grid-column: span 2 !important;
+  }
+
+  /* 5. Development Process 6-Grid */
+  #development-process-slider .splide__list,
+  .process-grid-6 {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 24px !important;
+    transform: none !important;
+    margin: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* 6. Health Sectors 9-Grid */
+  #health-sectors-slider .splide__list,
+  .sectors-grid-9 {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 20px !important;
+    transform: none !important;
+    margin: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* 7. Tech Stack 8-Grid (4 Columns Desktop) */
+  #tech-stack-slider .splide__list,
+  .tech-grid-8 {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 24px !important;
+    transform: none !important;
+    margin: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* 8. Cost Factors 8-Grid (4 Columns Desktop) */
+  #cost-factors-slider .splide__list,
+  .cost-factors-grid-8 {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 24px !important;
+    transform: none !important;
+    margin: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Slide items on desktop: fill grid cell */
+  #healthcare-services-slider .splide__slide,
+  #clinical-workflows-slider .splide__slide,
+  #operations-deck-slider .splide__slide,
+  #connected-health-slider .splide__slide,
+  #development-process-slider .splide__slide,
+  #health-sectors-slider .splide__slide,
+  #tech-stack-slider .splide__slide,
+  #cost-factors-slider .splide__slide {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    height: auto !important;
+    flex: none !important;
+    display: block !important;
+  }
+
+  /* Hide splide controls completely on desktop */
+  #healthcare-services-slider .splide__pagination,
+  #healthcare-services-slider .splide__arrows,
+  #clinical-workflows-slider .splide__pagination,
+  #clinical-workflows-slider .splide__arrows,
+  #operations-deck-slider .splide__pagination,
+  #operations-deck-slider .splide__arrows,
+  #connected-health-slider .splide__pagination,
+  #connected-health-slider .splide__arrows,
+  #development-process-slider .splide__pagination,
+  #development-process-slider .splide__arrows,
+  #health-sectors-slider .splide__pagination,
+  #health-sectors-slider .splide__arrows,
+  #tech-stack-slider .splide__pagination,
+  #tech-stack-slider .splide__arrows,
+  #cost-factors-slider .splide__pagination,
+  #cost-factors-slider .splide__arrows {
+    display: none !important;
   }
 }
