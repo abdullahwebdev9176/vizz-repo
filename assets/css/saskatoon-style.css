@@ -887,7 +887,7 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   background: rgba(0, 180, 216, 0.12);
   border: 1px solid rgba(0, 180, 216, 0.3);
   border-radius: 12px;
-  display: flex;
+  display: center;
   align-items: center;
   justify-content: center;
   font-size: 20px;
@@ -1826,7 +1826,132 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   19. RESPONSIVE MEDIA QUERIES
+   19. SECTION 14: FREQUENTLY ASKED QUESTIONS (FAQS - EXACT MATCH TO INDEX.HTML)
+   -------------------------------------------------------------------------- */
+.faq-section {
+  position: relative;
+  background-color: var(--bg-light-alt);
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+.faq-accordion-wrapper {
+  max-width: 880px;
+  margin: 0 auto 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  z-index: 2;
+}
+
+.faq-item {
+  background: var(--bg-light);
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.faq-item.active {
+  border-color: var(--btn-primary);
+  box-shadow: 0 10px 30px rgba(0, 136, 255, 0.1);
+}
+
+.faq-question-heading {
+  margin: 0;
+  padding: 0;
+}
+
+.faq-question-btn {
+  width: 100%;
+  padding: 22px 24px;
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  font-family: var(--font-family);
+  font-size: 16.5px;
+  font-weight: 700;
+  color: var(--text-dark);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  gap: 16px;
+}
+
+.faq-item.active .faq-question-btn {
+  color: var(--btn-primary);
+}
+
+.faq-question-btn:hover {
+  color: var(--btn-primary);
+}
+
+.faq-icon {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--btn-primary);
+  width: 32px;
+  height: 32px;
+  background: rgba(0, 180, 216, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(45deg);
+  background: var(--btn-primary);
+  color: var(--white-color);
+}
+
+.faq-answer-pane {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease-in-out;
+}
+
+.faq-item.active .faq-answer-pane {
+  max-height: 500px;
+}
+
+.faq-answer-content {
+  padding: 0 24px 22px;
+}
+
+.faq-answer-content p {
+  font-family: var(--font-family);
+  font-size: 14px;
+  color: var(--text-muted-light);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.faq-bottom-cta {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+  z-index: 2;
+}
+
+.faq-cta-text {
+  font-family: var(--font-family);
+  font-size: 15px;
+  color: var(--text-muted-light);
+  font-weight: 500;
+}
+
+/* --------------------------------------------------------------------------
+   20. RESPONSIVE MEDIA QUERIES
    -------------------------------------------------------------------------- */
 @media screen and (max-width: 1200px) {
   :root {
@@ -1870,7 +1995,8 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   .cost-factors-section,
   .partner-section,
   .service-area-section,
-  .hire-developer-section {
+  .hire-developer-section,
+  .faq-section {
     padding: 70px 0 60px;
   }
 
@@ -1975,7 +2101,7 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   .cost-factor-title,
   .partner-point-title,
   .service-zone-title {
-    font-size: 18px;
+    font-size: 17.5px;
   }
 
   .saskatoon-industry-title {
@@ -2035,6 +2161,30 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 
   .hire-dev-highlights-grid {
     grid-template-columns: 1fr;
+  }
+
+  .faq-accordion-wrapper {
+    gap: 12px;
+    margin-bottom: 35px;
+  }
+
+  .faq-question-btn {
+    padding: 18px 18px;
+    font-size: 15px;
+  }
+
+  .faq-icon {
+    width: 28px;
+    height: 28px;
+    font-size: 18px;
+  }
+
+  .faq-answer-content {
+    padding: 0 18px 18px;
+  }
+
+  .faq-answer-content p {
+    font-size: 13.5px;
   }
 }
 
