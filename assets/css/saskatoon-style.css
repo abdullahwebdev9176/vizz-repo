@@ -2619,3 +2619,213 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
     display: none !important;
   }
 }
+
+/* --------------------------------------------------------------------------
+   22. MOBILE TEXT ALIGNMENT & CENTERING OPTIMIZATIONS (<= 991px)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 991px) {
+  .partner-point-item {
+    text-align: left;
+  }
+  .challenges-intro-content {
+    text-align: center;
+  }
+  /* 1. Hero Section Centering */
+  .hero-col-1 {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-title {
+    text-align: center;
+  }
+
+  .hero-description {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-highlights {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .hero-highlight-item {
+    justify-content: center;
+    text-align: left;
+  }
+
+  .hero-actions {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .form-card-header {
+    text-align: center;
+  }
+
+  /* 2. Section 2: Digital Experience Centering */
+  .experience-col-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .experience-col-content .section-title {
+    text-align: center;
+  }
+
+  .experience-col-content .section-lead-text,
+  .experience-col-content .section-description {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .experience-actions {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .experience-visual-wrapper {
+    margin: 0 auto;
+    max-width: 600px;
+  }
+
+  /* 3. Section 9: Industries Cards Centering */
+  .saskatoon-industry-card {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .saskatoon-industry-icon {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .saskatoon-industry-title {
+    text-align: center;
+  }
+
+  /* 4. Section 11: Partner With Vizz Web Centering */
+  .partner-col-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .partner-col-content .section-badge-light {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .partner-col-content .section-title {
+    text-align: center;
+  }
+
+  .partner-lead-text {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .partner-actions {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .partner-image-wrapper {
+    margin: 0 auto;
+    max-width: 600px;
+  }
+
+  /* 5. Section 12: Service Area Section Centering */
+  .service-area-col-left {
+    text-align: center;
+    align-items: center;
+  }
+
+  .service-area-col-left .section-badge-dark {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .service-area-col-left .section-title {
+    text-align: center;
+  }
+
+  .service-area-col-left .section-intro-text {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .service-area-summary-box {
+    text-align: center;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 3px solid var(--btn-cyan);
+    border-radius: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+  }
+
+  .service-area-summary-text {
+    text-align: center;
+  }
+
+  .service-area-col-left .btn-primary-pill {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .service-zone-header {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .service-zone-chips-wrap {
+    justify-content: center;
+  }
+
+  /* 6. Section 13: Hire Dedicated Developer Centering */
+  .hire-dev-col-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hire-dev-col-content .section-badge-light {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hire-dev-col-content .section-title {
+    text-align: center;
+  }
+
+  .hire-dev-lead-text {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hire-dev-actions {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .hire-image-wrapper {
+    margin: 0 auto;
+    max-width: 600px;
+  }
+}
+
