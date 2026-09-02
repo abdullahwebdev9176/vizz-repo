@@ -4,6 +4,7 @@
  * Functionality:
  * 1. Responsive Splide.js slider for healthcare services on mobile & tablet (<= 991px).
  * 2. Smooth-scrolling lead form triggers with auto input focus.
+ * 3. Accessible Single-Open FAQ Accordion with ARIA state management.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -58,19 +59,17 @@ document.addEventListener('DOMContentLoaded', () => {
             arrows: false,
             pagination: true,
             speed: 450,
-            drag: true,
-            snap: true,
             breakpoints: {
-              576: {
+              767: {
                 perPage: 1,
-                gap: '14px',
+                gap: '16px',
               },
             },
           });
 
           servicesSplideInstance.mount();
         } catch (err) {
-          console.warn('[Splide] Error mounting healthcare services slider:', err);
+          console.warn('Healthcare services Splide initialization error:', err);
         }
       }
     } else {
@@ -78,24 +77,49 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
           servicesSplideInstance.destroy(true);
         } catch (err) {
-          console.warn('[Splide] Error destroying healthcare services slider:', err);
+          console.warn('Healthcare services Splide destroy error:', err);
         }
         servicesSplideInstance = null;
       }
-
-      // Clean up stray paginations on desktop
-      const strayPaginations = sliderElement.querySelectorAll('.splide__pagination');
-      strayPaginations.forEach((p) => p.remove());
     }
   }
 
-  // Initial call
+  // Initial check
   handleResponsiveServicesSlider();
 
-  // Debounced listener on resize
-  let resizeTimer = null;
+  // Debounced resize listener
+  let resizeTimeout;
   window.addEventListener('resize', () => {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(handleResponsiveServicesSlider, 120);
-  }, { passive: true });
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(handleResponsiveServicesSlider, 150);
+  });
+
+  // =========================================================================
+  // 3. ACCESSIBLE SINGLE-OPEN FAQ ACCORDION
+  // =========================================================================
+  const faqItems = document.querySelectorAll('.faq-item');
+
+  faqItems.forEach((item) => {
+    const questionBtn = item.querySelector('.faq-question-btn');
+    if (questionBtn) {
+      questionBtn.addEventListener('click', () => {
+        const isCurrentlyActive = item.classList.contains('active');
+
+        // Close all FAQ items
+        faqItems.forEach((otherItem) => {
+          otherItem.classList.remove('active');
+          const otherBtn = otherItem.querySelector('.faq-question-btn');
+          if (otherBtn) {
+            otherBtn.setAttribute('aria-expanded', 'false');
+          }
+        });
+
+        // Toggle clicked item if it was closed
+        if (!isCurrentlyActive) {
+          item.classList.add('active');
+          questionBtn.setAttribute('aria-expanded', 'true');
+        }
+      });
+    }
+  });
 });

@@ -2,7 +2,7 @@
    VIZZ WEB SOLUTIONS - HEALTHCARE DEDICATED STYLESHEET
    Page: healthcare.html
    Focus: Healthcare Software Development with Agentic AI & Smart Automation
-   Design Philosophy: Varied Section Layouts, Tech Stack Matrix, Cost Drivers, Partner Value Showcases & SEO Compliance
+   Design Philosophy: Varied Section Layouts, Tech Stack Matrix, Cost Drivers, FAQ Accordion & SEO Compliance
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -1663,7 +1663,7 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   17. NEW SECTION: KEY COST FACTORS IN HEALTHCARE (Light 4x2 Grid)
+   17. KEY COST FACTORS IN HEALTHCARE (Light 4x2 Grid)
    -------------------------------------------------------------------------- */
 .cost-factors-section {
   background: var(--bg-light-alt);
@@ -1750,7 +1750,137 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   18. DEEP DIVE FEATURE SECTIONS
+   18. SECTION 18: FREQUENTLY ASKED QUESTIONS (FAQS - ACCESSIBLE ACCORDION)
+   -------------------------------------------------------------------------- */
+.faq-section {
+  position: relative;
+  background-color: var(--bg-light);
+  padding: var(--section-padding);
+  overflow: hidden;
+  border-top: 1px solid var(--border-light);
+}
+
+.faq-accordion-wrapper {
+  max-width: 920px;
+  margin: 0 auto 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  position: relative;
+  z-index: 2;
+}
+
+@media screen and (min-width: 768px) {
+  .faq-accordion-wrapper {
+    gap: 16px;
+    margin-bottom: 48px;
+  }
+}
+
+.faq-item {
+  background: var(--bg-light-alt);
+  border: 1px solid var(--border-light);
+  border-radius: var(--border-radius-card-sm);
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+}
+
+.faq-item.active {
+  border-color: var(--btn-primary);
+  box-shadow: 0 8px 25px rgba(23, 161, 254, 0.12);
+  background: var(--bg-light);
+}
+
+.faq-question-heading {
+  margin: 0;
+  padding: 0;
+}
+
+.faq-question-btn {
+  width: 100%;
+  min-height: 48px;
+  padding: 18px 20px;
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-dark);
+  cursor: pointer;
+  transition: color 0.2s ease;
+  gap: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .faq-question-btn {
+    padding: 20px 24px;
+    font-size: 17px;
+  }
+}
+
+.faq-item.active .faq-question-btn {
+  color: var(--btn-primary);
+}
+
+.faq-question-btn:hover {
+  color: var(--btn-primary);
+}
+
+.faq-icon {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--btn-primary);
+  width: 32px;
+  height: 32px;
+  background: rgba(23, 161, 254, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(45deg);
+  background: var(--btn-primary);
+  color: var(--white-color);
+}
+
+.faq-answer-pane {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease-in-out;
+}
+
+.faq-item.active .faq-answer-pane {
+  max-height: 600px;
+}
+
+.faq-answer-content {
+  padding: 0 20px 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .faq-answer-content {
+    padding: 0 24px 22px;
+  }
+}
+
+.faq-answer-content p {
+  font-size: 14.5px;
+  color: var(--text-muted-light);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   19. DEEP DIVE FEATURE SECTIONS
    -------------------------------------------------------------------------- */
 .feature-split-section {
   padding: var(--section-padding);
@@ -1873,7 +2003,7 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   19. MID-PAGE HIGH-IMPACT CTA BANNER
+   20. MID-PAGE HIGH-IMPACT CTA BANNER
    -------------------------------------------------------------------------- */
 .mid-page-cta-section {
   background: linear-gradient(135deg, #07152b 0%, #0e2246 50%, #07152b 100%);
@@ -1920,7 +2050,7 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   20. RESPONSIVE SPLIDE CAROUSEL STYLING (Active <= 991px)
+   21. RESPONSIVE SPLIDE CAROUSEL STYLING (Active <= 991px)
    -------------------------------------------------------------------------- */
 @media screen and (max-width: 991px) {
   .splide__track {
