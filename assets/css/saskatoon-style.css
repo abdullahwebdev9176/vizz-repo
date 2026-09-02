@@ -430,6 +430,7 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   flex-direction: column;
   gap: 10px;
   margin-bottom: 28px;
+  padding-left: 0;
 }
 
 .hero-highlight-item {
@@ -1760,6 +1761,7 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   line-height: 1.65;
   color: var(--text-muted-light);
   margin: 0;
+  padding-left: 40px;
 }
 
 .partner-image-wrapper {
@@ -2246,6 +2248,142 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   .faq-bottom-cta .btn-primary-pill {
     width: 100%;
   }
+}
+
+/* --------------------------------------------------------------------------
+   19. SECTION 15: BOTTOM CONTACT SECTION (DARK OVERLAY - MATCHING INDEX.HTML)
+   -------------------------------------------------------------------------- */
+.bottom-contact-section {
+  position: relative;
+  background-image: linear-gradient(135deg, rgba(7, 21, 43, 0.94) 0%, rgba(8, 29, 63, 0.96) 100%), url('../images/contact-office-bg.webp');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 110px 0;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  .bottom-contact-section {
+    padding: 70px 0;
+  }
+}
+
+.bottom-contact-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+@media screen and (min-width: 992px) {
+  .bottom-contact-flex {
+    flex-direction: row;
+    align-items: center;
+    gap: 60px;
+  }
+}
+
+.bottom-contact-content {
+  width: 100%;
+}
+
+.bottom-contact-form-wrapper {
+  width: 100%;
+}
+
+@media screen and (min-width: 992px) {
+  .bottom-contact-content {
+    flex: 1.05;
+  }
+  .bottom-contact-form-wrapper {
+    flex: 0.95;
+  }
+}
+
+.contact-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 30px 0;
+}
+
+.contact-info-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: rgba(14, 34, 70, 0.7);
+  border: 1px solid rgba(0, 180, 216, 0.2);
+  border-radius: 12px;
+  padding: 16px 20px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+.contact-info-card:hover {
+  transform: translateX(5px);
+  border-color: var(--btn-primary);
+  background: rgba(14, 34, 70, 0.9);
+  box-shadow: 0 10px 25px rgba(0, 136, 255, 0.16);
+}
+
+.contact-icon-box {
+  font-size: 22px;
+  width: 44px;
+  height: 44px;
+  background: rgba(0, 180, 216, 0.12);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-info-title {
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.contact-channel-link {
+  color: var(--text-cyan);
+  font-family: var(--font-family);
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact-channel-link:hover {
+  color: var(--white-color);
+}
+
+.contact-info-desc {
+  font-family: var(--font-family);
+  font-size: 14px;
+  margin: 0;
+}
+
+.contact-guarantees-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 24px;
+}
+
+.contact-guarantee-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #e2e8f0;
+  font-size: 13.5px;
+  font-weight: 500;
+}
+
+.guarantee-check {
+  color: #10b981;
+  font-weight: 800;
 }
 
 /* --------------------------------------------------------------------------
@@ -2829,6 +2967,38 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   .hire-image-wrapper {
     margin: 0 auto;
     max-width: 600px;
+  }
+
+  /* 7. Bottom Contact Section Centering */
+  .bottom-contact-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bottom-contact-content .section-title {
+    text-align: center;
+  }
+
+  .bottom-contact-content .section-lead-text {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contact-info-list {
+    width: 100%;
+    margin: 24px 0;
+  }
+
+  .contact-info-card {
+    text-align: left;
+  }
+
+  .contact-guarantees-row {
+    justify-content: center;
+    width: 100%;
   }
 }
 
