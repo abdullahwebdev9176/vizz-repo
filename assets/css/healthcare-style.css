@@ -2,7 +2,7 @@
    VIZZ WEB SOLUTIONS - HEALTHCARE DEDICATED STYLESHEET
    Page: healthcare.html
    Focus: Healthcare Software Development with Agentic AI & Smart Automation
-   Design Philosophy: Varied Section Layouts, Process Roadmaps, Industry Ecosystems, Bento Grids & SEO Compliance
+   Design Philosophy: Varied Section Layouts, Partner Value Showcases, Process Roadmaps, Industry Ecosystems & SEO Compliance
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -159,6 +159,7 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 .mt-2 { margin-top: 8px; }
+.mt-3 { margin-top: 16px; }
 .mt-4 { margin-top: 24px; }
 
 /* Highlight Text Gradient */
@@ -1295,7 +1296,7 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   13. NEW SECTION: DEVELOPMENT PROCESS ROADMAP (Light Stepper Grid)
+   13. DEVELOPMENT PROCESS ROADMAP (Light Stepper Grid)
    -------------------------------------------------------------------------- */
 .process-section {
   background: var(--bg-light);
@@ -1379,7 +1380,7 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   14. NEW SECTION: TRANSFORMING HEALTH SYSTEMS / SECTORS (Dark 3x3 Ecosystem)
+   14. TRANSFORMING HEALTH SYSTEMS / SECTORS (Dark 3x3 Ecosystem)
    -------------------------------------------------------------------------- */
 .health-sectors-section {
   background: var(--bg-dark);
@@ -1456,7 +1457,121 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   15. DEEP DIVE FEATURE SECTIONS
+   15. REFINED SECTION: WHY HEALTHCARE TEAMS PARTNER WITH US (Top Split + Bottom 3x2 Grid)
+   -------------------------------------------------------------------------- */
+.why-partner-section {
+  background: var(--bg-light);
+  padding: var(--section-padding);
+}
+
+.why-partner-top-split {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  align-items: center;
+  margin-bottom: 48px;
+}
+
+@media screen and (min-width: 992px) {
+  .why-partner-top-split {
+    flex-direction: row;
+    gap: 48px;
+  }
+}
+
+.why-partner-text-side {
+  flex: 1 1 54%;
+}
+
+.why-partner-visual-side {
+  flex: 1 1 46%;
+  width: 100%;
+}
+
+.partner-value-grid-6 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .partner-value-grid-6 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .partner-value-grid-6 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.partner-value-card {
+  background: var(--bg-light-alt);
+  border: 1px solid var(--border-light);
+  border-radius: var(--border-radius-card-sm);
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.partner-value-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--btn-color);
+  box-shadow: 0 12px 28px rgba(23, 161, 254, 0.12);
+}
+
+.partner-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.partner-card-check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(23, 161, 254, 0.12);
+  color: var(--btn-color);
+  font-size: 14px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.partner-card-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 0;
+  line-height: 1.35;
+}
+
+.partner-card-desc {
+  font-size: 14px;
+  color: var(--text-muted-light);
+  line-height: 1.65;
+  margin: 0;
+}
+
+.why-partner-cta-row {
+  text-align: center;
+  margin-top: 36px;
+}
+
+@media screen and (min-width: 992px) {
+  .why-partner-cta-row {
+    margin-top: 44px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   16. DEEP DIVE FEATURE SECTIONS
    -------------------------------------------------------------------------- */
 .feature-split-section {
   padding: var(--section-padding);
@@ -1579,7 +1694,7 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   16. MID-PAGE HIGH-IMPACT CTA BANNER
+   17. MID-PAGE HIGH-IMPACT CTA BANNER
    -------------------------------------------------------------------------- */
 .mid-page-cta-section {
   background: linear-gradient(135deg, #07152b 0%, #0e2246 50%, #07152b 100%);
@@ -1626,7 +1741,7 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   17. RESPONSIVE SPLIDE CAROUSEL STYLING (Active <= 991px)
+   18. RESPONSIVE SPLIDE CAROUSEL STYLING (Active <= 991px)
    -------------------------------------------------------------------------- */
 @media screen and (max-width: 991px) {
   .splide__track {
