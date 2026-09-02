@@ -2,7 +2,7 @@
    VIZZ WEB SOLUTIONS - HEALTHCARE DEDICATED STYLESHEET
    Page: healthcare.html
    Focus: Healthcare Software Development with Agentic AI & Smart Automation
-   Design Philosophy: Varied Section Layouts, Bento Grids, Asymmetric Showcases, High Aesthetics & SEO Compliance
+   Design Philosophy: Varied Section Layouts, Bento Grids, Asymmetric Showcases, Connected Tech Grid & SEO Compliance
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -30,6 +30,7 @@
   --bg-dark-card: #0e2246;
   --bg-dark-card-alt: #132b57;
   --bg-dark-alt: #051022;
+  --bg-dark-deep: #030b17;
   --bg-light: #ffffff;
   --bg-light-alt: #f4f8fc;
   --bg-light-card: #edf4fb;
@@ -813,7 +814,7 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   8. NEW SECTION A: BENTO-STYLE CLINICAL PLATFORMS (Dark Asymmetric Bento)
+   8. BENTO-STYLE CLINICAL PLATFORMS (Dark Asymmetric Bento)
    -------------------------------------------------------------------------- */
 .bento-clinical-section {
   background: var(--bg-dark-alt);
@@ -929,7 +930,7 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   9. NEW SECTION B: HOSPITAL & PATIENT PORTAL ECOSYSTEM (Light Two-Column Interactive)
+   9. HOSPITAL & PATIENT PORTAL ECOSYSTEM (Light Two-Column Interactive)
    -------------------------------------------------------------------------- */
 .hospital-portal-section {
   background: var(--bg-light);
@@ -1011,7 +1012,7 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   10. NEW SECTION C: 3-COLUMN OPERATIONS DECK (Dark Distinct Trio)
+   10. 3-COLUMN OPERATIONS DECK (Dark Distinct Trio)
    -------------------------------------------------------------------------- */
 .operations-deck-section {
   background: var(--bg-dark);
@@ -1102,7 +1103,7 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   11. NEW SECTION D: LABS, LIMS & MEDICAL DEVICES (Light Specialized Grid)
+   11. LABS, LIMS & MEDICAL DEVICES (Light Specialized Grid)
    -------------------------------------------------------------------------- */
 .lims-devices-section {
   background: var(--bg-light-alt);
@@ -1171,7 +1172,127 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   12. EXISTING DEEP DIVE FEATURE SECTIONS (Preserved)
+   12. NEW SECTION: CONNECTED HEALTH TECH PARADIGMS (Dark Futuristic 5-Card Grid)
+   -------------------------------------------------------------------------- */
+.connected-health-section {
+  background: var(--bg-dark-deep);
+  background-image: 
+    radial-gradient(circle at 10% 30%, rgba(0, 180, 216, 0.08) 0%, transparent 45%),
+    radial-gradient(circle at 90% 70%, rgba(23, 161, 254, 0.08) 0%, transparent 45%);
+  padding: var(--section-padding);
+  border-top: 1px solid var(--border-dark);
+  border-bottom: 1px solid var(--border-dark);
+}
+
+.connected-health-grid-5 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .connected-health-grid-5 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .connected-health-grid-5 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .connected-card-featured-wide {
+    grid-column: span 2;
+  }
+}
+
+.connected-card {
+  background: linear-gradient(145deg, #091a36 0%, #061224 100%);
+  border: 1px solid var(--border-dark);
+  border-radius: var(--border-radius-card);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.connected-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--btn-cyan);
+  box-shadow: 0 16px 36px rgba(0, 180, 216, 0.2);
+}
+
+.connected-card-featured-wide {
+  background: linear-gradient(135deg, #0c244d 0%, #061224 100%);
+  border: 1px solid rgba(0, 180, 216, 0.4);
+}
+
+.connected-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.connected-card-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  background: rgba(0, 180, 216, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  border: 1px solid rgba(0, 180, 216, 0.3);
+}
+
+.connected-trend-badge {
+  background: rgba(23, 161, 254, 0.15);
+  color: var(--btn-cyan);
+  border: 1px solid rgba(23, 161, 254, 0.3);
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.connected-card-title {
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--text-white);
+  margin-bottom: 12px;
+  line-height: 1.35;
+}
+
+.connected-card-desc {
+  font-size: 14px;
+  color: var(--text-muted-dark);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.connected-tags-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.connected-tag {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #38bdf8;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* --------------------------------------------------------------------------
+   13. DEEP DIVE FEATURE SECTIONS
    -------------------------------------------------------------------------- */
 .feature-split-section {
   padding: var(--section-padding);
@@ -1294,7 +1415,7 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   13. MID-PAGE HIGH-IMPACT CTA BANNER
+   14. MID-PAGE HIGH-IMPACT CTA BANNER
    -------------------------------------------------------------------------- */
 .mid-page-cta-section {
   background: linear-gradient(135deg, #07152b 0%, #0e2246 50%, #07152b 100%);
@@ -1341,7 +1462,7 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   14. RESPONSIVE SPLIDE CAROUSEL STYLING (Active <= 991px)
+   15. RESPONSIVE SPLIDE CAROUSEL STYLING (Active <= 991px)
    -------------------------------------------------------------------------- */
 @media screen and (max-width: 991px) {
   .splide__track {
