@@ -2,7 +2,7 @@
    VIZZ WEB SOLUTIONS - HEALTHCARE DEDICATED STYLESHEET
    Page: healthcare.html
    Focus: Healthcare Software Development with Agentic AI & Smart Automation
-   Design Philosophy: Varied Section Layouts, Tech Stack Matrix, Partner Value Showcases & SEO Compliance
+   Design Philosophy: Varied Section Layouts, Tech Stack Matrix, Cost Drivers, Partner Value Showcases & SEO Compliance
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -1560,7 +1560,7 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   16. NEW SECTION: TECHNOLOGIES WE USE MATRIX (Dark 4x2 Category Grid)
+   16. TECHNOLOGIES WE USE MATRIX (Dark 4x2 Category Grid)
    -------------------------------------------------------------------------- */
 .tech-stack-section {
   background: var(--bg-dark-alt);
@@ -1663,7 +1663,94 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   17. DEEP DIVE FEATURE SECTIONS
+   17. NEW SECTION: KEY COST FACTORS IN HEALTHCARE (Light 4x2 Grid)
+   -------------------------------------------------------------------------- */
+.cost-factors-section {
+  background: var(--bg-light-alt);
+  padding: var(--section-padding);
+}
+
+.cost-factors-grid-8 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .cost-factors-grid-8 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .cost-factors-grid-8 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.cost-factor-card {
+  background: var(--bg-light);
+  border: 1px solid var(--border-light);
+  border-top: 3px solid var(--btn-color);
+  border-radius: var(--border-radius-card);
+  padding: 26px 22px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cost-factor-card:hover {
+  transform: translateY(-5px);
+  border-top-color: var(--btn-cyan);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+}
+
+.cost-card-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.cost-card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(23, 161, 254, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+
+.cost-number-badge {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--btn-color);
+  background: rgba(23, 161, 254, 0.08);
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+.cost-factor-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+  line-height: 1.35;
+}
+
+.cost-factor-desc {
+  font-size: 14px;
+  color: var(--text-muted-light);
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   18. DEEP DIVE FEATURE SECTIONS
    -------------------------------------------------------------------------- */
 .feature-split-section {
   padding: var(--section-padding);
@@ -1786,7 +1873,7 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   18. MID-PAGE HIGH-IMPACT CTA BANNER
+   19. MID-PAGE HIGH-IMPACT CTA BANNER
    -------------------------------------------------------------------------- */
 .mid-page-cta-section {
   background: linear-gradient(135deg, #07152b 0%, #0e2246 50%, #07152b 100%);
@@ -1833,7 +1920,7 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   19. RESPONSIVE SPLIDE CAROUSEL STYLING (Active <= 991px)
+   20. RESPONSIVE SPLIDE CAROUSEL STYLING (Active <= 991px)
    -------------------------------------------------------------------------- */
 @media screen and (max-width: 991px) {
   .splide__track {
