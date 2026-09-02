@@ -20,6 +20,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
 
   <!-- Dedicated Healthcare Stylesheet -->
   <link rel="stylesheet" href="assets/css/healthcare-style.css">
@@ -30,7 +31,7 @@
   <!-- MAIN PAGE CONTENT (NO HEADER / NO FOOTER) -->
   <main id="main-content" role="main">
 
-    <!-- ==================== HERO SECTION (SINGLE H1) ==================== -->
+    <!-- ==================== SECTION 1: HERO SECTION (SINGLE H1) ==================== -->
     <section class="hero-section" aria-label="Hero Section - Healthcare Software Development with Agentic AI">
       <div class="vizz-container">
 
@@ -148,9 +149,626 @@
       </div>
     </section>
 
+    <!-- ==================== SECTION 2: MODERNIZING CLINICAL & ADMINISTRATIVE OPERATIONS ==================== -->
+    <section class="digital-experience-section"
+      aria-label="Modernizing Clinical and Administrative Operations with Healthcare Software Development">
+      <div class="vizz-container">
+        <div class="experience-flex">
+
+          <!-- LEFT COLUMN: CONTENT -->
+          <div class="experience-col-content">
+            <div class="section-badge-light">
+              <span class="badge-dot-cyan" aria-hidden="true"></span>
+              <span>End-to-End HealthTech Lifecycle</span>
+            </div>
+
+            <!-- SECTION H2 -->
+            <h2 class="section-title">
+              Modernizing Clinical &amp; Administrative Operations with <span class="text-highlight-cyan">Healthcare Software Development</span>
+            </h2>
+
+            <p class="section-lead-text">
+              At <a href="https://vizzwebsolutions.com/" class="inline-brand-link" aria-label="Visit Vizz Web Solutions official website" title="Vizz Web Solutions">Vizz Web Solutions</a>, our healthcare software development services cover the complete journey from consultation and planning to development, integration, deployment, and long-term support.
+            </p>
+
+            <p class="section-description">
+              We engineer custom software systems that connect disparate medical databases, streamline clinical documentation, automate revenue cycles, and improve patient-clinician communication with unyielding security and compliance standards.
+            </p>
+
+            <div class="experience-solutions-box">
+              <h3 class="experience-solutions-title">Our Complete Healthcare Engineering Journey:</h3>
+              <ul class="experience-solutions-list" aria-label="Engineering Journey Highlights">
+                <li class="experience-solution-item">
+                  <span class="check-icon-circle" aria-hidden="true">&#10003;</span>
+                  <span><strong>Consultation &amp; Planning:</strong> Scoping clinical workflows, compliance mandates, and architectural blueprints.</span>
+                </li>
+                <li class="experience-solution-item">
+                  <span class="check-icon-circle" aria-hidden="true">&#10003;</span>
+                  <span><strong>Development &amp; Integration:</strong> HIPAA-compliant agile sprints, FHIR APIs, and AI agent orchestration.</span>
+                </li>
+                <li class="experience-solution-item">
+                  <span class="check-icon-circle" aria-hidden="true">&#10003;</span>
+                  <span><strong>Deployment &amp; Support:</strong> Zero-downtime go-live, clinician onboarding, and 24/7 security maintenance.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="experience-actions">
+              <a href="#lead-form" class="btn-primary-pill"
+                aria-label="Request custom healthcare software development consultation" title="Request A Free Consultation">
+                Request A Free Consultation
+              </a>
+            </div>
+          </div>
+
+          <!-- RIGHT COLUMN: VISUAL SHOWCASE -->
+          <div class="experience-col-visual">
+            <div class="experience-visual-wrapper">
+              <figure class="experience-image-figure">
+                <img src="assets/images/digital-experience.webp"
+                  alt="Modernizing Clinical and Administrative Operations with Healthcare Software Development"
+                  class="experience-featured-img" loading="lazy" width="600" height="450">
+              </figure>
+
+              <!-- Floating highlight cards -->
+              <div class="experience-floating-card top-floating-card">
+                <div class="floating-icon-box" aria-hidden="true">🛡️</div>
+                <div>
+                  <h4 class="floating-title">HIPAA &amp; FHIR Ready</h4>
+                  <p class="floating-subtitle">Zero-Trust Medical Security</p>
+                </div>
+              </div>
+
+              <div class="experience-floating-card bottom-floating-card">
+                <div class="floating-icon-box" aria-hidden="true">⚡</div>
+                <div>
+                  <h4 class="floating-title">99.9% Clinical Uptime</h4>
+                  <p class="floating-subtitle">High-Availability Cloud</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 3: COMPREHENSIVE HEALTHCARE SERVICES GRID ==================== -->
+    <section class="services-section" aria-label="Strategic Healthcare Software Development Services">
+      <div class="vizz-container">
+
+        <!-- SECTION HEADER -->
+        <div class="section-header-center">
+          <div class="section-badge-dark">
+            <span class="badge-dot-cyan" aria-hidden="true"></span>
+            <span>Comprehensive HealthTech Services</span>
+          </div>
+          <h2 class="section-title text-white">
+            Turn Clinical Complexities into Scalable Solutions with <span class="text-highlight-cyan">Strategic HealthTech Services</span>
+          </h2>
+          <p class="section-intro-text text-muted-dark">
+            Explore our specialized development capabilities designed to modernize clinical care, patient engagement, and administrative operations.
+          </p>
+        </div>
+
+        <!-- 8 SERVICES GRID (SPLIDE SLIDER ON MOBILE <= 991px, GRID ON DESKTOP) -->
+        <div class="splide services-slider" id="healthcare-services-slider" aria-label="Healthcare Software Development Services Slider">
+          <div class="splide__track">
+            <div class="splide__list services-grid-8">
+
+              <!-- Service 1 -->
+              <div class="splide__slide">
+                <article class="service-card-item">
+                  <div class="service-card-header">
+                    <div class="service-card-icon" aria-hidden="true">💻</div>
+                    <h3 class="service-card-title text-white">Healthcare Web Applications</h3>
+                  </div>
+                  <p class="service-card-desc text-muted-dark">
+                    Custom web platforms that centralize clinical and administrative information, making critical workflows accessible through secure, responsive interfaces for clinicians, staff, and executives.
+                  </p>
+                </article>
+              </div>
+
+              <!-- Service 2 -->
+              <div class="splide__slide">
+                <article class="service-card-item">
+                  <div class="service-card-header">
+                    <div class="service-card-icon" aria-hidden="true">📱</div>
+                    <h3 class="service-card-title text-white">Healthcare Mobile Apps</h3>
+                  </div>
+                  <p class="service-card-desc text-muted-dark">
+                    Extending clinical and administrative workflows to smartphones and tablets for remote patient monitoring, e-prescribing, secure messaging, patient check-in, and virtual care visits.
+                  </p>
+                </article>
+              </div>
+
+              <!-- Service 3 -->
+              <div class="splide__slide">
+                <article class="service-card-item">
+                  <div class="service-card-header">
+                    <div class="service-card-icon" aria-hidden="true">☁️</div>
+                    <h3 class="service-card-title text-white">Cloud-Based Solutions</h3>
+                  </div>
+                  <p class="service-card-desc text-muted-dark">
+                    HIPAA-compliant cloud platforms connecting multiple clinics, hospitals, and labs with centralized data access, hybrid architectures, and high-scalability infrastructure.
+                  </p>
+                </article>
+              </div>
+
+              <!-- Service 4 -->
+              <div class="splide__slide">
+                <article class="service-card-item">
+                  <div class="service-card-header">
+                    <div class="service-card-icon" aria-hidden="true">🤖</div>
+                    <h3 class="service-card-title text-white">Chatbots &amp; AI Agents</h3>
+                  </div>
+                  <p class="service-card-desc text-muted-dark">
+                    LLM-powered virtual assistants and Agentic AI using RAG orchestration for symptom triage, automated appointment scheduling, billing queries, and clinical documentation support.
+                  </p>
+                </article>
+              </div>
+
+              <!-- Service 5 -->
+              <div class="splide__slide">
+                <article class="service-card-item">
+                  <div class="service-card-header">
+                    <div class="service-card-icon" aria-hidden="true">🎨</div>
+                    <h3 class="service-card-title text-white">Healthcare UI/UX Design</h3>
+                  </div>
+                  <p class="service-card-desc text-muted-dark">
+                    Human-centered, ADA- and WCAG-conscious user interfaces designed to simplify complex clinical journeys and reduce cognitive load for doctors, nurses, and patients.
+                  </p>
+                </article>
+              </div>
+
+              <!-- Service 6 -->
+              <div class="splide__slide">
+                <article class="service-card-item">
+                  <div class="service-card-header">
+                    <div class="service-card-icon" aria-hidden="true">📊</div>
+                    <h3 class="service-card-title text-white">BI &amp; Healthcare Analytics</h3>
+                  </div>
+                  <p class="service-card-desc text-muted-dark">
+                    Unifying disparate EHR, billing, and lab data into real-time BI dashboards tracking patient outcomes, readmissions, claims denials, provider productivity, and RCM performance.
+                  </p>
+                </article>
+              </div>
+
+              <!-- Service 7 -->
+              <div class="splide__slide">
+                <article class="service-card-item">
+                  <div class="service-card-header">
+                    <div class="service-card-icon" aria-hidden="true">🔄</div>
+                    <h3 class="service-card-title text-white">HL7, FHIR &amp; API Integration</h3>
+                  </div>
+                  <p class="service-card-desc text-muted-dark">
+                    Secure interoperability middleware connecting EHRs (Epic, Cerner), labs, pharmacies, clearinghouses, and medical IoT devices via HL7, FHIR, EDI, and custom REST/GraphQL APIs.
+                  </p>
+                </article>
+              </div>
+
+              <!-- Service 8 -->
+              <div class="splide__slide">
+                <article class="service-card-item">
+                  <div class="service-card-header">
+                    <div class="service-card-icon" aria-hidden="true">🛡️</div>
+                    <h3 class="service-card-title text-white">Maintenance &amp; Support</h3>
+                  </div>
+                  <p class="service-card-desc text-muted-dark">
+                    Continuous application monitoring, security patches, performance optimization, database tuning, and gradual legacy modernization under guaranteed SLAs.
+                  </p>
+                </article>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- BOTTOM ACTION BUTTON -->
+        <div class="service-section-cta">
+          <a href="#lead-form" class="btn-primary-pill"
+            aria-label="Request a custom quote for healthcare software development services" title="Request A Free Consultation">
+            Request A Free Consultation
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 4: DEEP DIVE 1 - WEB & MOBILE APPLICATIONS ==================== -->
+    <section class="feature-split-section section-light" aria-label="Healthcare Web and Mobile Application Development">
+      <div class="vizz-container">
+        <div class="feature-split-flex">
+
+          <!-- LEFT COLUMN: CONTENT -->
+          <div class="feature-content-col">
+            <div class="section-badge-light">
+              <span class="badge-dot-cyan" aria-hidden="true"></span>
+              <span>Web &amp; Mobile Engineering</span>
+            </div>
+
+            <h2 class="section-title">
+              Connected Clinical Workflows Across <span class="text-highlight-cyan">Web &amp; Mobile Ecosystems</span>
+            </h2>
+
+            <p class="section-lead-text">
+              We engineer custom digital solutions that empower healthcare teams and patients with real-time access to critical tools across all devices.
+            </p>
+
+            <div class="feature-blocks-container">
+              <!-- Block 1: Web App Dev -->
+              <div class="feature-item-block">
+                <div class="feature-block-header">
+                  <span class="feature-block-icon" aria-hidden="true">💻</span>
+                  <h3 class="feature-block-title">Healthcare Web Application Development</h3>
+                </div>
+                <p class="feature-block-desc">
+                  We develop <a href="https://vizzwebsolutions.com/services/web-development/custom/" class="inline-brand-link" aria-label="Explore custom web applications development by Vizz Web Solutions" title="Custom Web Applications">custom web applications</a> for healthcare that centralize clinical and administrative information and make critical workflows accessible through secure, responsive interfaces. These solutions can be designed for physicians, nurses, administrative staff, billing teams, care coordinators, and healthcare executives.
+                </p>
+                <p class="feature-block-desc mt-2">
+                  Depending on your requirements, a healthcare web platform can support clinical documentation, scheduling, patient records, billing, care coordination, reporting, or multi-location practice management. We focus on creating applications that are practical for daily clinical use and flexible enough to evolve with your organization.
+                </p>
+              </div>
+
+              <!-- Block 2: Mobile App Dev -->
+              <div class="feature-item-block">
+                <div class="feature-block-header">
+                  <span class="feature-block-icon" aria-hidden="true">📱</span>
+                  <h3 class="feature-block-title">Healthcare Mobile App Development</h3>
+                </div>
+                <p class="feature-block-desc">
+                  Clinicians, care teams, and patients increasingly need access to health information outside the four walls of a clinic or hospital. Our <a href="https://vizzwebsolutions.com/services/mobile-application/" class="inline-brand-link" aria-label="Explore mobile app development services by Vizz Web Solutions" title="Mobile App Development Services">mobile app development services</a> help extend essential clinical and administrative workflows to smartphones and tablets.
+                </p>
+                <p class="feature-block-desc mt-2">
+                  We can develop mobile applications for remote patient monitoring, e-prescribing, secure clinician messaging, patient check-in, appointment reminders, medication tracking, and virtual care visits. The objective is to give clinicians and patients faster access to the tools and information they need, without relying entirely on desktop systems or paper processes.
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <a href="#lead-form" class="btn-primary-pill"
+                aria-label="Consult with our web and mobile healthtech engineers" title="Request A Free Consultation">
+                Request A Free Consultation
+              </a>
+            </div>
+          </div>
+
+          <!-- RIGHT COLUMN: VISUAL SHOWCASE -->
+          <div class="feature-visual-col">
+            <div class="feature-visual-wrapper">
+              <figure class="feature-image-figure">
+                <img src="assets/images/web-applications.webp"
+                  alt="Custom healthcare web applications and intuitive mobile health apps for clinicians and patients"
+                  class="feature-featured-img" loading="lazy" width="600" height="460">
+              </figure>
+
+              <div class="experience-floating-card top-floating-card">
+                <div class="floating-icon-box" aria-hidden="true">📲</div>
+                <div>
+                  <h4 class="floating-title">Multi-Platform Sync</h4>
+                  <p class="floating-subtitle">Web, iOS &amp; Android</p>
+                </div>
+              </div>
+
+              <div class="experience-floating-card bottom-floating-card">
+                <div class="floating-icon-box" aria-hidden="true">🩺</div>
+                <div>
+                  <h4 class="floating-title">mHealth &amp; IoT Ready</h4>
+                  <p class="floating-subtitle">Secure Telehealth &amp; RPM</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 5: DEEP DIVE 2 - CLOUD SOLUTIONS & AI AGENTS ==================== -->
+    <section class="feature-split-section section-dark" aria-label="Cloud-Based Healthcare Solutions and AI Agent Development">
+      <div class="vizz-container">
+        <div class="feature-split-flex flex-reverse">
+
+          <!-- RIGHT COLUMN: CONTENT -->
+          <div class="feature-content-col">
+            <div class="section-badge-dark">
+              <span class="badge-dot-cyan" aria-hidden="true"></span>
+              <span>Cloud &amp; Agentic AI</span>
+            </div>
+
+            <h2 class="section-title text-white">
+              Scalable Cloud Platforms &amp; <span class="text-highlight-cyan">Agentic AI Healthcare Assistants</span>
+            </h2>
+
+            <p class="section-lead-text text-muted-dark">
+              Modernize your healthcare infrastructure with resilient cloud architectures and intelligent AI agents engineered for PHI confidentiality.
+            </p>
+
+            <div class="feature-blocks-container">
+              <!-- Block 1: Cloud Solutions -->
+              <div class="feature-item-block">
+                <div class="feature-block-header">
+                  <span class="feature-block-icon" aria-hidden="true">☁️</span>
+                  <h3 class="feature-block-title text-white">Cloud-Based Healthcare Solutions</h3>
+                </div>
+                <p class="feature-block-desc text-muted-dark">
+                  We build <a href="https://vizzwebsolutions.com/services/software-development/cloud/" class="inline-brand-link" aria-label="Explore cloud-based software solutions by Vizz Web Solutions" title="Cloud-Based Software Solutions">cloud-based software solutions</a> for healthcare that need better scalability, centralized data access, flexible infrastructure, and easier collaboration across facilities, departments, and care teams. A cloud healthcare platform can connect multiple clinics, hospitals, labs, and operational data sources within a centralized, HIPAA compliant environment.
+                </p>
+                <p class="feature-block-desc text-muted-dark mt-2">
+                  We can also support cloud migration, hybrid architectures, cloud-native application development, data platforms, analytics environments, and HL7/FHIR-based API integrations. For healthcare organizations that still depend on on-premise legacy systems, we can design hybrid solutions that combine existing infrastructure with modern cloud services rather than forcing an unnecessary full migration.
+                </p>
+              </div>
+
+              <!-- Block 2: AI Agents & Chatbots -->
+              <div class="feature-item-block">
+                <div class="feature-block-header">
+                  <span class="feature-block-icon" aria-hidden="true">🤖</span>
+                  <h3 class="feature-block-title text-white">Healthcare Chatbots &amp; AI Agent Development</h3>
+                </div>
+                <p class="feature-block-desc text-muted-dark">
+                  AI-powered assistants can make complex healthcare information easier to access for patients and staff alike. We develop healthcare chatbots, LLM-powered virtual health assistants, and agentic AI systems that can help patients, clinicians, and support teams find relevant information faster and act on it automatically.
+                </p>
+                <p class="feature-block-desc text-muted-dark mt-2">
+                  A healthcare chatbot or AI agent can be designed to assist with symptom triage, appointment scheduling, insurance and billing questions, medication reminders, or clinical documentation support. Using retrieval-augmented generation (RAG) and multi-agent orchestration built on de-identified or synthetic data, these assistants can connect with approved EHR, scheduling, and billing systems to provide contextual, real-time answers while maintaining PHI security.
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <a href="#lead-form" class="btn-primary-pill"
+                aria-label="Build cloud healthcare platforms and AI agents with Vizz Web" title="Request A Free Consultation">
+                Request A Free Consultation
+              </a>
+            </div>
+          </div>
+
+          <!-- LEFT COLUMN: VISUAL SHOWCASE -->
+          <div class="feature-visual-col">
+            <div class="feature-visual-wrapper">
+              <figure class="feature-image-figure">
+                <img src="assets/images/enterprise-solutions.webp"
+                  alt="Cloud healthcare architecture, hybrid clinical databases, and Agentic AI medical assistant workflows"
+                  class="feature-featured-img" loading="lazy" width="600" height="460">
+              </figure>
+
+              <div class="experience-floating-card top-floating-card">
+                <div class="floating-icon-box" aria-hidden="true">🔒</div>
+                <div>
+                  <h4 class="floating-title">HIPAA Cloud BAA</h4>
+                  <p class="floating-subtitle">Encrypted &amp; Isolated Data</p>
+                </div>
+              </div>
+
+              <div class="experience-floating-card bottom-floating-card">
+                <div class="floating-icon-box" aria-hidden="true">🧠</div>
+                <div>
+                  <h4 class="floating-title">RAG &amp; LLM Powered</h4>
+                  <p class="floating-subtitle">Contextual Medical AI</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 6: DEEP DIVE 3 - UI/UX DESIGN & BI ANALYTICS ==================== -->
+    <section class="feature-split-section section-light" aria-label="Healthcare Software UI/UX Design and Business Intelligence">
+      <div class="vizz-container">
+        <div class="feature-split-flex">
+
+          <!-- LEFT COLUMN: CONTENT -->
+          <div class="feature-content-col">
+            <div class="section-badge-light">
+              <span class="badge-dot-cyan" aria-hidden="true"></span>
+              <span>Design &amp; Intelligence</span>
+            </div>
+
+            <h2 class="section-title">
+              Human-Centered UI/UX Design &amp; <span class="text-highlight-cyan">Healthcare Analytics</span>
+            </h2>
+
+            <p class="section-lead-text">
+              Transform clinical complexity into intuitive interfaces and unlock actionable insights from your organization's operational and medical data.
+            </p>
+
+            <div class="feature-blocks-container">
+              <!-- Block 1: UI/UX Design -->
+              <div class="feature-item-block">
+                <div class="feature-block-header">
+                  <span class="feature-block-icon" aria-hidden="true">🎨</span>
+                  <h3 class="feature-block-title">Healthcare Software UI/UX Design</h3>
+                </div>
+                <p class="feature-block-desc">
+                  Clinical applications can become dangerous, not just difficult, when too much information is presented without a clear hierarchy. Our <a href="https://vizzwebsolutions.com/services/design-and-marketing/ui-ux-design-services/" class="inline-brand-link" aria-label="Explore UI/UX design services by Vizz Web Solutions" title="UI/UX Design Services">UI/UX design services</a> for healthcare software focus on simplifying complex clinical workflows and creating interfaces that reduce clinician burden rather than adding to it.
+                </p>
+                <p class="feature-block-desc mt-2">
+                  We design ADA- and WCAG-conscious user experiences for physicians, nurses, administrative staff, billing teams, and patients. From wireframes and clinical user journeys to dashboards and high-fidelity interfaces, we focus on clarity, usability, speed, and safe task completion in high-stakes environments.
+                </p>
+              </div>
+
+              <!-- Block 2: BI & Analytics -->
+              <div class="feature-item-block">
+                <div class="feature-block-header">
+                  <span class="feature-block-icon" aria-hidden="true">📊</span>
+                  <h3 class="feature-block-title">Healthcare Business Intelligence &amp; Analytics</h3>
+                </div>
+                <p class="feature-block-desc">
+                  Healthcare organizations generate large amounts of clinical and operational data, but that data often sits across EHRs, billing systems, labs, and separate applications. Our healthcare analytics solutions help bring this information together and turn it into dashboards, reports, and useful clinical and operational insights.
+                </p>
+                <p class="feature-block-desc mt-2">
+                  Depending on the available data, healthcare BI solutions can help track patient outcomes, readmission rates, appointment no-shows, claims denial rates, provider productivity, population health trends, and revenue cycle performance.
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <a href="#lead-form" class="btn-primary-pill"
+                aria-label="Design intuitive healthcare UI/UX and BI analytics dashboards" title="Request A Free Consultation">
+                Request A Free Consultation
+              </a>
+            </div>
+          </div>
+
+          <!-- RIGHT COLUMN: VISUAL SHOWCASE -->
+          <div class="feature-visual-col">
+            <div class="feature-visual-wrapper">
+              <figure class="feature-image-figure">
+                <img src="assets/images/custom-websites.webp"
+                  alt="Medical UI/UX design interfaces, clinician usability dashboards, and healthcare business intelligence charts"
+                  class="feature-featured-img" loading="lazy" width="600" height="460">
+              </figure>
+
+              <div class="experience-floating-card top-floating-card">
+                <div class="floating-icon-box" aria-hidden="true">♿</div>
+                <div>
+                  <h4 class="floating-title">WCAG 2.1 AA Compliant</h4>
+                  <p class="floating-subtitle">Accessible &amp; Safe UI</p>
+                </div>
+              </div>
+
+              <div class="experience-floating-card bottom-floating-card">
+                <div class="floating-icon-box" aria-hidden="true">📈</div>
+                <div>
+                  <h4 class="floating-title">Real-Time BI Insights</h4>
+                  <p class="floating-subtitle">RCM &amp; Clinical Analytics</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 7: DEEP DIVE 4 - HL7/FHIR & SOFTWARE MAINTENANCE ==================== -->
+    <section class="feature-split-section section-dark" aria-label="HL7 FHIR Interoperability and Healthcare Software Maintenance">
+      <div class="vizz-container">
+        <div class="feature-split-flex flex-reverse">
+
+          <!-- RIGHT COLUMN: CONTENT -->
+          <div class="feature-content-col">
+            <div class="section-badge-dark">
+              <span class="badge-dot-cyan" aria-hidden="true"></span>
+              <span>Interoperability &amp; Support</span>
+            </div>
+
+            <h2 class="section-title text-white">
+              Seamless Healthcare Interoperability, <span class="text-highlight-cyan">FHIR APIs &amp; Maintenance</span>
+            </h2>
+
+            <p class="section-lead-text text-muted-dark">
+              Bridge proprietary data models, connect with health networks, and protect your software investments with ongoing engineering support.
+            </p>
+
+            <div class="feature-blocks-container">
+              <!-- Block 1: HL7 FHIR APIs -->
+              <div class="feature-item-block">
+                <div class="feature-block-header">
+                  <span class="feature-block-icon" aria-hidden="true">🔄</span>
+                  <h3 class="feature-block-title text-white">HL7, FHIR &amp; Healthcare API Integration</h3>
+                </div>
+                <p class="feature-block-desc text-muted-dark">
+                  Healthcare environments rarely depend on a single system. EHRs, labs, pharmacies, billing clearinghouses, payers, medical devices, and third-party applications often need to exchange information securely and in real time.
+                </p>
+                <p class="feature-block-desc text-muted-dark mt-2">
+                  Our healthcare interoperability and <a href="https://vizzwebsolutions.com/services/api-development-and-integration-expert/" class="inline-brand-link" aria-label="Explore API development and integration services by Vizz Web Solutions" title="API Development and Integration Services">API integration services</a> help connect these platforms through HL7 integration, FHIR integration, EDI, and secure middleware. This can reduce duplicate data entry, improve care coordination, and support true healthcare interoperability across the continuum of care.
+                </p>
+                <p class="feature-block-desc text-muted-dark mt-2">
+                  We can support EHR integration, EMR integration, lab and pharmacy connections, payer and clearinghouse data exchange, medical device and wearable integrations, and custom APIs that bridge proprietary or legacy data models.
+                </p>
+              </div>
+
+              <!-- Block 2: Software Maintenance -->
+              <div class="feature-item-block">
+                <div class="feature-block-header">
+                  <span class="feature-block-icon" aria-hidden="true">🛡️</span>
+                  <h3 class="feature-block-title text-white">Software Maintenance &amp; Support</h3>
+                </div>
+                <p class="feature-block-desc text-muted-dark">
+                  Healthcare software needs to remain reliable as regulations, patient volumes, and technology stacks evolve. Our software maintenance and support services help keep healthcare applications secure, stable, scalable, and aligned with changing clinical and regulatory needs.
+                </p>
+                <p class="feature-block-desc text-muted-dark mt-2">
+                  Support can include bug resolution, performance optimization, application monitoring, security updates, feature development, infrastructure improvements, integration maintenance, database optimization, and technology upgrades. We can also help organizations modernize legacy healthcare applications gradually when replacing an entire system at once would create unnecessary clinical risk.
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <a href="#lead-form" class="btn-primary-pill"
+                aria-label="Connect your healthcare systems and secure ongoing maintenance" title="Request A Free Consultation">
+                Request A Free Consultation
+              </a>
+            </div>
+          </div>
+
+          <!-- LEFT COLUMN: VISUAL SHOWCASE -->
+          <div class="feature-visual-col">
+            <div class="feature-visual-wrapper">
+              <figure class="feature-image-figure">
+                <img src="assets/images/api-integrations.webp"
+                  alt="HL7 and FHIR healthcare API integration middleware connecting EHR systems and medical devices"
+                  class="feature-featured-img" loading="lazy" width="600" height="460">
+              </figure>
+
+              <div class="experience-floating-card top-floating-card">
+                <div class="floating-icon-box" aria-hidden="true">⚡</div>
+                <div>
+                  <h4 class="floating-title">SMART on FHIR</h4>
+                  <p class="floating-subtitle">Interoperable EHR Connectors</p>
+                </div>
+              </div>
+
+              <div class="experience-floating-card bottom-floating-card">
+                <div class="floating-icon-box" aria-hidden="true">🛠️</div>
+                <div>
+                  <h4 class="floating-title">24/7 SLA Support</h4>
+                  <p class="floating-subtitle">Proactive Security &amp; Uptime</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 8: MID-PAGE HIGH-IMPACT CALL TO ACTION ==================== -->
+    <section class="mid-page-cta-section" aria-label="Healthcare Software Development Consultation Call to Action">
+      <div class="vizz-container">
+        <div class="mid-cta-box">
+          <div class="section-badge-dark">
+            <span class="badge-dot-cyan" aria-hidden="true"></span>
+            <span>Let's Build Together</span>
+          </div>
+
+          <h2 class="mid-cta-title">
+            Ready to Build Secure, Scalable <br><span class="text-highlight-cyan">Healthcare Technology?</span>
+          </h2>
+
+          <p class="mid-cta-desc">
+            Partner with Vizz Web Solutions to develop custom healthcare web applications, mobile platforms, Agentic AI assistants, and FHIR-compliant architectures tailored to your medical organization.
+          </p>
+
+          <div class="mid-cta-actions">
+            <a href="#lead-form" class="btn-primary-pill"
+              aria-label="Request a tailored proposal for healthcare software development" title="Request A Free Proposal">
+              Request A Free Proposal
+            </a>
+            <a href="tel:+18005558499" class="btn-secondary-pill"
+              aria-label="Call Vizz Web Solutions healthcare specialists" title="Call Our Specialists">
+              Call +1 (800) 555-VIZZ
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <!-- Dedicated Healthcare Script -->
+  <!-- External & Dedicated Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
   <script src="assets/js/healthcare-slider.js" defer></script>
 
 </body>
