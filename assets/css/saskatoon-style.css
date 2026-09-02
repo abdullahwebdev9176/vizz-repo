@@ -1566,7 +1566,267 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   17. RESPONSIVE MEDIA QUERIES
+   17. SECTION 12: SASKATOON & SURROUNDING SERVICE AREA (PREMIUM REDESIGN)
+   -------------------------------------------------------------------------- */
+.service-area-section {
+  position: relative;
+  background-color: var(--bg-dark);
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+.service-area-section::before {
+  content: '';
+  position: absolute;
+  top: -15%;
+  right: -10%;
+  width: 750px;
+  height: 750px;
+  background: radial-gradient(circle, rgba(0, 180, 216, 0.15) 0%, rgba(7, 21, 43, 0) 70%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.service-area-section::after {
+  content: '';
+  position: absolute;
+  bottom: -20%;
+  left: -10%;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(0, 136, 255, 0.12) 0%, rgba(7, 21, 43, 0) 70%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.service-area-flex {
+  display: flex;
+  align-items: stretch;
+  gap: 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.service-area-col-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.service-area-col-right {
+  flex: 1.15;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.service-area-summary-box {
+  background: rgba(14, 34, 70, 0.7);
+  border-left: 4px solid var(--btn-cyan);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0 14px 14px 0;
+  padding: 24px 26px;
+  margin-top: 18px;
+  margin-bottom: 30px;
+  backdrop-filter: blur(10px);
+}
+
+.service-area-summary-text {
+  font-family: var(--font-family);
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--text-white);
+  margin: 0;
+}
+
+/* Category Cards on the Right */
+.service-zone-card {
+  background: var(--bg-dark-card);
+  border: 1px solid rgba(0, 180, 216, 0.25);
+  border-radius: var(--border-radius-card);
+  padding: 26px 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease-in-out;
+}
+
+.service-zone-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--btn-primary);
+  box-shadow: 0 16px 40px rgba(0, 136, 255, 0.18);
+  background: rgba(14, 34, 70, 0.95);
+}
+
+.service-zone-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.service-zone-icon {
+  width: 38px;
+  height: 38px;
+  background: rgba(0, 180, 216, 0.12);
+  border: 1px solid rgba(0, 180, 216, 0.3);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.service-zone-title {
+  font-family: var(--font-family);
+  font-size: 17.5px;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--white-color);
+  margin: 0;
+}
+
+.service-zone-chips-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.service-location-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-family);
+  font-size: 13px;
+  font-weight: 500;
+  color: #e2e8f0;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 6px 14px;
+  border-radius: var(--border-radius-pill);
+  transition: all 0.25s ease;
+}
+
+.service-location-chip:hover {
+  background: rgba(0, 180, 216, 0.2);
+  border-color: var(--btn-cyan);
+  color: var(--white-color);
+  transform: translateY(-2px);
+}
+
+.service-location-chip::before {
+  content: '•';
+  color: var(--btn-cyan);
+  font-size: 14px;
+  line-height: 1;
+}
+
+/* --------------------------------------------------------------------------
+   18. SECTION 13: HIRE DEDICATED WEBSITE DEVELOPER (LIGHT)
+   -------------------------------------------------------------------------- */
+.hire-developer-section {
+  position: relative;
+  background-color: var(--bg-light);
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+.hire-developer-flex {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.hire-dev-col-content {
+  flex: 1.15;
+}
+
+.hire-dev-col-visual {
+  flex: 0.85;
+}
+
+.hire-dev-lead-text {
+  font-family: var(--font-family);
+  font-size: 16px;
+  color: var(--text-muted-light);
+  line-height: 1.8;
+  margin-bottom: 28px;
+}
+
+.hire-dev-highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.hire-dev-highlight-card {
+  background: var(--bg-light-alt);
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  padding: 16px 14px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease;
+}
+
+.hire-dev-highlight-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(0, 180, 216, 0.45);
+  box-shadow: 0 10px 24px rgba(7, 21, 43, 0.06);
+}
+
+.hire-dev-highlight-icon {
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.hire-dev-highlight-title {
+  font-family: var(--font-family);
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.hire-image-wrapper {
+  position: relative;
+  border-radius: var(--border-radius-card);
+}
+
+.hire-image-figure {
+  margin: 0;
+  border-radius: var(--border-radius-card);
+  overflow: hidden;
+  box-shadow: var(--shadow-card-elevated);
+  border: 1px solid var(--border-light);
+  background: var(--bg-dark);
+}
+
+.hire-featured-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.4s ease-in-out;
+}
+
+.hire-image-figure:hover .hire-featured-img {
+  transform: scale(1.02);
+}
+
+.hire-dev-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+}
+
+/* --------------------------------------------------------------------------
+   19. RESPONSIVE MEDIA QUERIES
    -------------------------------------------------------------------------- */
 @media screen and (max-width: 1200px) {
   :root {
@@ -1608,14 +1868,18 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   .process-approach-section,
   .saskatoon-industries-section,
   .cost-factors-section,
-  .partner-section {
+  .partner-section,
+  .service-area-section,
+  .hire-developer-section {
     padding: 70px 0 60px;
   }
 
   .hero-section-flex,
   .experience-flex,
   .challenges-intro-flex,
-  .partner-flex {
+  .partner-flex,
+  .service-area-flex,
+  .hire-developer-flex {
     flex-direction: column;
     gap: 40px;
   }
@@ -1627,7 +1891,11 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   .challenges-intro-content,
   .challenges-intro-visual,
   .partner-col-content,
-  .partner-col-visual {
+  .partner-col-visual,
+  .service-area-col-left,
+  .service-area-col-right,
+  .hire-dev-col-content,
+  .hire-dev-col-visual {
     width: 100%;
     flex: none;
     padding: 0;
@@ -1673,7 +1941,8 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   .section-intro-text,
   .challenges-lead-text,
   .challenges-desc-text,
-  .partner-lead-text {
+  .partner-lead-text,
+  .hire-dev-lead-text {
     font-size: 15px;
   }
 
@@ -1682,7 +1951,8 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   }
 
   .experience-actions,
-  .partner-actions {
+  .partner-actions,
+  .hire-dev-actions {
     justify-content: flex-start;
   }
 }
@@ -1703,7 +1973,8 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   .challenge-card-title,
   .process-card-title,
   .cost-factor-title,
-  .partner-point-title {
+  .partner-point-title,
+  .service-zone-title {
     font-size: 18px;
   }
 
@@ -1734,7 +2005,8 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 
   .experience-visual-wrapper,
   .challenges-image-wrapper,
-  .partner-image-wrapper {
+  .partner-image-wrapper,
+  .hire-image-wrapper {
     padding: 0;
   }
 
@@ -1745,7 +2017,8 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   .challenge-card,
   .process-card,
   .cost-factor-card,
-  .partner-point-item {
+  .partner-point-item,
+  .service-zone-card {
     padding: 24px 20px;
   }
 
@@ -1758,6 +2031,10 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 
   .industries-grid-10 {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hire-dev-highlights-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -1783,7 +2060,9 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   .process-card-desc,
   .cost-factor-desc,
   .partner-lead-text,
-  .partner-point-desc {
+  .partner-point-desc,
+  .service-area-summary-text,
+  .hire-dev-lead-text {
     font-size: 14px;
     line-height: 1.65;
   }
