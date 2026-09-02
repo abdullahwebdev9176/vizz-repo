@@ -1,0 +1,800 @@
+/* ==========================================================================
+   VIZZ WEB - SASKATOON DEDICATED STYLESHEET
+   Page: saskatoon.html
+   Design System: Poppins Font, Core Color Tokens, & SEO-Compliant Architecture
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. GOOGLE FONT: POPPINS IMPORT
+   -------------------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* --------------------------------------------------------------------------
+   2. CORE COLOR PALETTE & CSS VARIABLES (Same as index.html)
+   -------------------------------------------------------------------------- */
+:root {
+  /* 🔤 Typography & Font Family */
+  --font-family: 'Poppins', sans-serif;
+
+  /* 🔘 Button & Accent Colors */
+  --btn-primary: #17a1fe;
+  --btn-primary-hover: #006ed4;
+  --btn-cyan: #00b4d8;
+  --btn-color: #17a1fe;
+  --btn-color-hover: #ffffff;
+  --white-color: #ffffff;
+
+  /* 🌌 Background Colors */
+  --bg-dark: #07152b;
+  --bg-dark-card: #0e2246;
+  --bg-light: #ffffff;
+  --bg-light-alt: #f4f8fc;
+
+  /* ✍️ Font / Text Colors */
+  --text-white: #ffffff;
+  --text-dark: #0b1a30;
+  --text-muted-dark: #cbd5e1;
+  --text-muted-light: #4a5568;
+  --text-cyan: #00b4d8;
+
+  /* UI Borders & Radii */
+  --border-radius-pill: 10px;
+  --border-radius-card: 16px;
+  --border-radius-input: 8px;
+  --border-light: #e2e8f0;
+  --border-dark: #1b3252;
+
+  /* Shadows */
+  --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.05);
+  --shadow-card-elevated: 0 20px 45px rgba(0, 0, 0, 0.28);
+  --shadow-btn: 0 8px 25px rgba(0, 136, 255, 0.35);
+
+  /* Layout */
+  --max-width-container: calc(100% - 20%);
+}
+
+/* --------------------------------------------------------------------------
+   3. GLOBAL BASE, RESETS & TYPOGRAPHY
+   -------------------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-family);
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-light);
+  color: var(--text-muted-light);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Headings Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family);
+  color: var(--text-dark);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+/* Text Elements Typography */
+p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
+  font-family: var(--font-family);
+}
+
+/* Shared Container */
+.vizz-container {
+  width: 100%;
+  max-width: var(--max-width-container);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* Highlight Text Gradient */
+.text-highlight-cyan {
+  font-family: var(--font-family);
+  color: var(--text-cyan);
+  background: linear-gradient(90deg, #00b4d8 0%, #22d3ee 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   4. BUTTON COMPONENTS (Pill CTA Buttons)
+   -------------------------------------------------------------------------- */
+.btn-primary-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px !important;
+  padding-right: 30px !important;
+  padding-bottom: 10px !important;
+  padding-left: 30px !important;
+  border-radius: 10px !important;
+  background: var(--btn-color);
+  border: 1px solid var(--btn-color);
+  color: var(--white-color) !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  font-family: 'Poppins', sans-serif !important;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: var(--shadow-btn);
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+}
+
+.btn-primary-pill:hover {
+  background: var(--btn-color-hover);
+  border: 1px solid var(--btn-color);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0, 136, 255, 0.5);
+  color: var(--btn-color) !important;
+}
+
+.btn-primary-pill:active {
+  transform: translateY(0);
+}
+
+.btn-secondary-pill,
+.btn-outline-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px !important;
+  padding-right: 30px !important;
+  padding-bottom: 10px !important;
+  padding-left: 30px !important;
+  border-radius: 10px !important;
+  background: var(--white-color);
+  border: 1px solid var(--btn-color);
+  color: var(--btn-color) !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  font-family: 'Poppins', sans-serif !important;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: var(--shadow-btn);
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+}
+
+.btn-secondary-pill:hover,
+.btn-outline-pill:hover {
+  background: var(--btn-color);
+  border: 1px solid var(--btn-color);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0, 136, 255, 0.5);
+  color: var(--white-color) !important;
+}
+
+.btn-secondary-pill:active,
+.btn-outline-pill:active {
+  transform: translateY(0);
+}
+
+/* --------------------------------------------------------------------------
+   5. HERO SECTION STYLES
+   -------------------------------------------------------------------------- */
+.hero-section {
+  position: relative;
+  background-color: var(--bg-dark);
+  background-image: linear-gradient(135deg, rgba(7, 21, 43, 0.92) 0%, rgba(11, 27, 54, 0.88) 50%, rgba(8, 29, 63, 0.94) 100%), 
+                    url('../images/hero-img.webp');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 100px 0 90px;
+  overflow: hidden;
+}
+
+/* Glowing Background Accents */
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: -15%;
+  left: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(0, 180, 216, 0.18) 0%, rgba(7, 21, 43, 0) 70%);
+  pointer-events: none;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.hero-section::after {
+  content: '';
+  position: absolute;
+  bottom: -20%;
+  right: -10%;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(0, 136, 255, 0.15) 0%, rgba(7, 21, 43, 0) 70%);
+  pointer-events: none;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.hero-section-flex {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Hero Left Column (Content) */
+.hero-col-1 {
+  flex: 1.15;
+  padding: 12px;
+}
+
+.hero-col-2 {
+  flex: 0.85;
+  padding: 12px;
+}
+
+/* Single H1 on the entire page */
+.hero-title {
+  font-family: var(--font-family);
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 1.22;
+  color: var(--text-white);
+  margin-bottom: 22px;
+  letter-spacing: -0.5px;
+}
+
+.hero-description {
+  font-family: var(--font-family);
+  font-size: 15.5px;
+  line-height: 1.75;
+  color: var(--text-muted-dark);
+  margin-bottom: 16px;
+}
+
+/* Hero Key Features List */
+.hero-highlights {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 32px;
+  font-family: var(--font-family);
+}
+
+.hero-highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-family);
+  font-size: 14.5px;
+  font-weight: 500;
+  color: #e2e8f0;
+}
+
+.check-icon-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  background: rgba(16, 185, 129, 0.2);
+  border: 1px solid #10b981;
+  border-radius: 50%;
+  color: #10b981;
+  font-size: 11px;
+  flex-shrink: 0;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+}
+
+/* --------------------------------------------------------------------------
+   6. HERO RIGHT COLUMN: LEAD CAPTURE FORM CARD
+   -------------------------------------------------------------------------- */
+.hero-form-card {
+  border-radius: var(--border-radius-card);
+  box-shadow: var(--shadow-card-elevated);
+  padding: 36px 32px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(14, 34, 70, 0.85);
+  backdrop-filter: blur(10px);
+  position: relative;
+  font-family: var(--font-family);
+}
+
+.form-card-header {
+  margin-bottom: 22px;
+  text-align: left;
+}
+
+.form-card-title {
+  font-family: var(--font-family);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--white-color);
+  margin-bottom: 6px;
+}
+
+.form-card-subtitle {
+  font-family: var(--font-family);
+  font-size: 14px;
+  color: #94a3b8;
+  line-height: 1.5;
+}
+
+/* Form Controls */
+.lead-capture-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-family: var(--font-family);
+}
+
+.form-row-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+  font-family: var(--font-family);
+}
+
+.form-label {
+  font-family: var(--font-family);
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--white-color);
+}
+
+.form-label .required-star {
+  color: #ef4444;
+  margin-left: 2px;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 14px;
+  font-family: var(--font-family);
+  color: var(--text-dark);
+  background-color: var(--bg-light-alt);
+  border: 1px solid var(--border-light);
+  border-radius: var(--border-radius-input);
+  transition: all 0.2s ease-in-out;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  font-family: var(--font-family);
+  color: #94a3b8;
+  font-size: 13.5px;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  background-color: var(--bg-light);
+  border-color: var(--btn-primary);
+  box-shadow: 0 0 0 3.5px rgba(0, 136, 255, 0.15);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 85px;
+}
+
+.form-privacy-note {
+  font-family: var(--font-family);
+  font-size: 12px;
+  color: #94a3b8;
+  text-align: center;
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+/* --------------------------------------------------------------------------
+   7. SECTION 2: DIGITAL EXPERIENCE & WHY BUSINESSES NEED WEB DEV
+   -------------------------------------------------------------------------- */
+.digital-experience-section {
+  position: relative;
+  background-color: var(--bg-light-alt);
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+.experience-flex {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.experience-col-content {
+  flex: 1.15;
+}
+
+.experience-col-visual {
+  flex: 0.85;
+}
+
+.section-badge-light {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0, 180, 216, 0.1);
+  border: 1px solid rgba(0, 180, 216, 0.25);
+  color: var(--btn-primary);
+  padding: 6px 16px;
+  border-radius: var(--border-radius-pill);
+  font-family: var(--font-family);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 18px;
+}
+
+.badge-dot-cyan {
+  width: 8px;
+  height: 8px;
+  background-color: var(--btn-primary);
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(0, 180, 216, 0.6);
+}
+
+.section-title {
+  font-family: var(--font-family);
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--text-dark);
+  margin-bottom: 20px;
+  letter-spacing: -0.4px;
+}
+
+.section-lead-text {
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-dark);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.section-description {
+  font-family: var(--font-family);
+  font-size: 15px;
+  color: var(--text-muted-light);
+  line-height: 1.75;
+  margin-bottom: 24px;
+}
+
+.inline-brand-link {
+  color: var(--btn-primary);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease-in-out;
+}
+
+.inline-brand-link:hover {
+  color: var(--btn-primary-hover);
+}
+
+.experience-solutions-box {
+  background: var(--bg-light);
+  border: 1px solid var(--border-light);
+  border-radius: var(--border-radius-card);
+  padding: 26px 28px;
+  margin-bottom: 22px;
+  box-shadow: var(--shadow-card);
+}
+
+.experience-subheading {
+  font-family: var(--font-family);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 18px;
+}
+
+.experience-benefit-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 24px;
+  font-family: var(--font-family);
+}
+
+.benefit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-family: var(--font-family);
+  font-size: 14px;
+  color: var(--text-muted-light);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.benefit-check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background: rgba(0, 180, 216, 0.12);
+  border: 1px solid rgba(0, 180, 216, 0.35);
+  border-radius: 50%;
+  color: var(--btn-primary);
+  font-size: 11px;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.experience-closing-text {
+  font-family: var(--font-family);
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-dark);
+  line-height: 1.7;
+  margin-bottom: 28px;
+  border-left: 3px solid var(--btn-primary);
+  padding-left: 16px;
+  text-align: left !important;
+}
+
+.experience-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+}
+
+/* Visual Showcase Column */
+.experience-visual-wrapper {
+  position: relative;
+  border-radius: var(--border-radius-card);
+  padding: 10px;
+}
+
+.experience-image-figure {
+  margin: 0;
+  border-radius: var(--border-radius-card);
+  overflow: hidden;
+  box-shadow: var(--shadow-card-elevated);
+  border: 1px solid var(--border-light);
+  background: var(--bg-dark);
+}
+
+.experience-featured-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.4s ease-in-out;
+}
+
+.experience-image-figure:hover .experience-featured-img {
+  transform: scale(1.02);
+}
+
+/* Floating Stat Badges */
+.experience-floating-card {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 16px 36px rgba(7, 21, 43, 0.14);
+  z-index: 3;
+  transition: transform 0.3s ease;
+}
+
+.experience-floating-card:hover {
+  transform: translateY(-4px);
+}
+
+.top-floating-card {
+  top: -15px;
+  right: -15px;
+}
+
+.bottom-floating-card {
+  bottom: -15px;
+  left: -15px;
+}
+
+.floating-icon-box {
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: rgba(0, 180, 216, 0.1);
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.floating-title {
+  font-family: var(--font-family);
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 2px;
+}
+
+.floating-subtitle {
+  font-family: var(--font-family);
+  font-size: 11.5px;
+  color: var(--text-muted-light);
+}
+
+/* --------------------------------------------------------------------------
+   8. RESPONSIVE MEDIA QUERIES
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 1200px) {
+  :root {
+    --max-width-container: calc(100% - 10%);
+  }
+
+  .hero-title {
+    font-size: 38px;
+  }
+
+  .section-title {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  :root {
+    --max-width-container: 100%;
+  }
+
+  .hero-section {
+    padding: 70px 0 60px;
+  }
+
+  .hero-section-flex,
+  .experience-flex {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .hero-col-1,
+  .hero-col-2,
+  .experience-col-content,
+  .experience-col-visual {
+    width: 100%;
+    flex: none;
+    padding: 0;
+  }
+
+  .hero-title {
+    font-size: 32px;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  .hero-description,
+  .section-lead-text,
+  .section-description {
+    font-size: 15px;
+  }
+
+  .hero-form-card {
+    padding: 28px 22px;
+  }
+
+  .experience-actions {
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-title {
+    font-size: 28px;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  .hero-form-card {
+    padding: 24px 18px;
+  }
+
+  .form-row-2col,
+  .experience-benefit-list {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .btn-primary-pill,
+  .btn-secondary-pill {
+    padding: 10px 24px !important;
+    font-size: 13.5px !important;
+  }
+
+  .experience-floating-card {
+    position: static;
+    margin-top: 14px;
+    width: 100%;
+  }
+
+  .experience-visual-wrapper {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-title {
+    font-size: 24px;
+  }
+
+  .section-title {
+    font-size: 22px;
+  }
+
+  .hero-description,
+  .section-lead-text,
+  .section-description {
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .hero-highlight-item,
+  .benefit-item {
+    font-size: 13.5px;
+  }
+
+  .btn-primary-pill,
+  .btn-secondary-pill {
+    width: 100% !important;
+  }
+}
