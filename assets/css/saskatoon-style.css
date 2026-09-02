@@ -919,7 +919,127 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   11. RESPONSIVE MEDIA QUERIES
+   11. SECTION 6: NEXT-GENERATION TECHNOLOGIES (ROBUST CSS GRID)
+   -------------------------------------------------------------------------- */
+.tech-stack-section {
+  position: relative;
+  background-color: var(--bg-dark);
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+.tech-stack-section::before {
+  content: '';
+  position: absolute;
+  top: -10%;
+  left: 20%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(0, 180, 216, 0.12) 0%, rgba(7, 21, 43, 0) 70%);
+  pointer-events: none;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.tech-stack-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.tech-card {
+  background: var(--bg-dark-card);
+  border: 1px solid rgba(0, 180, 216, 0.2);
+  border-radius: var(--border-radius-card);
+  padding: 26px 22px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease-in-out;
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.tech-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--btn-primary);
+  box-shadow: 0 14px 35px rgba(0, 136, 255, 0.2);
+  background: rgba(14, 34, 70, 0.95);
+}
+
+.tech-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.tech-card-icon {
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 180, 216, 0.12);
+  border: 1px solid rgba(0, 180, 216, 0.25);
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.tech-card-title {
+  font-family: var(--font-family);
+  font-size: 16.5px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--white-color);
+  margin: 0;
+}
+
+.tech-tags-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  width: 100%;
+}
+
+.tech-tag {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-family);
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--text-muted-dark);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.tech-tag:hover {
+  background: rgba(0, 180, 216, 0.18);
+  border-color: var(--btn-primary);
+  color: var(--white-color);
+  transform: translateY(-1px);
+}
+
+.tech-stack-cta-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 48px;
+  position: relative;
+  z-index: 2;
+}
+
+/* --------------------------------------------------------------------------
+   12. RESPONSIVE MEDIA QUERIES
    -------------------------------------------------------------------------- */
 @media screen and (max-width: 1200px) {
   :root {
@@ -933,6 +1053,10 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   .section-title {
     font-size: 30px;
   }
+
+  .tech-stack-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media screen and (max-width: 991px) {
@@ -944,7 +1068,8 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   .digital-experience-section,
   .services-section,
   .success-pillars-section,
-  .ai-advanced-section {
+  .ai-advanced-section,
+  .tech-stack-section {
     padding: 70px 0 60px;
   }
 
@@ -965,8 +1090,9 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 
   .services-grid-8,
   .pillars-grid-6,
-  .ai-cards-grid-5 {
-    grid-template-columns: 1fr;
+  .ai-cards-grid-5,
+  .tech-stack-grid {
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
 
@@ -1010,7 +1136,8 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 
   .service-card-title,
   .pillar-card-title,
-  .ai-card-title {
+  .ai-card-title,
+  .tech-card-title {
     font-size: 18px;
   }
 
@@ -1041,8 +1168,13 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 
   .service-card-item,
   .pillar-card,
-  .ai-card-item {
+  .ai-card-item,
+  .tech-card {
     padding: 24px 20px;
+  }
+
+  .tech-stack-grid {
+    grid-template-columns: 1fr;
   }
 }
 
