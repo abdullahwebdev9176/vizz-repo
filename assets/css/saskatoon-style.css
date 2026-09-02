@@ -2624,6 +2624,9 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
    22. MOBILE TEXT ALIGNMENT & CENTERING OPTIMIZATIONS (<= 991px)
    -------------------------------------------------------------------------- */
 @media screen and (max-width: 991px) {
+  .floating-title, .floating-subtitle {
+    margin-bottom: 0;
+  }
   .partner-point-item {
     text-align: left;
   }
