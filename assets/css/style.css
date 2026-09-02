@@ -2151,7 +2151,7 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
    -------------------------------------------------------------------------- */
 .bottom-contact-section {
   position: relative;
-  background-image: linear-gradient(135deg, rgba(7, 21, 43, 0.94) 0%, rgba(8, 29, 63, 0.96) 100%), url('../images/contact-office-bg.jpg');
+  background-image: linear-gradient(135deg, rgba(7, 21, 43, 0.94) 0%, rgba(8, 29, 63, 0.96) 100%), url('../images/contact-office-bg.webp');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
