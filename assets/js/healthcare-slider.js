@@ -35,41 +35,45 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // =========================================================================
-  // 2. AUTO-MOVING SHOWCASE CARDS SLIDER (2 Cards at a time, Autoplays Loop)
+  // 2. AUTO-MOVING SHOWCASE CARDS SLIDERS (2 Cards at a time, Autoplays Loop)
   // =========================================================================
-  const showcaseSliderEl = document.getElementById('showcase-cards-slider');
-  if (showcaseSliderEl && typeof Splide !== 'undefined') {
-    try {
-      const showcaseSplide = new Splide('#showcase-cards-slider', {
-        type: 'loop',
-        perPage: 2,
-        perMove: 1,
-        gap: '28px',
-        arrows: false,
-        pagination: true,
-        autoplay: true,
-        interval: 3200,
-        speed: 800,
-        pauseOnHover: true,
-        pauseOnFocus: true,
-        drag: true,
-        breakpoints: {
-          991: {
-            perPage: 2,
-            gap: '20px',
-          },
-          767: {
-            perPage: 1,
-            gap: '16px',
-          },
-        },
-      });
+  const autoMovingSliders = ['showcase-cards-slider', 'clinical-showcase-slider'];
 
-      showcaseSplide.mount();
-    } catch (err) {
-      console.warn('[Splide] Error mounting #showcase-cards-slider:', err);
+  autoMovingSliders.forEach((sliderId) => {
+    const sliderEl = document.getElementById(sliderId);
+    if (sliderEl && typeof Splide !== 'undefined') {
+      try {
+        const splideInstance = new Splide(`#${sliderId}`, {
+          type: 'loop',
+          perPage: 2,
+          perMove: 1,
+          gap: '28px',
+          arrows: false,
+          pagination: true,
+          autoplay: true,
+          interval: 3200,
+          speed: 800,
+          pauseOnHover: true,
+          pauseOnFocus: true,
+          drag: true,
+          breakpoints: {
+            991: {
+              perPage: 2,
+              gap: '20px',
+            },
+            767: {
+              perPage: 1,
+              gap: '16px',
+            },
+          },
+        });
+
+        splideInstance.mount();
+      } catch (err) {
+        console.warn(`[Splide] Error mounting #${sliderId}:`, err);
+      }
     }
-  }
+  });
 
   // =========================================================================
   // 3. MULTI-SLIDER RESPONSIVE MANAGER (Active <= 991px, Destroyed on Desktop)

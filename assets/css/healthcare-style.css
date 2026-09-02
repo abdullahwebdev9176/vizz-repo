@@ -831,7 +831,9 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   background: #07152b;
   position: relative;
 }
-
+.left-aligned-title {
+  text-align: left !important;
+}
 
 .transport-card-img {
   width: 100%;
