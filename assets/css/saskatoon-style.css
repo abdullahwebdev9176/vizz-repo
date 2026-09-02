@@ -2257,10 +2257,15 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 .services-slider,
 .pillars-slider,
 .ai-advanced-slider,
+.saskatoon-tech-slider,
 .tech-stack-slider,
 .challenges-slider,
+.saskatoon-process-slider,
 .process-slider,
-.cost-factors-slider {
+.saskatoon-industries-slider,
+.industries-slider,
+.cost-factors-slider,
+.partner-slider {
   visibility: visible !important;
   position: relative;
   width: 100%;
@@ -2272,10 +2277,15 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 .services-slider .splide__slide .service-card-item,
 .pillars-slider .splide__slide .pillar-card,
 .ai-advanced-slider .splide__slide .ai-card-item,
+.saskatoon-tech-slider .splide__slide .tech-card,
 .tech-stack-slider .splide__slide .tech-card,
 .challenges-slider .splide__slide .challenge-card,
+.saskatoon-process-slider .splide__slide .process-card,
 .process-slider .splide__slide .process-card,
-.cost-factors-slider .splide__slide .cost-factor-card {
+.saskatoon-industries-slider .splide__slide .saskatoon-industry-card,
+.industries-slider .splide__slide .saskatoon-industry-card,
+.cost-factors-slider .splide__slide .cost-factor-card,
+.partner-slider .splide__slide .partner-point-item {
   width: 100% !important;
   max-width: 100% !important;
   height: 100%;
@@ -2321,15 +2331,19 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   transform: scale(1);
 }
 
-/* Light sections pagination (Pillars & Challenges) */
+/* Light sections pagination (Pillars, Challenges, Industries, Partner) */
 .success-pillars-section .splide__pagination__page,
-.challenges-section .splide__pagination__page {
+.challenges-section .splide__pagination__page,
+.saskatoon-industries-section .splide__pagination__page,
+.partner-section .splide__pagination__page {
   background: rgba(7, 21, 43, 0.15);
   border: 1px solid rgba(7, 21, 43, 0.3);
 }
 
 .success-pillars-section .splide__pagination__page.is-active,
-.challenges-section .splide__pagination__page.is-active {
+.challenges-section .splide__pagination__page.is-active,
+.saskatoon-industries-section .splide__pagination__page.is-active,
+.partner-section .splide__pagination__page.is-active {
   background: var(--btn-primary);
   border-color: #0077b6;
   box-shadow: 0 0 10px rgba(0, 119, 182, 0.4);
@@ -2339,13 +2353,21 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
    MOBILE & TABLET SLIDER OVERRIDES (<= 991px)
    ========================================================================== */
 @media screen and (max-width: 991px) {
+  .mobile-mb {
+    margin-bottom: 40px;
+  }
   .services-slider .splide__track,
   .pillars-slider .splide__track,
   .ai-advanced-slider .splide__track,
+  .saskatoon-tech-slider .splide__track,
   .tech-stack-slider .splide__track,
   .challenges-slider .splide__track,
+  .saskatoon-process-slider .splide__track,
   .process-slider .splide__track,
-  .cost-factors-slider .splide__track {
+  .saskatoon-industries-slider .splide__track,
+  .industries-slider .splide__track,
+  .cost-factors-slider .splide__track,
+  .partner-slider .splide__track {
     overflow: hidden !important;
     position: relative !important;
     width: 100% !important;
@@ -2355,10 +2377,15 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   .services-slider .splide__list,
   .pillars-slider .splide__list,
   .ai-advanced-slider .splide__list,
+  .saskatoon-tech-slider .splide__list,
   .tech-stack-slider .splide__list,
   .challenges-slider .splide__list,
+  .saskatoon-process-slider .splide__list,
   .process-slider .splide__list,
-  .cost-factors-slider .splide__list {
+  .saskatoon-industries-slider .splide__list,
+  .industries-slider .splide__list,
+  .cost-factors-slider .splide__list,
+  .partner-slider .splide__list {
     display: flex !important;
     gap: 0 !important;
     grid-template-columns: none !important;
@@ -2371,10 +2398,15 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   .services-slider .splide__slide,
   .pillars-slider .splide__slide,
   .ai-advanced-slider .splide__slide,
+  .saskatoon-tech-slider .splide__slide,
   .tech-stack-slider .splide__slide,
   .challenges-slider .splide__slide,
+  .saskatoon-process-slider .splide__slide,
   .process-slider .splide__slide,
-  .cost-factors-slider .splide__slide {
+  .saskatoon-industries-slider .splide__slide,
+  .industries-slider .splide__slide,
+  .cost-factors-slider .splide__slide,
+  .partner-slider .splide__slide {
     display: flex !important;
     flex-direction: column !important;
     flex-shrink: 0 !important;
@@ -2391,20 +2423,30 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   .services-slider,
   .pillars-slider,
   .ai-advanced-slider,
+  .saskatoon-tech-slider,
   .tech-stack-slider,
   .challenges-slider,
+  .saskatoon-process-slider,
   .process-slider,
-  .cost-factors-slider {
+  .saskatoon-industries-slider,
+  .industries-slider,
+  .cost-factors-slider,
+  .partner-slider {
     visibility: visible !important;
   }
 
   .services-slider .splide__track,
   .pillars-slider .splide__track,
   .ai-advanced-slider .splide__track,
+  .saskatoon-tech-slider .splide__track,
   .tech-stack-slider .splide__track,
   .challenges-slider .splide__track,
+  .saskatoon-process-slider .splide__track,
   .process-slider .splide__track,
-  .cost-factors-slider .splide__track {
+  .saskatoon-industries-slider .splide__track,
+  .industries-slider .splide__track,
+  .cost-factors-slider .splide__track,
+  .partner-slider .splide__track {
     overflow: visible !important;
     position: static !important;
     width: 100% !important;
@@ -2456,6 +2498,7 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   }
 
   /* 4. Tech Stack Grid */
+  .saskatoon-tech-slider .splide__list,
   .tech-stack-slider .splide__list,
   .tech-stack-grid {
     display: grid !important;
@@ -2480,6 +2523,7 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   }
 
   /* 6. Process Approach 6-Grid */
+  .saskatoon-process-slider .splide__list,
   .process-slider .splide__list,
   .process-grid-6 {
     display: grid !important;
@@ -2491,7 +2535,20 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
     height: auto !important;
   }
 
-  /* 7. Cost Factors 9-Grid */
+  /* 7. Industries We Serve 10-Grid */
+  .saskatoon-industries-slider .splide__list,
+  .industries-slider .splide__list,
+  .industries-grid-10 {
+    display: grid !important;
+    grid-template-columns: repeat(5, 1fr) !important;
+    gap: 20px !important;
+    transform: none !important;
+    margin: 0 0 30px 0 !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* 8. Cost Factors 9-Grid */
   .cost-factors-slider .splide__list,
   .cost-factors-grid-9 {
     display: grid !important;
@@ -2503,14 +2560,31 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
     height: auto !important;
   }
 
+  /* 9. Partner With Vizz Web 6-Grid */
+  .partner-slider .splide__list,
+  .partner-points-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+    transform: none !important;
+    margin: 0 0 24px 0 !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
   /* Slide items on desktop: fill grid cell */
   .services-slider .splide__slide,
   .pillars-slider .splide__slide,
   .ai-advanced-slider .splide__slide,
+  .saskatoon-tech-slider .splide__slide,
   .tech-stack-slider .splide__slide,
   .challenges-slider .splide__slide,
+  .saskatoon-process-slider .splide__slide,
   .process-slider .splide__slide,
-  .cost-factors-slider .splide__slide {
+  .saskatoon-industries-slider .splide__slide,
+  .industries-slider .splide__slide,
+  .cost-factors-slider .splide__slide,
+  .partner-slider .splide__slide {
     width: 100% !important;
     max-width: 100% !important;
     margin: 0 !important;
@@ -2526,14 +2600,22 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   .pillars-slider .splide__arrows,
   .ai-advanced-slider .splide__pagination,
   .ai-advanced-slider .splide__arrows,
+  .saskatoon-tech-slider .splide__pagination,
+  .saskatoon-tech-slider .splide__arrows,
   .tech-stack-slider .splide__pagination,
   .tech-stack-slider .splide__arrows,
   .challenges-slider .splide__pagination,
   .challenges-slider .splide__arrows,
+  .saskatoon-process-slider .splide__pagination,
+  .saskatoon-process-slider .splide__arrows,
   .process-slider .splide__pagination,
   .process-slider .splide__arrows,
+  .saskatoon-industries-slider .splide__pagination,
+  .saskatoon-industries-slider .splide__arrows,
   .cost-factors-slider .splide__pagination,
-  .cost-factors-slider .splide__arrows {
+  .cost-factors-slider .splide__arrows,
+  .partner-slider .splide__pagination,
+  .partner-slider .splide__arrows {
     display: none !important;
   }
 }

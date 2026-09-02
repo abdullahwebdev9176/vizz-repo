@@ -5,7 +5,7 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Slider configurations list for all 7 sections
+  // Slider configurations list for all 9 sections
   const sliderConfigs = [
     {
       id: 'services-slider',
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
       gapMobile: '14px',
     },
     {
-      id: 'tech-stack-slider',
+      id: 'saskatoon-tech-slider',
       perPageTablet: 2,
       perPageMobile: 1,
       gapTablet: '18px',
@@ -43,17 +43,37 @@ document.addEventListener('DOMContentLoaded', () => {
       gapMobile: '14px',
     },
     {
-      id: 'process-slider',
+      id: 'saskatoon-process-slider',
       perPageTablet: 2,
       perPageMobile: 1,
       gapTablet: '20px',
       gapMobile: '14px',
     },
     {
+      id: 'saskatoon-industries-slider',
+      perPageTablet: 3,
+      perPageMobile: 2,
+      gapTablet: '16px',
+      gapMobile: '12px',
+      extraBreakpoints: {
+        420: {
+          perPage: 1,
+          gap: '10px',
+        },
+      },
+    },
+    {
       id: 'cost-factors-slider',
       perPageTablet: 2,
       perPageMobile: 1,
       gapTablet: '20px',
+      gapMobile: '14px',
+    },
+    {
+      id: 'partner-slider',
+      perPageTablet: 2,
+      perPageMobile: 1,
+      gapTablet: '18px',
       gapMobile: '14px',
     },
   ];
@@ -81,6 +101,17 @@ document.addEventListener('DOMContentLoaded', () => {
             const existingPaginations = sliderElement.querySelectorAll('.splide__pagination');
             existingPaginations.forEach(p => p.remove());
 
+            const breakpointsConfig = {
+              576: {
+                perPage: config.perPageMobile,
+                gap: config.gapMobile,
+              },
+            };
+
+            if (config.extraBreakpoints) {
+              Object.assign(breakpointsConfig, config.extraBreakpoints);
+            }
+
             const splideInstance = new Splide(`#${config.id}`, {
               type: 'slide',
               perPage: config.perPageTablet,
@@ -92,12 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
               snap: true,
               flickPower: 400,
               keyboard: false,
-              breakpoints: {
-                576: {
-                  perPage: config.perPageMobile,
-                  gap: config.gapMobile,
-                },
-              },
+              breakpoints: breakpointsConfig,
             });
 
             splideInstance.mount();
