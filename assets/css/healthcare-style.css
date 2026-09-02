@@ -2,7 +2,7 @@
    VIZZ WEB SOLUTIONS - HEALTHCARE DEDICATED STYLESHEET
    Page: healthcare.html
    Focus: Healthcare Software Development with Agentic AI & Smart Automation
-   Design Philosophy: Varied Section Layouts, Bento Grids, Asymmetric Showcases, Connected Tech Grid & SEO Compliance
+   Design Philosophy: Varied Section Layouts, Process Roadmaps, Industry Ecosystems, Bento Grids & SEO Compliance
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -157,6 +157,9 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 .w-100 {
   width: 100%;
 }
+
+.mt-2 { margin-top: 8px; }
+.mt-4 { margin-top: 24px; }
 
 /* Highlight Text Gradient */
 .text-highlight-cyan {
@@ -1172,7 +1175,7 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   12. NEW SECTION: CONNECTED HEALTH TECH PARADIGMS (Dark Futuristic 5-Card Grid)
+   12. CONNECTED HEALTH TECH PARADIGMS (Dark Futuristic 5-Card Grid)
    -------------------------------------------------------------------------- */
 .connected-health-section {
   background: var(--bg-dark-deep);
@@ -1292,7 +1295,168 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   13. DEEP DIVE FEATURE SECTIONS
+   13. NEW SECTION: DEVELOPMENT PROCESS ROADMAP (Light Stepper Grid)
+   -------------------------------------------------------------------------- */
+.process-section {
+  background: var(--bg-light);
+  padding: var(--section-padding);
+}
+
+.process-grid-6 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .process-grid-6 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .process-grid-6 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.process-step-card {
+  background: var(--bg-light-alt);
+  border: 1px solid var(--border-light);
+  border-radius: var(--border-radius-card);
+  padding: 30px 24px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.process-step-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--btn-color);
+  box-shadow: 0 14px 30px rgba(23, 161, 254, 0.12);
+}
+
+.process-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.process-step-number {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--btn-cyan);
+  line-height: 1;
+  opacity: 0.85;
+}
+
+.process-step-pill {
+  background: rgba(23, 161, 254, 0.1);
+  color: var(--btn-color);
+  border: 1px solid rgba(23, 161, 254, 0.25);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.process-step-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+  line-height: 1.35;
+}
+
+.process-step-desc {
+  font-size: 14px;
+  color: var(--text-muted-light);
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   14. NEW SECTION: TRANSFORMING HEALTH SYSTEMS / SECTORS (Dark 3x3 Ecosystem)
+   -------------------------------------------------------------------------- */
+.health-sectors-section {
+  background: var(--bg-dark);
+  padding: var(--section-padding);
+  border-top: 1px solid var(--border-dark);
+  border-bottom: 1px solid var(--border-dark);
+}
+
+.sectors-grid-9 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .sectors-grid-9 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .sectors-grid-9 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.sector-card {
+  background: var(--bg-dark-card);
+  border: 1px solid var(--border-dark);
+  border-radius: var(--border-radius-card);
+  padding: 24px 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sector-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 180, 216, 0.5);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+}
+
+.sector-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(0, 180, 216, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  flex-shrink: 0;
+  border: 1px solid rgba(0, 180, 216, 0.3);
+}
+
+.sector-content {
+  flex: 1;
+}
+
+.sector-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-white);
+  margin-bottom: 6px;
+  line-height: 1.35;
+}
+
+.sector-desc {
+  font-size: 13px;
+  color: var(--text-muted-dark);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   15. DEEP DIVE FEATURE SECTIONS
    -------------------------------------------------------------------------- */
 .feature-split-section {
   padding: var(--section-padding);
@@ -1415,7 +1579,7 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   14. MID-PAGE HIGH-IMPACT CTA BANNER
+   16. MID-PAGE HIGH-IMPACT CTA BANNER
    -------------------------------------------------------------------------- */
 .mid-page-cta-section {
   background: linear-gradient(135deg, #07152b 0%, #0e2246 50%, #07152b 100%);
@@ -1462,7 +1626,7 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   15. RESPONSIVE SPLIDE CAROUSEL STYLING (Active <= 991px)
+   17. RESPONSIVE SPLIDE CAROUSEL STYLING (Active <= 991px)
    -------------------------------------------------------------------------- */
 @media screen and (max-width: 991px) {
   .splide__track {
