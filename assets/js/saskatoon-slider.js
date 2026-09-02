@@ -77,6 +77,10 @@ document.addEventListener('DOMContentLoaded', () => {
         // Mount Splide if not already active
         if (!activeSplideInstances[config.id]) {
           try {
+            // Remove any leftover duplicate pagination elements before mounting
+            const existingPaginations = sliderElement.querySelectorAll('.splide__pagination');
+            existingPaginations.forEach(p => p.remove());
+
             const splideInstance = new Splide(`#${config.id}`, {
               type: 'slide',
               perPage: config.perPageTablet,
@@ -112,6 +116,10 @@ document.addEventListener('DOMContentLoaded', () => {
           }
           delete activeSplideInstances[config.id];
         }
+
+        // Clean up any remaining pagination elements on desktop
+        const strayPaginations = sliderElement.querySelectorAll('.splide__pagination');
+        strayPaginations.forEach(p => p.remove());
       }
     });
   }
