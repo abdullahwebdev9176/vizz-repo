@@ -1,0 +1,408 @@
+/* ==========================================================================
+   VIZZ WEB SOLUTIONS - HEALTHCARE DEDICATED STYLESHEET
+   Page: healthcare.html (Hero Section Focus)
+   Design System & Responsive Tokens
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. GOOGLE FONT: POPPINS IMPORT
+   -------------------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* --------------------------------------------------------------------------
+   2. CORE COLOR PALETTE & DESIGN SYSTEM TOKENS
+   -------------------------------------------------------------------------- */
+:root {
+  /* 🔤 Typography & Font Family */
+  --font-family: 'Poppins', sans-serif;
+
+  /* 🔘 Brand, Accent & Interactive Colors */
+  --btn-primary: #17a1fe;
+  --btn-primary-hover: #006ed4;
+  --btn-cyan: #00b4d8;
+  --btn-color: #17a1fe;
+  --btn-color-hover: #ffffff;
+  --white-color: #ffffff;
+
+  /* 🌌 Background Colors */
+  --bg-dark: #07152b;
+  --bg-dark-card: #0e2246;
+  --bg-light: #ffffff;
+
+  /* ✍️ Font / Text Colors */
+  --text-white: #ffffff;
+  --text-dark: #0b1a30;
+  --text-muted-dark: #cbd5e1;
+  --text-muted-light: #4a5568;
+  --text-cyan: #00b4d8;
+
+  /* UI Borders & Radii */
+  --border-radius-pill: 10px;
+  --border-radius-card: 16px;
+  --border-radius-input: 8px;
+  --border-light: #e2e8f0;
+  --border-dark: #1b3252;
+
+  /* Shadows */
+  --shadow-card-elevated: 0 16px 36px rgba(0, 0, 0, 0.22);
+  --shadow-btn: 0 8px 25px rgba(0, 136, 255, 0.35);
+
+  /* Layout Spacing (Mobile-First) */
+  --container-padding: 16px;
+  --section-padding: 60px 0;
+  --max-width-container: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --container-padding: 24px;
+    --section-padding: 80px 0;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  :root {
+    --container-padding: 24px;
+    --section-padding: 100px 0;
+    --max-width-container: calc(100% - 10%);
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  :root {
+    --max-width-container: calc(100% - 18%);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   3. BASE RESETS & TYPOGRAPHY
+   -------------------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-family);
+  overflow-x: hidden;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-dark);
+  color: var(--text-muted-light);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Headings Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family);
+  color: var(--text-dark);
+  font-weight: 700;
+  line-height: 1.25;
+  word-wrap: break-word;
+}
+
+p, span, a, li, label, input, textarea, button, small, strong, em, b {
+  font-family: var(--font-family);
+}
+
+/* Shared Container */
+.vizz-container {
+  width: 100%;
+  max-width: var(--max-width-container);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+
+/* Utilities */
+.w-100 {
+  width: 100%;
+}
+
+/* Highlight Text Gradient */
+.text-highlight-cyan {
+  font-family: var(--font-family);
+  color: var(--text-cyan);
+  background: linear-gradient(90deg, #00b4d8 0%, #22d3ee 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline;
+}
+
+/* --------------------------------------------------------------------------
+   4. BUTTON STANDARDS (Mandatory Design Tokens)
+   -------------------------------------------------------------------------- */
+.btn-primary-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px !important;
+  padding-right: 30px !important;
+  padding-bottom: 10px !important;
+  padding-left: 30px !important;
+  border-radius: 10px !important;
+  background: var(--btn-color);
+  border: 1px solid var(--btn-color);
+  color: var(--white-color) !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  font-family: 'Poppins', sans-serif !important;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  box-shadow: var(--shadow-btn);
+}
+
+.btn-primary-pill:hover {
+  background: var(--btn-color-hover);
+  border: 1px solid var(--btn-color);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0, 136, 255, 0.5);
+  color: var(--btn-color) !important;
+}
+
+.btn-primary-pill:active {
+  transform: translateY(0);
+}
+
+/* --------------------------------------------------------------------------
+   5. HERO SECTION & LEAD CAPTURE FORM (Matching index.html)
+   -------------------------------------------------------------------------- */
+.hero-section {
+  background: var(--bg-dark);
+  background-image: 
+    radial-gradient(circle at 15% 20%, rgba(0, 180, 216, 0.12) 0%, transparent 40%),
+    radial-gradient(circle at 85% 70%, rgba(23, 161, 254, 0.1) 0%, transparent 45%);
+  padding: var(--section-padding);
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-section-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  align-items: stretch;
+}
+
+@media screen and (min-width: 992px) {
+  .hero-section-flex {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+  }
+}
+
+.hero-col-1 {
+  flex: 1 1 58%;
+}
+
+.hero-col-2 {
+  flex: 1 1 42%;
+  width: 100%;
+}
+
+.hero-title {
+  color: var(--text-white);
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-title {
+    font-size: 38px;
+    line-height: 1.22;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero-title {
+    font-size: 46px;
+    line-height: 1.2;
+  }
+}
+
+.hero-description {
+  color: var(--text-muted-dark);
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-description {
+    font-size: 16px;
+  }
+}
+
+.hero-highlights {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hero-highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #e2e8f0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-highlight-item {
+    font-size: 15px;
+  }
+}
+
+.check-icon-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(0, 180, 216, 0.2);
+  color: var(--btn-cyan);
+  font-size: 12px;
+  font-weight: 700;
+  border: 1px solid rgba(0, 180, 216, 0.4);
+  flex-shrink: 0;
+}
+
+.hero-actions {
+  margin-top: 10px;
+}
+
+/* Right Column: Hero Form Card */
+.hero-form-card {
+  background: var(--bg-dark-card);
+  border: 1px solid var(--border-dark);
+  border-radius: var(--border-radius-card);
+  padding: 24px 20px;
+  box-shadow: var(--shadow-card-elevated);
+}
+
+@media screen and (min-width: 768px) {
+  .hero-form-card {
+    padding: 32px 28px;
+  }
+}
+
+.form-card-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-card-title {
+  color: var(--text-white);
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.form-card-subtitle {
+  color: var(--text-muted-dark);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.lead-capture-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.form-row-2col {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+@media screen and (min-width: 576px) {
+  .form-row-2col {
+    flex-direction: row;
+    gap: 14px;
+  }
+  .form-row-2col .form-group {
+    flex: 1;
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+}
+
+.form-label {
+  color: #e2e8f0;
+  font-size: 13px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.required-star {
+  color: #f43f5e;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 10px 14px;
+  background: #07152b;
+  border: 1px solid var(--border-dark);
+  border-radius: var(--border-radius-input);
+  color: var(--text-white);
+  font-size: 14px;
+  font-family: var(--font-family);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: #64748b;
+  font-size: 13px;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--btn-color);
+  box-shadow: 0 0 0 3px rgba(23, 161, 254, 0.2);
+}
+
+.form-privacy-note {
+  color: #94a3b8;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
