@@ -2257,7 +2257,9 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   color: #10b981;
   font-weight: 800;
 }
-
+.custom-web-app {
+  margin-top: 80px;
+}
 /* --------------------------------------------------------------------------
    19. CONSOLIDATED RESPONSIVE SYSTEM (Single Definition Per Breakpoint)
    -------------------------------------------------------------------------- */
@@ -2608,6 +2610,19 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 
 /* Medium Tablets & Mobile Screens (<= 991px) - Splide Active & Center Alignment */
 @media screen and (max-width: 991px) {
+  
+  .custom-web-app {
+    margin-top: 50px;
+  }
+  .our-web-dev {
+      margin: 0 auto 50px;
+  }
+  .build-somthing-cta {
+    margin-bottom: 0;
+  }
+  .relevant-sec {
+    padding-bottom: 60px;
+  }
 
   .left-align-text, 
   .partner-pillar-item {
@@ -2850,6 +2865,12 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 
   .contact-info-card {
     padding: 14px 16px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .lead-capture-form {
+    gap: 0;
   }
 }
 
