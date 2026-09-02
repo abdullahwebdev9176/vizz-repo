@@ -1439,7 +1439,134 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   16. RESPONSIVE MEDIA QUERIES
+   16. SECTION 11: PARTNER WITH VIZZ WEB (LIGHT)
+   -------------------------------------------------------------------------- */
+.partner-section {
+  position: relative;
+  background-color: var(--bg-light-alt);
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+.partner-flex {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.partner-col-content {
+  flex: 1.15;
+}
+
+.partner-col-visual {
+  flex: 0.85;
+}
+
+.partner-lead-text {
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-dark);
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.partner-points-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.partner-point-item {
+  background: var(--bg-light);
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  padding: 20px 18px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+
+.partner-point-item:hover {
+  transform: translateY(-3px);
+  border-color: rgba(0, 180, 216, 0.45);
+  box-shadow: 0 12px 28px rgba(7, 21, 43, 0.07);
+}
+
+.partner-point-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.partner-point-icon {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: rgba(0, 180, 216, 0.1);
+  border-radius: 8px;
+  color: var(--btn-primary);
+  flex-shrink: 0;
+}
+
+.partner-point-title {
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--text-dark);
+  margin: 0;
+}
+
+.partner-point-desc {
+  font-family: var(--font-family);
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--text-muted-light);
+  margin: 0;
+}
+
+.partner-image-wrapper {
+  position: relative;
+  border-radius: var(--border-radius-card);
+}
+
+.partner-image-figure {
+  margin: 0;
+  border-radius: var(--border-radius-card);
+  overflow: hidden;
+  box-shadow: var(--shadow-card-elevated);
+  border: 1px solid var(--border-light);
+  background: var(--bg-dark);
+}
+
+.partner-featured-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.4s ease-in-out;
+}
+
+.partner-image-figure:hover .partner-featured-img {
+  transform: scale(1.02);
+}
+
+.partner-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+}
+
+/* --------------------------------------------------------------------------
+   17. RESPONSIVE MEDIA QUERIES
    -------------------------------------------------------------------------- */
 @media screen and (max-width: 1200px) {
   :root {
@@ -1480,13 +1607,15 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   .challenges-section,
   .process-approach-section,
   .saskatoon-industries-section,
-  .cost-factors-section {
+  .cost-factors-section,
+  .partner-section {
     padding: 70px 0 60px;
   }
 
   .hero-section-flex,
   .experience-flex,
-  .challenges-intro-flex {
+  .challenges-intro-flex,
+  .partner-flex {
     flex-direction: column;
     gap: 40px;
   }
@@ -1496,7 +1625,9 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   .experience-col-content,
   .experience-col-visual,
   .challenges-intro-content,
-  .challenges-intro-visual {
+  .challenges-intro-visual,
+  .partner-col-content,
+  .partner-col-visual {
     width: 100%;
     flex: none;
     padding: 0;
@@ -1511,6 +1642,11 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   .cost-factors-grid-9 {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+  }
+
+  .partner-points-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
   }
 
   .industries-grid-10 {
@@ -1536,7 +1672,8 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   .section-description,
   .section-intro-text,
   .challenges-lead-text,
-  .challenges-desc-text {
+  .challenges-desc-text,
+  .partner-lead-text {
     font-size: 15px;
   }
 
@@ -1544,7 +1681,8 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
     padding: 28px 22px;
   }
 
-  .experience-actions {
+  .experience-actions,
+  .partner-actions {
     justify-content: flex-start;
   }
 }
@@ -1564,7 +1702,8 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   .tech-card-title,
   .challenge-card-title,
   .process-card-title,
-  .cost-factor-title {
+  .cost-factor-title,
+  .partner-point-title {
     font-size: 18px;
   }
 
@@ -1594,7 +1733,8 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   }
 
   .experience-visual-wrapper,
-  .challenges-image-wrapper {
+  .challenges-image-wrapper,
+  .partner-image-wrapper {
     padding: 0;
   }
 
@@ -1604,7 +1744,8 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   .tech-card,
   .challenge-card,
   .process-card,
-  .cost-factor-card {
+  .cost-factor-card,
+  .partner-point-item {
     padding: 24px 20px;
   }
 
@@ -1640,7 +1781,9 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   .challenges-desc-text,
   .challenge-card-desc,
   .process-card-desc,
-  .cost-factor-desc {
+  .cost-factor-desc,
+  .partner-lead-text,
+  .partner-point-desc {
     font-size: 14px;
     line-height: 1.65;
   }
