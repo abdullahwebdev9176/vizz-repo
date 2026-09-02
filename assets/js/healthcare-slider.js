@@ -2,8 +2,8 @@
  * Vizz Web Solutions - Healthcare Page Script
  * Page: healthcare.html
  * Functionality:
- * 1. Responsive Splide.js slider for healthcare services on mobile & tablet (<= 991px).
- * 2. Smooth-scrolling lead form triggers with auto input focus.
+ * 1. Smooth-scrolling lead form triggers with auto input focus.
+ * 2. Multi-Slider Manager with Splide.js (Active <= 991px, Destroyed on Desktop > 991px).
  * 3. Accessible Single-Open FAQ Accordion with ARIA state management.
  */
 
@@ -33,65 +33,86 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // =========================================================================
-  // 2. RESPONSIVE SPLIDE SLIDER (Active <= 991px, Destroyed on Desktop > 991px)
+  // 2. MULTI-SLIDER RESPONSIVE MANAGER (Active <= 991px, Destroyed on Desktop)
   // =========================================================================
-  let servicesSplideInstance = null;
+  const sliderSelectors = [
+    { selector: '#healthcare-services-slider', perPageTablet: 2, perPageMobile: 1 },
+    { selector: '#clinical-workflows-slider', perPageTablet: 1, perPageMobile: 1 },
+    { selector: '#operations-deck-slider', perPageTablet: 2, perPageMobile: 1 },
+    { selector: '#connected-health-slider', perPageTablet: 2, perPageMobile: 1 },
+    { selector: '#development-process-slider', perPageTablet: 2, perPageMobile: 1 },
+    { selector: '#health-sectors-slider', perPageTablet: 2, perPageMobile: 1 },
+    { selector: '#tech-stack-slider', perPageTablet: 2, perPageMobile: 1 },
+    { selector: '#cost-factors-slider', perPageTablet: 2, perPageMobile: 1 },
+  ];
 
-  function handleResponsiveServicesSlider() {
+  const sliderInstances = new Map();
+
+  function initOrDestroySliders() {
     const isMobileOrTablet = window.innerWidth <= 991;
-    const sliderElement = document.getElementById('healthcare-services-slider');
 
-    if (!sliderElement || typeof Splide === 'undefined') {
+    if (typeof Splide === 'undefined') {
       return;
     }
 
-    if (isMobileOrTablet) {
-      if (!servicesSplideInstance) {
-        try {
-          // Clean up any stray pagination elements before mounting
-          const existingPaginations = sliderElement.querySelectorAll('.splide__pagination');
-          existingPaginations.forEach((p) => p.remove());
+    sliderSelectors.forEach((cfg) => {
+      const el = document.querySelector(cfg.selector);
+      if (!el) return;
 
-          servicesSplideInstance = new Splide('#healthcare-services-slider', {
-            type: 'slide',
-            perPage: 2,
-            gap: '20px',
-            arrows: false,
-            pagination: true,
-            speed: 450,
-            breakpoints: {
-              767: {
-                perPage: 1,
-                gap: '16px',
+      const hasInstance = sliderInstances.has(cfg.selector);
+
+      if (isMobileOrTablet) {
+        if (!hasInstance) {
+          try {
+            // Clean up any stray pagination DOM elements before mounting
+            const existingPaginations = el.querySelectorAll('.splide__pagination');
+            existingPaginations.forEach((p) => p.remove());
+
+            const splide = new Splide(cfg.selector, {
+              type: 'slide',
+              perPage: cfg.perPageTablet,
+              gap: '20px',
+              arrows: false,
+              pagination: true,
+              speed: 450,
+              breakpoints: {
+                767: {
+                  perPage: cfg.perPageMobile,
+                  gap: '16px',
+                },
               },
-            },
-          });
+            });
 
-          servicesSplideInstance.mount();
-        } catch (err) {
-          console.warn('Healthcare services Splide initialization error:', err);
+            splide.mount();
+            sliderInstances.set(cfg.selector, splide);
+          } catch (err) {
+            console.warn(`Error initializing slider for ${cfg.selector}:`, err);
+          }
+        }
+      } else {
+        if (hasInstance) {
+          try {
+            const splide = sliderInstances.get(cfg.selector);
+            if (splide) {
+              splide.destroy(true);
+            }
+          } catch (err) {
+            console.warn(`Error destroying slider for ${cfg.selector}:`, err);
+          }
+          sliderInstances.delete(cfg.selector);
         }
       }
-    } else {
-      if (servicesSplideInstance) {
-        try {
-          servicesSplideInstance.destroy(true);
-        } catch (err) {
-          console.warn('Healthcare services Splide destroy error:', err);
-        }
-        servicesSplideInstance = null;
-      }
-    }
+    });
   }
 
-  // Initial check
-  handleResponsiveServicesSlider();
+  // Initial execution
+  initOrDestroySliders();
 
-  // Debounced resize listener
-  let resizeTimeout;
+  // Debounced resize handler
+  let resizeTimer = null;
   window.addEventListener('resize', () => {
-    clearTimeout(resizeTimeout);
-    resizeTimeout = setTimeout(handleResponsiveServicesSlider, 150);
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(initOrDestroySliders, 150);
   });
 
   // =========================================================================

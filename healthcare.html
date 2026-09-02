@@ -251,8 +251,8 @@
           </p>
         </div>
 
-        <!-- 8 SERVICES GRID (SPLIDE SLIDER ON MOBILE <= 991px, GRID ON DESKTOP) -->
-        <div class="splide services-slider" id="healthcare-services-slider" aria-label="Healthcare Software Development Services Slider">
+        <!-- 8 SERVICES RESPONSIVE SLIDER (ACTIVE <= 991px, GRID ON DESKTOP) -->
+        <div class="splide responsive-section-slider" id="healthcare-services-slider" aria-label="Healthcare Software Development Services Slider">
           <div class="splide__track">
             <div class="splide__list services-grid-8">
 
@@ -752,62 +752,72 @@
           </p>
         </div>
 
-        <!-- BENTO ASYMMETRIC GRID -->
-        <div class="bento-grid-3">
+        <!-- BENTO ASYMMETRIC GRID (SLIDER ON MOBILE <= 991px, BENTO ON DESKTOP) -->
+        <div class="splide responsive-section-slider" id="clinical-workflows-slider" aria-label="Custom Clinical Software Solutions Slider">
+          <div class="splide__track">
+            <div class="splide__list bento-grid-3">
 
-          <!-- 1. FEATURED LARGE BENTO CARD: EHR/EMR -->
-          <article class="bento-card bento-card-featured">
-            <span class="bento-badge">Featured Core Platform</span>
-            <div class="bento-icon-title-wrap">
-              <div class="bento-icon" aria-hidden="true">📋</div>
-              <h3 class="bento-title">Electronic Health Record Software (EHR/EMR)</h3>
-            </div>
-            <p class="bento-desc">
-              Our EHR software development and EMR software development services centralize patient records, treatment history, lab results, and care plans in one place. Custom EHR/EMR platforms can support clinical documentation, order management, e-prescribing, speech-to-text charting, and role-based access controls.
-            </p>
-            <div class="bento-tags-row" aria-label="EHR Capabilities">
-              <span class="bento-tag">Clinical Documentation</span>
-              <span class="bento-tag">Order Management</span>
-              <span class="bento-tag">E-Prescribing (eRx)</span>
-              <span class="bento-tag">Speech-to-Text Charting</span>
-              <span class="bento-tag">Role-Based Access Controls</span>
-            </div>
-          </article>
+              <!-- 1. FEATURED LARGE BENTO CARD: EHR/EMR -->
+              <div class="splide__slide bento-slide-featured">
+                <article class="bento-card bento-card-featured">
+                  <span class="bento-badge">Featured Core Platform</span>
+                  <div class="bento-icon-title-wrap">
+                    <div class="bento-icon" aria-hidden="true">📋</div>
+                    <h3 class="bento-title">Electronic Health Record Software (EHR/EMR)</h3>
+                  </div>
+                  <p class="bento-desc">
+                    Our EHR software development and EMR software development services centralize patient records, treatment history, lab results, and care plans in one place. Custom EHR/EMR platforms can support clinical documentation, order management, e-prescribing, speech-to-text charting, and role-based access controls.
+                  </p>
+                  <div class="bento-tags-row" aria-label="EHR Capabilities">
+                    <span class="bento-tag">Clinical Documentation</span>
+                    <span class="bento-tag">Order Management</span>
+                    <span class="bento-tag">E-Prescribing (eRx)</span>
+                    <span class="bento-tag">Speech-to-Text Charting</span>
+                    <span class="bento-tag">Role-Based Access Controls</span>
+                  </div>
+                </article>
+              </div>
 
-          <!-- 2. BENTO CARD: TELEHEALTH & VIRTUAL CARE -->
-          <article class="bento-card">
-            <div class="bento-icon-title-wrap">
-              <div class="bento-icon" aria-hidden="true">📱</div>
-              <h3 class="bento-title">Telehealth &amp; Virtual Care Software</h3>
-            </div>
-            <p class="bento-desc">
-              We build telehealth app development solutions with secure video conferencing, remote consultations, and integrated billing. Custom telehealth platforms can support live video visits, asynchronous messaging, e-prescribing, and EHR connectivity to support remote care delivery at scale.
-            </p>
-            <div class="bento-tags-row" aria-label="Telehealth Capabilities">
-              <span class="bento-tag">Encrypted Video Visits</span>
-              <span class="bento-tag">Asynchronous Messaging</span>
-              <span class="bento-tag">Integrated Billing</span>
-              <span class="bento-tag">EHR Connectivity</span>
-            </div>
-          </article>
+              <!-- 2. BENTO CARD: TELEHEALTH & VIRTUAL CARE -->
+              <div class="splide__slide">
+                <article class="bento-card">
+                  <div class="bento-icon-title-wrap">
+                    <div class="bento-icon" aria-hidden="true">📱</div>
+                    <h3 class="bento-title">Telehealth &amp; Virtual Care Software</h3>
+                  </div>
+                  <p class="bento-desc">
+                    We build telehealth app development solutions with secure video conferencing, remote consultations, and integrated billing. Custom telehealth platforms can support live video visits, asynchronous messaging, e-prescribing, and EHR connectivity to support remote care delivery at scale.
+                  </p>
+                  <div class="bento-tags-row" aria-label="Telehealth Capabilities">
+                    <span class="bento-tag">Encrypted Video Visits</span>
+                    <span class="bento-tag">Asynchronous Messaging</span>
+                    <span class="bento-tag">Integrated Billing</span>
+                    <span class="bento-tag">EHR Connectivity</span>
+                  </div>
+                </article>
+              </div>
 
-          <!-- 3. BENTO CARD: REMOTE PATIENT MONITORING -->
-          <article class="bento-card">
-            <div class="bento-icon-title-wrap">
-              <div class="bento-icon" aria-hidden="true">⌚</div>
-              <h3 class="bento-title">Remote Patient Monitoring Software</h3>
-            </div>
-            <p class="bento-desc">
-              Our remote patient monitoring software connects wearables, medical devices, and home health sensors to clinical teams for continuous, real-time visibility. Custom RPM platforms can support chronic condition management, post-discharge monitoring, and automated clinical alerting.
-            </p>
-            <div class="bento-tags-row" aria-label="RPM Capabilities">
-              <span class="bento-tag">Wearables &amp; Medical Sensors</span>
-              <span class="bento-tag">Chronic Condition Care</span>
-              <span class="bento-tag">Post-Discharge Tracking</span>
-              <span class="bento-tag">Real-Time Clinical Alerts</span>
-            </div>
-          </article>
+              <!-- 3. BENTO CARD: REMOTE PATIENT MONITORING -->
+              <div class="splide__slide">
+                <article class="bento-card">
+                  <div class="bento-icon-title-wrap">
+                    <div class="bento-icon" aria-hidden="true">⌚</div>
+                    <h3 class="bento-title">Remote Patient Monitoring Software</h3>
+                  </div>
+                  <p class="bento-desc">
+                    Our remote patient monitoring software connects wearables, medical devices, and home health sensors to clinical teams for continuous, real-time visibility. Custom RPM platforms can support chronic condition management, post-discharge monitoring, and automated clinical alerting.
+                  </p>
+                  <div class="bento-tags-row" aria-label="RPM Capabilities">
+                    <span class="bento-tag">Wearables &amp; Medical Sensors</span>
+                    <span class="bento-tag">Chronic Condition Care</span>
+                    <span class="bento-tag">Post-Discharge Tracking</span>
+                    <span class="bento-tag">Real-Time Clinical Alerts</span>
+                  </div>
+                </article>
+              </div>
 
+            </div>
+          </div>
         </div>
 
       </div>
@@ -917,54 +927,64 @@
           </p>
         </div>
 
-        <!-- 3-COLUMN DISTINCT DECK -->
-        <div class="operations-deck-grid">
+        <!-- 3-COLUMN DISTINCT DECK (SLIDER ON MOBILE <= 991px, GRID ON DESKTOP) -->
+        <div class="splide responsive-section-slider" id="operations-deck-slider" aria-label="Operations CRM and Pharmacy Slider">
+          <div class="splide__track">
+            <div class="splide__list operations-deck-grid">
 
-          <!-- Deck Card 1: Healthcare CRM -->
-          <article class="deck-card">
-            <div class="deck-card-top-icon" aria-hidden="true">🤝</div>
-            <h3 class="deck-card-title">Healthcare CRM Software</h3>
-            <p class="deck-card-desc">
-              We develop healthcare CRM platforms tailored to patient relationship management, marketing automation, and referral tracking. Custom healthcare CRM solutions can support patient segmentation, outreach campaigns, lead and referral management, and analytics for care programs.
-            </p>
-            <div class="deck-pills-wrap" aria-label="Healthcare CRM Capabilities">
-              <span class="deck-pill">Patient Segmentation</span>
-              <span class="deck-pill">Outreach Automation</span>
-              <span class="deck-pill">Referral Tracking</span>
-              <span class="deck-pill">Care Program Analytics</span>
+              <!-- Deck Card 1: Healthcare CRM -->
+              <div class="splide__slide">
+                <article class="deck-card">
+                  <div class="deck-card-top-icon" aria-hidden="true">🤝</div>
+                  <h3 class="deck-card-title">Healthcare CRM Software</h3>
+                  <p class="deck-card-desc">
+                    We develop healthcare CRM platforms tailored to patient relationship management, marketing automation, and referral tracking. Custom healthcare CRM solutions can support patient segmentation, outreach campaigns, lead and referral management, and analytics for care programs.
+                  </p>
+                  <div class="deck-pills-wrap" aria-label="Healthcare CRM Capabilities">
+                    <span class="deck-pill">Patient Segmentation</span>
+                    <span class="deck-pill">Outreach Automation</span>
+                    <span class="deck-pill">Referral Tracking</span>
+                    <span class="deck-pill">Care Program Analytics</span>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Deck Card 2: Medical Billing & RCM -->
+              <div class="splide__slide">
+                <article class="deck-card">
+                  <div class="deck-card-top-icon" aria-hidden="true">💳</div>
+                  <h3 class="deck-card-title">Medical Billing &amp; RCM Software</h3>
+                  <p class="deck-card-desc">
+                    Our medical billing and RCM platforms simplify ICD coding, eligibility verification, claims scrubbing, and payment posting. Custom revenue cycle management software can support denial management, A/R tracking, and clearinghouse integration to reduce administrative burden and accelerate cash flow.
+                  </p>
+                  <div class="deck-pills-wrap" aria-label="RCM Capabilities">
+                    <span class="deck-pill">ICD Coding &amp; Eligibility</span>
+                    <span class="deck-pill">Claims Scrubbing</span>
+                    <span class="deck-pill">Denial Management</span>
+                    <span class="deck-pill">Clearinghouse Integration</span>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Deck Card 3: Pharmacy Management -->
+              <div class="splide__slide">
+                <article class="deck-card">
+                  <div class="deck-card-top-icon" aria-hidden="true">💊</div>
+                  <h3 class="deck-card-title">Pharmacy Management Software</h3>
+                  <p class="deck-card-desc">
+                    We build pharmacy management solutions that digitize prescribing, dispensing, and fulfillment while improving medication safety and inventory control. Custom pharmacy platforms can support e-prescriptions, drug interaction checks, and pharmacy analytics.
+                  </p>
+                  <div class="deck-pills-wrap" aria-label="Pharmacy Capabilities">
+                    <span class="deck-pill">E-Prescription Dispensing</span>
+                    <span class="deck-pill">Drug Interaction Checks</span>
+                    <span class="deck-pill">Inventory Safety Control</span>
+                    <span class="deck-pill">Pharmacy Analytics</span>
+                  </div>
+                </article>
+              </div>
+
             </div>
-          </article>
-
-          <!-- Deck Card 2: Medical Billing & RCM -->
-          <article class="deck-card">
-            <div class="deck-card-top-icon" aria-hidden="true">💳</div>
-            <h3 class="deck-card-title">Medical Billing &amp; RCM Software</h3>
-            <p class="deck-card-desc">
-              Our medical billing and RCM platforms simplify ICD coding, eligibility verification, claims scrubbing, and payment posting. Custom revenue cycle management software can support denial management, A/R tracking, and clearinghouse integration to reduce administrative burden and accelerate cash flow.
-            </p>
-            <div class="deck-pills-wrap" aria-label="RCM Capabilities">
-              <span class="deck-pill">ICD Coding &amp; Eligibility</span>
-              <span class="deck-pill">Claims Scrubbing</span>
-              <span class="deck-pill">Denial Management</span>
-              <span class="deck-pill">Clearinghouse Integration</span>
-            </div>
-          </article>
-
-          <!-- Deck Card 3: Pharmacy Management -->
-          <article class="deck-card">
-            <div class="deck-card-top-icon" aria-hidden="true">💊</div>
-            <h3 class="deck-card-title">Pharmacy Management Software</h3>
-            <p class="deck-card-desc">
-              We build pharmacy management solutions that digitize prescribing, dispensing, and fulfillment while improving medication safety and inventory control. Custom pharmacy platforms can support e-prescriptions, drug interaction checks, and pharmacy analytics.
-            </p>
-            <div class="deck-pills-wrap" aria-label="Pharmacy Capabilities">
-              <span class="deck-pill">E-Prescription Dispensing</span>
-              <span class="deck-pill">Drug Interaction Checks</span>
-              <span class="deck-pill">Inventory Safety Control</span>
-              <span class="deck-pill">Pharmacy Analytics</span>
-            </div>
-          </article>
-
+          </div>
         </div>
 
       </div>
@@ -1079,100 +1099,114 @@
           </p>
         </div>
 
-        <!-- 5-CARD CONNECTED HEALTH TECH GRID -->
-        <div class="connected-health-grid-5">
+        <!-- 5-CARD CONNECTED HEALTH TECH (SLIDER ON MOBILE <= 991px, GRID ON DESKTOP) -->
+        <div class="splide responsive-section-slider" id="connected-health-slider" aria-label="Connected Healthcare Technologies Slider">
+          <div class="splide__track">
+            <div class="splide__list connected-health-grid-5">
 
-          <!-- Card 1: AI in Healthcare Software (Featured Wide Card) -->
-          <article class="connected-card connected-card-featured-wide">
-            <div class="connected-card-top">
-              <div class="connected-card-icon" aria-hidden="true">🧠</div>
-              <span class="connected-trend-badge">Agentic AI Core</span>
-            </div>
-            <h3 class="connected-card-title">Artificial Intelligence in Healthcare Software</h3>
-            <p class="connected-card-desc">
-              We integrate AI in healthcare software to support clinical decision support, predictive medicine, medical imaging analysis, and clinical documentation intelligence. <a href="https://vizzwebsolutions.com/services/software-development/ai/" class="inline-brand-link" aria-label="Explore AI-powered healthcare software solutions by Vizz Web Solutions" title="AI-Powered Solutions">AI-powered solutions</a> can also power agentic workflows that automate intake, coding, and routine administrative tasks. We focus on use cases where artificial intelligence can deliver practical, compliant clinical value.
-            </p>
-            <div class="connected-tags-wrap" aria-label="AI Capabilities">
-              <span class="connected-tag">Clinical Decision Support</span>
-              <span class="connected-tag">Predictive Medicine</span>
-              <span class="connected-tag">Medical Imaging AI</span>
-              <span class="connected-tag">Agentic Intake Automation</span>
-              <span class="connected-tag">Documentation Intelligence</span>
-            </div>
-          </article>
+              <!-- Card 1: AI in Healthcare Software (Featured Wide Card) -->
+              <div class="splide__slide connected-slide-featured">
+                <article class="connected-card connected-card-featured-wide">
+                  <div class="connected-card-top">
+                    <div class="connected-card-icon" aria-hidden="true">🧠</div>
+                    <span class="connected-trend-badge">Agentic AI Core</span>
+                  </div>
+                  <h3 class="connected-card-title">Artificial Intelligence in Healthcare Software</h3>
+                  <p class="connected-card-desc">
+                    We integrate AI in healthcare software to support clinical decision support, predictive medicine, medical imaging analysis, and clinical documentation intelligence. <a href="https://vizzwebsolutions.com/services/software-development/ai/" class="inline-brand-link" aria-label="Explore AI-powered healthcare software solutions by Vizz Web Solutions" title="AI-Powered Solutions">AI-powered solutions</a> can also power agentic workflows that automate intake, coding, and routine administrative tasks. We focus on use cases where artificial intelligence can deliver practical, compliant clinical value.
+                  </p>
+                  <div class="connected-tags-wrap" aria-label="AI Capabilities">
+                    <span class="connected-tag">Clinical Decision Support</span>
+                    <span class="connected-tag">Predictive Medicine</span>
+                    <span class="connected-tag">Medical Imaging AI</span>
+                    <span class="connected-tag">Agentic Intake Automation</span>
+                    <span class="connected-tag">Documentation Intelligence</span>
+                  </div>
+                </article>
+              </div>
 
-          <!-- Card 2: IoT & Connected Health -->
-          <article class="connected-card">
-            <div class="connected-card-top">
-              <div class="connected-card-icon" aria-hidden="true">📡</div>
-              <span class="connected-trend-badge">Connected Health</span>
-            </div>
-            <h3 class="connected-card-title">Internet of Things &amp; Connected Health</h3>
-            <p class="connected-card-desc">
-              Our <a href="https://vizzwebsolutions.com/services/software-development/iot/" class="inline-brand-link" aria-label="Explore IoT healthcare solutions by Vizz Web Solutions" title="IoT Solutions">IoT solutions</a> for healthcare connect wearables, remote sensors, and medical devices to capture real-time patient data. IoT can support remote patient monitoring, chronic disease management, medication adherence tracking, and continuous vital-sign visibility. Connected device data can also feed EHRs, analytics platforms, and AI-driven clinical alerting systems.
-            </p>
-            <div class="connected-tags-wrap" aria-label="IoT Capabilities">
-              <span class="connected-tag">Remote Patient Monitoring</span>
-              <span class="connected-tag">Continuous Vital Signs</span>
-              <span class="connected-tag">Medication Adherence</span>
-              <span class="connected-tag">EHR Device Streaming</span>
-            </div>
-          </article>
+              <!-- Card 2: IoT & Connected Health -->
+              <div class="splide__slide">
+                <article class="connected-card">
+                  <div class="connected-card-top">
+                    <div class="connected-card-icon" aria-hidden="true">📡</div>
+                    <span class="connected-trend-badge">Connected Health</span>
+                  </div>
+                  <h3 class="connected-card-title">Internet of Things &amp; Connected Health</h3>
+                  <p class="connected-card-desc">
+                    Our <a href="https://vizzwebsolutions.com/services/software-development/iot/" class="inline-brand-link" aria-label="Explore IoT healthcare solutions by Vizz Web Solutions" title="IoT Solutions">IoT solutions</a> for healthcare connect wearables, remote sensors, and medical devices to capture real-time patient data. IoT can support remote patient monitoring, chronic disease management, medication adherence tracking, and continuous vital-sign visibility. Connected device data can also feed EHRs, analytics platforms, and AI-driven clinical alerting systems.
+                  </p>
+                  <div class="connected-tags-wrap" aria-label="IoT Capabilities">
+                    <span class="connected-tag">Remote Patient Monitoring</span>
+                    <span class="connected-tag">Continuous Vital Signs</span>
+                    <span class="connected-tag">Medication Adherence</span>
+                    <span class="connected-tag">EHR Device Streaming</span>
+                  </div>
+                </article>
+              </div>
 
-          <!-- Card 3: Healthcare Interoperability (HL7 & FHIR) -->
-          <article class="connected-card">
-            <div class="connected-card-top">
-              <div class="connected-card-icon" aria-hidden="true">🔄</div>
-              <span class="connected-trend-badge">Interoperability</span>
-            </div>
-            <h3 class="connected-card-title">Healthcare Interoperability (HL7 &amp; FHIR)</h3>
-            <p class="connected-card-desc">
-              We build interoperability into every solution using HL7 v2, FHIR, CDA/CCD, and DICOM standards. Interoperable architecture enables secure data exchange between EHRs, labs, imaging systems, pharmacies, and payers, reducing data silos and supporting coordinated, evidence-based care across the entire continuum.
-            </p>
-            <div class="connected-tags-wrap" aria-label="Interoperability Standards">
-              <span class="connected-tag">HL7 v2 / v3</span>
-              <span class="connected-tag">FHIR R4 / R5</span>
-              <span class="connected-tag">CDA / CCD Standards</span>
-              <span class="connected-tag">DICOM Imaging Sync</span>
-            </div>
-          </article>
+              <!-- Card 3: Healthcare Interoperability (HL7 & FHIR) -->
+              <div class="splide__slide">
+                <article class="connected-card">
+                  <div class="connected-card-top">
+                    <div class="connected-card-icon" aria-hidden="true">🔄</div>
+                    <span class="connected-trend-badge">Interoperability</span>
+                  </div>
+                  <h3 class="connected-card-title">Healthcare Interoperability (HL7 &amp; FHIR)</h3>
+                  <p class="connected-card-desc">
+                    We build interoperability into every solution using HL7 v2, FHIR, CDA/CCD, and DICOM standards. Interoperable architecture enables secure data exchange between EHRs, labs, imaging systems, pharmacies, and payers, reducing data silos and supporting coordinated, evidence-based care across the entire continuum.
+                  </p>
+                  <div class="connected-tags-wrap" aria-label="Interoperability Standards">
+                    <span class="connected-tag">HL7 v2 / v3</span>
+                    <span class="connected-tag">FHIR R4 / R5</span>
+                    <span class="connected-tag">CDA / CCD Standards</span>
+                    <span class="connected-tag">DICOM Imaging Sync</span>
+                  </div>
+                </article>
+              </div>
 
-          <!-- Card 4: Machine Learning & Predictive Analytics -->
-          <article class="connected-card">
-            <div class="connected-card-top">
-              <div class="connected-card-icon" aria-hidden="true">📈</div>
-              <span class="connected-trend-badge">Predictive ML</span>
-            </div>
-            <h3 class="connected-card-title">Machine Learning &amp; Predictive Analytics</h3>
-            <p class="connected-card-desc">
-              Our <a href="https://vizzwebsolutions.com/services/machine-learning-and-ai-development/" class="inline-brand-link" aria-label="Explore machine learning solutions for healthcare by Vizz Web Solutions" title="Machine Learning Solutions">machine learning solutions</a> for healthcare can analyze historical and real-time clinical data to identify patterns and support predictive decision-making. Applications include patient admission forecasting, readmission risk scoring, fraud detection in billing, and population health analytics. Effective ML solutions are developed around reliable, governed data and clearly defined clinical objectives.
-            </p>
-            <div class="connected-tags-wrap" aria-label="ML Capabilities">
-              <span class="connected-tag">Admission Forecasting</span>
-              <span class="connected-tag">Readmission Risk Scoring</span>
-              <span class="connected-tag">Billing Fraud Detection</span>
-              <span class="connected-tag">Population Health ML</span>
-            </div>
-          </article>
+              <!-- Card 4: Machine Learning & Predictive Analytics -->
+              <div class="splide__slide">
+                <article class="connected-card">
+                  <div class="connected-card-top">
+                    <div class="connected-card-icon" aria-hidden="true">📈</div>
+                    <span class="connected-trend-badge">Predictive ML</span>
+                  </div>
+                  <h3 class="connected-card-title">Machine Learning &amp; Predictive Analytics</h3>
+                  <p class="connected-card-desc">
+                    Our <a href="https://vizzwebsolutions.com/services/machine-learning-and-ai-development/" class="inline-brand-link" aria-label="Explore machine learning solutions for healthcare by Vizz Web Solutions" title="Machine Learning Solutions">machine learning solutions</a> for healthcare can analyze historical and real-time clinical data to identify patterns and support predictive decision-making. Applications include patient admission forecasting, readmission risk scoring, fraud detection in billing, and population health analytics. Effective ML solutions are developed around reliable, governed data and clearly defined clinical objectives.
+                  </p>
+                  <div class="connected-tags-wrap" aria-label="ML Capabilities">
+                    <span class="connected-tag">Admission Forecasting</span>
+                    <span class="connected-tag">Readmission Risk Scoring</span>
+                    <span class="connected-tag">Billing Fraud Detection</span>
+                    <span class="connected-tag">Population Health ML</span>
+                  </div>
+                </article>
+              </div>
 
-          <!-- Card 5: Cloud Computing & HIPAA-Ready Infrastructure -->
-          <article class="connected-card">
-            <div class="connected-card-top">
-              <div class="connected-card-icon" aria-hidden="true">☁️</div>
-              <span class="connected-trend-badge">Cloud BAA Ready</span>
-            </div>
-            <h3 class="connected-card-title">Cloud Computing &amp; HIPAA-Ready Infrastructure</h3>
-            <p class="connected-card-desc">
-              We use cloud computing for healthcare to build scalable applications, centralized data environments, multi-facility systems, and secure analytics platforms. Cloud-native, HIPAA compliant architecture can improve accessibility, integration, and infrastructure flexibility. We can also design hybrid solutions for organizations that need to retain critical on-premise systems.
-            </p>
-            <div class="connected-tags-wrap" aria-label="Cloud Infrastructure Capabilities">
-              <span class="connected-tag">HIPAA Compliant Architecture</span>
-              <span class="connected-tag">Multi-Facility Scalability</span>
-              <span class="connected-tag">Hybrid Cloud Deployment</span>
-              <span class="connected-tag">Enterprise Data Lake</span>
-            </div>
-          </article>
+              <!-- Card 5: Cloud Computing & HIPAA-Ready Infrastructure -->
+              <div class="splide__slide">
+                <article class="connected-card">
+                  <div class="connected-card-top">
+                    <div class="connected-card-icon" aria-hidden="true">☁️</div>
+                    <span class="connected-trend-badge">Cloud BAA Ready</span>
+                  </div>
+                  <h3 class="connected-card-title">Cloud Computing &amp; HIPAA-Ready Infrastructure</h3>
+                  <p class="connected-card-desc">
+                    We use cloud computing for healthcare to build scalable applications, centralized data environments, multi-facility systems, and secure analytics platforms. Cloud-native, HIPAA compliant architecture can improve accessibility, integration, and infrastructure flexibility. We can also design hybrid solutions for organizations that need to retain critical on-premise systems.
+                  </p>
+                  <div class="connected-tags-wrap" aria-label="Cloud Infrastructure Capabilities">
+                    <span class="connected-tag">HIPAA Compliant Architecture</span>
+                    <span class="connected-tag">Multi-Facility Scalability</span>
+                    <span class="connected-tag">Hybrid Cloud Deployment</span>
+                    <span class="connected-tag">Enterprise Data Lake</span>
+                  </div>
+                </article>
+              </div>
 
+            </div>
+          </div>
         </div>
 
         <!-- BOTTOM ACTION BUTTON -->
@@ -1204,81 +1238,97 @@
           </p>
         </div>
 
-        <!-- 6-STEP PROCESS GRID -->
-        <div class="process-grid-6">
+        <!-- 6-STEP PROCESS (SLIDER ON MOBILE <= 991px, GRID ON DESKTOP) -->
+        <div class="splide responsive-section-slider" id="development-process-slider" aria-label="Healthcare Development Process Slider">
+          <div class="splide__track">
+            <div class="splide__list process-grid-6">
 
-          <!-- Step 1 -->
-          <article class="process-step-card">
-            <div class="process-card-top">
-              <span class="process-step-number" aria-hidden="true">01</span>
-              <span class="process-step-pill">Phase 1</span>
+              <!-- Step 1 -->
+              <div class="splide__slide">
+                <article class="process-step-card">
+                  <div class="process-card-top">
+                    <span class="process-step-number" aria-hidden="true">01</span>
+                    <span class="process-step-pill">Phase 1</span>
+                  </div>
+                  <h3 class="process-step-title">Requirement Analysis &amp; Consultation</h3>
+                  <p class="process-step-desc">
+                    We assess your clinical workflows, systems, data, users, goals, and compliance needs to define a clear and effective project scope.
+                  </p>
+                </article>
+              </div>
+
+              <!-- Step 2 -->
+              <div class="splide__slide">
+                <article class="process-step-card">
+                  <div class="process-card-top">
+                    <span class="process-step-number" aria-hidden="true">02</span>
+                    <span class="process-step-pill">Phase 2</span>
+                  </div>
+                  <h3 class="process-step-title">Solution Design &amp; Architecture</h3>
+                  <p class="process-step-desc">
+                    We design a secure, scalable, HIPAA-aligned architecture covering databases, integrations, user roles, security controls, and data flows.
+                  </p>
+                </article>
+              </div>
+
+              <!-- Step 3 -->
+              <div class="splide__slide">
+                <article class="process-step-card">
+                  <div class="process-card-top">
+                    <span class="process-step-number" aria-hidden="true">03</span>
+                    <span class="process-step-pill">Phase 3</span>
+                  </div>
+                  <h3 class="process-step-title">Development &amp; Customization</h3>
+                  <p class="process-step-desc">
+                    We build and customize your healthcare application with tailored features, workflows, dashboards, APIs, automation, integrations, and clinical logic.
+                  </p>
+                </article>
+              </div>
+
+              <!-- Step 4 -->
+              <div class="splide__slide">
+                <article class="process-step-card">
+                  <div class="process-card-top">
+                    <span class="process-step-number" aria-hidden="true">04</span>
+                    <span class="process-step-pill">Phase 4</span>
+                  </div>
+                  <h3 class="process-step-title">Testing &amp; Quality Assurance</h3>
+                  <p class="process-step-desc">
+                    We rigorously test functionality, security, performance, usability, integrations, and interoperability to ensure reliable and production-ready healthcare software.
+                  </p>
+                </article>
+              </div>
+
+              <!-- Step 5 -->
+              <div class="splide__slide">
+                <article class="process-step-card">
+                  <div class="process-card-top">
+                    <span class="process-step-number" aria-hidden="true">05</span>
+                    <span class="process-step-pill">Phase 5</span>
+                  </div>
+                  <h3 class="process-step-title">Deployment &amp; Integration</h3>
+                  <p class="process-step-desc">
+                    We securely deploy, migrate, and integrate the application using pilot, phased, or controlled rollout strategies based on your clinical and operational needs.
+                  </p>
+                </article>
+              </div>
+
+              <!-- Step 6 -->
+              <div class="splide__slide">
+                <article class="process-step-card">
+                  <div class="process-card-top">
+                    <span class="process-step-number" aria-hidden="true">06</span>
+                    <span class="process-step-pill">Phase 6</span>
+                  </div>
+                  <h3 class="process-step-title">Support &amp; Maintenance</h3>
+                  <p class="process-step-desc">
+                    We provide ongoing monitoring, updates, optimization, integration support, and feature enhancements to keep your healthcare software secure, stable, and scalable.
+                  </p>
+                </article>
+              </div>
+
             </div>
-            <h3 class="process-step-title">Requirement Analysis &amp; Consultation</h3>
-            <p class="process-step-desc">
-              We assess your clinical workflows, systems, data, users, goals, and compliance needs to define a clear and effective project scope.
-            </p>
-          </article>
-
-          <!-- Step 2 -->
-          <article class="process-step-card">
-            <div class="process-card-top">
-              <span class="process-step-number" aria-hidden="true">02</span>
-              <span class="process-step-pill">Phase 2</span>
-            </div>
-            <h3 class="process-step-title">Solution Design &amp; Architecture</h3>
-            <p class="process-step-desc">
-              We design a secure, scalable, HIPAA-aligned architecture covering databases, integrations, user roles, security controls, and data flows.
-            </p>
-          </article>
-
-          <!-- Step 3 -->
-          <article class="process-step-card">
-            <div class="process-card-top">
-              <span class="process-step-number" aria-hidden="true">03</span>
-              <span class="process-step-pill">Phase 3</span>
-            </div>
-            <h3 class="process-step-title">Development &amp; Customization</h3>
-            <p class="process-step-desc">
-              We build and customize your healthcare application with tailored features, workflows, dashboards, APIs, automation, integrations, and clinical logic.
-            </p>
-          </article>
-
-          <!-- Step 4 -->
-          <article class="process-step-card">
-            <div class="process-card-top">
-              <span class="process-step-number" aria-hidden="true">04</span>
-              <span class="process-step-pill">Phase 4</span>
-            </div>
-            <h3 class="process-step-title">Testing &amp; Quality Assurance</h3>
-            <p class="process-step-desc">
-              We rigorously test functionality, security, performance, usability, integrations, and interoperability to ensure reliable and production-ready healthcare software.
-            </p>
-          </article>
-
-          <!-- Step 5 -->
-          <article class="process-step-card">
-            <div class="process-card-top">
-              <span class="process-step-number" aria-hidden="true">05</span>
-              <span class="process-step-pill">Phase 5</span>
-            </div>
-            <h3 class="process-step-title">Deployment &amp; Integration</h3>
-            <p class="process-step-desc">
-              We securely deploy, migrate, and integrate the application using pilot, phased, or controlled rollout strategies based on your clinical and operational needs.
-            </p>
-          </article>
-
-          <!-- Step 6 -->
-          <article class="process-step-card">
-            <div class="process-card-top">
-              <span class="process-step-number" aria-hidden="true">06</span>
-              <span class="process-step-pill">Phase 6</span>
-            </div>
-            <h3 class="process-step-title">Support &amp; Maintenance</h3>
-            <p class="process-step-desc">
-              We provide ongoing monitoring, updates, optimization, integration support, and feature enhancements to keep your healthcare software secure, stable, and scalable.
-            </p>
-          </article>
-
+          </div>
         </div>
 
       </div>
@@ -1302,90 +1352,112 @@
           </p>
         </div>
 
-        <!-- 9 SECTORS GRID -->
-        <div class="sectors-grid-9">
+        <!-- 9 SECTORS (SLIDER ON MOBILE <= 991px, GRID ON DESKTOP) -->
+        <div class="splide responsive-section-slider" id="health-sectors-slider" aria-label="Health Sectors We Serve Slider">
+          <div class="splide__track">
+            <div class="splide__list sectors-grid-9">
 
-          <!-- 1. Hospitals & Health Systems -->
-          <article class="sector-card">
-            <div class="sector-icon-box" aria-hidden="true">🏥</div>
-            <div class="sector-content">
-              <h3 class="sector-title">Hospitals &amp; Health Systems</h3>
-              <p class="sector-desc">Enterprise-scale clinical workflows, multi-departmental coordination, bed management, and unified EHR platforms.</p>
+              <!-- 1. Hospitals & Health Systems -->
+              <div class="splide__slide">
+                <article class="sector-card">
+                  <div class="sector-icon-box" aria-hidden="true">🏥</div>
+                  <div class="sector-content">
+                    <h3 class="sector-title">Hospitals &amp; Health Systems</h3>
+                    <p class="sector-desc">Enterprise-scale clinical workflows, multi-departmental coordination, bed management, and unified EHR platforms.</p>
+                  </div>
+                </article>
+              </div>
+
+              <!-- 2. Outpatient Clinics & Physician Practices -->
+              <div class="splide__slide">
+                <article class="sector-card">
+                  <div class="sector-icon-box" aria-hidden="true">🩺</div>
+                  <div class="sector-content">
+                    <h3 class="sector-title">Outpatient Clinics &amp; Physician Practices</h3>
+                    <p class="sector-desc">Streamlined patient scheduling, clinical charting, billing automation, and practice management tools.</p>
+                  </div>
+                </article>
+              </div>
+
+              <!-- 3. Telehealth & Virtual Care Providers -->
+              <div class="splide__slide">
+                <article class="sector-card">
+                  <div class="sector-icon-box" aria-hidden="true">📱</div>
+                  <div class="sector-content">
+                    <h3 class="sector-title">Telehealth &amp; Virtual Care Providers</h3>
+                    <p class="sector-desc">Secure HD video consultations, asynchronous messaging, e-prescribing, and remote clinician portals.</p>
+                  </div>
+                </article>
+              </div>
+
+              <!-- 4. Diagnostic & Laboratory Organizations -->
+              <div class="splide__slide">
+                <article class="sector-card">
+                  <div class="sector-icon-box" aria-hidden="true">🔬</div>
+                  <div class="sector-content">
+                    <h3 class="sector-title">Diagnostic &amp; Laboratory Organizations</h3>
+                    <p class="sector-desc">End-to-end LIMS, automated specimen intake, diagnostic device interfacing, and fast result delivery.</p>
+                  </div>
+                </article>
+              </div>
+
+              <!-- 5. Pharmaceutical & Pharmacy Companies -->
+              <div class="splide__slide">
+                <article class="sector-card">
+                  <div class="sector-icon-box" aria-hidden="true">💊</div>
+                  <div class="sector-content">
+                    <h3 class="sector-title">Pharmaceutical &amp; Pharmacy Companies</h3>
+                    <p class="sector-desc">E-prescriptions, automated inventory tracking, medication adherence monitoring, and clinical trial data.</p>
+                  </div>
+                </article>
+              </div>
+
+              <!-- 6. Behavioral & Mental Health Providers -->
+              <div class="splide__slide">
+                <article class="sector-card">
+                  <div class="sector-icon-box" aria-hidden="true">🧠</div>
+                  <div class="sector-content">
+                    <h3 class="sector-title">Behavioral &amp; Mental Health Providers</h3>
+                    <p class="sector-desc">Specialized therapy documentation, outcome tracking, confidential patient messaging, and telehealth.</p>
+                  </div>
+                </article>
+              </div>
+
+              <!-- 7. Long-Term Care & Home Health Agencies -->
+              <div class="splide__slide">
+                <article class="sector-card">
+                  <div class="sector-icon-box" aria-hidden="true">🏡</div>
+                  <div class="sector-content">
+                    <h3 class="sector-title">Long-Term Care &amp; Home Health Agencies</h3>
+                    <p class="sector-desc">Remote patient monitoring, caregiver scheduling, home vital tracking, and mobile nurse documentation.</p>
+                  </div>
+                </article>
+              </div>
+
+              <!-- 8. Medical Device Manufacturers & Startups -->
+              <div class="splide__slide">
+                <article class="sector-card">
+                  <div class="sector-icon-box" aria-hidden="true">⚡</div>
+                  <div class="sector-content">
+                    <h3 class="sector-title">Medical Device Manufacturers &amp; HealthTech Startups</h3>
+                    <p class="sector-desc">Connected IoT device firmware, HIPAA-ready cloud backends, and FDA-compliant medical applications.</p>
+                  </div>
+                </article>
+              </div>
+
+              <!-- 9. On Demand Healthcare -->
+              <div class="splide__slide">
+                <article class="sector-card">
+                  <div class="sector-icon-box" aria-hidden="true">🚀</div>
+                  <div class="sector-content">
+                    <h3 class="sector-title">On-Demand Healthcare</h3>
+                    <p class="sector-desc">Fast-response home care dispatch, mobile phlebotomy, urgent care triage, and direct-to-consumer health apps.</p>
+                  </div>
+                </article>
+              </div>
+
             </div>
-          </article>
-
-          <!-- 2. Outpatient Clinics & Physician Practices -->
-          <article class="sector-card">
-            <div class="sector-icon-box" aria-hidden="true">🩺</div>
-            <div class="sector-content">
-              <h3 class="sector-title">Outpatient Clinics &amp; Physician Practices</h3>
-              <p class="sector-desc">Streamlined patient scheduling, clinical charting, billing automation, and practice management tools.</p>
-            </div>
-          </article>
-
-          <!-- 3. Telehealth & Virtual Care Providers -->
-          <article class="sector-card">
-            <div class="sector-icon-box" aria-hidden="true">📱</div>
-            <div class="sector-content">
-              <h3 class="sector-title">Telehealth &amp; Virtual Care Providers</h3>
-              <p class="sector-desc">Secure HD video consultations, asynchronous messaging, e-prescribing, and remote clinician portals.</p>
-            </div>
-          </article>
-
-          <!-- 4. Diagnostic & Laboratory Organizations -->
-          <article class="sector-card">
-            <div class="sector-icon-box" aria-hidden="true">🔬</div>
-            <div class="sector-content">
-              <h3 class="sector-title">Diagnostic &amp; Laboratory Organizations</h3>
-              <p class="sector-desc">End-to-end LIMS, automated specimen intake, diagnostic device interfacing, and fast result delivery.</p>
-            </div>
-          </article>
-
-          <!-- 5. Pharmaceutical & Pharmacy Companies -->
-          <article class="sector-card">
-            <div class="sector-icon-box" aria-hidden="true">💊</div>
-            <div class="sector-content">
-              <h3 class="sector-title">Pharmaceutical &amp; Pharmacy Companies</h3>
-              <p class="sector-desc">E-prescriptions, automated inventory tracking, medication adherence monitoring, and clinical trial data.</p>
-            </div>
-          </article>
-
-          <!-- 6. Behavioral & Mental Health Providers -->
-          <article class="sector-card">
-            <div class="sector-icon-box" aria-hidden="true">🧠</div>
-            <div class="sector-content">
-              <h3 class="sector-title">Behavioral &amp; Mental Health Providers</h3>
-              <p class="sector-desc">Specialized therapy documentation, outcome tracking, confidential patient messaging, and telehealth.</p>
-            </div>
-          </article>
-
-          <!-- 7. Long-Term Care & Home Health Agencies -->
-          <article class="sector-card">
-            <div class="sector-icon-box" aria-hidden="true">🏡</div>
-            <div class="sector-content">
-              <h3 class="sector-title">Long-Term Care &amp; Home Health Agencies</h3>
-              <p class="sector-desc">Remote patient monitoring, caregiver scheduling, home vital tracking, and mobile nurse documentation.</p>
-            </div>
-          </article>
-
-          <!-- 8. Medical Device Manufacturers & Startups -->
-          <article class="sector-card">
-            <div class="sector-icon-box" aria-hidden="true">⚡</div>
-            <div class="sector-content">
-              <h3 class="sector-title">Medical Device Manufacturers &amp; HealthTech Startups</h3>
-              <p class="sector-desc">Connected IoT device firmware, HIPAA-ready cloud backends, and FDA-compliant medical applications.</p>
-            </div>
-          </article>
-
-          <!-- 9. On Demand Healthcare -->
-          <article class="sector-card">
-            <div class="sector-icon-box" aria-hidden="true">🚀</div>
-            <div class="sector-content">
-              <h3 class="sector-title">On-Demand Healthcare</h3>
-              <p class="sector-desc">Fast-response home care dispatch, mobile phlebotomy, urgent care triage, and direct-to-consumer health apps.</p>
-            </div>
-          </article>
-
+          </div>
         </div>
 
       </div>
@@ -1546,129 +1618,149 @@
           </p>
         </div>
 
-        <!-- 8 TECH STACK CATEGORY CARDS (4x2 GRID) -->
-        <div class="tech-grid-8">
+        <!-- 8 TECH STACK CATEGORY CARDS (SLIDER ON MOBILE <= 991px, GRID ON DESKTOP) -->
+        <div class="splide responsive-section-slider" id="tech-stack-slider" aria-label="Healthcare Technology Stack Slider">
+          <div class="splide__track">
+            <div class="splide__list tech-grid-8">
 
-          <!-- 1. Programming Languages -->
-          <article class="tech-category-card">
-            <div class="tech-card-header">
-              <div class="tech-card-icon" aria-hidden="true">💻</div>
-              <h3 class="tech-category-title">Programming Languages</h3>
-            </div>
-            <div class="tech-chips-wrap" aria-label="Programming Languages">
-              <span class="tech-chip">C#</span>
-              <span class="tech-chip">Java</span>
-              <span class="tech-chip">Python</span>
-              <span class="tech-chip">PHP</span>
-              <span class="tech-chip">JavaScript</span>
-              <span class="tech-chip">Ruby</span>
-            </div>
-          </article>
+              <!-- 1. Programming Languages -->
+              <div class="splide__slide">
+                <article class="tech-category-card">
+                  <div class="tech-card-header">
+                    <div class="tech-card-icon" aria-hidden="true">💻</div>
+                    <h3 class="tech-category-title">Programming Languages</h3>
+                  </div>
+                  <div class="tech-chips-wrap" aria-label="Programming Languages">
+                    <span class="tech-chip">C#</span>
+                    <span class="tech-chip">Java</span>
+                    <span class="tech-chip">Python</span>
+                    <span class="tech-chip">PHP</span>
+                    <span class="tech-chip">JavaScript</span>
+                    <span class="tech-chip">Ruby</span>
+                  </div>
+                </article>
+              </div>
 
-          <!-- 2. Frameworks & Libraries -->
-          <article class="tech-category-card">
-            <div class="tech-card-header">
-              <div class="tech-card-icon" aria-hidden="true">⚡</div>
-              <h3 class="tech-category-title">Frameworks &amp; Libraries</h3>
-            </div>
-            <div class="tech-chips-wrap" aria-label="Frameworks and Libraries">
-              <span class="tech-chip">.NET Core / ASP.NET</span>
-              <span class="tech-chip">React</span>
-              <span class="tech-chip">Angular</span>
-              <span class="tech-chip">Vue.js</span>
-              <span class="tech-chip">Node.js / Express</span>
-              <span class="tech-chip">Ruby on Rails</span>
-            </div>
-          </article>
+              <!-- 2. Frameworks & Libraries -->
+              <div class="splide__slide">
+                <article class="tech-category-card">
+                  <div class="tech-card-header">
+                    <div class="tech-card-icon" aria-hidden="true">⚡</div>
+                    <h3 class="tech-category-title">Frameworks &amp; Libraries</h3>
+                  </div>
+                  <div class="tech-chips-wrap" aria-label="Frameworks and Libraries">
+                    <span class="tech-chip">.NET Core / ASP.NET</span>
+                    <span class="tech-chip">React</span>
+                    <span class="tech-chip">Angular</span>
+                    <span class="tech-chip">Vue.js</span>
+                    <span class="tech-chip">Node.js / Express</span>
+                    <span class="tech-chip">Ruby on Rails</span>
+                  </div>
+                </article>
+              </div>
 
-          <!-- 3. Mobile Technologies -->
-          <article class="tech-category-card">
-            <div class="tech-card-header">
-              <div class="tech-card-icon" aria-hidden="true">📱</div>
-              <h3 class="tech-category-title">Mobile Technologies</h3>
-            </div>
-            <div class="tech-chips-wrap" aria-label="Mobile Technologies">
-              <span class="tech-chip">Swift</span>
-              <span class="tech-chip">Kotlin</span>
-              <span class="tech-chip">Flutter</span>
-              <span class="tech-chip">React Native</span>
-            </div>
-          </article>
+              <!-- 3. Mobile Technologies -->
+              <div class="splide__slide">
+                <article class="tech-category-card">
+                  <div class="tech-card-header">
+                    <div class="tech-card-icon" aria-hidden="true">📱</div>
+                    <h3 class="tech-category-title">Mobile Technologies</h3>
+                  </div>
+                  <div class="tech-chips-wrap" aria-label="Mobile Technologies">
+                    <span class="tech-chip">Swift</span>
+                    <span class="tech-chip">Kotlin</span>
+                    <span class="tech-chip">Flutter</span>
+                    <span class="tech-chip">React Native</span>
+                  </div>
+                </article>
+              </div>
 
-          <!-- 4. Platforms -->
-          <article class="tech-category-card">
-            <div class="tech-card-header">
-              <div class="tech-card-icon" aria-hidden="true">🏢</div>
-              <h3 class="tech-category-title">Platforms</h3>
-            </div>
-            <div class="tech-chips-wrap" aria-label="Healthcare Platforms">
-              <span class="tech-chip">Salesforce Health Cloud</span>
-              <span class="tech-chip">Microsoft Cloud for Healthcare</span>
-              <span class="tech-chip">Dynamics 365</span>
-              <span class="tech-chip">Odoo</span>
-            </div>
-          </article>
+              <!-- 4. Platforms -->
+              <div class="splide__slide">
+                <article class="tech-category-card">
+                  <div class="tech-card-header">
+                    <div class="tech-card-icon" aria-hidden="true">🏢</div>
+                    <h3 class="tech-category-title">Platforms</h3>
+                  </div>
+                  <div class="tech-chips-wrap" aria-label="Healthcare Platforms">
+                    <span class="tech-chip">Salesforce Health Cloud</span>
+                    <span class="tech-chip">Microsoft Cloud for Healthcare</span>
+                    <span class="tech-chip">Dynamics 365</span>
+                    <span class="tech-chip">Odoo</span>
+                  </div>
+                </article>
+              </div>
 
-          <!-- 5. Cloud & DevOps -->
-          <article class="tech-category-card">
-            <div class="tech-card-header">
-              <div class="tech-card-icon" aria-hidden="true">☁️</div>
-              <h3 class="tech-category-title">Cloud &amp; DevOps</h3>
-            </div>
-            <div class="tech-chips-wrap" aria-label="Cloud and DevOps">
-              <span class="tech-chip">AWS</span>
-              <span class="tech-chip">Microsoft Azure</span>
-              <span class="tech-chip">Google Cloud Platform</span>
-              <span class="tech-chip">Docker</span>
-              <span class="tech-chip">Kubernetes</span>
-            </div>
-          </article>
+              <!-- 5. Cloud & DevOps -->
+              <div class="splide__slide">
+                <article class="tech-category-card">
+                  <div class="tech-card-header">
+                    <div class="tech-card-icon" aria-hidden="true">☁️</div>
+                    <h3 class="tech-category-title">Cloud &amp; DevOps</h3>
+                  </div>
+                  <div class="tech-chips-wrap" aria-label="Cloud and DevOps">
+                    <span class="tech-chip">AWS</span>
+                    <span class="tech-chip">Microsoft Azure</span>
+                    <span class="tech-chip">Google Cloud Platform</span>
+                    <span class="tech-chip">Docker</span>
+                    <span class="tech-chip">Kubernetes</span>
+                  </div>
+                </article>
+              </div>
 
-          <!-- 6. Data & AI -->
-          <article class="tech-category-card">
-            <div class="tech-card-header">
-              <div class="tech-card-icon" aria-hidden="true">🧠</div>
-              <h3 class="tech-category-title">Data &amp; AI</h3>
-            </div>
-            <div class="tech-chips-wrap" aria-label="Data and AI">
-              <span class="tech-chip">Python (ML/AI)</span>
-              <span class="tech-chip">TensorFlow</span>
-              <span class="tech-chip">LLM / RAG Frameworks</span>
-              <span class="tech-chip">Power BI</span>
-            </div>
-          </article>
+              <!-- 6. Data & AI -->
+              <div class="splide__slide">
+                <article class="tech-category-card">
+                  <div class="tech-card-header">
+                    <div class="tech-card-icon" aria-hidden="true">🧠</div>
+                    <h3 class="tech-category-title">Data &amp; AI</h3>
+                  </div>
+                  <div class="tech-chips-wrap" aria-label="Data and AI">
+                    <span class="tech-chip">Python (ML/AI)</span>
+                    <span class="tech-chip">TensorFlow</span>
+                    <span class="tech-chip">LLM / RAG Frameworks</span>
+                    <span class="tech-chip">Power BI</span>
+                  </div>
+                </article>
+              </div>
 
-          <!-- 7. Interoperability -->
-          <article class="tech-category-card">
-            <div class="tech-card-header">
-              <div class="tech-card-icon" aria-hidden="true">🔄</div>
-              <h3 class="tech-category-title">Interoperability</h3>
-            </div>
-            <div class="tech-chips-wrap" aria-label="Healthcare Interoperability Standards">
-              <span class="tech-chip">HL7 v2</span>
-              <span class="tech-chip">FHIR R4</span>
-              <span class="tech-chip">CDA / CCD</span>
-              <span class="tech-chip">DICOM</span>
-              <span class="tech-chip">X12 EDI</span>
-              <span class="tech-chip">NCPDP</span>
-            </div>
-          </article>
+              <!-- 7. Interoperability -->
+              <div class="splide__slide">
+                <article class="tech-category-card">
+                  <div class="tech-card-header">
+                    <div class="tech-card-icon" aria-hidden="true">🔄</div>
+                    <h3 class="tech-category-title">Interoperability</h3>
+                  </div>
+                  <div class="tech-chips-wrap" aria-label="Healthcare Interoperability Standards">
+                    <span class="tech-chip">HL7 v2</span>
+                    <span class="tech-chip">FHIR R4</span>
+                    <span class="tech-chip">CDA / CCD</span>
+                    <span class="tech-chip">DICOM</span>
+                    <span class="tech-chip">X12 EDI</span>
+                    <span class="tech-chip">NCPDP</span>
+                  </div>
+                </article>
+              </div>
 
-          <!-- 8. Database-Related -->
-          <article class="tech-category-card">
-            <div class="tech-card-header">
-              <div class="tech-card-icon" aria-hidden="true">🗄️</div>
-              <h3 class="tech-category-title">Database-Related</h3>
-            </div>
-            <div class="tech-chips-wrap" aria-label="Databases and Data Stores">
-              <span class="tech-chip">SQL Server</span>
-              <span class="tech-chip">PostgreSQL</span>
-              <span class="tech-chip">MongoDB</span>
-              <span class="tech-chip">Azure Cosmos DB</span>
-              <span class="tech-chip">Redis</span>
-            </div>
-          </article>
+              <!-- 8. Database-Related -->
+              <div class="splide__slide">
+                <article class="tech-category-card">
+                  <div class="tech-card-header">
+                    <div class="tech-card-icon" aria-hidden="true">🗄️</div>
+                    <h3 class="tech-category-title">Database-Related</h3>
+                  </div>
+                  <div class="tech-chips-wrap" aria-label="Databases and Data Stores">
+                    <span class="tech-chip">SQL Server</span>
+                    <span class="tech-chip">PostgreSQL</span>
+                    <span class="tech-chip">MongoDB</span>
+                    <span class="tech-chip">Azure Cosmos DB</span>
+                    <span class="tech-chip">Redis</span>
+                  </div>
+                </article>
+              </div>
 
+            </div>
+          </div>
         </div>
 
         <!-- BOTTOM ACTION BUTTON -->
@@ -1700,105 +1792,125 @@
           </p>
         </div>
 
-        <!-- 8 COST DRIVER CARDS GRID (4x2) -->
-        <div class="cost-factors-grid-8">
+        <!-- 8 COST DRIVER CARDS (SLIDER ON MOBILE <= 991px, GRID ON DESKTOP) -->
+        <div class="splide responsive-section-slider" id="cost-factors-slider" aria-label="Healthcare Cost Drivers Slider">
+          <div class="splide__track">
+            <div class="splide__list cost-factors-grid-8">
 
-          <!-- 1. Architecture & Functional Scope -->
-          <article class="cost-factor-card">
-            <div class="cost-card-top-row">
-              <div class="cost-card-icon" aria-hidden="true">🏗️</div>
-              <span class="cost-number-badge">01</span>
+              <!-- 1. Architecture & Functional Scope -->
+              <div class="splide__slide">
+                <article class="cost-factor-card">
+                  <div class="cost-card-top-row">
+                    <div class="cost-card-icon" aria-hidden="true">🏗️</div>
+                    <span class="cost-number-badge">01</span>
+                  </div>
+                  <h3 class="cost-factor-title">Architecture &amp; Functional Scope</h3>
+                  <p class="cost-factor-desc">
+                    The modules and features required, from patient portals to complete EHR or hospital management systems.
+                  </p>
+                </article>
+              </div>
+
+              <!-- 2. User Base -->
+              <div class="splide__slide">
+                <article class="cost-factor-card">
+                  <div class="cost-card-top-row">
+                    <div class="cost-card-icon" aria-hidden="true">👥</div>
+                    <span class="cost-number-badge">02</span>
+                  </div>
+                  <h3 class="cost-factor-title">User Base</h3>
+                  <p class="cost-factor-desc">
+                    The number of clinicians, staff, and patients, along with role-specific UX/UI requirements.
+                  </p>
+                </article>
+              </div>
+
+              <!-- 3. Technology Stack -->
+              <div class="splide__slide">
+                <article class="cost-factor-card">
+                  <div class="cost-card-top-row">
+                    <div class="cost-card-icon" aria-hidden="true">⚡</div>
+                    <span class="cost-number-badge">03</span>
+                  </div>
+                  <h3 class="cost-factor-title">Technology Stack</h3>
+                  <p class="cost-factor-desc">
+                    Cloud services, third-party platforms, medical devices, frameworks, and other technologies needed for development.
+                  </p>
+                </article>
+              </div>
+
+              <!-- 4. Deployment Model -->
+              <div class="splide__slide">
+                <article class="cost-factor-card">
+                  <div class="cost-card-top-row">
+                    <div class="cost-card-icon" aria-hidden="true">☁️</div>
+                    <span class="cost-number-badge">04</span>
+                  </div>
+                  <h3 class="cost-factor-title">Deployment Model</h3>
+                  <p class="cost-factor-desc">
+                    Whether your solution requires on-premises, cloud, hybrid, or multi-cloud infrastructure.
+                  </p>
+                </article>
+              </div>
+
+              <!-- 5. Integration Requirements -->
+              <div class="splide__slide">
+                <article class="cost-factor-card">
+                  <div class="cost-card-top-row">
+                    <div class="cost-card-icon" aria-hidden="true">🔄</div>
+                    <span class="cost-number-badge">05</span>
+                  </div>
+                  <h3 class="cost-factor-title">Integration Requirements</h3>
+                  <p class="cost-factor-desc">
+                    Connections with EHRs, labs, pharmacies, payers, and clearinghouses through HL7, FHIR, X12 EDI, or APIs.
+                  </p>
+                </article>
+              </div>
+
+              <!-- 6. Data Management -->
+              <div class="splide__slide">
+                <article class="cost-factor-card">
+                  <div class="cost-card-top-row">
+                    <div class="cost-card-icon" aria-hidden="true">🗄️</div>
+                    <span class="cost-number-badge">06</span>
+                  </div>
+                  <h3 class="cost-factor-title">Data Management</h3>
+                  <p class="cost-factor-desc">
+                    Data migration, cleansing, transformation, de-identification, storage, and integration with legacy systems.
+                  </p>
+                </article>
+              </div>
+
+              <!-- 7. Development Team -->
+              <div class="splide__slide">
+                <article class="cost-factor-card">
+                  <div class="cost-card-top-row">
+                    <div class="cost-card-icon" aria-hidden="true">👨‍💻</div>
+                    <span class="cost-number-badge">07</span>
+                  </div>
+                  <h3 class="cost-factor-title">Development Team</h3>
+                  <p class="cost-factor-desc">
+                    The specialists required, including developers, UI/UX designers, QA engineers, DevOps professionals, compliance experts, and AI/ML engineers.
+                  </p>
+                </article>
+              </div>
+
+              <!-- 8. Compliance & Ongoing Support -->
+              <div class="splide__slide">
+                <article class="cost-factor-card">
+                  <div class="cost-card-top-row">
+                    <div class="cost-card-icon" aria-hidden="true">🛡️</div>
+                    <span class="cost-number-badge">08</span>
+                  </div>
+                  <h3 class="cost-factor-title">Compliance &amp; Ongoing Support</h3>
+                  <p class="cost-factor-desc">
+                    HIPAA and PHI safeguards, staff training, security updates, maintenance, monitoring, and continuous feature improvements.
+                  </p>
+                </article>
+              </div>
+
             </div>
-            <h3 class="cost-factor-title">Architecture &amp; Functional Scope</h3>
-            <p class="cost-factor-desc">
-              The modules and features required, from patient portals to complete EHR or hospital management systems.
-            </p>
-          </article>
-
-          <!-- 2. User Base -->
-          <article class="cost-factor-card">
-            <div class="cost-card-top-row">
-              <div class="cost-card-icon" aria-hidden="true">👥</div>
-              <span class="cost-number-badge">02</span>
-            </div>
-            <h3 class="cost-factor-title">User Base</h3>
-            <p class="cost-factor-desc">
-              The number of clinicians, staff, and patients, along with role-specific UX/UI requirements.
-            </p>
-          </article>
-
-          <!-- 3. Technology Stack -->
-          <article class="cost-factor-card">
-            <div class="cost-card-top-row">
-              <div class="cost-card-icon" aria-hidden="true">⚡</div>
-              <span class="cost-number-badge">03</span>
-            </div>
-            <h3 class="cost-factor-title">Technology Stack</h3>
-            <p class="cost-factor-desc">
-              Cloud services, third-party platforms, medical devices, frameworks, and other technologies needed for development.
-            </p>
-          </article>
-
-          <!-- 4. Deployment Model -->
-          <article class="cost-factor-card">
-            <div class="cost-card-top-row">
-              <div class="cost-card-icon" aria-hidden="true">☁️</div>
-              <span class="cost-number-badge">04</span>
-            </div>
-            <h3 class="cost-factor-title">Deployment Model</h3>
-            <p class="cost-factor-desc">
-              Whether your solution requires on-premises, cloud, hybrid, or multi-cloud infrastructure.
-            </p>
-          </article>
-
-          <!-- 5. Integration Requirements -->
-          <article class="cost-factor-card">
-            <div class="cost-card-top-row">
-              <div class="cost-card-icon" aria-hidden="true">🔄</div>
-              <span class="cost-number-badge">05</span>
-            </div>
-            <h3 class="cost-factor-title">Integration Requirements</h3>
-            <p class="cost-factor-desc">
-              Connections with EHRs, labs, pharmacies, payers, and clearinghouses through HL7, FHIR, X12 EDI, or APIs.
-            </p>
-          </article>
-
-          <!-- 6. Data Management -->
-          <article class="cost-factor-card">
-            <div class="cost-card-top-row">
-              <div class="cost-card-icon" aria-hidden="true">🗄️</div>
-              <span class="cost-number-badge">06</span>
-            </div>
-            <h3 class="cost-factor-title">Data Management</h3>
-            <p class="cost-factor-desc">
-              Data migration, cleansing, transformation, de-identification, storage, and integration with legacy systems.
-            </p>
-          </article>
-
-          <!-- 7. Development Team -->
-          <article class="cost-factor-card">
-            <div class="cost-card-top-row">
-              <div class="cost-card-icon" aria-hidden="true">👨‍💻</div>
-              <span class="cost-number-badge">07</span>
-            </div>
-            <h3 class="cost-factor-title">Development Team</h3>
-            <p class="cost-factor-desc">
-              The specialists required, including developers, UI/UX designers, QA engineers, DevOps professionals, compliance experts, and AI/ML engineers.
-            </p>
-          </article>
-
-          <!-- 8. Compliance & Ongoing Support -->
-          <article class="cost-factor-card">
-            <div class="cost-card-top-row">
-              <div class="cost-card-icon" aria-hidden="true">🛡️</div>
-              <span class="cost-number-badge">08</span>
-            </div>
-            <h3 class="cost-factor-title">Compliance &amp; Ongoing Support</h3>
-            <p class="cost-factor-desc">
-              HIPAA and PHI safeguards, staff training, security updates, maintenance, monitoring, and continuous feature improvements.
-            </p>
-          </article>
-
+          </div>
         </div>
 
         <!-- BOTTOM ACTION BUTTON -->
@@ -1926,7 +2038,7 @@
                 <span class="faq-icon" aria-hidden="true">+</span>
               </button>
             </h3>
-            <div class="faq-answer-pane" id="faq-ans-6" role="region" aria-labelledby="faq-q-6">
+            <div class="faq-answer-pane" id="faq-ans-6" role="region" aria-labelledby="faq-q-1">
               <div class="faq-answer-content">
                 <p>
                   HIPAA compliance is built into healthcare software from the ground up through secure-by-design architecture. This includes encryption of PHI at rest and in transit, role-based access controls, audit trails, consent management, and controlled development and testing environments that never expose live patient data.
