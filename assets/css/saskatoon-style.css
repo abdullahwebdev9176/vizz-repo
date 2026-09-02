@@ -836,7 +836,7 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   right: 10%;
   width: 700px;
   height: 400px;
-  background: radial-gradient(circle, rgba(0, 180, 216, 0.12) 0%, rgba(7, 21, 43, 0) 70%);
+  background: radial-gradient(circle, rgba(0, 136, 255, 0.12) 0%, rgba(7, 21, 43, 0) 70%);
   pointer-events: none;
   z-index: 1;
 }
@@ -1347,7 +1347,99 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   15. RESPONSIVE MEDIA QUERIES
+   15. SECTION 10: WEB DEVELOPMENT COST FACTORS (DARK)
+   -------------------------------------------------------------------------- */
+.cost-factors-section {
+  position: relative;
+  background-color: var(--bg-dark);
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+.cost-factors-section::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  width: 700px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(0, 136, 255, 0.12) 0%, rgba(7, 21, 43, 0) 70%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.cost-factors-grid-9 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+  position: relative;
+  z-index: 2;
+}
+
+.cost-factor-card {
+  background: var(--bg-dark-card);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--border-radius-card);
+  padding: 32px 26px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.cost-factor-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(0, 180, 216, 0.45);
+  box-shadow: 0 18px 42px rgba(0, 136, 255, 0.2);
+}
+
+.cost-factor-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.cost-factor-icon {
+  width: 44px;
+  height: 44px;
+  background: rgba(0, 180, 216, 0.12);
+  border: 1px solid rgba(0, 180, 216, 0.3);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.cost-factor-title {
+  font-family: var(--font-family);
+  font-size: 18.5px;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--white-color);
+  margin: 0;
+}
+
+.cost-factor-desc {
+  font-family: var(--font-family);
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: var(--text-muted-dark);
+  margin: 0;
+}
+
+.cost-factors-cta {
+  text-align: center;
+  margin-top: 50px;
+  position: relative;
+  z-index: 2;
+}
+
+/* --------------------------------------------------------------------------
+   16. RESPONSIVE MEDIA QUERIES
    -------------------------------------------------------------------------- */
 @media screen and (max-width: 1200px) {
   :root {
@@ -1364,7 +1456,8 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 
   .tech-stack-grid,
   .challenges-grid-6,
-  .process-grid-6 {
+  .process-grid-6,
+  .cost-factors-grid-9 {
     grid-template-columns: repeat(3, 1fr);
   }
 
@@ -1386,7 +1479,8 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   .tech-stack-section,
   .challenges-section,
   .process-approach-section,
-  .saskatoon-industries-section {
+  .saskatoon-industries-section,
+  .cost-factors-section {
     padding: 70px 0 60px;
   }
 
@@ -1413,7 +1507,8 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   .ai-cards-grid-5,
   .tech-stack-grid,
   .challenges-grid-6,
-  .process-grid-6 {
+  .process-grid-6,
+  .cost-factors-grid-9 {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
@@ -1468,7 +1563,8 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   .ai-card-title,
   .tech-card-title,
   .challenge-card-title,
-  .process-card-title {
+  .process-card-title,
+  .cost-factor-title {
     font-size: 18px;
   }
 
@@ -1507,13 +1603,15 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   .ai-card-item,
   .tech-card,
   .challenge-card,
-  .process-card {
+  .process-card,
+  .cost-factor-card {
     padding: 24px 20px;
   }
 
   .tech-stack-grid,
   .challenges-grid-6,
-  .process-grid-6 {
+  .process-grid-6,
+  .cost-factors-grid-9 {
     grid-template-columns: 1fr;
   }
 
@@ -1541,7 +1639,8 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   .challenges-lead-text,
   .challenges-desc-text,
   .challenge-card-desc,
-  .process-card-desc {
+  .process-card-desc,
+  .cost-factor-desc {
     font-size: 14px;
     line-height: 1.65;
   }
