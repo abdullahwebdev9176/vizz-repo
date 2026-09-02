@@ -748,7 +748,79 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   9. RESPONSIVE MEDIA QUERIES
+   9. SECTION 4: BUILDING DIGITAL SUCCESS (6-GRID LIGHT)
+   -------------------------------------------------------------------------- */
+.success-pillars-section {
+  position: relative;
+  background-color: var(--bg-light-alt);
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+.pillars-grid-6 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+  position: relative;
+  z-index: 2;
+}
+
+.pillar-card {
+  background: var(--bg-light);
+  border: 1px solid var(--border-light);
+  border-radius: var(--border-radius-card);
+  padding: 30px 26px;
+  box-shadow: var(--shadow-card);
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+
+.pillar-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(0, 180, 216, 0.4);
+  box-shadow: 0 16px 36px rgba(7, 21, 43, 0.08);
+}
+
+.pillar-card-icon {
+  width: 46px;
+  height: 46px;
+  background: rgba(0, 180, 216, 0.1);
+  border: 1px solid rgba(0, 180, 216, 0.25);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  margin-bottom: 18px;
+}
+
+.pillar-card-title {
+  font-family: var(--font-family);
+  font-size: 18.5px;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+}
+
+.pillar-card-desc {
+  font-family: var(--font-family);
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: var(--text-muted-light);
+  margin: 0;
+}
+
+.pillars-action-cta {
+  text-align: center;
+  margin-top: 48px;
+  position: relative;
+  z-index: 2;
+}
+
+/* --------------------------------------------------------------------------
+   10. RESPONSIVE MEDIA QUERIES
    -------------------------------------------------------------------------- */
 @media screen and (max-width: 1200px) {
   :root {
@@ -771,7 +843,8 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 
   .hero-section,
   .digital-experience-section,
-  .services-section {
+  .services-section,
+  .success-pillars-section {
     padding: 70px 0 60px;
   }
 
@@ -790,7 +863,8 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
     padding: 0;
   }
 
-  .services-grid-8 {
+  .services-grid-8,
+  .pillars-grid-6 {
     grid-template-columns: 1fr;
     gap: 20px;
   }
@@ -828,7 +902,8 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
     font-size: 24px;
   }
 
-  .service-card-title {
+  .service-card-title,
+  .pillar-card-title {
     font-size: 18px;
   }
 
@@ -857,7 +932,8 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
     padding: 0;
   }
 
-  .service-card-item {
+  .service-card-item,
+  .pillar-card {
     padding: 24px 20px;
   }
 }
@@ -875,7 +951,8 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   .section-lead-text,
   .section-description,
   .section-intro-text,
-  .service-card-desc {
+  .service-card-desc,
+  .pillar-card-desc {
     font-size: 14px;
     line-height: 1.65;
   }
