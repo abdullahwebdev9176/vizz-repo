@@ -2,7 +2,7 @@
    VIZZ WEB SOLUTIONS - HEALTHCARE DEDICATED STYLESHEET
    Page: healthcare.html
    Focus: Healthcare Software Development with Agentic AI & Smart Automation
-   Design Philosophy: Mobile-First Responsive Architecture, Native Desktop Grids (>= 992px), Touch Sliders (<= 991px), Rich Aesthetics & SEO Compliance
+   Design Philosophy: Mobile-First Responsive Architecture, Native Desktop Grids (>= 992px), Touch Sliders (<= 991px), Auto-Moving Showcase, Rich Aesthetics & SEO Compliance
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -24,6 +24,7 @@
   --btn-color: #17a1fe;
   --btn-color-hover: #ffffff;
   --white-color: #ffffff;
+  --accent-coral: #ff6b4a;
 
   /* 🌌 Background Colors */
   --bg-dark: #07152b;
@@ -446,46 +447,6 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   }
 }
 
-.hero-highlights {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 24px 0;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.hero-highlight-item {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  color: #e2e8f0;
-  font-size: 14px;
-  font-weight: 500;
-  text-align: left;
-}
-
-@media screen and (min-width: 768px) {
-  .hero-highlight-item {
-    font-size: 15px;
-  }
-}
-
-.check-icon-circle {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  background: rgba(0, 180, 216, 0.2);
-  color: var(--btn-cyan);
-  font-size: 12px;
-  font-weight: 700;
-  border: 1px solid rgba(0, 180, 216, 0.4);
-  flex-shrink: 0;
-}
-
 .hero-actions {
   margin-top: 10px;
   text-align: center;
@@ -668,39 +629,6 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   margin-bottom: 22px;
 }
 
-.experience-solutions-box {
-  background: var(--bg-light-alt);
-  border: 1px solid var(--border-light);
-  border-radius: var(--border-radius-card-sm);
-  padding: 18px 18px;
-  margin-bottom: 24px;
-  text-align: left;
-}
-
-.experience-solutions-title {
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--text-dark);
-  margin-bottom: 10px;
-}
-
-.experience-solutions-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.experience-solution-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  font-size: 13.5px;
-  color: var(--text-muted-light);
-}
-
 .experience-actions {
   text-align: center;
 }
@@ -814,93 +742,189 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   7. SECTION 3: COMPREHENSIVE SERVICES (Cards Base Styles)
+   7. SECTION 2B: AUTO-MOVING HEALTHCARE WORKFLOW SHOWCASE SLIDER
    -------------------------------------------------------------------------- */
-.services-section {
-  background: var(--bg-dark);
-  padding: var(--section-padding);
-  border-top: 1px solid var(--border-dark);
-  border-bottom: 1px solid var(--border-dark);
+.workflow-showcase-section {
+  background-color: var(--bg-light-alt);
+  padding: 60px 0;
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
   position: relative;
   overflow: hidden;
 }
 
-.service-card-item {
-  background: var(--bg-dark-card);
-  border: 1px solid var(--border-dark);
-  border-radius: var(--border-radius-card);
-  padding: 24px 20px;
+.showcase-cards-slider .splide__track {
+  overflow: hidden !important;
+  position: relative !important;
+  width: 100% !important;
+  padding: 10px 0 20px 0 !important;
+}
+
+.showcase-cards-slider .splide__list {
+  display: flex !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+}
+
+.showcase-cards-slider .splide__slide {
+  display: flex !important;
+  flex-direction: column !important;
+  flex-shrink: 0 !important;
+  box-sizing: border-box !important;
+  height: auto !important;
+}
+
+/* Transport Style Card Matching the Reference UI */
+.transport-style-card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 24px 24px 44px 24px;
+  padding: 26px 22px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   height: 100%;
-  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-  text-align: center;
+  transition: transform 0.35s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+  position: relative;
+  text-align: left;
 }
 
-@media screen and (min-width: 992px) {
-  .service-card-item {
-    text-align: left;
-    padding: 26px 22px;
-  }
+.transport-style-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.09);
+  border-color: rgba(23, 161, 254, 0.3);
 }
 
-.service-card-item:hover {
-  transform: translateY(-4px);
-  border-color: rgba(0, 180, 216, 0.5);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
-}
-
-.service-card-header {
+.transport-card-header {
   display: flex;
-  flex-direction: column;
   align-items: center;
   gap: 12px;
   margin-bottom: 14px;
 }
 
-@media screen and (min-width: 992px) {
-  .service-card-header {
-    flex-direction: row;
-    align-items: flex-start;
-  }
-}
-
-.service-card-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 10px;
-  background: rgba(0, 180, 216, 0.15);
-  display: flex;
+.transport-card-icon {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 22px;
+  width: 38px;
+  height: 38px;
   flex-shrink: 0;
-  border: 1px solid rgba(0, 180, 216, 0.3);
 }
 
-.service-card-title {
-  font-size: 17px;
-  font-weight: 600;
-  line-height: 1.35;
-}
-
-.service-card-desc {
-  font-size: 14px;
-  line-height: 1.65;
+.transport-card-title {
+  font-size: 16.5px;
+  font-weight: 700;
+  color: var(--text-dark);
   margin: 0;
+  line-height: 1.3;
 }
 
-.service-section-cta {
-  text-align: center;
-  margin-top: 32px;
+/* Unique Dual-Capsule/Pill Masked Image */
+.transport-image-wrapper {
+  width: 100%;
+  height: 350px;
+  border-radius: 38px;
+  overflow: hidden;
+  margin-bottom: 18px;
+  background: #07152b;
   position: relative;
-  z-index: 2;
 }
 
-@media screen and (min-width: 992px) {
-  .service-section-cta {
-    margin-top: 48px;
-  }
+
+.transport-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.transport-style-card:hover .transport-card-img {
+  transform: scale(1.05);
+}
+
+.transport-card-desc {
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: #64748b;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.transport-card-footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+}
+
+.transport-details-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.transport-arrow-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  background: #edf2f7;
+  border-radius: 8px;
+  color: #0b1a30;
+  font-size: 14px;
+  font-weight: 700;
+  transition: all 0.25s ease;
+}
+
+.transport-btn-text {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #0b1a30;
+  transition: color 0.25s ease;
+}
+
+.transport-style-card:hover .transport-arrow-box {
+  background: var(--btn-color);
+  color: #ffffff;
+  transform: translateX(3px);
+}
+
+.transport-style-card:hover .transport-btn-text {
+  color: var(--btn-color);
+}
+
+/* Showcase Pagination Dots */
+.showcase-cards-slider .splide__pagination {
+  position: relative;
+  bottom: auto;
+  margin-top: 24px;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+  list-style: none;
+}
+
+.showcase-cards-slider .splide__pagination__page {
+  width: 8px;
+  height: 8px;
+  background: rgba(23, 161, 254, 0.25);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  opacity: 1;
+  border: none;
+  cursor: pointer;
+}
+
+.showcase-cards-slider .splide__pagination__page.is-active {
+  background: var(--btn-color) !important;
+  width: 24px;
+  border-radius: 10px;
 }
 
 /* --------------------------------------------------------------------------
@@ -1007,31 +1031,7 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   font-size: 14px;
   color: var(--text-muted-dark);
   line-height: 1.7;
-  margin-bottom: 20px;
-}
-
-.bento-tags-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 8px;
-  margin-top: auto;
-}
-
-@media screen and (min-width: 992px) {
-  .bento-tags-row {
-    justify-content: flex-start;
-  }
-}
-
-.bento-tag {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: #94a3b8;
-  padding: 4px 10px;
-  border-radius: 6px;
-  font-size: 12px;
-  font-weight: 500;
+  margin: 0;
 }
 
 /* --------------------------------------------------------------------------
@@ -1085,36 +1085,7 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   font-size: 14px;
   color: var(--text-muted-light);
   line-height: 1.65;
-  margin-bottom: 14px;
-}
-
-.portal-checklist {
-  list-style: none;
-  padding: 0;
   margin: 0;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 8px;
-}
-
-@media screen and (min-width: 576px) {
-  .portal-checklist {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-.portal-checklist-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--text-dark);
-}
-
-.check-bullet {
-  color: var(--btn-color);
-  font-weight: 700;
 }
 
 /* --------------------------------------------------------------------------
@@ -1186,31 +1157,7 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   font-size: 14px;
   color: var(--text-muted-dark);
   line-height: 1.7;
-  margin-bottom: 20px;
-}
-
-.deck-pills-wrap {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 8px;
-  margin-top: auto;
-}
-
-@media screen and (min-width: 992px) {
-  .deck-pills-wrap {
-    justify-content: flex-start;
-  }
-}
-
-.deck-pill {
-  background: rgba(0, 180, 216, 0.1);
-  color: #38bdf8;
-  border: 1px solid rgba(0, 180, 216, 0.2);
-  padding: 4px 10px;
-  border-radius: 20px;
-  font-size: 12px;
-  font-weight: 500;
+  margin: 0;
 }
 
 /* --------------------------------------------------------------------------
@@ -1266,22 +1213,7 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   font-size: 14px;
   color: var(--text-muted-light);
   line-height: 1.65;
-  margin-bottom: 14px;
-}
-
-.lims-chips-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.lims-chip {
-  background: #e2e8f0;
-  color: var(--text-dark);
-  padding: 4px 10px;
-  border-radius: 6px;
-  font-size: 12px;
-  font-weight: 500;
+  margin: 0;
 }
 
 /* --------------------------------------------------------------------------
@@ -1372,31 +1304,7 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   font-size: 14px;
   color: var(--text-muted-dark);
   line-height: 1.7;
-  margin-bottom: 20px;
-}
-
-.connected-tags-wrap {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 8px;
-  margin-top: auto;
-}
-
-@media screen and (min-width: 992px) {
-  .connected-tags-wrap {
-    justify-content: flex-start;
-  }
-}
-
-.connected-tag {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: #38bdf8;
-  padding: 4px 10px;
-  border-radius: 6px;
-  font-size: 12px;
-  font-weight: 500;
+  margin: 0;
 }
 
 /* --------------------------------------------------------------------------
@@ -1991,140 +1899,7 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   19. DEEP DIVE FEATURE SECTIONS (Sections 4, 5, 6, 7)
-   -------------------------------------------------------------------------- */
-.feature-split-section {
-  padding: var(--section-padding);
-  border-bottom: 1px solid var(--border-light);
-}
-
-.feature-split-section.section-dark {
-  background: var(--bg-dark-alt);
-  border-bottom: 1px solid var(--border-dark);
-}
-
-.feature-split-section.section-light {
-  background: var(--bg-light);
-}
-
-.feature-split-flex {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  align-items: center;
-}
-
-@media screen and (min-width: 992px) {
-  .feature-split-flex {
-    flex-direction: row;
-    gap: 48px;
-  }
-  
-  .feature-split-flex.flex-reverse {
-    flex-direction: row-reverse;
-  }
-}
-
-.feature-content-col {
-  flex: 1 1 55%;
-  text-align: center;
-}
-
-@media screen and (min-width: 992px) {
-  .feature-content-col {
-    text-align: left;
-  }
-}
-
-.feature-visual-col {
-  flex: 1 1 45%;
-  width: 100%;
-}
-
-.feature-blocks-container {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  margin-top: 20px;
-  margin-bottom: 22px;
-}
-
-.feature-item-block {
-  background: var(--bg-light-alt);
-  border: 1px solid var(--border-light);
-  border-radius: var(--border-radius-card-sm);
-  padding: 18px 18px;
-  transition: transform 0.25s ease, border-color 0.25s ease;
-  text-align: left;
-}
-
-.section-dark .feature-item-block {
-  background: var(--bg-dark-card);
-  border-color: var(--border-dark);
-}
-
-.feature-item-block:hover {
-  transform: translateY(-2px);
-  border-color: var(--btn-color);
-}
-
-.feature-block-header {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 8px;
-}
-
-.feature-block-icon {
-  font-size: 20px;
-}
-
-.feature-block-title {
-  font-size: 16px;
-  font-weight: 600;
-  margin: 0;
-}
-
-.feature-block-desc {
-  font-size: 14px;
-  line-height: 1.65;
-  margin: 0;
-}
-
-.feature-visual-wrapper {
-  position: relative;
-  border-radius: var(--border-radius-card);
-  overflow: visible;
-  max-width: 580px;
-  margin: 0 auto;
-}
-
-.feature-image-figure {
-  margin: 0;
-  border-radius: var(--border-radius-card);
-  overflow: hidden;
-  box-shadow: var(--shadow-card);
-  border: 1px solid var(--border-light);
-}
-
-.section-dark .feature-image-figure {
-  border-color: var(--border-dark);
-  box-shadow: var(--shadow-card-elevated);
-}
-
-.feature-featured-img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  transition: transform 0.4s ease;
-}
-
-.feature-image-figure:hover .feature-featured-img {
-  transform: scale(1.02);
-}
-
-/* --------------------------------------------------------------------------
-   20. MID-PAGE HIGH-IMPACT CTA BANNER
+   19. MID-PAGE HIGH-IMPACT CTA BANNER
    -------------------------------------------------------------------------- */
 .mid-page-cta-section {
   background: linear-gradient(135deg, #07152b 0%, #0e2246 50%, #07152b 100%);
@@ -2192,10 +1967,9 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 /* ==========================================================================
-   21. MOBILE & TABLET SLIDER OVERRIDES (<= 991px)
+   20. MOBILE & TABLET SLIDER OVERRIDES (<= 991px)
    ========================================================================== */
 @media screen and (max-width: 991px) {
-  #healthcare-services-slider .splide__track,
   #clinical-workflows-slider .splide__track,
   #operations-deck-slider .splide__track,
   #connected-health-slider .splide__track,
@@ -2209,7 +1983,6 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
     padding: 6px 0 !important;
   }
 
-  #healthcare-services-slider .splide__list,
   #clinical-workflows-slider .splide__list,
   #operations-deck-slider .splide__list,
   #connected-health-slider .splide__list,
@@ -2226,7 +1999,6 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
     width: auto !important;
   }
 
-  #healthcare-services-slider .splide__slide,
   #clinical-workflows-slider .splide__slide,
   #operations-deck-slider .splide__slide,
   #connected-health-slider .splide__slide,
@@ -2273,7 +2045,6 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
     cursor: pointer;
   }
 
-  .services-section .splide__pagination__page,
   .bento-clinical-section .splide__pagination__page,
   .operations-deck-section .splide__pagination__page,
   .connected-health-section .splide__pagination__page,
@@ -2290,10 +2061,9 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 /* ==========================================================================
-   22. DESKTOP OVERRIDES (>= 992px) - PURE NATIVE GRID SYSTEM, SLIDER INACTIVE
+   21. DESKTOP OVERRIDES (>= 992px) - PURE NATIVE GRID SYSTEM, SLIDER INACTIVE
    ========================================================================== */
 @media screen and (min-width: 992px) {
-  #healthcare-services-slider,
   #clinical-workflows-slider,
   #operations-deck-slider,
   #connected-health-slider,
@@ -2304,7 +2074,6 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
     visibility: visible !important;
   }
 
-  #healthcare-services-slider .splide__track,
   #clinical-workflows-slider .splide__track,
   #operations-deck-slider .splide__track,
   #connected-health-slider .splide__track,
@@ -2318,19 +2087,7 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
     padding: 0 !important;
   }
 
-  /* 1. Services 8-Grid (4 Columns Desktop) */
-  #healthcare-services-slider .splide__list,
-  .services-grid-8 {
-    display: grid !important;
-    grid-template-columns: repeat(4, 1fr) !important;
-    gap: 20px !important;
-    transform: none !important;
-    margin: 0 !important;
-    width: 100% !important;
-    height: auto !important;
-  }
-
-  /* 2. Bento Clinical 3-Grid (Asymmetric Desktop Bento) */
+  /* 1. Bento Clinical 3-Grid (Asymmetric Desktop Bento) */
   #clinical-workflows-slider .splide__list,
   .bento-grid-3 {
     display: grid !important;
@@ -2347,7 +2104,7 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
     grid-row: span 2 !important;
   }
 
-  /* 3. Operations Deck 3-Grid */
+  /* 2. Operations Deck 3-Grid */
   #operations-deck-slider .splide__list,
   .operations-deck-grid {
     display: grid !important;
@@ -2359,7 +2116,7 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
     height: auto !important;
   }
 
-  /* 4. Connected Health 5-Grid */
+  /* 3. Connected Health 5-Grid */
   #connected-health-slider .splide__list,
   .connected-health-grid-5 {
     display: grid !important;
@@ -2375,7 +2132,7 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
     grid-column: span 2 !important;
   }
 
-  /* 5. Development Process 6-Grid */
+  /* 4. Development Process 6-Grid */
   #development-process-slider .splide__list,
   .process-grid-6 {
     display: grid !important;
@@ -2387,7 +2144,7 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
     height: auto !important;
   }
 
-  /* 6. Health Sectors 9-Grid */
+  /* 5. Health Sectors 9-Grid */
   #health-sectors-slider .splide__list,
   .sectors-grid-9 {
     display: grid !important;
@@ -2399,7 +2156,7 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
     height: auto !important;
   }
 
-  /* 7. Tech Stack 8-Grid (4 Columns Desktop) */
+  /* 6. Tech Stack 8-Grid (4 Columns Desktop) */
   #tech-stack-slider .splide__list,
   .tech-grid-8 {
     display: grid !important;
@@ -2411,7 +2168,7 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
     height: auto !important;
   }
 
-  /* 8. Cost Factors 8-Grid (4 Columns Desktop) */
+  /* 7. Cost Factors 8-Grid (4 Columns Desktop) */
   #cost-factors-slider .splide__list,
   .cost-factors-grid-8 {
     display: grid !important;
@@ -2424,7 +2181,6 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   }
 
   /* Slide items on desktop: fill grid cell */
-  #healthcare-services-slider .splide__slide,
   #clinical-workflows-slider .splide__slide,
   #operations-deck-slider .splide__slide,
   #connected-health-slider .splide__slide,
@@ -2440,9 +2196,7 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
     display: block !important;
   }
 
-  /* Hide splide controls completely on desktop */
-  #healthcare-services-slider .splide__pagination,
-  #healthcare-services-slider .splide__arrows,
+  /* Hide splide controls completely on desktop for static grid sections */
   #clinical-workflows-slider .splide__pagination,
   #clinical-workflows-slider .splide__arrows,
   #operations-deck-slider .splide__pagination,

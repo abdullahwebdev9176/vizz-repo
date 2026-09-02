@@ -2,10 +2,11 @@
  * Vizz Web Solutions - Healthcare Page Dedicated Responsive Sliders & Scripts
  * Page: healthcare.html
  * Functionality:
- * 1. Activates Splide.js sliders on mobile & tablet (<= 991px).
- * 2. Automatically destroys sliders on desktop (> 991px) to preserve native CSS grid layouts.
- * 3. Smooth-scrolling lead form triggers with auto input focus.
- * 4. Accessible Single-Open FAQ Accordion with ARIA state management.
+ * 1. Auto-moving showcase cards slider (#showcase-cards-slider) showing 2 cards at a time with autoplay loop.
+ * 2. Activates Splide.js sliders on mobile & tablet (<= 991px) for grid sections.
+ * 3. Automatically destroys responsive sliders on desktop (> 991px) to preserve native CSS grids.
+ * 4. Smooth-scrolling lead form triggers with auto input focus.
+ * 5. Accessible Single-Open FAQ Accordion with ARIA state management.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -34,16 +35,46 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // =========================================================================
-  // 2. MULTI-SLIDER RESPONSIVE MANAGER (Active <= 991px, Destroyed on Desktop)
+  // 2. AUTO-MOVING SHOWCASE CARDS SLIDER (2 Cards at a time, Autoplays Loop)
+  // =========================================================================
+  const showcaseSliderEl = document.getElementById('showcase-cards-slider');
+  if (showcaseSliderEl && typeof Splide !== 'undefined') {
+    try {
+      const showcaseSplide = new Splide('#showcase-cards-slider', {
+        type: 'loop',
+        perPage: 2,
+        perMove: 1,
+        gap: '28px',
+        arrows: false,
+        pagination: true,
+        autoplay: true,
+        interval: 3200,
+        speed: 800,
+        pauseOnHover: true,
+        pauseOnFocus: true,
+        drag: true,
+        breakpoints: {
+          991: {
+            perPage: 2,
+            gap: '20px',
+          },
+          767: {
+            perPage: 1,
+            gap: '16px',
+          },
+        },
+      });
+
+      showcaseSplide.mount();
+    } catch (err) {
+      console.warn('[Splide] Error mounting #showcase-cards-slider:', err);
+    }
+  }
+
+  // =========================================================================
+  // 3. MULTI-SLIDER RESPONSIVE MANAGER (Active <= 991px, Destroyed on Desktop)
   // =========================================================================
   const sliderConfigs = [
-    {
-      id: 'healthcare-services-slider',
-      perPageTablet: 2,
-      perPageMobile: 1,
-      gapTablet: '20px',
-      gapMobile: '14px',
-    },
     {
       id: 'clinical-workflows-slider',
       perPageTablet: 1,
@@ -187,7 +218,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('orientationchange', onWindowResize, { passive: true });
 
   // =========================================================================
-  // 3. ACCESSIBLE SINGLE-OPEN FAQ ACCORDION
+  // 4. ACCESSIBLE SINGLE-OPEN FAQ ACCORDION
   // =========================================================================
   const faqItems = document.querySelectorAll('.faq-item');
 
