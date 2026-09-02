@@ -2247,3 +2247,293 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
     width: 100%;
   }
 }
+
+/* --------------------------------------------------------------------------
+   21. SASKATOON RESPONSIVE SPLIDE SLIDERS (ACTIVE <= 991px, GRID ON DESKTOP)
+   -------------------------------------------------------------------------- */
+
+/* Base Splide Visibility & Box Sizing */
+.splide,
+.services-slider,
+.pillars-slider,
+.ai-advanced-slider,
+.tech-stack-slider,
+.challenges-slider,
+.process-slider,
+.cost-factors-slider {
+  visibility: visible !important;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Base slide card normalization */
+.services-slider .splide__slide .service-card-item,
+.pillars-slider .splide__slide .pillar-card,
+.ai-advanced-slider .splide__slide .ai-card-item,
+.tech-stack-slider .splide__slide .tech-card,
+.challenges-slider .splide__slide .challenge-card,
+.process-slider .splide__slide .process-card,
+.cost-factors-slider .splide__slide .cost-factor-card {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: 100%;
+  box-sizing: border-box !important;
+  min-width: 0 !important;
+  margin-bottom: 0;
+}
+
+/* Splide Pagination Dots Styling (Global) */
+.splide__pagination {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 28px !important;
+  position: static !important;
+  padding: 0;
+  list-style: none;
+  z-index: 2;
+}
+
+.splide__pagination__page {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  padding: 0;
+  outline: none;
+  opacity: 0.6;
+  display: inline-block;
+}
+
+.splide__pagination__page.is-active {
+  width: 26px;
+  border-radius: 10px;
+  background: var(--btn-primary);
+  border-color: #00b4d8;
+  box-shadow: 0 0 14px rgba(0, 180, 216, 0.6);
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Light sections pagination (Pillars & Challenges) */
+.success-pillars-section .splide__pagination__page,
+.challenges-section .splide__pagination__page {
+  background: rgba(7, 21, 43, 0.15);
+  border: 1px solid rgba(7, 21, 43, 0.3);
+}
+
+.success-pillars-section .splide__pagination__page.is-active,
+.challenges-section .splide__pagination__page.is-active {
+  background: var(--btn-primary);
+  border-color: #0077b6;
+  box-shadow: 0 0 10px rgba(0, 119, 182, 0.4);
+}
+
+/* ==========================================================================
+   MOBILE & TABLET SLIDER OVERRIDES (<= 991px)
+   ========================================================================== */
+@media screen and (max-width: 991px) {
+  .services-slider .splide__track,
+  .pillars-slider .splide__track,
+  .ai-advanced-slider .splide__track,
+  .tech-stack-slider .splide__track,
+  .challenges-slider .splide__track,
+  .process-slider .splide__track,
+  .cost-factors-slider .splide__track {
+    overflow: hidden !important;
+    position: relative !important;
+    width: 100% !important;
+    padding: 6px 0 !important;
+  }
+
+  .services-slider .splide__list,
+  .pillars-slider .splide__list,
+  .ai-advanced-slider .splide__list,
+  .tech-stack-slider .splide__list,
+  .challenges-slider .splide__list,
+  .process-slider .splide__list,
+  .cost-factors-slider .splide__list {
+    display: flex !important;
+    gap: 0 !important;
+    grid-template-columns: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    width: auto !important;
+  }
+
+  .services-slider .splide__slide,
+  .pillars-slider .splide__slide,
+  .ai-advanced-slider .splide__slide,
+  .tech-stack-slider .splide__slide,
+  .challenges-slider .splide__slide,
+  .process-slider .splide__slide,
+  .cost-factors-slider .splide__slide {
+    display: flex !important;
+    flex-direction: column !important;
+    flex-shrink: 0 !important;
+    box-sizing: border-box !important;
+    height: auto !important;
+    min-width: 0 !important;
+  }
+}
+
+/* ==========================================================================
+   DESKTOP OVERRIDES (>= 992px) - PURE NATIVE GRID SYSTEM, SLIDER INACTIVE
+   ========================================================================== */
+@media screen and (min-width: 992px) {
+  .services-slider,
+  .pillars-slider,
+  .ai-advanced-slider,
+  .tech-stack-slider,
+  .challenges-slider,
+  .process-slider,
+  .cost-factors-slider {
+    visibility: visible !important;
+  }
+
+  .services-slider .splide__track,
+  .pillars-slider .splide__track,
+  .ai-advanced-slider .splide__track,
+  .tech-stack-slider .splide__track,
+  .challenges-slider .splide__track,
+  .process-slider .splide__track,
+  .cost-factors-slider .splide__track {
+    overflow: visible !important;
+    position: static !important;
+    width: 100% !important;
+    padding: 0 !important;
+  }
+
+  /* 1. Services 8-Grid */
+  .services-slider .splide__list,
+  .services-grid-8 {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 24px !important;
+    transform: none !important;
+    margin: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* 2. Success Pillars 6-Grid */
+  .pillars-slider .splide__list,
+  .pillars-grid-6 {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 24px !important;
+    transform: none !important;
+    margin: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* 3. AI Advanced 5-Grid */
+  .ai-advanced-slider .splide__list,
+  .ai-cards-grid-5 {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 24px !important;
+    transform: none !important;
+    margin: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .ai-advanced-slider .splide__slide:last-child:nth-child(odd) {
+    grid-column: 1 / -1 !important;
+    max-width: 700px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 100% !important;
+  }
+
+  /* 4. Tech Stack Grid */
+  .tech-stack-slider .splide__list,
+  .tech-stack-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 22px !important;
+    transform: none !important;
+    margin: 0 0 30px 0 !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* 5. Challenges 6-Grid */
+  .challenges-slider .splide__list,
+  .challenges-grid-6 {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 24px !important;
+    transform: none !important;
+    margin: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* 6. Process Approach 6-Grid */
+  .process-slider .splide__list,
+  .process-grid-6 {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 24px !important;
+    transform: none !important;
+    margin: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* 7. Cost Factors 9-Grid */
+  .cost-factors-slider .splide__list,
+  .cost-factors-grid-9 {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 24px !important;
+    transform: none !important;
+    margin: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Slide items on desktop: fill grid cell */
+  .services-slider .splide__slide,
+  .pillars-slider .splide__slide,
+  .ai-advanced-slider .splide__slide,
+  .tech-stack-slider .splide__slide,
+  .challenges-slider .splide__slide,
+  .process-slider .splide__slide,
+  .cost-factors-slider .splide__slide {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    height: auto !important;
+    flex: none !important;
+    display: block !important;
+  }
+
+  /* Hide splide controls completely on desktop */
+  .services-slider .splide__pagination,
+  .services-slider .splide__arrows,
+  .pillars-slider .splide__pagination,
+  .pillars-slider .splide__arrows,
+  .ai-advanced-slider .splide__pagination,
+  .ai-advanced-slider .splide__arrows,
+  .tech-stack-slider .splide__pagination,
+  .tech-stack-slider .splide__arrows,
+  .challenges-slider .splide__pagination,
+  .challenges-slider .splide__arrows,
+  .process-slider .splide__pagination,
+  .process-slider .splide__arrows,
+  .cost-factors-slider .splide__pagination,
+  .cost-factors-slider .splide__arrows {
+    display: none !important;
+  }
+}
