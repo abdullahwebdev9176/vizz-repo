@@ -2,7 +2,7 @@
    VIZZ WEB SOLUTIONS - HEALTHCARE DEDICATED STYLESHEET
    Page: healthcare.html
    Focus: Healthcare Software Development with Agentic AI & Smart Automation
-   Design Philosophy: Mobile-First Responsive, High Aesthetics, Dark/Light Alternating Sections & SEO Compliance
+   Design Philosophy: Varied Section Layouts, Bento Grids, Asymmetric Showcases, High Aesthetics & SEO Compliance
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -28,9 +28,11 @@
   /* 🌌 Background Colors */
   --bg-dark: #07152b;
   --bg-dark-card: #0e2246;
+  --bg-dark-card-alt: #132b57;
   --bg-dark-alt: #051022;
   --bg-light: #ffffff;
   --bg-light-alt: #f4f8fc;
+  --bg-light-card: #edf4fb;
 
   /* ✍️ Font / Text Colors */
   --text-white: #ffffff;
@@ -46,6 +48,7 @@
   --border-radius-input: 8px;
   --border-light: #e2e8f0;
   --border-dark: #1b3252;
+  --border-cyan-glow: rgba(0, 180, 216, 0.4);
 
   /* Shadows */
   --shadow-card: 0 6px 24px rgba(0, 0, 0, 0.06);
@@ -673,6 +676,20 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   z-index: 2;
 }
 
+.section-dark .experience-floating-card {
+  background: rgba(14, 34, 70, 0.95);
+  border-color: var(--border-dark);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+.section-dark .floating-title {
+  color: var(--text-white);
+}
+
+.section-dark .floating-subtitle {
+  color: var(--text-muted-dark);
+}
+
 .top-floating-card {
   top: -16px;
   left: 12px;
@@ -796,7 +813,365 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   8. DEEP DIVE FEATURE SECTIONS (Alternating Light/Dark)
+   8. NEW SECTION A: BENTO-STYLE CLINICAL PLATFORMS (Dark Asymmetric Bento)
+   -------------------------------------------------------------------------- */
+.bento-clinical-section {
+  background: var(--bg-dark-alt);
+  padding: var(--section-padding);
+  border-top: 1px solid var(--border-dark);
+  border-bottom: 1px solid var(--border-dark);
+}
+
+.bento-grid-3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media screen and (min-width: 992px) {
+  .bento-grid-3 {
+    grid-template-columns: 1.2fr 1fr;
+    grid-template-rows: auto auto;
+  }
+  
+  .bento-card-featured {
+    grid-row: span 2;
+  }
+}
+
+.bento-card {
+  background: var(--bg-dark-card);
+  border: 1px solid var(--border-dark);
+  border-radius: var(--border-radius-card);
+  padding: 30px 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bento-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--btn-cyan);
+  box-shadow: 0 16px 36px rgba(0, 180, 216, 0.15);
+}
+
+.bento-card-featured {
+  background: linear-gradient(145deg, #0e2246 0%, #081730 100%);
+  border: 1px solid rgba(0, 180, 216, 0.35);
+}
+
+.bento-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: rgba(0, 180, 216, 0.15);
+  color: var(--btn-cyan);
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  align-self: flex-start;
+}
+
+.bento-icon-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.bento-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(23, 161, 254, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  flex-shrink: 0;
+  border: 1px solid rgba(23, 161, 254, 0.3);
+}
+
+.bento-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-white);
+  margin: 0;
+}
+
+.bento-desc {
+  font-size: 14px;
+  color: var(--text-muted-dark);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.bento-tags-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.bento-tag {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #94a3b8;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* --------------------------------------------------------------------------
+   9. NEW SECTION B: HOSPITAL & PATIENT PORTAL ECOSYSTEM (Light Two-Column Interactive)
+   -------------------------------------------------------------------------- */
+.hospital-portal-section {
+  background: var(--bg-light);
+  padding: var(--section-padding);
+}
+
+.dual-cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.interactive-portal-card {
+  background: var(--bg-light-alt);
+  border: 1px solid var(--border-light);
+  border-left: 4px solid var(--btn-color);
+  border-radius: var(--border-radius-card-sm);
+  padding: 24px 22px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.interactive-portal-card:hover {
+  transform: translateX(4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+}
+
+.portal-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.portal-card-icon {
+  font-size: 24px;
+}
+
+.portal-card-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 0;
+}
+
+.portal-card-desc {
+  font-size: 14px;
+  color: var(--text-muted-light);
+  line-height: 1.65;
+  margin-bottom: 14px;
+}
+
+.portal-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+
+@media screen and (min-width: 576px) {
+  .portal-checklist {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.portal-checklist-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.check-bullet {
+  color: var(--btn-color);
+  font-weight: 700;
+}
+
+/* --------------------------------------------------------------------------
+   10. NEW SECTION C: 3-COLUMN OPERATIONS DECK (Dark Distinct Trio)
+   -------------------------------------------------------------------------- */
+.operations-deck-section {
+  background: var(--bg-dark);
+  padding: var(--section-padding);
+  border-top: 1px solid var(--border-dark);
+  border-bottom: 1px solid var(--border-dark);
+}
+
+.operations-deck-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .operations-deck-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .operations-deck-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.deck-card {
+  background: var(--bg-dark-card);
+  border: 1px solid var(--border-dark);
+  border-radius: var(--border-radius-card);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.deck-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(23, 161, 254, 0.5);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.4);
+}
+
+.deck-card-top-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: rgba(0, 180, 216, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  margin-bottom: 18px;
+  border: 1px solid rgba(0, 180, 216, 0.25);
+}
+
+.deck-card-title {
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--text-white);
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.deck-card-desc {
+  font-size: 14px;
+  color: var(--text-muted-dark);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.deck-pills-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.deck-pill {
+  background: rgba(0, 180, 216, 0.1);
+  color: #38bdf8;
+  border: 1px solid rgba(0, 180, 216, 0.2);
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* --------------------------------------------------------------------------
+   11. NEW SECTION D: LABS, LIMS & MEDICAL DEVICES (Light Specialized Grid)
+   -------------------------------------------------------------------------- */
+.lims-devices-section {
+  background: var(--bg-light-alt);
+  padding: var(--section-padding);
+}
+
+.lims-card-item {
+  background: var(--bg-light);
+  border: 1px solid var(--border-light);
+  border-radius: var(--border-radius-card-sm);
+  padding: 24px;
+  margin-bottom: 20px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.lims-card-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+}
+
+.lims-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
+.lims-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(23, 161, 254, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+
+.lims-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 0;
+}
+
+.lims-desc {
+  font-size: 14px;
+  color: var(--text-muted-light);
+  line-height: 1.65;
+  margin-bottom: 14px;
+}
+
+.lims-chips-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.lims-chip {
+  background: #e2e8f0;
+  color: var(--text-dark);
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* --------------------------------------------------------------------------
+   12. EXISTING DEEP DIVE FEATURE SECTIONS (Preserved)
    -------------------------------------------------------------------------- */
 .feature-split-section {
   padding: var(--section-padding);
@@ -919,7 +1294,7 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   9. MID-PAGE HIGH-IMPACT CTA BANNER
+   13. MID-PAGE HIGH-IMPACT CTA BANNER
    -------------------------------------------------------------------------- */
 .mid-page-cta-section {
   background: linear-gradient(135deg, #07152b 0%, #0e2246 50%, #07152b 100%);
@@ -966,7 +1341,7 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   10. RESPONSIVE SPLIDE CAROUSEL STYLING (Active <= 991px)
+   14. RESPONSIVE SPLIDE CAROUSEL STYLING (Active <= 991px)
    -------------------------------------------------------------------------- */
 @media screen and (max-width: 991px) {
   .splide__track {
