@@ -108,6 +108,19 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   padding-right: 20px;
 }
 
+/* Utility Helpers */
+.text-white {
+  color: var(--text-white) !important;
+}
+
+.text-muted-dark {
+  color: var(--text-muted-dark) !important;
+}
+
+.text-muted-light {
+  color: var(--text-muted-light) !important;
+}
+
 /* Highlight Text Gradient */
 .text-highlight-cyan {
   font-family: var(--font-family);
@@ -469,6 +482,22 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   margin-bottom: 18px;
 }
 
+.section-badge-dark {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0, 180, 216, 0.12);
+  border: 1px solid rgba(0, 180, 216, 0.3);
+  color: var(--text-cyan);
+  padding: 6px 16px;
+  border-radius: var(--border-radius-pill);
+  font-family: var(--font-family);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 18px;
+}
+
 .badge-dot-cyan {
   width: 8px;
   height: 8px;
@@ -514,70 +543,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 
 .inline-brand-link:hover {
   color: var(--btn-primary-hover);
-}
-
-.experience-solutions-box {
-  background: var(--bg-light);
-  border: 1px solid var(--border-light);
-  border-radius: var(--border-radius-card);
-  padding: 26px 28px;
-  margin-bottom: 22px;
-  box-shadow: var(--shadow-card);
-}
-
-.experience-subheading {
-  font-family: var(--font-family);
-  font-size: 17px;
-  font-weight: 600;
-  color: var(--text-dark);
-  margin-bottom: 18px;
-}
-
-.experience-benefit-list {
-  list-style: none;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px 24px;
-  font-family: var(--font-family);
-}
-
-.benefit-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  font-family: var(--font-family);
-  font-size: 14px;
-  color: var(--text-muted-light);
-  font-weight: 500;
-  line-height: 1.5;
-}
-
-.benefit-check {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 20px;
-  height: 20px;
-  background: rgba(0, 180, 216, 0.12);
-  border: 1px solid rgba(0, 180, 216, 0.35);
-  border-radius: 50%;
-  color: var(--btn-primary);
-  font-size: 11px;
-  font-weight: 700;
-  flex-shrink: 0;
-  margin-top: 1px;
-}
-
-.experience-closing-text {
-  font-family: var(--font-family);
-  font-size: 15px;
-  font-weight: 500;
-  color: var(--text-dark);
-  line-height: 1.7;
-  margin-bottom: 28px;
-  border-left: 3px solid var(--btn-primary);
-  padding-left: 16px;
-  text-align: left !important;
 }
 
 .experience-actions {
@@ -673,7 +638,117 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   8. RESPONSIVE MEDIA QUERIES
+   8. SECTION 3: STRATEGIC WEB DEVELOPMENT SERVICES (8-GRID)
+   -------------------------------------------------------------------------- */
+.services-section {
+  position: relative;
+  background-color: var(--bg-dark);
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+.services-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(0, 180, 216, 0.1) 0%, rgba(7, 21, 43, 0) 70%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.section-header-center {
+  text-align: center;
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  position: relative;
+  z-index: 2;
+}
+
+.section-intro-text {
+  font-family: var(--font-family);
+  font-size: 16px;
+  line-height: 1.7;
+  margin-top: 14px;
+}
+
+.services-grid-8 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  position: relative;
+  z-index: 2;
+}
+
+.service-card-item {
+  background: var(--bg-dark-card);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--border-radius-card);
+  padding: 32px 28px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.service-card-item:hover {
+  transform: translateY(-5px);
+  border-color: rgba(0, 180, 216, 0.4);
+  box-shadow: 0 16px 40px rgba(0, 136, 255, 0.18);
+}
+
+.service-card-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.service-card-icon {
+  width: 48px;
+  height: 48px;
+  background: rgba(0, 180, 216, 0.12);
+  border: 1px solid rgba(0, 180, 216, 0.3);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+.service-card-title {
+  font-family: var(--font-family);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--white-color);
+  margin: 0;
+}
+
+.service-card-desc {
+  font-family: var(--font-family);
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--text-muted-dark);
+  margin: 0;
+}
+
+.service-section-cta {
+  text-align: center;
+  margin-top: 48px;
+  position: relative;
+  z-index: 2;
+}
+
+/* --------------------------------------------------------------------------
+   9. RESPONSIVE MEDIA QUERIES
    -------------------------------------------------------------------------- */
 @media screen and (max-width: 1200px) {
   :root {
@@ -694,7 +769,9 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
     --max-width-container: 100%;
   }
 
-  .hero-section {
+  .hero-section,
+  .digital-experience-section,
+  .services-section {
     padding: 70px 0 60px;
   }
 
@@ -713,6 +790,11 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
     padding: 0;
   }
 
+  .services-grid-8 {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
   .hero-title {
     font-size: 32px;
   }
@@ -723,7 +805,8 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 
   .hero-description,
   .section-lead-text,
-  .section-description {
+  .section-description,
+  .section-intro-text {
     font-size: 15px;
   }
 
@@ -745,12 +828,15 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
     font-size: 24px;
   }
 
+  .service-card-title {
+    font-size: 18px;
+  }
+
   .hero-form-card {
     padding: 24px 18px;
   }
 
-  .form-row-2col,
-  .experience-benefit-list {
+  .form-row-2col {
     grid-template-columns: 1fr;
     gap: 12px;
   }
@@ -770,6 +856,10 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   .experience-visual-wrapper {
     padding: 0;
   }
+
+  .service-card-item {
+    padding: 24px 20px;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -783,13 +873,14 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 
   .hero-description,
   .section-lead-text,
-  .section-description {
+  .section-description,
+  .section-intro-text,
+  .service-card-desc {
     font-size: 14px;
     line-height: 1.65;
   }
 
-  .hero-highlight-item,
-  .benefit-item {
+  .hero-highlight-item {
     font-size: 13.5px;
   }
 
