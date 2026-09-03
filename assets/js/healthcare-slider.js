@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
       try {
         const splideInstance = new Splide(`#${sliderId}`, {
           type: 'loop',
-          perPage: 2,
+          perPage: 3,
           perMove: 1,
           gap: '28px',
           arrows: false,
