@@ -1,10 +1,41 @@
 /**
- * Vizz Web - Saskatoon Page Dedicated Responsive Sliders
- * Activates Splide.js sliders on mobile & tablet (<= 991px)
- * Automatically destroys sliders on desktop (> 991px) to preserve native CSS grid layouts.
+ * Vizz Web - Saskatoon Page Dedicated Responsive Sliders & Interactive Scripts
+ * Page: saskatoon.html
+ * Functionality:
+ * 1. Smooth-scrolling lead form triggers with auto input focus.
+ * 2. Activates Splide.js sliders on mobile & tablet (<= 991px) for grid sections.
+ * 3. Automatically destroys sliders on desktop (> 991px) to preserve native CSS grid layouts.
+ * 4. Accessible Single-Open FAQ Accordion with ARIA state management.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  // =========================================================================
+  // 1. SMOOTH SCROLL HANDLER FOR LEAD FORM TRIGGERS
+  // =========================================================================
+  const leadTriggers = document.querySelectorAll('a[href^="#lead-form"]');
+
+  leadTriggers.forEach((anchor) => {
+    anchor.addEventListener('click', (e) => {
+      const targetElement = document.getElementById('lead-form');
+      if (targetElement) {
+        e.preventDefault();
+        targetElement.scrollIntoView({
+          behavior: 'smooth',
+          block: 'center',
+        });
+
+        // Focus first input for enhanced accessibility and conversion
+        const firstInput = targetElement.querySelector('input');
+        if (firstInput) {
+          setTimeout(() => firstInput.focus(), 450);
+        }
+      }
+    });
+  });
+
+  // =========================================================================
+  // 2. MULTI-SLIDER RESPONSIVE MANAGER (Active <= 991px, Destroyed on Desktop)
+  // =========================================================================
   // Slider configurations list for all 9 sections
   const sliderConfigs = [
     {
@@ -99,7 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
           try {
             // Remove any leftover duplicate pagination elements before mounting
             const existingPaginations = sliderElement.querySelectorAll('.splide__pagination');
-            existingPaginations.forEach(p => p.remove());
+            existingPaginations.forEach((p) => p.remove());
 
             const breakpointsConfig = {
               576: {
@@ -145,7 +176,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Clean up any remaining pagination elements on desktop
         const strayPaginations = sliderElement.querySelectorAll('.splide__pagination');
-        strayPaginations.forEach(p => p.remove());
+        strayPaginations.forEach((p) => p.remove());
       }
     });
   }
@@ -162,4 +193,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('resize', onWindowResize, { passive: true });
   window.addEventListener('orientationchange', onWindowResize, { passive: true });
+
+  // =========================================================================
+  // 3. ACCESSIBLE SINGLE-OPEN FAQ ACCORDION
+  // =========================================================================
+  const faqItems = document.querySelectorAll('.faq-item');
+
+  faqItems.forEach((item) => {
+    const questionBtn = item.querySelector('.faq-question-btn');
+    if (questionBtn) {
+      questionBtn.addEventListener('click', () => {
+        const isCurrentlyActive = item.classList.contains('active');
+
+        // Close all FAQ items
+        faqItems.forEach((otherItem) => {
+          otherItem.classList.remove('active');
+          const otherBtn = otherItem.querySelector('.faq-question-btn');
+          if (otherBtn) {
+            otherBtn.setAttribute('aria-expanded', 'false');
+          }
+        });
+
+        // Toggle clicked item if it was closed
+        if (!isCurrentlyActive) {
+          item.classList.add('active');
+          questionBtn.setAttribute('aria-expanded', 'true');
+        }
+      });
+    }
+  });
 });
