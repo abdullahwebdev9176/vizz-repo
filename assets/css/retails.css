@@ -331,12 +331,272 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   gap: 6px;
 }
 
+/* --------------------------------------------------------------------------
+   6. SECTION 2: CAPABILITIES & OMNICHANNEL COMMERCE SOLUTIONS
+   -------------------------------------------------------------------------- */
+.capabilities-section {
+  background-color: var(--bg-light-alt);
+  padding: var(--section-padding);
+  position: relative;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.section-header-center {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 36px auto;
+}
+
+.section-eyebrow {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--accent-coral);
+  margin-bottom: 12px;
+}
+
+.section-title {
+  color: var(--text-dark);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.28;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.section-lead-text {
+  color: var(--text-muted-light);
+  font-size: 14.5px;
+  line-height: 1.7;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.inline-link {
+  color: var(--btn-color);
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.25s ease;
+}
+
+.inline-link:hover {
+  color: var(--btn-primary-hover);
+}
+
+/* TransHub-Style Capabilities Cards */
+.capabilities-grid {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.transport-style-card {
+  background: var(--bg-light);
+  border-radius: var(--border-radius-card);
+  padding: 22px 18px;
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-card);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+}
+
+.transport-style-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-card-elevated);
+  border-color: rgba(36, 143, 206, 0.5);
+}
+
+.transport-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+  min-height: 48px;
+}
+
+.transport-icon-box {
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  border-radius: 10px;
+  background: rgba(255, 107, 74, 0.1);
+  color: var(--accent-coral);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.transport-style-card:hover .transport-icon-box {
+  background: var(--accent-coral);
+  color: var(--white-color);
+  transform: scale(1.05);
+}
+
+.transport-card-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-dark);
+  line-height: 1.35;
+  margin: 0;
+}
+
+.transport-card-media {
+  width: 100%;
+  height: 145px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 14px;
+  background: #e2e8f0;
+}
+
+.transport-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.transport-style-card:hover .transport-card-img {
+  transform: scale(1.06);
+}
+
+.transport-content-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 12px;
+  transition: all 0.3s ease;
+}
+
+.transport-card-desc {
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: var(--text-muted-light);
+  margin: 0;
+}
+
+.transport-more-content {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.transport-more-content.show {
+  display: flex;
+  animation: fadeInContent 0.3s ease forwards;
+}
+
+@keyframes fadeInContent {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.transport-card-footer {
+  margin-top: auto;
+  padding-top: 10px;
+  border-top: 1px solid rgba(226, 232, 240, 0.7);
+}
+
+.transport-read-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: none;
+  color: var(--btn-color);
+  font-size: 13px;
+  font-weight: 600;
+  font-family: var(--font-family);
+  cursor: pointer;
+  padding: 4px 0;
+  transition: all 0.25s ease;
+}
+
+.transport-read-more-btn:hover {
+  color: var(--btn-primary-hover);
+  transform: translateX(2px);
+}
+
+.read-more-chevron {
+  transition: transform 0.3s ease;
+}
+
+.transport-style-card.is-expanded .read-more-chevron {
+  transform: rotate(180deg);
+}
+
+/* --------------------------------------------------------------------------
+   7. SPLIDE SLIDER CUSTOM CONTROLS, PAGINATION & VISIBILITY OVERRIDES
+   -------------------------------------------------------------------------- */
+/* Ensure Splide containers remain visible across desktop even when unmounted */
+.splide,
+.splide:not(.is-rendered),
+.splide:not(.is-active),
+.splide__track,
+.splide__list,
+.splide__slide {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.splide__pagination {
+  bottom: -28px !important;
+}
+
+.splide__pagination__page {
+  background: #cbd5e1 !important;
+  opacity: 1 !important;
+  width: 8px !important;
+  height: 8px !important;
+  transition: all 0.3s ease !important;
+}
+
+.splide__pagination__page.is-active {
+  background: var(--btn-primary) !important;
+  transform: scale(1.3) !important;
+  border-radius: 8px !important;
+  width: 22px !important;
+}
+
+.splide__arrow {
+  background: var(--bg-light) !important;
+  border: 1px solid var(--border-light) !important;
+  box-shadow: var(--shadow-card) !important;
+  opacity: 0.9 !important;
+  transition: all 0.25s ease !important;
+}
+
+.splide__arrow:hover {
+  background: var(--btn-primary) !important;
+  color: var(--white-color) !important;
+}
+
+.splide__arrow svg {
+  fill: currentColor !important;
+}
+
 /* ==========================================================================
-   6. CONSOLIDATED RESPONSIVE MEDIA QUERIES (Mobile-First & Desktop Overrides)
+   8. CONSOLIDATED RESPONSIVE MEDIA QUERIES (Mobile-First & Desktop Overrides)
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   6.1 MIN-WIDTH: 576px (Phablets / Small Devices Upwards)
+   8.1 MIN-WIDTH: 576px (Phablets / Small Devices Upwards)
    -------------------------------------------------------------------------- */
 @media screen and (min-width: 576px) {
   /* Hero Form */
@@ -351,7 +611,7 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   6.2 MIN-WIDTH: 768px (Tablets / Medium Devices Upwards)
+   8.2 MIN-WIDTH: 768px (Tablets / Medium Devices Upwards)
    -------------------------------------------------------------------------- */
 @media screen and (min-width: 768px) {
   :root {
@@ -368,15 +628,28 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   .hero-form-card {
     padding: 32px 28px;
   }
+
+  /* Section 2 */
+  .section-title {
+    font-size: 30px;
+  }
+
+  .section-lead-text {
+    font-size: 15px;
+  }
+
+  .section-header-center {
+    margin-bottom: 44px;
+  }
 }
 
 /* --------------------------------------------------------------------------
-   6.3 MIN-WIDTH: 992px (Desktop & Large Screens - Native Grids & Desktop Layout)
+   8.3 MIN-WIDTH: 992px (Desktop & Large Screens - Native Grids & Desktop Layout)
    -------------------------------------------------------------------------- */
 @media screen and (min-width: 992px) {
   :root {
     --container-padding: 24px;
-    --section-padding: 90px 0;
+    --section-padding: 85px 0;
     --max-width-container: calc(100% - 10%);
   }
 
@@ -401,20 +674,98 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   .hero-actions {
     text-align: left;
   }
+
+  /* Section 2: Desktop 4-Column Native Grid */
+  .splide,
+  .splide:not(.is-rendered),
+  .splide__track {
+    overflow: visible !important;
+    width: 100% !important;
+    position: static !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .capabilities-grid,
+  .splide__list.capabilities-grid,
+  .splide__list {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 22px !important;
+    transform: none !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    list-style: none !important;
+  }
+
+  .capabilities-grid .splide__slide,
+  .splide__slide {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    transform: none !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    flex: initial !important;
+  }
+
+  .splide__arrows,
+  .splide__pagination {
+    display: none !important;
+  }
+
+  .section-title {
+    font-size: 34px;
+  }
+
+  /* Desktop Expand Scrollable Behavior (max-height: 280px) */
+  .transport-content-box.expanded {
+    max-height: 280px;
+    overflow-y: auto;
+    padding-right: 6px;
+  }
+
+  .transport-content-box.expanded::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .transport-content-box.expanded::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 4px;
+  }
+
+  .transport-content-box.expanded::-webkit-scrollbar-thumb {
+    background: var(--btn-primary);
+    border-radius: 4px;
+  }
 }
 
 /* --------------------------------------------------------------------------
-   6.4 MIN-WIDTH: 1200px (Extra Large Screens)
+   8.4 MIN-WIDTH: 1200px (Extra Large Screens)
    -------------------------------------------------------------------------- */
 @media screen and (min-width: 1200px) {
   .hero-title {
     font-size: 46px;
     line-height: 1.2;
   }
+
+  .section-title {
+    font-size: 36px;
+  }
+
+  .capabilities-grid,
+  .splide__list.capabilities-grid {
+    gap: 26px !important;
+  }
 }
 
 /* --------------------------------------------------------------------------
-   6.5 MIN-WIDTH: 1280px (Wide Desktop Screens)
+   8.5 MIN-WIDTH: 1280px (Wide Desktop Screens)
    -------------------------------------------------------------------------- */
 @media screen and (min-width: 1280px) {
   :root {
@@ -423,7 +774,7 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   6.6 MAX-WIDTH: 576px (Small Mobile Screens)
+   8.6 MAX-WIDTH: 576px (Small Mobile Screens)
    -------------------------------------------------------------------------- */
 @media screen and (max-width: 576px) {
   .btn-primary-pill {
@@ -431,4 +782,10 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
     padding-left: 18px !important;
     padding-right: 18px !important;
   }
+
+  .transport-card-header {
+    min-height: auto;
+  }
 }
+
+

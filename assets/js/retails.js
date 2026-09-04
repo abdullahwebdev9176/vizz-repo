@@ -186,6 +186,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       } else {
         // Destroy slider on desktop (>= 992px) to restore native grid
+        sliderElement.classList.add('is-rendered');
         if (activeSplideInstances[config.id]) {
           try {
             activeSplideInstances[config.id].destroy(true);
@@ -193,6 +194,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.warn(`[Splide] Error destroying #${config.id}:`, err);
           }
           delete activeSplideInstances[config.id];
+          sliderElement.classList.add('is-rendered');
         }
       }
     });
