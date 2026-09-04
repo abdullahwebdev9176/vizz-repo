@@ -402,7 +402,7 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 .hero-title {
   color: var(--text-white);
   font-size: 26px;
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1.25;
   margin-bottom: 18px;
   text-align: center;
@@ -1519,10 +1519,11 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   background: var(--bg-dark-card);
   border: 1px solid var(--border-dark);
   border-radius: var(--border-radius-card);
-  padding: 24px 20px;
+  padding: 20px 18px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 14px;
   transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
@@ -1532,7 +1533,7 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 @media screen and (min-width: 992px) {
   .sector-card {
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     text-align: left;
     gap: 16px;
   }
@@ -1565,15 +1566,8 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   font-size: 16px;
   font-weight: 700;
   color: var(--text-white);
-  margin-bottom: 6px;
-  line-height: 1.35;
-}
-
-.sector-desc {
-  font-size: 13px;
-  color: var(--text-muted-dark);
-  line-height: 1.6;
   margin: 0;
+  line-height: 1.35;
 }
 
 /* --------------------------------------------------------------------------
