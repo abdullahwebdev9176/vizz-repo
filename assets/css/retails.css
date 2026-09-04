@@ -1,0 +1,3033 @@
+/* ==========================================================================
+   VIZZ WEB - SASKATOON DEDICATED STYLESHEET
+   Page: saskatoon.html
+   Design Philosophy: Mobile-First Responsive Architecture, Rich Aesthetics & SEO Compliance
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. GOOGLE FONT: POPPINS IMPORT
+   -------------------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* --------------------------------------------------------------------------
+   2. CORE COLOR PALETTE & DESIGN SYSTEM TOKENS (Mobile-First Variables)
+   -------------------------------------------------------------------------- */
+:root {
+  /* 🔤 Typography & Font Family */
+  --font-family: 'Poppins', sans-serif;
+
+  /* 🔘 Brand, Accent & Interactive Colors */
+  --btn-primary: #248fce;
+  --btn-primary-hover: #006ed4;
+  --btn-cyan: #248fce;
+  --btn-color: #248fce;
+  --btn-color-hover: #ffffff;
+  --white-color: #ffffff;
+
+  /* 🌌 Background Colors */
+  --bg-dark: #07152b;
+  --bg-dark-card: #0e2246;
+  --bg-light: #ffffff;
+  --bg-light-alt: #f4f8fc;
+
+  /* ✍️ Font / Text Colors */
+  --text-white: #ffffff;
+  --text-dark: #0b1a30;
+  --text-muted-dark: #cbd5e1;
+  --text-muted-light: #4a5568;
+  --text-cyan: #248fce;
+
+  /* UI Borders & Radii */
+  --border-radius-pill: 10px;
+  --border-radius-card: 16px;
+  --border-radius-card-sm: 12px;
+  --border-radius-input: 8px;
+  --border-light: #e2e8f0;
+  --border-dark: #1b3252;
+
+  /* Shadows */
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.05);
+  --shadow-card-elevated: 0 16px 36px rgba(0, 0, 0, 0.22);
+  --shadow-btn: 0 8px 25px rgba(0, 136, 255, 0.35);
+
+  /* Layout Spacing (Mobile-First) */
+  --container-padding: 16px;
+  --section-padding: 60px 0;
+  --max-width-container: 100%;
+}
+
+
+/* --------------------------------------------------------------------------
+   3. BASE RESETS & MOBILE-FIRST TYPOGRAPHY
+   -------------------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-family);
+  overflow-x: hidden;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-light);
+  color: var(--text-muted-light);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Headings Typography (Fluid Scale) */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family);
+  color: var(--text-dark);
+  font-weight: 700;
+  line-height: 1.25;
+  word-wrap: break-word;
+}
+
+/* Text Elements Typography */
+p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
+  font-family: var(--font-family);
+}
+
+/* Shared Container */
+.vizz-container {
+  width: 100%;
+  max-width: var(--max-width-container);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+
+/* Helper Utilities */
+.text-white {
+  color: var(--text-white) !important;
+}
+
+.text-muted-dark {
+  color: var(--text-muted-dark) !important;
+}
+
+.text-muted-light {
+  color: var(--text-muted-light) !important;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+/* Highlight Text Gradient */
+.text-highlight-cyan {
+  font-family: var(--font-family);
+  color: var(--text-cyan);
+  display: inline;
+}
+
+/* Badges (Mobile-First) */
+.section-badge-light,
+.section-badge-dark {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: var(--border-radius-pill);
+  font-family: var(--font-family);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+
+
+.section-badge-light {
+  background: rgba(0, 180, 216, 0.1);
+  border: 1px solid rgba(0, 180, 216, 0.25);
+  color: var(--btn-primary);
+}
+
+.section-badge-dark {
+  background: rgba(0, 180, 216, 0.12);
+  border: 1px solid rgba(0, 180, 216, 0.3);
+  color: var(--text-cyan);
+}
+
+.badge-dot-cyan {
+  width: 8px;
+  height: 8px;
+  background-color: var(--btn-primary);
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(0, 180, 216, 0.6);
+  flex-shrink: 0;
+}
+
+/* Section Header (Centered) */
+.section-header-center {
+  text-align: center;
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 35px;
+  position: relative;
+  z-index: 2;
+}
+
+
+.section-title {
+  font-family: var(--font-family);
+  font-size: clamp(22px, 4vw, 34px);
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--text-dark);
+  margin-bottom: 14px;
+  letter-spacing: -0.3px;
+}
+
+.section-lead-text {
+  font-family: var(--font-family);
+  font-size: clamp(14.5px, 2vw, 16px);
+  font-weight: 500;
+  color: var(--text-dark);
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+
+.section-description,
+.section-intro-text {
+  font-family: var(--font-family);
+  font-size: clamp(14px, 1.8vw, 15px);
+  color: var(--text-muted-light);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+/* Inline Brand Link */
+.inline-brand-link {
+  color: var(--btn-primary);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease-in-out;
+}
+
+.inline-brand-link:hover {
+  color: var(--btn-primary-hover);
+}
+
+/* --------------------------------------------------------------------------
+   4. BUTTON COMPONENTS (Touch-Friendly Pill CTA Buttons)
+   -------------------------------------------------------------------------- */
+.btn-primary-pill,
+.btn-secondary-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 10px 24px !important;
+  border-radius: 10px !important;
+  font-size: 13.5px !important;
+  font-weight: 500 !important;
+  font-family: 'Poppins', sans-serif !important;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: var(--shadow-btn);
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  text-align: center;
+}
+
+
+.btn-primary-pill {
+  background: var(--btn-color);
+  border: 1px solid var(--btn-color);
+  color: var(--white-color) !important;
+}
+
+.btn-primary-pill:hover {
+  background: var(--btn-color-hover);
+  border: 1px solid var(--btn-color);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0, 136, 255, 0.5);
+  color: var(--btn-color) !important;
+}
+
+.btn-primary-pill:active {
+  transform: translateY(0);
+}
+
+.btn-secondary-pill {
+  background: var(--white-color);
+  border: 1px solid var(--btn-color);
+  color: var(--btn-color) !important;
+}
+
+.btn-secondary-pill:hover {
+  background: var(--btn-color);
+  border: 1px solid var(--btn-color);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0, 136, 255, 0.5);
+  color: var(--white-color) !important;
+}
+
+/* --------------------------------------------------------------------------
+   5. SECTION 1: HERO SECTION (Mobile-First Flex Layout)
+   -------------------------------------------------------------------------- */
+.hero-section {
+  position: relative;
+  background-color: var(--bg-dark);
+  background-image: linear-gradient(135deg, rgba(7, 21, 43, 0.94) 0%, rgba(11, 27, 54, 0.9) 50%, rgba(8, 29, 63, 0.96) 100%), 
+                    url('../images/hero-img.webp');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: var(--section-padding);
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(0, 180, 216, 0.18) 0%, rgba(7, 21, 43, 0) 70%);
+  pointer-events: none;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.hero-section::after {
+  content: '';
+  position: absolute;
+  bottom: -10%;
+  right: -10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(0, 136, 255, 0.15) 0%, rgba(7, 21, 43, 0) 70%);
+  pointer-events: none;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+
+.hero-section-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  position: relative;
+  z-index: 2;
+}
+
+
+.hero-col-1 {
+  width: 100%;
+}
+
+.hero-col-2 {
+  width: 100%;
+}
+
+
+/* Single H1 on page */
+.hero-title {
+  font-family: var(--font-family);
+  font-size: clamp(24px, 5.2vw, 44px);
+  font-weight: 700;
+  line-height: 1.22;
+  color: var(--text-white);
+  margin-bottom: 18px;
+  letter-spacing: -0.4px;
+}
+
+.hero-description {
+  font-family: var(--font-family);
+  font-size: clamp(14px, 1.8vw, 15.5px);
+  line-height: 1.75;
+  color: var(--text-muted-dark);
+  margin-bottom: 16px;
+}
+
+.hero-highlights {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 28px;
+  padding-left: 0;
+}
+
+.hero-highlight-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: clamp(13.5px, 1.8vw, 14.5px);
+  font-weight: 500;
+  color: #e2e8f0;
+}
+
+.check-icon-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background: rgba(16, 185, 129, 0.2);
+  border: 1px solid #10b981;
+  border-radius: 50%;
+  color: #10b981;
+  font-size: 10px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+
+/* Hero Lead Form Card */
+.hero-form-card {
+  border-radius: var(--border-radius-card);
+  box-shadow: var(--shadow-card-elevated);
+  padding: 24px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(14, 34, 70, 0.88);
+  backdrop-filter: blur(10px);
+  position: relative;
+}
+
+
+.form-card-header {
+  margin-bottom: 18px;
+  text-align: left;
+}
+
+.form-card-title {
+  font-family: var(--font-family);
+  font-size: clamp(18px, 3vw, 22px);
+  font-weight: 700;
+  color: var(--white-color);
+  margin-bottom: 4px;
+}
+
+.form-card-subtitle {
+  font-family: var(--font-family);
+  font-size: 13.5px;
+  color: #94a3b8;
+  line-height: 1.5;
+}
+
+.lead-capture-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.form-row-2col {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  text-align: left;
+}
+
+.form-label {
+  font-family: var(--font-family);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--white-color);
+}
+
+.form-label .required-star {
+  color: #ef4444;
+  margin-left: 2px;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-family: var(--font-family);
+  color: var(--text-dark);
+  background-color: var(--bg-light-alt);
+  border: 1px solid var(--border-light);
+  border-radius: var(--border-radius-input);
+  transition: all 0.2s ease-in-out;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  font-family: var(--font-family);
+  color: #94a3b8;
+  font-size: 13.5px;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  background-color: var(--bg-light);
+  border-color: var(--btn-primary);
+  box-shadow: 0 0 0 3.5px rgba(0, 136, 255, 0.15);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.form-privacy-note {
+  font-family: var(--font-family);
+  font-size: 12px;
+  color: #94a3b8;
+  text-align: center;
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+/* --------------------------------------------------------------------------
+   6. SECTION 2: DIGITAL EXPERIENCE & WHY BUSINESSES NEED WEB DEV
+   -------------------------------------------------------------------------- */
+.digital-experience-section {
+  position: relative;
+  background-color: var(--bg-light-alt);
+  padding: var(--section-padding);
+  overflow: hidden;
+}
+
+.experience-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+
+.experience-col-content {
+  width: 100%;
+}
+
+.experience-col-visual {
+  width: 100%;
+}
+
+
+.experience-visual-wrapper {
+  position: relative;
+  border-radius: var(--border-radius-card);
+}
+
+.experience-image-figure {
+  margin: 0;
+  border-radius: var(--border-radius-card);
+  overflow: hidden;
+  box-shadow: var(--shadow-card-elevated);
+  border: 1px solid var(--border-light);
+  background: var(--bg-dark);
+}
+
+.experience-featured-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.4s ease-in-out;
+}
+
+.experience-image-figure:hover .experience-featured-img {
+  transform: scale(1.02);
+}
+
+/* Floating Badges */
+.experience-floating-card {
+  position: static;
+  margin-top: 14px;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 8px 24px rgba(7, 21, 43, 0.08);
+}
+
+
+.floating-icon-box {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 180, 216, 0.1);
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.floating-title {
+  font-family: var(--font-family);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.floating-subtitle {
+  font-family: var(--font-family);
+  font-size: 11.5px;
+  color: var(--text-muted-light);
+}
+
+.experience-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+
+/* --------------------------------------------------------------------------
+   7. SECTION 3: STRATEGIC WEB DEVELOPMENT SERVICES (8-GRID)
+   -------------------------------------------------------------------------- */
+.services-section {
+  position: relative;
+  background-color: var(--bg-dark);
+  padding: var(--section-padding);
+  overflow: hidden;
+}
+
+.services-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(0, 180, 216, 0.1) 0%, rgba(7, 21, 43, 0) 70%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.services-grid-8 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  position: relative;
+  z-index: 2;
+}
+
+
+.service-card-item {
+  background: var(--bg-dark-card);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--border-radius-card);
+  padding: 24px 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.service-card-item:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 180, 216, 0.4);
+  box-shadow: 0 16px 40px rgba(0, 136, 255, 0.18);
+}
+
+.service-card-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.service-card-icon {
+  width: 44px;
+  height: 44px;
+  background: rgba(0, 180, 216, 0.12);
+  border: 1px solid rgba(0, 180, 216, 0.3);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.service-card-title {
+  font-family: var(--font-family);
+  font-size: clamp(17px, 2.5vw, 20px);
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--white-color);
+  margin: 0;
+}
+
+.service-card-desc {
+  font-family: var(--font-family);
+  font-size: clamp(13.5px, 1.8vw, 15px);
+  line-height: 1.7;
+  color: var(--text-muted-dark);
+  margin: 0;
+}
+
+.service-section-cta {
+  text-align: center;
+  margin-top: 36px;
+  position: relative;
+  z-index: 2;
+}
+
+
+/* --------------------------------------------------------------------------
+   8. SECTION 4: BUILDING DIGITAL SUCCESS (6-GRID LIGHT)
+   -------------------------------------------------------------------------- */
+.success-pillars-section {
+  position: relative;
+  background-color: var(--bg-light-alt);
+  padding: var(--section-padding);
+  overflow: hidden;
+}
+
+.pillars-grid-6 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  position: relative;
+  z-index: 2;
+}
+
+
+.pillar-card {
+  background: var(--bg-light);
+  border: 1px solid var(--border-light);
+  border-radius: var(--border-radius-card);
+  padding: 24px 20px;
+  box-shadow: var(--shadow-card);
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.pillar-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 180, 216, 0.4);
+  box-shadow: 0 16px 36px rgba(7, 21, 43, 0.08);
+}
+
+.pillar-card-icon {
+  width: 44px;
+  height: 44px;
+  background: rgba(0, 180, 216, 0.1);
+  border: 1px solid rgba(0, 180, 216, 0.25);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-bottom: 14px;
+}
+
+.pillar-card-title {
+  font-family: var(--font-family);
+  font-size: clamp(16.5px, 2.2vw, 18.5px);
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+
+.pillar-card-desc {
+  font-family: var(--font-family);
+  font-size: clamp(13.5px, 1.8vw, 14.5px);
+  line-height: 1.7;
+  color: var(--text-muted-light);
+  margin: 0;
+}
+
+.pillars-action-cta {
+  text-align: center;
+  margin-top: 36px;
+  position: relative;
+  z-index: 2;
+}
+
+
+/* --------------------------------------------------------------------------
+   9. SECTION 5: ADVANCED WEB DEV BUILT FOR AI SEARCH (5-GRID DARK)
+   -------------------------------------------------------------------------- */
+.ai-advanced-section {
+  position: relative;
+  background-color: var(--bg-dark);
+  padding: var(--section-padding);
+  overflow: hidden;
+}
+
+.ai-cards-grid-5 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  position: relative;
+  z-index: 2;
+}
+
+
+.ai-card-item {
+  background: var(--bg-dark-card);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--border-radius-card);
+  padding: 24px 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.ai-card-item:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 180, 216, 0.4);
+  box-shadow: 0 16px 40px rgba(0, 136, 255, 0.18);
+}
+
+.ai-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.ai-card-icon {
+  width: 42px;
+  height: 42px;
+  background: rgba(0, 180, 216, 0.12);
+  border: 1px solid rgba(0, 180, 216, 0.3);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.ai-card-title {
+  font-family: var(--font-family);
+  font-size: clamp(16.5px, 2.2vw, 19px);
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--white-color);
+  margin: 0;
+}
+
+.ai-card-desc {
+  font-family: var(--font-family);
+  font-size: clamp(13.5px, 1.8vw, 14.5px);
+  line-height: 1.7;
+  color: var(--text-muted-dark);
+  margin: 0;
+}
+
+.ai-advanced-cta {
+  text-align: center;
+  margin-top: 36px;
+  position: relative;
+  z-index: 2;
+}
+
+
+/* --------------------------------------------------------------------------
+   10. SECTION 6: NEXT-GENERATION TECHNOLOGIES (ROBUST CSS GRID)
+   -------------------------------------------------------------------------- */
+.tech-stack-section {
+  position: relative;
+  background-color: var(--bg-dark);
+  padding: var(--section-padding);
+  overflow: hidden;
+}
+
+.tech-stack-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 30px;
+}
+
+
+.tech-card {
+  background: var(--bg-dark-card);
+  border: 1px solid rgba(0, 180, 216, 0.2);
+  border-radius: var(--border-radius-card);
+  padding: 22px 18px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease-in-out;
+}
+
+.tech-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--btn-primary);
+  box-shadow: 0 12px 30px rgba(0, 136, 255, 0.2);
+}
+
+.tech-card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.tech-card-icon {
+  font-size: 18px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 180, 216, 0.12);
+  border: 1px solid rgba(0, 180, 216, 0.25);
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.tech-card-title {
+  font-family: var(--font-family);
+  font-size: clamp(15px, 2vw, 16.5px);
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--white-color);
+  margin: 0;
+}
+
+.tech-tags-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tech-tag {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-family);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-muted-dark);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 5px 10px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.tech-tag:hover {
+  background: rgba(0, 180, 216, 0.18);
+  border-color: var(--btn-primary);
+  color: var(--white-color);
+}
+
+.tech-stack-cta-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 36px;
+  position: relative;
+  z-index: 2;
+}
+
+
+/* --------------------------------------------------------------------------
+   11. SECTION 7: WEBSITE DEVELOPMENT CHALLENGES WE SOLVE (LIGHT)
+   -------------------------------------------------------------------------- */
+.challenges-section {
+  position: relative;
+  background-color: var(--bg-light-alt);
+  padding: var(--section-padding);
+  overflow: hidden;
+}
+
+.challenges-intro-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+
+.challenges-intro-content {
+  width: 100%;
+}
+
+.challenges-intro-visual {
+  width: 100%;
+}
+
+
+.challenges-lead-text {
+  font-family: var(--font-family);
+  font-size: clamp(14.5px, 2vw, 16px);
+  font-weight: 500;
+  color: var(--text-dark);
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+
+.challenges-desc-text {
+  font-family: var(--font-family);
+  font-size: clamp(13.5px, 1.8vw, 15px);
+  color: var(--text-muted-light);
+  line-height: 1.75;
+  margin-bottom: 16px;
+}
+
+.challenges-subheading {
+  font-family: var(--font-family);
+  font-size: clamp(14.5px, 2vw, 16.5px);
+  color: var(--text-dark);
+}
+
+.challenges-image-wrapper {
+  position: relative;
+  border-radius: var(--border-radius-card);
+}
+
+.challenges-image-figure {
+  margin: 0;
+  border-radius: var(--border-radius-card);
+  overflow: hidden;
+  box-shadow: var(--shadow-card-elevated);
+  border: 1px solid var(--border-light);
+  background: var(--bg-dark);
+}
+
+.challenges-featured-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.4s ease-in-out;
+}
+
+.challenges-image-figure:hover .challenges-featured-img {
+  transform: scale(1.02);
+}
+
+.challenges-grid-6 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  position: relative;
+  z-index: 2;
+}
+
+
+.challenge-card {
+  background: var(--bg-light);
+  border: 1px solid var(--border-light);
+  border-radius: var(--border-radius-card);
+  padding: 24px 20px;
+  box-shadow: var(--shadow-card);
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.challenge-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 180, 216, 0.45);
+  box-shadow: 0 16px 36px rgba(7, 21, 43, 0.08);
+}
+
+.challenge-card-icon {
+  width: 44px;
+  height: 44px;
+  background: rgba(0, 180, 216, 0.1);
+  border: 1px solid rgba(0, 180, 216, 0.25);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-bottom: 14px;
+}
+
+.challenge-card-title {
+  font-family: var(--font-family);
+  font-size: clamp(16.5px, 2.2vw, 18.5px);
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+
+.challenge-card-desc {
+  font-family: var(--font-family);
+  font-size: clamp(13.5px, 1.8vw, 14.5px);
+  line-height: 1.7;
+  color: var(--text-muted-light);
+  margin: 0;
+}
+
+.challenges-action-cta {
+  text-align: center;
+  margin-top: 36px;
+  position: relative;
+  z-index: 2;
+}
+
+
+/* --------------------------------------------------------------------------
+   12. SECTION 8: OUR WEB DEVELOPMENT APPROACH (PROCESS WORKFLOW)
+   -------------------------------------------------------------------------- */
+.process-approach-section {
+  position: relative;
+  background-color: var(--bg-dark);
+  padding: var(--section-padding);
+  overflow: hidden;
+}
+
+.process-grid-6 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  position: relative;
+  z-index: 2;
+}
+
+
+.process-card {
+  background: var(--bg-dark-card);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--border-radius-card);
+  padding: 24px 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.process-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 180, 216, 0.45);
+  box-shadow: 0 16px 36px rgba(0, 136, 255, 0.2);
+}
+
+.process-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.process-card-icon {
+  width: 44px;
+  height: 44px;
+  background: rgba(0, 180, 216, 0.12);
+  border: 1px solid rgba(0, 180, 216, 0.3);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.process-step-badge {
+  font-family: var(--font-family);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-cyan);
+  background: rgba(0, 180, 216, 0.1);
+  border: 1px solid rgba(0, 180, 216, 0.25);
+  padding: 4px 10px;
+  border-radius: var(--border-radius-pill);
+}
+
+.process-card-title {
+  font-family: var(--font-family);
+  font-size: clamp(16.5px, 2.2vw, 19px);
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--white-color);
+  margin-bottom: 10px;
+}
+
+.process-card-desc {
+  font-family: var(--font-family);
+  font-size: clamp(13.5px, 1.8vw, 14.5px);
+  line-height: 1.7;
+  color: var(--text-muted-dark);
+  margin: 0;
+}
+
+.process-action-cta {
+  text-align: center;
+  margin-top: 36px;
+  position: relative;
+  z-index: 2;
+}
+
+
+/* --------------------------------------------------------------------------
+   13. SECTION 9: INDUSTRIES WE SERVE IN SASKATOON (LIGHT)
+   -------------------------------------------------------------------------- */
+.saskatoon-industries-section {
+  position: relative;
+  background-color: var(--bg-light);
+  padding: var(--section-padding);
+  overflow: hidden;
+}
+
+.industries-grid-10 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 30px;
+}
+
+
+.saskatoon-industry-card {
+  background: var(--bg-light-alt);
+  border: 1px solid var(--border-light);
+  border-radius: var(--border-radius-card);
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: all 0.3s ease-in-out;
+  box-shadow: var(--shadow-card);
+}
+
+.saskatoon-industry-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 180, 216, 0.45);
+  box-shadow: 0 14px 30px rgba(7, 21, 43, 0.08);
+  background: #ffffff;
+}
+
+.saskatoon-industry-icon {
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 180, 216, 0.1);
+  border: 1px solid rgba(0, 180, 216, 0.25);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.saskatoon-industry-title {
+  font-family: var(--font-family);
+  font-size: clamp(14px, 1.8vw, 15.5px);
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--text-dark);
+  margin: 0;
+}
+
+.industries-action-cta {
+  text-align: center;
+  margin-top: 36px;
+  position: relative;
+  z-index: 2;
+}
+
+
+/* --------------------------------------------------------------------------
+   14. SECTION 10: WEB DEVELOPMENT COST FACTORS (DARK)
+   -------------------------------------------------------------------------- */
+.cost-factors-section {
+  position: relative;
+  background-color: var(--bg-dark);
+  padding: var(--section-padding);
+  overflow: hidden;
+}
+
+.cost-factors-grid-9 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  position: relative;
+  z-index: 2;
+}
+
+
+.cost-factor-card {
+  background: var(--bg-dark-card);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--border-radius-card);
+  padding: 24px 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.cost-factor-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 180, 216, 0.45);
+  box-shadow: 0 16px 36px rgba(0, 136, 255, 0.2);
+}
+
+.cost-factor-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.cost-factor-icon {
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 180, 216, 0.12);
+  border: 1px solid rgba(0, 180, 216, 0.3);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.cost-factor-title {
+  font-family: var(--font-family);
+  font-size: clamp(16px, 2.2vw, 18.5px);
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--white-color);
+  margin: 0;
+}
+
+.cost-factor-desc {
+  font-family: var(--font-family);
+  font-size: clamp(13.5px, 1.8vw, 14.5px);
+  line-height: 1.7;
+  color: var(--text-muted-dark);
+  margin: 0;
+}
+
+.cost-factors-cta {
+  text-align: center;
+  margin-top: 36px;
+  position: relative;
+  z-index: 2;
+}
+
+
+/* --------------------------------------------------------------------------
+   15. SECTION 11: PARTNER WITH VIZZ WEB (LIGHT)
+   -------------------------------------------------------------------------- */
+.partner-section {
+  position: relative;
+  background-color: var(--bg-light-alt);
+  padding: var(--section-padding);
+  overflow: hidden;
+}
+
+.partner-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+
+.partner-col-content {
+  width: 100%;
+}
+
+.partner-col-visual {
+  width: 100%;
+}
+
+
+.partner-lead-text {
+  font-family: var(--font-family);
+  font-size: clamp(14.5px, 2vw, 16px);
+  font-weight: 500;
+  color: var(--text-dark);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.partner-points-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+
+.partner-point-item {
+  background: var(--bg-light);
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  padding: 16px 14px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+
+.partner-point-item:hover {
+  transform: translateY(-3px);
+  border-color: rgba(0, 180, 216, 0.45);
+  box-shadow: 0 10px 24px rgba(7, 21, 43, 0.07);
+}
+
+.partner-point-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.partner-point-icon {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background: rgba(0, 180, 216, 0.1);
+  border-radius: 8px;
+  color: var(--btn-primary);
+  flex-shrink: 0;
+}
+
+.partner-point-title {
+  font-family: var(--font-family);
+  font-size: clamp(14.5px, 2vw, 16px);
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--text-dark);
+  margin: 0;
+}
+
+.partner-point-desc {
+  font-family: var(--font-family);
+  font-size: clamp(13px, 1.6vw, 14px);
+  line-height: 1.65;
+  color: var(--text-muted-light);
+  margin: 0;
+  padding-left: 40px;
+}
+
+.partner-image-wrapper {
+  position: relative;
+  border-radius: var(--border-radius-card);
+}
+
+.partner-image-figure {
+  margin: 0;
+  border-radius: var(--border-radius-card);
+  overflow: hidden;
+  box-shadow: var(--shadow-card-elevated);
+  border: 1px solid var(--border-light);
+  background: var(--bg-dark);
+}
+
+.partner-featured-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.4s ease-in-out;
+}
+
+.partner-image-figure:hover .partner-featured-img {
+  transform: scale(1.02);
+}
+
+.partner-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+
+/* --------------------------------------------------------------------------
+   16. SECTION 12: SASKATOON & SURROUNDING SERVICE AREA
+   -------------------------------------------------------------------------- */
+.service-area-section {
+  position: relative;
+  background-color: var(--bg-dark);
+  padding: var(--section-padding);
+  overflow: hidden;
+}
+
+.service-area-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  position: relative;
+  z-index: 2;
+}
+
+
+.service-area-col-left {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.service-area-col-right {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+
+.service-area-summary-box {
+  background: rgba(14, 34, 70, 0.75);
+  border-left: 4px solid var(--btn-cyan);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0 12px 12px 0;
+  padding: 18px 16px;
+  margin-top: 14px;
+  margin-bottom: 24px;
+  backdrop-filter: blur(10px);
+}
+
+
+.service-area-summary-text {
+  font-family: var(--font-family);
+  font-size: clamp(13.5px, 1.8vw, 15px);
+  line-height: 1.8;
+  color: var(--text-white);
+  margin: 0;
+}
+
+.service-zone-card {
+  background: var(--bg-dark-card);
+  border: 1px solid rgba(0, 180, 216, 0.25);
+  border-radius: var(--border-radius-card);
+  padding: 20px 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+
+.service-zone-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--btn-primary);
+  box-shadow: 0 14px 35px rgba(0, 136, 255, 0.18);
+}
+
+.service-zone-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.service-zone-icon {
+  width: 36px;
+  height: 36px;
+  background: rgba(0, 180, 216, 0.12);
+  border: 1px solid rgba(0, 180, 216, 0.3);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.service-zone-title {
+  font-family: var(--font-family);
+  font-size: clamp(15.5px, 2.2vw, 17.5px);
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--white-color);
+  margin: 0;
+}
+
+.service-zone-chips-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+
+.service-location-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-family);
+  font-size: 12.5px;
+  font-weight: 500;
+  color: #e2e8f0;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 5px 12px;
+  border-radius: var(--border-radius-pill);
+  transition: all 0.2s ease;
+}
+
+.service-location-chip:hover {
+  background: rgba(0, 180, 216, 0.2);
+  border-color: var(--btn-cyan);
+  color: var(--white-color);
+}
+
+.service-location-chip::before {
+  content: '•';
+  color: var(--btn-cyan);
+  font-size: 13px;
+  line-height: 1;
+}
+
+
+/* --------------------------------------------------------------------------
+   17. SECTION 13: HIRE DEDICATED WEBSITE DEVELOPER (LIGHT)
+   -------------------------------------------------------------------------- */
+.hire-developer-section {
+  position: relative;
+  background-color: var(--bg-light);
+  padding: var(--section-padding);
+  overflow: hidden;
+}
+
+.hire-developer-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+
+.hire-dev-col-content {
+  width: 100%;
+}
+
+.hire-dev-col-visual {
+  width: 100%;
+}
+
+
+.hire-dev-lead-text {
+  font-family: var(--font-family);
+  font-size: clamp(14px, 1.8vw, 16px);
+  color: var(--text-muted-light);
+  line-height: 1.75;
+  margin-bottom: 22px;
+}
+
+.hire-dev-highlights-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+
+.hire-dev-highlight-card {
+  background: var(--bg-light-alt);
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  padding: 14px 12px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease;
+}
+
+.hire-dev-highlight-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(0, 180, 216, 0.45);
+  box-shadow: 0 10px 24px rgba(7, 21, 43, 0.06);
+}
+
+.hire-dev-highlight-icon {
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.hire-dev-highlight-title {
+  font-family: var(--font-family);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.hire-image-wrapper {
+  position: relative;
+  border-radius: var(--border-radius-card);
+}
+
+.hire-image-figure {
+  margin: 0;
+  border-radius: var(--border-radius-card);
+  overflow: hidden;
+  box-shadow: var(--shadow-card-elevated);
+  border: 1px solid var(--border-light);
+  background: var(--bg-dark);
+}
+
+.hire-featured-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.4s ease-in-out;
+}
+
+.hire-image-figure:hover .hire-featured-img {
+  transform: scale(1.02);
+}
+
+.hire-dev-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+
+/* --------------------------------------------------------------------------
+   18. SECTION 14: FREQUENTLY ASKED QUESTIONS (FAQS - MATCHING INDEX.HTML)
+   -------------------------------------------------------------------------- */
+.faq-section {
+  position: relative;
+  background-color: var(--bg-light-alt);
+  padding: var(--section-padding);
+  overflow: hidden;
+}
+
+.faq-accordion-wrapper {
+  max-width: 880px;
+  margin: 0 auto 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  position: relative;
+  z-index: 2;
+}
+
+
+.faq-item {
+  background: var(--bg-light);
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.faq-item.active {
+  border-color: var(--btn-primary);
+  box-shadow: 0 10px 30px rgba(0, 136, 255, 0.1);
+}
+
+.faq-question-heading {
+  margin: 0;
+  padding: 0;
+}
+
+.faq-question-btn {
+  width: 100%;
+  min-height: 48px;
+  padding: 16px 18px;
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  font-family: var(--font-family);
+  font-size: clamp(14.5px, 2vw, 16.5px);
+  font-weight: 700;
+  color: var(--text-dark);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  gap: 14px;
+}
+
+
+.faq-item.active .faq-question-btn {
+  color: var(--btn-primary);
+}
+
+.faq-question-btn:hover {
+  color: var(--btn-primary);
+}
+
+.faq-icon {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--btn-primary);
+  width: 30px;
+  height: 30px;
+  background: rgba(0, 180, 216, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
+
+
+.faq-item.active .faq-icon {
+  transform: rotate(45deg);
+  background: var(--btn-primary);
+  color: var(--white-color);
+}
+
+.faq-answer-pane {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease-in-out;
+}
+
+.faq-item.active .faq-answer-pane {
+  max-height: 500px;
+}
+
+.faq-answer-content {
+  padding: 0 18px 18px;
+}
+
+
+.faq-answer-content p {
+  font-family: var(--font-family);
+  font-size: clamp(13.5px, 1.8vw, 14px);
+  color: var(--text-muted-light);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.faq-bottom-cta {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  position: relative;
+  z-index: 2;
+}
+
+
+/* --------------------------------------------------------------------------
+   19. SECTION 15: BOTTOM CONTACT SECTION (DARK OVERLAY - MATCHING INDEX.HTML)
+   -------------------------------------------------------------------------- */
+.bottom-contact-section {
+  position: relative;
+  background-image: linear-gradient(135deg, rgba(7, 21, 43, 0.94) 0%, rgba(8, 29, 63, 0.96) 100%), url('../images/contact-office-bg.webp');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 110px 0;
+  overflow: hidden;
+}
+
+
+.bottom-contact-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+
+.bottom-contact-content {
+  width: 100%;
+}
+
+.bottom-contact-form-wrapper {
+  width: 100%;
+}
+
+
+.contact-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 30px 0;
+}
+
+.contact-info-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: rgba(14, 34, 70, 0.7);
+  border: 1px solid rgba(0, 180, 216, 0.2);
+  border-radius: 12px;
+  padding: 16px 20px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+.contact-info-card:hover {
+  transform: translateX(5px);
+  border-color: var(--btn-primary);
+  background: rgba(14, 34, 70, 0.9);
+  box-shadow: 0 10px 25px rgba(0, 136, 255, 0.16);
+}
+
+.contact-icon-box {
+  font-size: 22px;
+  width: 44px;
+  height: 44px;
+  background: rgba(0, 180, 216, 0.12);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-info-title {
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.contact-channel-link {
+  color: var(--text-cyan);
+  font-family: var(--font-family);
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact-channel-link:hover {
+  color: var(--white-color);
+}
+
+.contact-info-desc {
+  font-family: var(--font-family);
+  font-size: 14px;
+  margin: 0;
+}
+
+.contact-guarantees-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 24px;
+}
+
+.contact-guarantee-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #e2e8f0;
+  font-size: 13.5px;
+  font-weight: 500;
+}
+
+.guarantee-check {
+  color: #10b981;
+  font-weight: 800;
+}
+
+/* --------------------------------------------------------------------------
+   21. SASKATOON RESPONSIVE SPLIDE SLIDERS (ACTIVE <= 991px, GRID ON DESKTOP)
+   -------------------------------------------------------------------------- */
+
+/* Base Splide Visibility & Box Sizing */
+.splide,
+.services-slider,
+.pillars-slider,
+.ai-advanced-slider,
+.saskatoon-tech-slider,
+.tech-stack-slider,
+.challenges-slider,
+.saskatoon-process-slider,
+.process-slider,
+.saskatoon-industries-slider,
+.industries-slider,
+.cost-factors-slider,
+.partner-slider {
+  visibility: visible !important;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Base slide card normalization */
+.services-slider .splide__slide .service-card-item,
+.pillars-slider .splide__slide .pillar-card,
+.ai-advanced-slider .splide__slide .ai-card-item,
+.saskatoon-tech-slider .splide__slide .tech-card,
+.tech-stack-slider .splide__slide .tech-card,
+.challenges-slider .splide__slide .challenge-card,
+.saskatoon-process-slider .splide__slide .process-card,
+.process-slider .splide__slide .process-card,
+.saskatoon-industries-slider .splide__slide .saskatoon-industry-card,
+.industries-slider .splide__slide .saskatoon-industry-card,
+.cost-factors-slider .splide__slide .cost-factor-card,
+.partner-slider .splide__slide .partner-point-item {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: 100%;
+  box-sizing: border-box !important;
+  min-width: 0 !important;
+  margin-bottom: 0;
+}
+
+/* Splide Pagination Dots Styling (Global) */
+.splide__pagination {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 28px !important;
+  position: static !important;
+  padding: 0;
+  list-style: none;
+  z-index: 2;
+}
+
+.splide__pagination__page {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  padding: 0;
+  outline: none;
+  opacity: 0.6;
+  display: inline-block;
+}
+
+.splide__pagination__page.is-active {
+  width: 26px;
+  border-radius: 10px;
+  background: var(--btn-primary);
+  border-color: #248fce;
+  box-shadow: 0 0 14px rgba(0, 180, 216, 0.6);
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Light sections pagination (Pillars, Challenges, Industries, Partner) */
+.success-pillars-section .splide__pagination__page,
+.challenges-section .splide__pagination__page,
+.saskatoon-industries-section .splide__pagination__page,
+.partner-section .splide__pagination__page {
+  background: rgba(7, 21, 43, 0.15);
+  border: 1px solid rgba(7, 21, 43, 0.3);
+}
+
+.success-pillars-section .splide__pagination__page.is-active,
+.challenges-section .splide__pagination__page.is-active,
+.saskatoon-industries-section .splide__pagination__page.is-active,
+.partner-section .splide__pagination__page.is-active {
+  background: var(--btn-primary);
+  border-color: #0077b6;
+  box-shadow: 0 0 10px rgba(0, 119, 182, 0.4);
+}
+
+/* ==========================================================================
+   MOBILE & TABLET SLIDER OVERRIDES (<= 991px)
+   ========================================================================== */
+
+
+/* ==========================================================================
+   DESKTOP OVERRIDES (>= 992px) - PURE NATIVE GRID SYSTEM, SLIDER INACTIVE
+   ========================================================================== */
+
+
+/* --------------------------------------------------------------------------
+   22. MOBILE TEXT ALIGNMENT & CENTERING OPTIMIZATIONS (<= 991px)
+   -------------------------------------------------------------------------- */
+
+/* ==========================================================================
+   20. CONSOLIDATED RESPONSIVE MEDIA QUERIES (Mobile-First & Desktop Overrides)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   20.1 MIN-WIDTH: 480px (Extra Small / Landscape Devices Upwards)
+   -------------------------------------------------------------------------- */
+@media screen and (min-width: 480px) {
+  .industries-grid-10 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .hire-dev-highlights-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   20.2 MIN-WIDTH: 576px (Phablets / Small Devices Upwards)
+   -------------------------------------------------------------------------- */
+@media screen and (min-width: 576px) {
+  .form-row-2col {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .tech-stack-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .partner-points-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   20.3 MIN-WIDTH: 640px (Medium-Small Mobile Devices Upwards)
+   -------------------------------------------------------------------------- */
+@media screen and (min-width: 640px) {
+  .pillars-grid-6 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .challenges-grid-6 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .process-grid-6 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .cost-factors-grid-9 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   20.4 MIN-WIDTH: 768px (Tablets / Medium Devices Upwards)
+   -------------------------------------------------------------------------- */
+@media screen and (min-width: 768px) {
+  :root {
+    --container-padding: 24px;
+    --section-padding: 80px 0;
+  }
+
+  .section-badge-light,
+  .section-badge-dark {
+    font-size: 13px;
+    padding: 6px 16px;
+    margin-bottom: 18px;
+  }
+
+  .section-header-center {
+    margin-bottom: 50px;
+  }
+
+  .btn-primary-pill,
+  .btn-secondary-pill {
+    padding: 11px 30px !important;
+    font-size: 14px !important;
+  }
+
+  .hero-form-card {
+    padding: 34px 28px;
+  }
+
+  .services-grid-8 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .service-card-item {
+    padding: 30px 26px;
+  }
+
+  .pillar-card {
+    padding: 28px 24px;
+  }
+
+  .ai-cards-grid-5 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .ai-cards-grid-5 article:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+  .ai-card-item {
+    padding: 30px 26px;
+  }
+
+  .challenge-card {
+    padding: 28px 24px;
+  }
+
+  .process-card {
+    padding: 30px 24px;
+  }
+
+  .industries-grid-10 {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+
+  .cost-factor-card {
+    padding: 28px 24px;
+  }
+
+  .service-area-summary-box {
+    padding: 22px 24px;
+  }
+
+  .service-zone-card {
+    padding: 24px 22px;
+  }
+
+  .service-zone-chips-wrap {
+    gap: 8px;
+  }
+
+  .faq-accordion-wrapper {
+    gap: 16px;
+    margin-bottom: 50px;
+  }
+
+  .faq-question-btn {
+    padding: 22px 24px;
+    gap: 16px;
+  }
+
+  .faq-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 22px;
+  }
+
+  .faq-answer-content {
+    padding: 0 24px 22px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   20.5 MIN-WIDTH: 992px (Desktop & Large Screens - Native Grids & Desktop Layout)
+   -------------------------------------------------------------------------- */
+@media screen and (min-width: 992px) {
+  :root {
+    --container-padding: 24px;
+    --section-padding: 100px 0;
+    --max-width-container: calc(100% - 10%);
+  }
+
+  .hero-section::before {
+    width: 600px; height: 600px;
+  }
+
+  .hero-section::after {
+    width: 700px; height: 700px;
+  }
+
+  .hero-section-flex {
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .hero-col-1 {
+    flex: 1.15;
+  }
+
+  .hero-col-2 {
+    flex: 0.85;
+  }
+
+  .experience-flex {
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .experience-col-content {
+    flex: 1.15;
+  }
+
+  .experience-col-visual {
+    flex: 0.85;
+  }
+
+  .experience-floating-card {
+    position: absolute;
+    margin-top: 0;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 0 16px 36px rgba(7, 21, 43, 0.14);
+  }
+
+  .top-floating-card {
+    top: -15px;
+    right: -15px;
+  }
+
+  .bottom-floating-card {
+    bottom: -15px;
+    left: -15px;
+  }
+
+  .pillars-grid-6 {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .tech-stack-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+  }
+
+  .challenges-intro-flex {
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 50px;
+  }
+
+  .challenges-intro-content {
+    flex: 1.15;
+  }
+
+  .challenges-intro-visual {
+    flex: 0.85;
+  }
+
+  .challenges-grid-6 {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .process-grid-6 {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .cost-factors-grid-9 {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .partner-flex {
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .partner-col-content {
+    flex: 1.15;
+  }
+
+  .partner-col-visual {
+    flex: 0.85;
+  }
+
+  .service-area-flex {
+    flex-direction: row;
+    align-items: stretch;
+    gap: 40px;
+  }
+
+  .service-area-col-left {
+    flex: 1;
+  }
+
+  .service-area-col-right {
+    flex: 1.15;
+  }
+
+  .hire-developer-flex {
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .hire-dev-col-content {
+    flex: 1.15;
+  }
+
+  .hire-dev-col-visual {
+    flex: 0.85;
+  }
+
+  .bottom-contact-flex {
+    flex-direction: row;
+    align-items: center;
+    gap: 60px;
+  }
+
+  .bottom-contact-content {
+    flex: 1.05;
+  }
+
+  .bottom-contact-form-wrapper {
+    flex: 0.95;
+  }
+
+  .services-slider,
+  .pillars-slider,
+  .ai-advanced-slider,
+  .saskatoon-tech-slider,
+  .tech-stack-slider,
+  .challenges-slider,
+  .saskatoon-process-slider,
+  .process-slider,
+  .saskatoon-industries-slider,
+  .industries-slider,
+  .cost-factors-slider,
+  .partner-slider {
+    visibility: visible !important;
+  }
+
+  .services-slider .splide__track,
+  .pillars-slider .splide__track,
+  .ai-advanced-slider .splide__track,
+  .saskatoon-tech-slider .splide__track,
+  .tech-stack-slider .splide__track,
+  .challenges-slider .splide__track,
+  .saskatoon-process-slider .splide__track,
+  .process-slider .splide__track,
+  .saskatoon-industries-slider .splide__track,
+  .industries-slider .splide__track,
+  .cost-factors-slider .splide__track,
+  .partner-slider .splide__track {
+    overflow: visible !important;
+    position: static !important;
+    width: 100% !important;
+    padding: 0 !important;
+  }
+
+  /* 1. Services 8-Grid */
+
+  .services-slider .splide__list,
+  .services-grid-8 {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 24px !important;
+    transform: none !important;
+    margin: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* 2. Success Pillars 6-Grid */
+
+  .pillars-slider .splide__list,
+  .pillars-grid-6 {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 24px !important;
+    transform: none !important;
+    margin: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* 3. AI Advanced 5-Grid */
+
+  .ai-advanced-slider .splide__list,
+  .ai-cards-grid-5 {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 24px !important;
+    transform: none !important;
+    margin: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .ai-advanced-slider .splide__slide:last-child:nth-child(odd) {
+    grid-column: 1 / -1 !important;
+    max-width: 700px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 100% !important;
+  }
+
+  /* 4. Tech Stack Grid */
+
+  .saskatoon-tech-slider .splide__list,
+  .tech-stack-slider .splide__list,
+  .tech-stack-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 22px !important;
+    transform: none !important;
+    margin: 0 0 30px 0 !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* 5. Challenges 6-Grid */
+
+  .challenges-slider .splide__list,
+  .challenges-grid-6 {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 24px !important;
+    transform: none !important;
+    margin: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* 6. Process Approach 6-Grid */
+
+  .saskatoon-process-slider .splide__list,
+  .process-slider .splide__list,
+  .process-grid-6 {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 24px !important;
+    transform: none !important;
+    margin: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* 7. Industries We Serve 10-Grid */
+
+  .saskatoon-industries-slider .splide__list,
+  .industries-slider .splide__list,
+  .industries-grid-10 {
+    display: grid !important;
+    grid-template-columns: repeat(5, 1fr) !important;
+    gap: 20px !important;
+    transform: none !important;
+    margin: 0 0 30px 0 !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* 8. Cost Factors 9-Grid */
+
+  .cost-factors-slider .splide__list,
+  .cost-factors-grid-9 {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 24px !important;
+    transform: none !important;
+    margin: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* 9. Partner With Vizz Web 6-Grid */
+
+  .partner-slider .splide__list,
+  .partner-points-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+    transform: none !important;
+    margin: 0 0 24px 0 !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Slide items on desktop: fill grid cell */
+
+  .services-slider .splide__slide,
+  .pillars-slider .splide__slide,
+  .ai-advanced-slider .splide__slide,
+  .saskatoon-tech-slider .splide__slide,
+  .tech-stack-slider .splide__slide,
+  .challenges-slider .splide__slide,
+  .saskatoon-process-slider .splide__slide,
+  .process-slider .splide__slide,
+  .saskatoon-industries-slider .splide__slide,
+  .industries-slider .splide__slide,
+  .cost-factors-slider .splide__slide,
+  .partner-slider .splide__slide {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    height: auto !important;
+    flex: none !important;
+    display: block !important;
+  }
+
+  /* Hide splide controls completely on desktop */
+
+  .services-slider .splide__pagination,
+  .services-slider .splide__arrows,
+  .pillars-slider .splide__pagination,
+  .pillars-slider .splide__arrows,
+  .ai-advanced-slider .splide__pagination,
+  .ai-advanced-slider .splide__arrows,
+  .saskatoon-tech-slider .splide__pagination,
+  .saskatoon-tech-slider .splide__arrows,
+  .tech-stack-slider .splide__pagination,
+  .tech-stack-slider .splide__arrows,
+  .challenges-slider .splide__pagination,
+  .challenges-slider .splide__arrows,
+  .saskatoon-process-slider .splide__pagination,
+  .saskatoon-process-slider .splide__arrows,
+  .process-slider .splide__pagination,
+  .process-slider .splide__arrows,
+  .saskatoon-industries-slider .splide__pagination,
+  .saskatoon-industries-slider .splide__arrows,
+  .cost-factors-slider .splide__pagination,
+  .cost-factors-slider .splide__arrows,
+  .partner-slider .splide__pagination,
+  .partner-slider .splide__arrows {
+    display: none !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   20.6 MIN-WIDTH: 1024px (Large Tablets / Desktops)
+   -------------------------------------------------------------------------- */
+@media screen and (min-width: 1024px) {
+  .industries-grid-10 {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   20.7 MIN-WIDTH: 1280px (Wide Desktop Screens)
+   -------------------------------------------------------------------------- */
+@media screen and (min-width: 1280px) {
+  :root {
+    --max-width-container: calc(100% - 18%);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   20.8 MAX-WIDTH: 991px (Mobile & Tablet Touch Sliders & Text Alignments)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 991px) {
+  .mobile-mb {
+    margin-bottom: 40px;
+  }
+
+  .services-slider .splide__track,
+  .pillars-slider .splide__track,
+  .ai-advanced-slider .splide__track,
+  .saskatoon-tech-slider .splide__track,
+  .tech-stack-slider .splide__track,
+  .challenges-slider .splide__track,
+  .saskatoon-process-slider .splide__track,
+  .process-slider .splide__track,
+  .saskatoon-industries-slider .splide__track,
+  .industries-slider .splide__track,
+  .cost-factors-slider .splide__track,
+  .partner-slider .splide__track {
+    overflow: hidden !important;
+    position: relative !important;
+    width: 100% !important;
+    padding: 6px 0 !important;
+  }
+
+  .services-slider .splide__list,
+  .pillars-slider .splide__list,
+  .ai-advanced-slider .splide__list,
+  .saskatoon-tech-slider .splide__list,
+  .tech-stack-slider .splide__list,
+  .challenges-slider .splide__list,
+  .saskatoon-process-slider .splide__list,
+  .process-slider .splide__list,
+  .saskatoon-industries-slider .splide__list,
+  .industries-slider .splide__list,
+  .cost-factors-slider .splide__list,
+  .partner-slider .splide__list {
+    display: flex !important;
+    gap: 0 !important;
+    grid-template-columns: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    width: auto !important;
+  }
+
+  .services-slider .splide__slide,
+  .pillars-slider .splide__slide,
+  .ai-advanced-slider .splide__slide,
+  .saskatoon-tech-slider .splide__slide,
+  .tech-stack-slider .splide__slide,
+  .challenges-slider .splide__slide,
+  .saskatoon-process-slider .splide__slide,
+  .process-slider .splide__slide,
+  .saskatoon-industries-slider .splide__slide,
+  .industries-slider .splide__slide,
+  .cost-factors-slider .splide__slide,
+  .partner-slider .splide__slide {
+    display: flex !important;
+    flex-direction: column !important;
+    flex-shrink: 0 !important;
+    box-sizing: border-box !important;
+    height: auto !important;
+    min-width: 0 !important;
+  }
+
+  .floating-title, .floating-subtitle {
+    margin-bottom: 0;
+  }
+
+  .partner-point-item {
+    text-align: left;
+  }
+
+  .challenges-intro-content {
+    text-align: center;
+  }
+
+  /* 1. Hero Section Centering */
+
+  .hero-col-1 {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-title {
+    text-align: center;
+  }
+
+  .hero-description {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-highlights {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .hero-highlight-item {
+    justify-content: center;
+    text-align: left;
+  }
+
+  .hero-actions {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .form-card-header {
+    text-align: center;
+  }
+
+  /* 2. Section 2: Digital Experience Centering */
+
+  .experience-col-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .experience-col-content .section-title {
+    text-align: center;
+  }
+
+  .experience-col-content .section-lead-text,
+  .experience-col-content .section-description {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .experience-actions {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .experience-visual-wrapper {
+    margin: 0 auto;
+    max-width: 600px;
+  }
+
+  /* 3. Section 9: Industries Cards Centering */
+
+  .saskatoon-industry-card {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .saskatoon-industry-icon {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .saskatoon-industry-title {
+    text-align: center;
+  }
+
+  /* 4. Section 11: Partner With Vizz Web Centering */
+
+  .partner-col-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .partner-col-content .section-badge-light {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .partner-col-content .section-title {
+    text-align: center;
+  }
+
+  .partner-lead-text {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .partner-actions {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .partner-image-wrapper {
+    margin: 0 auto;
+    max-width: 600px;
+  }
+
+  /* 5. Section 12: Service Area Section Centering */
+
+  .service-area-col-left {
+    text-align: center;
+    align-items: center;
+  }
+
+  .service-area-col-left .section-badge-dark {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .service-area-col-left .section-title {
+    text-align: center;
+  }
+
+  .service-area-col-left .section-intro-text {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .service-area-summary-box {
+    text-align: center;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 3px solid var(--btn-cyan);
+    border-radius: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+  }
+
+  .service-area-summary-text {
+    text-align: center;
+  }
+
+  .service-area-col-left .btn-primary-pill {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .service-zone-header {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .service-zone-chips-wrap {
+    justify-content: center;
+  }
+
+  /* 6. Section 13: Hire Dedicated Developer Centering */
+
+  .hire-dev-col-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hire-dev-col-content .section-badge-light {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hire-dev-col-content .section-title {
+    text-align: center;
+  }
+
+  .hire-dev-lead-text {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hire-dev-actions {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .hire-image-wrapper {
+    margin: 0 auto;
+    max-width: 600px;
+  }
+
+  /* 7. Bottom Contact Section Centering */
+
+  .bottom-contact-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bottom-contact-content .section-title {
+    text-align: center;
+  }
+
+  .bottom-contact-content .section-lead-text {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contact-info-list {
+    width: 100%;
+    margin: 24px 0;
+  }
+
+  .contact-info-card {
+    text-align: left;
+  }
+
+  .contact-guarantees-row {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   20.9 MAX-WIDTH: 768px (Mobile Spacing Adjustments)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 768px) {
+  .bottom-contact-section {
+    padding: 70px 0;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   20.10 MAX-WIDTH: 576px (Small Mobile Screens & Full-Width Buttons)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 576px) {
+  .hero-actions .btn-primary-pill {
+    width: 100%;
+  }
+
+  .experience-actions .btn-primary-pill {
+    width: 100%;
+  }
+
+  .service-section-cta .btn-primary-pill {
+    width: 100%;
+  }
+
+  .pillars-action-cta .btn-primary-pill {
+    width: 100%;
+  }
+
+  .ai-advanced-cta .btn-primary-pill {
+    width: 100%;
+  }
+
+  .tech-stack-cta-wrap .btn-primary-pill {
+    width: 100%;
+  }
+
+  .challenges-action-cta .btn-primary-pill {
+    width: 100%;
+  }
+
+  .process-action-cta .btn-primary-pill {
+    width: 100%;
+  }
+
+  .industries-action-cta .btn-primary-pill {
+    width: 100%;
+  }
+
+  .cost-factors-cta .btn-primary-pill {
+    width: 100%;
+  }
+
+  .partner-actions .btn-primary-pill {
+    width: 100%;
+  }
+
+  .service-area-col-left .btn-primary-pill {
+    width: 100%;
+  }
+
+  .hire-dev-actions .btn-primary-pill {
+    width: 100%;
+  }
+
+  .faq-bottom-cta .btn-primary-pill {
+    width: 100%;
+  }
+}
