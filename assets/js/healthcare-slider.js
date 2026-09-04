@@ -249,4 +249,61 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   });
+
+  // =========================================================================
+  // 5. READ MORE / READ LESS EXPAND HANDLER FOR TRANSPORT CARDS
+  // =========================================================================
+  const readMoreButtons = document.querySelectorAll('.transport-read-more-btn');
+
+  readMoreButtons.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+
+      const card = btn.closest('.transport-style-card');
+      if (!card) return;
+
+      const isMobile = window.innerWidth <= 768;
+
+      if (isMobile) {
+        // Mobile: Expanding one card expands ALL cards in the slider together
+        const sliderOrSection = btn.closest('.splide') || btn.closest('.workflow-showcase-section') || document;
+        const allCards = sliderOrSection.querySelectorAll('.transport-style-card');
+        const isCurrentlyExpanded = card.classList.contains('is-expanded');
+
+        allCards.forEach((c) => {
+          const cardBtn = c.querySelector('.transport-read-more-btn');
+          const cardTextSpan = cardBtn ? cardBtn.querySelector('.read-more-text') : null;
+          const cardContentBox = c.querySelector('.transport-content-box');
+
+          if (isCurrentlyExpanded) {
+            c.classList.remove('is-expanded');
+            if (cardBtn) cardBtn.setAttribute('aria-expanded', 'false');
+            if (cardTextSpan) cardTextSpan.textContent = 'Read More';
+            if (cardContentBox) cardContentBox.scrollTop = 0;
+          } else {
+            c.classList.add('is-expanded');
+            if (cardBtn) cardBtn.setAttribute('aria-expanded', 'true');
+            if (cardTextSpan) cardTextSpan.textContent = 'Read Less';
+          }
+        });
+      } else {
+        // Desktop: Independent toggle per card (fixed 120px height, scrollable content)
+        const isExpanded = card.classList.contains('is-expanded');
+        const textSpan = btn.querySelector('.read-more-text');
+        const contentBox = card.querySelector('.transport-content-box');
+
+        if (isExpanded) {
+          card.classList.remove('is-expanded');
+          btn.setAttribute('aria-expanded', 'false');
+          if (textSpan) textSpan.textContent = 'Read More';
+          if (contentBox) contentBox.scrollTop = 0;
+        } else {
+          card.classList.add('is-expanded');
+          btn.setAttribute('aria-expanded', 'true');
+          if (textSpan) textSpan.textContent = 'Read Less';
+        }
+      }
+    });
+  });
 });

@@ -850,14 +850,134 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   font-size: 13.5px;
   line-height: 1.65;
   color: #64748b;
-  margin-bottom: 20px;
+  margin-bottom: 0;
   text-align: left;
+}
+
+/* Transport Content Box & Read More Functionality */
+.transport-content-box {
+  height: 120px;
+  overflow: hidden;
+  position: relative;
+}
+
+.transport-more-content {
+  display: none;
+  animation: fadeInContent 0.3s ease forwards;
+}
+
+.transport-content-box .transport-card-desc + .transport-card-desc,
+.transport-content-box .transport-more-content .transport-card-desc {
+  margin-top: 12px;
+}
+
+@keyframes fadeInContent {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Desktop Expanded State (> 768px): Height stays 120px (does not increase), content becomes scrollable */
+.transport-style-card.is-expanded .transport-more-content {
+  display: block;
+}
+
+.transport-style-card.is-expanded .transport-content-box {
+  height: 120px;
+  max-height: 120px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding-right: 6px;
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 #f1f5f9;
+}
+
+.transport-content-box::-webkit-scrollbar {
+  width: 5px;
+}
+
+.transport-content-box::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 4px;
+}
+
+.transport-content-box::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+.transport-content-box::-webkit-scrollbar-thumb:hover {
+  background: var(--btn-color);
+}
+
+/* Mobile Rules (<= 768px): No Fixed Height, No Scrollbar, Height Increases Naturally */
+@media screen and (max-width: 768px) {
+  .transport-content-box {
+    height: auto !important;
+    max-height: none !important;
+    overflow-y: visible !important;
+    padding-right: 0 !important;
+  }
+
+  .transport-style-card.is-expanded .transport-content-box {
+    height: auto !important;
+    max-height: none !important;
+    overflow-y: visible !important;
+    padding-right: 0 !important;
+  }
 }
 
 .transport-card-footer {
   margin-top: auto;
   display: flex;
   align-items: center;
+  padding-top: 14px;
+}
+
+.transport-read-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: none;
+  padding: 4px 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--btn-color);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  user-select: none;
+}
+
+.transport-read-more-btn:hover {
+  color: var(--btn-primary-hover);
+  gap: 11px;
+}
+
+.transport-read-more-btn .read-more-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(23, 161, 254, 0.1);
+  color: var(--btn-color);
+  transition: transform 0.3s ease, background-color 0.25s ease, color 0.25s ease;
+}
+
+.transport-read-more-btn:hover .read-more-icon {
+  background: rgba(23, 161, 254, 0.2);
+}
+
+.transport-style-card.is-expanded .transport-read-more-btn .read-more-icon {
+  transform: rotate(180deg);
 }
 
 .transport-details-btn {
