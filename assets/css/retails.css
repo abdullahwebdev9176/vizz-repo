@@ -993,6 +993,130 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   display: none;
 }
 
+/* --------------------------------------------------------------------------
+   8.2 SECTION 6: INDUSTRIES & RETAIL BUSINESSES WE SERVE (3x3 Holographic Matrix)
+   -------------------------------------------------------------------------- */
+.retail-sectors-section {
+  background: #07152b;
+  background-image: 
+    radial-gradient(circle at 50% 20%, rgba(36, 143, 206, 0.12) 0%, transparent 50%),
+    radial-gradient(circle at 10% 80%, rgba(255, 107, 74, 0.08) 0%, transparent 45%);
+  padding: var(--section-padding);
+  position: relative;
+  border-bottom: 1px solid #132b57;
+}
+
+.retail-sectors-grid {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sector-holo-card {
+  background: #091a33;
+  border: 1px solid #143257;
+  border-radius: 18px;
+  padding: 24px 22px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  height: 100%;
+}
+
+.sector-holo-card:hover {
+  transform: translateY(-6px);
+  background: #0c2345;
+  border-color: rgba(36, 143, 206, 0.7);
+  box-shadow: 0 16px 36px rgba(0, 136, 255, 0.22);
+}
+
+.sector-card-glow-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--btn-color), var(--accent-coral), transparent);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.sector-holo-card:hover .sector-card-glow-bar {
+  opacity: 1;
+}
+
+.sector-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sector-icon-badge {
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  border-radius: 14px;
+  background: rgba(36, 143, 206, 0.12);
+  color: var(--btn-color);
+  border: 1px solid rgba(36, 143, 206, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.35s ease;
+}
+
+.sector-holo-card:hover .sector-icon-badge {
+  background: var(--btn-color);
+  color: #ffffff;
+  border-color: var(--btn-color);
+  transform: scale(1.08);
+  box-shadow: 0 0 16px rgba(36, 143, 206, 0.6);
+}
+
+.sector-badge-tag {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 800;
+  color: #94a3b8;
+  font-family: var(--font-family);
+}
+
+.sector-arrow-circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(36, 143, 206, 0.1);
+  border: 1px solid rgba(36, 143, 206, 0.25);
+  color: var(--btn-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.sector-holo-card:hover .sector-arrow-circle {
+  background: var(--accent-coral);
+  color: #ffffff;
+  border-color: var(--accent-coral);
+  transform: rotate(45deg);
+  box-shadow: 0 0 12px rgba(255, 107, 74, 0.5);
+}
+
+.sector-card-title {
+  font-size: 17.5px;
+  font-weight: 700;
+  color: var(--text-white);
+  line-height: 1.35;
+  margin: 0;
+}
+
 /* ==========================================================================
    9. CONSOLIDATED RESPONSIVE MEDIA QUERIES (Mobile-First & Desktop Overrides)
    ========================================================================== */
@@ -1351,8 +1475,24 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
     list-style: none !important;
   }
 
+  /* Section 6: Desktop 3-Column Holographic Matrix Grid */
+  .retail-sectors-grid,
+  .splide__list.retail-sectors-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 24px !important;
+    transform: none !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    list-style: none !important;
+  }
+
   .capabilities-grid .splide__slide,
   .solutions-matrix-deck .splide__slide,
+  .retail-sectors-grid .splide__slide,
   .splide__slide {
     width: 100% !important;
     max-width: 100% !important;
@@ -1435,6 +1575,11 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   .solutions-matrix-deck,
   .splide__list.solutions-matrix-deck {
     gap: 24px !important;
+  }
+
+  .retail-sectors-grid,
+  .splide__list.retail-sectors-grid {
+    gap: 26px !important;
   }
 
   .solution-matrix-item {
