@@ -31,7 +31,114 @@
   <!-- MAIN PAGE CONTENT (NO HEADER / NO FOOTER) -->
   <main id="main-content" role="main">
 
-    
+    <!-- ==================== SECTION 1: HERO SECTION (SINGLE H1) ==================== -->
+    <section class="hero-section" aria-label="Hero Section - Retail Software Development Services">
+      <div class="vizz-container">
+
+        <div class="hero-section-flex">
+          <!-- LEFT COLUMN: CONTENT & VALUE PROPOSITION -->
+          <div class="hero-col-1">
+
+            <!-- SINGLE H1 ON THE ENTIRE PAGE -->
+            <h1 class="hero-title">
+              Retail Software Development Services for the <span class="text-highlight-cyan">Omnichannel Era</span>
+            </h1>
+
+            <p class="hero-description">
+              Transform fragmented retail operations with custom retail software development built around the way your
+              business works. Vizz Web Solutions helps retailers, ecommerce brands, and hybrid store networks connect
+              POS, ERP, inventory, ecommerce, mobile, customer data, and supply chain operations through scalable retail
+              technology.
+            </p>
+
+            <p class="hero-description">
+              From omnichannel retail platforms and cloud solutions to AI-powered tools and RFID tracking, we build
+              technology that helps you reduce stockouts, cut operational costs, streamline workflows, and deliver a
+              seamless customer experience across every channel.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#lead-form" class="btn-primary-pill"
+                aria-label="Request a custom consultation for retail software development"
+                title="Request A Free Consultation">
+                Request A Free Consultation
+              </a>
+            </div>
+          </div>
+
+          <!-- RIGHT COLUMN: LEAD CAPTURE FORM CARD -->
+          <div class="hero-col-2 hero-form-card" id="lead-form">
+            <div class="form-card-header">
+              <h2 class="form-card-title">Get Started Today</h2>
+              <p class="form-card-subtitle">Tell us about your retail project and receive a tailored proposal within
+                24 hours.</p>
+            </div>
+
+            <form action="/submit-inquiry" method="POST" class="lead-capture-form"
+              aria-label="Retail Project Consultation Request Form">
+
+              <!-- First Name & Last Name (2-Column Row) -->
+              <div class="form-row-2col">
+                <div class="form-group">
+                  <label for="fname" class="form-label">
+                    First Name <span class="required-star" aria-hidden="true">*</span>
+                  </label>
+                  <input type="text" id="fname" name="fname" class="form-input" placeholder="e.g. Sarah" required
+                    aria-required="true" autocomplete="given-name">
+                </div>
+
+                <div class="form-group">
+                  <label for="lname" class="form-label">
+                    Last Name <span class="required-star" aria-hidden="true">*</span>
+                  </label>
+                  <input type="text" id="lname" name="lname" class="form-input" placeholder="e.g. Jenkins" required
+                    aria-required="true" autocomplete="family-name">
+                </div>
+              </div>
+
+              <!-- Email Field -->
+              <div class="form-group">
+                <label for="email" class="form-label">
+                  Work Email <span class="required-star" aria-hidden="true">*</span>
+                </label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="sarah@company.com"
+                  required aria-required="true" autocomplete="email">
+              </div>
+
+              <!-- Phone Field -->
+              <div class="form-group">
+                <label for="phone" class="form-label">
+                  Phone Number <span class="required-star" aria-hidden="true">*</span>
+                </label>
+                <input type="tel" id="phone" name="phone" class="form-input" placeholder="+1 (800) 000-0000" required
+                  aria-required="true" autocomplete="tel">
+              </div>
+
+              <!-- Comments Field -->
+              <div class="form-group">
+                <label for="comments" class="form-label">
+                  Project Details &amp; Objectives <span class="required-star" aria-hidden="true">*</span>
+                </label>
+                <textarea id="comments" name="comments" class="form-textarea" rows="3"
+                  placeholder="Describe your retail software goals, ecommerce requirements, or timeline..."
+                  required aria-required="true"></textarea>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" class="btn-primary-pill w-100" aria-label="Submit retail consultation request"
+                title="Submit Request">
+                Submit Request
+              </button>
+
+              <p class="form-privacy-note">
+                <span aria-hidden="true">🔒</span> Your data is protected by strict NDA &amp; confidentiality standards.
+              </p>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </section>
 
   </main>
 
