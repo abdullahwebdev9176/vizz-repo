@@ -56,26 +56,6 @@
   --max-width-container: 100%;
 }
 
-@media screen and (min-width: 768px) {
-  :root {
-    --container-padding: 24px;
-    --section-padding: 80px 0;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  :root {
-    --container-padding: 24px;
-    --section-padding: 100px 0;
-    --max-width-container: calc(100% - 10%);
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  :root {
-    --max-width-container: calc(100% - 18%);
-  }
-}
 
 /* --------------------------------------------------------------------------
    3. BASE RESETS & MOBILE-FIRST TYPOGRAPHY
@@ -176,14 +156,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   text-transform: uppercase;
 }
 
-@media screen and (min-width: 768px) {
-  .section-badge-light,
-  .section-badge-dark {
-    font-size: 13px;
-    padding: 6px 16px;
-    margin-bottom: 18px;
-  }
-}
 
 .section-badge-light {
   background: rgba(0, 180, 216, 0.1);
@@ -217,11 +189,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   z-index: 2;
 }
 
-@media screen and (min-width: 768px) {
-  .section-header-center {
-    margin-bottom: 50px;
-  }
-}
 
 .section-title {
   font-family: var(--font-family);
@@ -287,13 +254,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   text-align: center;
 }
 
-@media screen and (min-width: 768px) {
-  .btn-primary-pill,
-  .btn-secondary-pill {
-    padding: 11px 30px !important;
-    font-size: 14px !important;
-  }
-}
 
 .btn-primary-pill {
   background: var(--btn-color);
@@ -368,10 +328,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   z-index: 1;
 }
 
-@media screen and (min-width: 992px) {
-  .hero-section::before { width: 600px; height: 600px; }
-  .hero-section::after { width: 700px; height: 700px; }
-}
 
 .hero-section-flex {
   display: flex;
@@ -381,13 +337,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   z-index: 2;
 }
 
-@media screen and (min-width: 992px) {
-  .hero-section-flex {
-    flex-direction: row;
-    align-items: center;
-    gap: 40px;
-  }
-}
 
 .hero-col-1 {
   width: 100%;
@@ -397,10 +346,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   width: 100%;
 }
 
-@media screen and (min-width: 992px) {
-  .hero-col-1 { flex: 1.15; }
-  .hero-col-2 { flex: 0.85; }
-}
 
 /* Single H1 on page */
 .hero-title {
@@ -460,11 +405,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   gap: 14px;
 }
 
-@media screen and (max-width: 576px) {
-  .hero-actions .btn-primary-pill {
-    width: 100%;
-  }
-}
 
 /* Hero Lead Form Card */
 .hero-form-card {
@@ -477,11 +417,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   position: relative;
 }
 
-@media screen and (min-width: 768px) {
-  .hero-form-card {
-    padding: 34px 28px;
-  }
-}
 
 .form-card-header {
   margin-bottom: 18px;
@@ -515,11 +450,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   gap: 14px;
 }
 
-@media screen and (min-width: 576px) {
-  .form-row-2col {
-    grid-template-columns: 1fr 1fr;
-  }
-}
 
 .form-group {
   display: flex;
@@ -602,13 +532,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   gap: 36px;
 }
 
-@media screen and (min-width: 992px) {
-  .experience-flex {
-    flex-direction: row;
-    align-items: center;
-    gap: 50px;
-  }
-}
 
 .experience-col-content {
   width: 100%;
@@ -618,10 +541,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   width: 100%;
 }
 
-@media screen and (min-width: 992px) {
-  .experience-col-content { flex: 1.15; }
-  .experience-col-visual { flex: 0.85; }
-}
 
 .experience-visual-wrapper {
   position: relative;
@@ -663,26 +582,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   box-shadow: 0 8px 24px rgba(7, 21, 43, 0.08);
 }
 
-@media screen and (min-width: 992px) {
-  .experience-floating-card {
-    position: absolute;
-    margin-top: 0;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.9);
-    box-shadow: 0 16px 36px rgba(7, 21, 43, 0.14);
-  }
-
-  .top-floating-card {
-    top: -15px;
-    right: -15px;
-  }
-
-  .bottom-floating-card {
-    bottom: -15px;
-    left: -15px;
-  }
-}
 
 .floating-icon-box {
   font-size: 20px;
@@ -715,11 +614,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   gap: 14px;
 }
 
-@media screen and (max-width: 576px) {
-  .experience-actions .btn-primary-pill {
-    width: 100%;
-  }
-}
 
 /* --------------------------------------------------------------------------
    7. SECTION 3: STRATEGIC WEB DEVELOPMENT SERVICES (8-GRID)
@@ -752,12 +646,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   z-index: 2;
 }
 
-@media screen and (min-width: 768px) {
-  .services-grid-8 {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-  }
-}
 
 .service-card-item {
   background: var(--bg-dark-card);
@@ -770,11 +658,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   flex-direction: column;
 }
 
-@media screen and (min-width: 768px) {
-  .service-card-item {
-    padding: 30px 26px;
-  }
-}
 
 .service-card-item:hover {
   transform: translateY(-4px);
@@ -826,11 +709,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   z-index: 2;
 }
 
-@media screen and (max-width: 576px) {
-  .service-section-cta .btn-primary-pill {
-    width: 100%;
-  }
-}
 
 /* --------------------------------------------------------------------------
    8. SECTION 4: BUILDING DIGITAL SUCCESS (6-GRID LIGHT)
@@ -850,19 +728,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   z-index: 2;
 }
 
-@media screen and (min-width: 640px) {
-  .pillars-grid-6 {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .pillars-grid-6 {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-  }
-}
 
 .pillar-card {
   background: var(--bg-light);
@@ -875,11 +740,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   flex-direction: column;
 }
 
-@media screen and (min-width: 768px) {
-  .pillar-card {
-    padding: 28px 24px;
-  }
-}
 
 .pillar-card:hover {
   transform: translateY(-4px);
@@ -924,11 +784,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   z-index: 2;
 }
 
-@media screen and (max-width: 576px) {
-  .pillars-action-cta .btn-primary-pill {
-    width: 100%;
-  }
-}
 
 /* --------------------------------------------------------------------------
    9. SECTION 5: ADVANCED WEB DEV BUILT FOR AI SEARCH (5-GRID DARK)
@@ -948,20 +803,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   z-index: 2;
 }
 
-@media screen and (min-width: 768px) {
-  .ai-cards-grid-5 {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-  }
-
-  .ai-cards-grid-5 article:last-child:nth-child(odd) {
-    grid-column: 1 / -1;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-  }
-}
 
 .ai-card-item {
   background: var(--bg-dark-card);
@@ -974,11 +815,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   flex-direction: column;
 }
 
-@media screen and (min-width: 768px) {
-  .ai-card-item {
-    padding: 30px 26px;
-  }
-}
 
 .ai-card-item:hover {
   transform: translateY(-4px);
@@ -1030,11 +866,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   z-index: 2;
 }
 
-@media screen and (max-width: 576px) {
-  .ai-advanced-cta .btn-primary-pill {
-    width: 100%;
-  }
-}
 
 /* --------------------------------------------------------------------------
    10. SECTION 6: NEXT-GENERATION TECHNOLOGIES (ROBUST CSS GRID)
@@ -1055,19 +886,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   margin-bottom: 30px;
 }
 
-@media screen and (min-width: 576px) {
-  .tech-stack-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 18px;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .tech-stack-grid {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 22px;
-  }
-}
 
 .tech-card {
   background: var(--bg-dark-card);
@@ -1150,11 +968,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   z-index: 2;
 }
 
-@media screen and (max-width: 576px) {
-  .tech-stack-cta-wrap .btn-primary-pill {
-    width: 100%;
-  }
-}
 
 /* --------------------------------------------------------------------------
    11. SECTION 7: WEBSITE DEVELOPMENT CHALLENGES WE SOLVE (LIGHT)
@@ -1173,14 +986,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   margin-bottom: 40px;
 }
 
-@media screen and (min-width: 992px) {
-  .challenges-intro-flex {
-    flex-direction: row;
-    align-items: center;
-    gap: 50px;
-    margin-bottom: 50px;
-  }
-}
 
 .challenges-intro-content {
   width: 100%;
@@ -1190,10 +995,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   width: 100%;
 }
 
-@media screen and (min-width: 992px) {
-  .challenges-intro-content { flex: 1.15; }
-  .challenges-intro-visual { flex: 0.85; }
-}
 
 .challenges-lead-text {
   font-family: var(--font-family);
@@ -1252,19 +1053,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   z-index: 2;
 }
 
-@media screen and (min-width: 640px) {
-  .challenges-grid-6 {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .challenges-grid-6 {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-  }
-}
 
 .challenge-card {
   background: var(--bg-light);
@@ -1277,11 +1065,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   flex-direction: column;
 }
 
-@media screen and (min-width: 768px) {
-  .challenge-card {
-    padding: 28px 24px;
-  }
-}
 
 .challenge-card:hover {
   transform: translateY(-4px);
@@ -1326,11 +1109,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   z-index: 2;
 }
 
-@media screen and (max-width: 576px) {
-  .challenges-action-cta .btn-primary-pill {
-    width: 100%;
-  }
-}
 
 /* --------------------------------------------------------------------------
    12. SECTION 8: OUR WEB DEVELOPMENT APPROACH (PROCESS WORKFLOW)
@@ -1350,19 +1128,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   z-index: 2;
 }
 
-@media screen and (min-width: 640px) {
-  .process-grid-6 {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .process-grid-6 {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-  }
-}
 
 .process-card {
   background: var(--bg-dark-card);
@@ -1375,11 +1140,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   flex-direction: column;
 }
 
-@media screen and (min-width: 768px) {
-  .process-card {
-    padding: 30px 24px;
-  }
-}
 
 .process-card:hover {
   transform: translateY(-4px);
@@ -1441,11 +1201,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   z-index: 2;
 }
 
-@media screen and (max-width: 576px) {
-  .process-action-cta .btn-primary-pill {
-    width: 100%;
-  }
-}
 
 /* --------------------------------------------------------------------------
    13. SECTION 9: INDUSTRIES WE SERVE IN SASKATOON (LIGHT)
@@ -1466,26 +1221,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   margin-bottom: 30px;
 }
 
-@media screen and (min-width: 480px) {
-  .industries-grid-10 {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .industries-grid-10 {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .industries-grid-10 {
-    grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
-  }
-}
 
 .saskatoon-industry-card {
   background: var(--bg-light-alt);
@@ -1535,11 +1270,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   z-index: 2;
 }
 
-@media screen and (max-width: 576px) {
-  .industries-action-cta .btn-primary-pill {
-    width: 100%;
-  }
-}
 
 /* --------------------------------------------------------------------------
    14. SECTION 10: WEB DEVELOPMENT COST FACTORS (DARK)
@@ -1559,19 +1289,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   z-index: 2;
 }
 
-@media screen and (min-width: 640px) {
-  .cost-factors-grid-9 {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .cost-factors-grid-9 {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-  }
-}
 
 .cost-factor-card {
   background: var(--bg-dark-card);
@@ -1584,11 +1301,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   flex-direction: column;
 }
 
-@media screen and (min-width: 768px) {
-  .cost-factor-card {
-    padding: 28px 24px;
-  }
-}
 
 .cost-factor-card:hover {
   transform: translateY(-4px);
@@ -1640,11 +1352,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   z-index: 2;
 }
 
-@media screen and (max-width: 576px) {
-  .cost-factors-cta .btn-primary-pill {
-    width: 100%;
-  }
-}
 
 /* --------------------------------------------------------------------------
    15. SECTION 11: PARTNER WITH VIZZ WEB (LIGHT)
@@ -1662,13 +1369,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   gap: 36px;
 }
 
-@media screen and (min-width: 992px) {
-  .partner-flex {
-    flex-direction: row;
-    align-items: center;
-    gap: 50px;
-  }
-}
 
 .partner-col-content {
   width: 100%;
@@ -1678,10 +1378,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   width: 100%;
 }
 
-@media screen and (min-width: 992px) {
-  .partner-col-content { flex: 1.15; }
-  .partner-col-visual { flex: 0.85; }
-}
 
 .partner-lead-text {
   font-family: var(--font-family);
@@ -1699,12 +1395,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   margin-bottom: 24px;
 }
 
-@media screen and (min-width: 576px) {
-  .partner-points-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-  }
-}
 
 .partner-point-item {
   background: var(--bg-light);
@@ -1793,11 +1483,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   gap: 14px;
 }
 
-@media screen and (max-width: 576px) {
-  .partner-actions .btn-primary-pill {
-    width: 100%;
-  }
-}
 
 /* --------------------------------------------------------------------------
    16. SECTION 12: SASKATOON & SURROUNDING SERVICE AREA
@@ -1817,13 +1502,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   z-index: 2;
 }
 
-@media screen and (min-width: 992px) {
-  .service-area-flex {
-    flex-direction: row;
-    align-items: stretch;
-    gap: 40px;
-  }
-}
 
 .service-area-col-left {
   width: 100%;
@@ -1839,10 +1517,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   gap: 18px;
 }
 
-@media screen and (min-width: 992px) {
-  .service-area-col-left { flex: 1; }
-  .service-area-col-right { flex: 1.15; }
-}
 
 .service-area-summary-box {
   background: rgba(14, 34, 70, 0.75);
@@ -1857,11 +1531,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   backdrop-filter: blur(10px);
 }
 
-@media screen and (min-width: 768px) {
-  .service-area-summary-box {
-    padding: 22px 24px;
-  }
-}
 
 .service-area-summary-text {
   font-family: var(--font-family);
@@ -1880,11 +1549,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   transition: all 0.3s ease-in-out;
 }
 
-@media screen and (min-width: 768px) {
-  .service-zone-card {
-    padding: 24px 22px;
-  }
-}
 
 .service-zone-card:hover {
   transform: translateY(-3px);
@@ -1929,11 +1593,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   gap: 6px;
 }
 
-@media screen and (min-width: 768px) {
-  .service-zone-chips-wrap {
-    gap: 8px;
-  }
-}
 
 .service-location-chip {
   display: inline-flex;
@@ -1963,11 +1622,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   line-height: 1;
 }
 
-@media screen and (max-width: 576px) {
-  .service-area-col-left .btn-primary-pill {
-    width: 100%;
-  }
-}
 
 /* --------------------------------------------------------------------------
    17. SECTION 13: HIRE DEDICATED WEBSITE DEVELOPER (LIGHT)
@@ -1985,13 +1639,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   gap: 36px;
 }
 
-@media screen and (min-width: 992px) {
-  .hire-developer-flex {
-    flex-direction: row;
-    align-items: center;
-    gap: 50px;
-  }
-}
 
 .hire-dev-col-content {
   width: 100%;
@@ -2001,10 +1648,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   width: 100%;
 }
 
-@media screen and (min-width: 992px) {
-  .hire-dev-col-content { flex: 1.15; }
-  .hire-dev-col-visual { flex: 0.85; }
-}
 
 .hire-dev-lead-text {
   font-family: var(--font-family);
@@ -2021,12 +1664,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   margin-bottom: 24px;
 }
 
-@media screen and (min-width: 480px) {
-  .hire-dev-highlights-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 14px;
-  }
-}
 
 .hire-dev-highlight-card {
   background: var(--bg-light-alt);
@@ -2088,11 +1725,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   gap: 14px;
 }
 
-@media screen and (max-width: 576px) {
-  .hire-dev-actions .btn-primary-pill {
-    width: 100%;
-  }
-}
 
 /* --------------------------------------------------------------------------
    18. SECTION 14: FREQUENTLY ASKED QUESTIONS (FAQS - MATCHING INDEX.HTML)
@@ -2114,12 +1746,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   z-index: 2;
 }
 
-@media screen and (min-width: 768px) {
-  .faq-accordion-wrapper {
-    gap: 16px;
-    margin-bottom: 50px;
-  }
-}
 
 .faq-item {
   background: var(--bg-light);
@@ -2159,12 +1785,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   gap: 14px;
 }
 
-@media screen and (min-width: 768px) {
-  .faq-question-btn {
-    padding: 22px 24px;
-    gap: 16px;
-  }
-}
 
 .faq-item.active .faq-question-btn {
   color: var(--btn-primary);
@@ -2189,13 +1809,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
 }
 
-@media screen and (min-width: 768px) {
-  .faq-icon {
-    width: 32px;
-    height: 32px;
-    font-size: 22px;
-  }
-}
 
 .faq-item.active .faq-icon {
   transform: rotate(45deg);
@@ -2217,11 +1830,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   padding: 0 18px 18px;
 }
 
-@media screen and (min-width: 768px) {
-  .faq-answer-content {
-    padding: 0 24px 22px;
-  }
-}
 
 .faq-answer-content p {
   font-family: var(--font-family);
@@ -2241,11 +1849,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   z-index: 2;
 }
 
-@media screen and (max-width: 576px) {
-  .faq-bottom-cta .btn-primary-pill {
-    width: 100%;
-  }
-}
 
 /* --------------------------------------------------------------------------
    19. SECTION 15: BOTTOM CONTACT SECTION (DARK OVERLAY - MATCHING INDEX.HTML)
@@ -2260,11 +1863,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   overflow: hidden;
 }
 
-@media screen and (max-width: 768px) {
-  .bottom-contact-section {
-    padding: 70px 0;
-  }
-}
 
 .bottom-contact-flex {
   display: flex;
@@ -2272,13 +1870,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   gap: 40px;
 }
 
-@media screen and (min-width: 992px) {
-  .bottom-contact-flex {
-    flex-direction: row;
-    align-items: center;
-    gap: 60px;
-  }
-}
 
 .bottom-contact-content {
   width: 100%;
@@ -2288,14 +1879,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   width: 100%;
 }
 
-@media screen and (min-width: 992px) {
-  .bottom-contact-content {
-    flex: 1.05;
-  }
-  .bottom-contact-form-wrapper {
-    flex: 0.95;
-  }
-}
 
 .contact-info-list {
   display: flex;
@@ -2487,10 +2070,589 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 /* ==========================================================================
    MOBILE & TABLET SLIDER OVERRIDES (<= 991px)
    ========================================================================== */
+
+
+/* ==========================================================================
+   DESKTOP OVERRIDES (>= 992px) - PURE NATIVE GRID SYSTEM, SLIDER INACTIVE
+   ========================================================================== */
+
+
+/* --------------------------------------------------------------------------
+   22. MOBILE TEXT ALIGNMENT & CENTERING OPTIMIZATIONS (<= 991px)
+   -------------------------------------------------------------------------- */
+
+/* ==========================================================================
+   20. CONSOLIDATED RESPONSIVE MEDIA QUERIES (Mobile-First & Desktop Overrides)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   20.1 MIN-WIDTH: 480px (Extra Small / Landscape Devices Upwards)
+   -------------------------------------------------------------------------- */
+@media screen and (min-width: 480px) {
+  .industries-grid-10 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .hire-dev-highlights-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   20.2 MIN-WIDTH: 576px (Phablets / Small Devices Upwards)
+   -------------------------------------------------------------------------- */
+@media screen and (min-width: 576px) {
+  .form-row-2col {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .tech-stack-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .partner-points-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   20.3 MIN-WIDTH: 640px (Medium-Small Mobile Devices Upwards)
+   -------------------------------------------------------------------------- */
+@media screen and (min-width: 640px) {
+  .pillars-grid-6 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .challenges-grid-6 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .process-grid-6 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .cost-factors-grid-9 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   20.4 MIN-WIDTH: 768px (Tablets / Medium Devices Upwards)
+   -------------------------------------------------------------------------- */
+@media screen and (min-width: 768px) {
+  :root {
+    --container-padding: 24px;
+    --section-padding: 80px 0;
+  }
+
+  .section-badge-light,
+  .section-badge-dark {
+    font-size: 13px;
+    padding: 6px 16px;
+    margin-bottom: 18px;
+  }
+
+  .section-header-center {
+    margin-bottom: 50px;
+  }
+
+  .btn-primary-pill,
+  .btn-secondary-pill {
+    padding: 11px 30px !important;
+    font-size: 14px !important;
+  }
+
+  .hero-form-card {
+    padding: 34px 28px;
+  }
+
+  .services-grid-8 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .service-card-item {
+    padding: 30px 26px;
+  }
+
+  .pillar-card {
+    padding: 28px 24px;
+  }
+
+  .ai-cards-grid-5 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .ai-cards-grid-5 article:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+  .ai-card-item {
+    padding: 30px 26px;
+  }
+
+  .challenge-card {
+    padding: 28px 24px;
+  }
+
+  .process-card {
+    padding: 30px 24px;
+  }
+
+  .industries-grid-10 {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+
+  .cost-factor-card {
+    padding: 28px 24px;
+  }
+
+  .service-area-summary-box {
+    padding: 22px 24px;
+  }
+
+  .service-zone-card {
+    padding: 24px 22px;
+  }
+
+  .service-zone-chips-wrap {
+    gap: 8px;
+  }
+
+  .faq-accordion-wrapper {
+    gap: 16px;
+    margin-bottom: 50px;
+  }
+
+  .faq-question-btn {
+    padding: 22px 24px;
+    gap: 16px;
+  }
+
+  .faq-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 22px;
+  }
+
+  .faq-answer-content {
+    padding: 0 24px 22px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   20.5 MIN-WIDTH: 992px (Desktop & Large Screens - Native Grids & Desktop Layout)
+   -------------------------------------------------------------------------- */
+@media screen and (min-width: 992px) {
+  :root {
+    --container-padding: 24px;
+    --section-padding: 100px 0;
+    --max-width-container: calc(100% - 10%);
+  }
+
+  .hero-section::before {
+    width: 600px; height: 600px;
+  }
+
+  .hero-section::after {
+    width: 700px; height: 700px;
+  }
+
+  .hero-section-flex {
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .hero-col-1 {
+    flex: 1.15;
+  }
+
+  .hero-col-2 {
+    flex: 0.85;
+  }
+
+  .experience-flex {
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .experience-col-content {
+    flex: 1.15;
+  }
+
+  .experience-col-visual {
+    flex: 0.85;
+  }
+
+  .experience-floating-card {
+    position: absolute;
+    margin-top: 0;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 0 16px 36px rgba(7, 21, 43, 0.14);
+  }
+
+  .top-floating-card {
+    top: -15px;
+    right: -15px;
+  }
+
+  .bottom-floating-card {
+    bottom: -15px;
+    left: -15px;
+  }
+
+  .pillars-grid-6 {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .tech-stack-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+  }
+
+  .challenges-intro-flex {
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 50px;
+  }
+
+  .challenges-intro-content {
+    flex: 1.15;
+  }
+
+  .challenges-intro-visual {
+    flex: 0.85;
+  }
+
+  .challenges-grid-6 {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .process-grid-6 {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .cost-factors-grid-9 {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .partner-flex {
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .partner-col-content {
+    flex: 1.15;
+  }
+
+  .partner-col-visual {
+    flex: 0.85;
+  }
+
+  .service-area-flex {
+    flex-direction: row;
+    align-items: stretch;
+    gap: 40px;
+  }
+
+  .service-area-col-left {
+    flex: 1;
+  }
+
+  .service-area-col-right {
+    flex: 1.15;
+  }
+
+  .hire-developer-flex {
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .hire-dev-col-content {
+    flex: 1.15;
+  }
+
+  .hire-dev-col-visual {
+    flex: 0.85;
+  }
+
+  .bottom-contact-flex {
+    flex-direction: row;
+    align-items: center;
+    gap: 60px;
+  }
+
+  .bottom-contact-content {
+    flex: 1.05;
+  }
+
+  .bottom-contact-form-wrapper {
+    flex: 0.95;
+  }
+
+  .services-slider,
+  .pillars-slider,
+  .ai-advanced-slider,
+  .saskatoon-tech-slider,
+  .tech-stack-slider,
+  .challenges-slider,
+  .saskatoon-process-slider,
+  .process-slider,
+  .saskatoon-industries-slider,
+  .industries-slider,
+  .cost-factors-slider,
+  .partner-slider {
+    visibility: visible !important;
+  }
+
+  .services-slider .splide__track,
+  .pillars-slider .splide__track,
+  .ai-advanced-slider .splide__track,
+  .saskatoon-tech-slider .splide__track,
+  .tech-stack-slider .splide__track,
+  .challenges-slider .splide__track,
+  .saskatoon-process-slider .splide__track,
+  .process-slider .splide__track,
+  .saskatoon-industries-slider .splide__track,
+  .industries-slider .splide__track,
+  .cost-factors-slider .splide__track,
+  .partner-slider .splide__track {
+    overflow: visible !important;
+    position: static !important;
+    width: 100% !important;
+    padding: 0 !important;
+  }
+
+  /* 1. Services 8-Grid */
+
+  .services-slider .splide__list,
+  .services-grid-8 {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 24px !important;
+    transform: none !important;
+    margin: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* 2. Success Pillars 6-Grid */
+
+  .pillars-slider .splide__list,
+  .pillars-grid-6 {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 24px !important;
+    transform: none !important;
+    margin: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* 3. AI Advanced 5-Grid */
+
+  .ai-advanced-slider .splide__list,
+  .ai-cards-grid-5 {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 24px !important;
+    transform: none !important;
+    margin: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .ai-advanced-slider .splide__slide:last-child:nth-child(odd) {
+    grid-column: 1 / -1 !important;
+    max-width: 700px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 100% !important;
+  }
+
+  /* 4. Tech Stack Grid */
+
+  .saskatoon-tech-slider .splide__list,
+  .tech-stack-slider .splide__list,
+  .tech-stack-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 22px !important;
+    transform: none !important;
+    margin: 0 0 30px 0 !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* 5. Challenges 6-Grid */
+
+  .challenges-slider .splide__list,
+  .challenges-grid-6 {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 24px !important;
+    transform: none !important;
+    margin: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* 6. Process Approach 6-Grid */
+
+  .saskatoon-process-slider .splide__list,
+  .process-slider .splide__list,
+  .process-grid-6 {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 24px !important;
+    transform: none !important;
+    margin: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* 7. Industries We Serve 10-Grid */
+
+  .saskatoon-industries-slider .splide__list,
+  .industries-slider .splide__list,
+  .industries-grid-10 {
+    display: grid !important;
+    grid-template-columns: repeat(5, 1fr) !important;
+    gap: 20px !important;
+    transform: none !important;
+    margin: 0 0 30px 0 !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* 8. Cost Factors 9-Grid */
+
+  .cost-factors-slider .splide__list,
+  .cost-factors-grid-9 {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 24px !important;
+    transform: none !important;
+    margin: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* 9. Partner With Vizz Web 6-Grid */
+
+  .partner-slider .splide__list,
+  .partner-points-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+    transform: none !important;
+    margin: 0 0 24px 0 !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Slide items on desktop: fill grid cell */
+
+  .services-slider .splide__slide,
+  .pillars-slider .splide__slide,
+  .ai-advanced-slider .splide__slide,
+  .saskatoon-tech-slider .splide__slide,
+  .tech-stack-slider .splide__slide,
+  .challenges-slider .splide__slide,
+  .saskatoon-process-slider .splide__slide,
+  .process-slider .splide__slide,
+  .saskatoon-industries-slider .splide__slide,
+  .industries-slider .splide__slide,
+  .cost-factors-slider .splide__slide,
+  .partner-slider .splide__slide {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    height: auto !important;
+    flex: none !important;
+    display: block !important;
+  }
+
+  /* Hide splide controls completely on desktop */
+
+  .services-slider .splide__pagination,
+  .services-slider .splide__arrows,
+  .pillars-slider .splide__pagination,
+  .pillars-slider .splide__arrows,
+  .ai-advanced-slider .splide__pagination,
+  .ai-advanced-slider .splide__arrows,
+  .saskatoon-tech-slider .splide__pagination,
+  .saskatoon-tech-slider .splide__arrows,
+  .tech-stack-slider .splide__pagination,
+  .tech-stack-slider .splide__arrows,
+  .challenges-slider .splide__pagination,
+  .challenges-slider .splide__arrows,
+  .saskatoon-process-slider .splide__pagination,
+  .saskatoon-process-slider .splide__arrows,
+  .process-slider .splide__pagination,
+  .process-slider .splide__arrows,
+  .saskatoon-industries-slider .splide__pagination,
+  .saskatoon-industries-slider .splide__arrows,
+  .cost-factors-slider .splide__pagination,
+  .cost-factors-slider .splide__arrows,
+  .partner-slider .splide__pagination,
+  .partner-slider .splide__arrows {
+    display: none !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   20.6 MIN-WIDTH: 1024px (Large Tablets / Desktops)
+   -------------------------------------------------------------------------- */
+@media screen and (min-width: 1024px) {
+  .industries-grid-10 {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   20.7 MIN-WIDTH: 1280px (Wide Desktop Screens)
+   -------------------------------------------------------------------------- */
+@media screen and (min-width: 1280px) {
+  :root {
+    --max-width-container: calc(100% - 18%);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   20.8 MAX-WIDTH: 991px (Mobile & Tablet Touch Sliders & Text Alignments)
+   -------------------------------------------------------------------------- */
 @media screen and (max-width: 991px) {
   .mobile-mb {
     margin-bottom: 40px;
   }
+
   .services-slider .splide__track,
   .pillars-slider .splide__track,
   .ai-advanced-slider .splide__track,
@@ -2549,226 +2711,21 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
     height: auto !important;
     min-width: 0 !important;
   }
-}
 
-/* ==========================================================================
-   DESKTOP OVERRIDES (>= 992px) - PURE NATIVE GRID SYSTEM, SLIDER INACTIVE
-   ========================================================================== */
-@media screen and (min-width: 992px) {
-  .services-slider,
-  .pillars-slider,
-  .ai-advanced-slider,
-  .saskatoon-tech-slider,
-  .tech-stack-slider,
-  .challenges-slider,
-  .saskatoon-process-slider,
-  .process-slider,
-  .saskatoon-industries-slider,
-  .industries-slider,
-  .cost-factors-slider,
-  .partner-slider {
-    visibility: visible !important;
-  }
-
-  .services-slider .splide__track,
-  .pillars-slider .splide__track,
-  .ai-advanced-slider .splide__track,
-  .saskatoon-tech-slider .splide__track,
-  .tech-stack-slider .splide__track,
-  .challenges-slider .splide__track,
-  .saskatoon-process-slider .splide__track,
-  .process-slider .splide__track,
-  .saskatoon-industries-slider .splide__track,
-  .industries-slider .splide__track,
-  .cost-factors-slider .splide__track,
-  .partner-slider .splide__track {
-    overflow: visible !important;
-    position: static !important;
-    width: 100% !important;
-    padding: 0 !important;
-  }
-
-  /* 1. Services 8-Grid */
-  .services-slider .splide__list,
-  .services-grid-8 {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 24px !important;
-    transform: none !important;
-    margin: 0 !important;
-    width: 100% !important;
-    height: auto !important;
-  }
-
-  /* 2. Success Pillars 6-Grid */
-  .pillars-slider .splide__list,
-  .pillars-grid-6 {
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important;
-    gap: 24px !important;
-    transform: none !important;
-    margin: 0 !important;
-    width: 100% !important;
-    height: auto !important;
-  }
-
-  /* 3. AI Advanced 5-Grid */
-  .ai-advanced-slider .splide__list,
-  .ai-cards-grid-5 {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 24px !important;
-    transform: none !important;
-    margin: 0 !important;
-    width: 100% !important;
-    height: auto !important;
-  }
-
-  .ai-advanced-slider .splide__slide:last-child:nth-child(odd) {
-    grid-column: 1 / -1 !important;
-    max-width: 700px !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    width: 100% !important;
-  }
-
-  /* 4. Tech Stack Grid */
-  .saskatoon-tech-slider .splide__list,
-  .tech-stack-slider .splide__list,
-  .tech-stack-grid {
-    display: grid !important;
-    grid-template-columns: repeat(4, 1fr) !important;
-    gap: 22px !important;
-    transform: none !important;
-    margin: 0 0 30px 0 !important;
-    width: 100% !important;
-    height: auto !important;
-  }
-
-  /* 5. Challenges 6-Grid */
-  .challenges-slider .splide__list,
-  .challenges-grid-6 {
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important;
-    gap: 24px !important;
-    transform: none !important;
-    margin: 0 !important;
-    width: 100% !important;
-    height: auto !important;
-  }
-
-  /* 6. Process Approach 6-Grid */
-  .saskatoon-process-slider .splide__list,
-  .process-slider .splide__list,
-  .process-grid-6 {
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important;
-    gap: 24px !important;
-    transform: none !important;
-    margin: 0 !important;
-    width: 100% !important;
-    height: auto !important;
-  }
-
-  /* 7. Industries We Serve 10-Grid */
-  .saskatoon-industries-slider .splide__list,
-  .industries-slider .splide__list,
-  .industries-grid-10 {
-    display: grid !important;
-    grid-template-columns: repeat(5, 1fr) !important;
-    gap: 20px !important;
-    transform: none !important;
-    margin: 0 0 30px 0 !important;
-    width: 100% !important;
-    height: auto !important;
-  }
-
-  /* 8. Cost Factors 9-Grid */
-  .cost-factors-slider .splide__list,
-  .cost-factors-grid-9 {
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important;
-    gap: 24px !important;
-    transform: none !important;
-    margin: 0 !important;
-    width: 100% !important;
-    height: auto !important;
-  }
-
-  /* 9. Partner With Vizz Web 6-Grid */
-  .partner-slider .splide__list,
-  .partner-points-grid {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 16px !important;
-    transform: none !important;
-    margin: 0 0 24px 0 !important;
-    width: 100% !important;
-    height: auto !important;
-  }
-
-  /* Slide items on desktop: fill grid cell */
-  .services-slider .splide__slide,
-  .pillars-slider .splide__slide,
-  .ai-advanced-slider .splide__slide,
-  .saskatoon-tech-slider .splide__slide,
-  .tech-stack-slider .splide__slide,
-  .challenges-slider .splide__slide,
-  .saskatoon-process-slider .splide__slide,
-  .process-slider .splide__slide,
-  .saskatoon-industries-slider .splide__slide,
-  .industries-slider .splide__slide,
-  .cost-factors-slider .splide__slide,
-  .partner-slider .splide__slide {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 !important;
-    height: auto !important;
-    flex: none !important;
-    display: block !important;
-  }
-
-  /* Hide splide controls completely on desktop */
-  .services-slider .splide__pagination,
-  .services-slider .splide__arrows,
-  .pillars-slider .splide__pagination,
-  .pillars-slider .splide__arrows,
-  .ai-advanced-slider .splide__pagination,
-  .ai-advanced-slider .splide__arrows,
-  .saskatoon-tech-slider .splide__pagination,
-  .saskatoon-tech-slider .splide__arrows,
-  .tech-stack-slider .splide__pagination,
-  .tech-stack-slider .splide__arrows,
-  .challenges-slider .splide__pagination,
-  .challenges-slider .splide__arrows,
-  .saskatoon-process-slider .splide__pagination,
-  .saskatoon-process-slider .splide__arrows,
-  .process-slider .splide__pagination,
-  .process-slider .splide__arrows,
-  .saskatoon-industries-slider .splide__pagination,
-  .saskatoon-industries-slider .splide__arrows,
-  .cost-factors-slider .splide__pagination,
-  .cost-factors-slider .splide__arrows,
-  .partner-slider .splide__pagination,
-  .partner-slider .splide__arrows {
-    display: none !important;
-  }
-}
-
-/* --------------------------------------------------------------------------
-   22. MOBILE TEXT ALIGNMENT & CENTERING OPTIMIZATIONS (<= 991px)
-   -------------------------------------------------------------------------- */
-@media screen and (max-width: 991px) {
   .floating-title, .floating-subtitle {
     margin-bottom: 0;
   }
+
   .partner-point-item {
     text-align: left;
   }
+
   .challenges-intro-content {
     text-align: center;
   }
+
   /* 1. Hero Section Centering */
+
   .hero-col-1 {
     text-align: center;
     display: flex;
@@ -2807,6 +2764,7 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   }
 
   /* 2. Section 2: Digital Experience Centering */
+
   .experience-col-content {
     text-align: center;
     display: flex;
@@ -2836,6 +2794,7 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   }
 
   /* 3. Section 9: Industries Cards Centering */
+
   .saskatoon-industry-card {
     align-items: center;
     text-align: center;
@@ -2852,6 +2811,7 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   }
 
   /* 4. Section 11: Partner With Vizz Web Centering */
+
   .partner-col-content {
     text-align: center;
     display: flex;
@@ -2885,6 +2845,7 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   }
 
   /* 5. Section 12: Service Area Section Centering */
+
   .service-area-col-left {
     text-align: center;
     align-items: center;
@@ -2934,6 +2895,7 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   }
 
   /* 6. Section 13: Hire Dedicated Developer Centering */
+
   .hire-dev-col-content {
     text-align: center;
     display: flex;
@@ -2967,6 +2929,7 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   }
 
   /* 7. Bottom Contact Section Centering */
+
   .bottom-contact-content {
     text-align: center;
     display: flex;
@@ -2999,3 +2962,72 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   }
 }
 
+/* --------------------------------------------------------------------------
+   20.9 MAX-WIDTH: 768px (Mobile Spacing Adjustments)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 768px) {
+  .bottom-contact-section {
+    padding: 70px 0;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   20.10 MAX-WIDTH: 576px (Small Mobile Screens & Full-Width Buttons)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 576px) {
+  .hero-actions .btn-primary-pill {
+    width: 100%;
+  }
+
+  .experience-actions .btn-primary-pill {
+    width: 100%;
+  }
+
+  .service-section-cta .btn-primary-pill {
+    width: 100%;
+  }
+
+  .pillars-action-cta .btn-primary-pill {
+    width: 100%;
+  }
+
+  .ai-advanced-cta .btn-primary-pill {
+    width: 100%;
+  }
+
+  .tech-stack-cta-wrap .btn-primary-pill {
+    width: 100%;
+  }
+
+  .challenges-action-cta .btn-primary-pill {
+    width: 100%;
+  }
+
+  .process-action-cta .btn-primary-pill {
+    width: 100%;
+  }
+
+  .industries-action-cta .btn-primary-pill {
+    width: 100%;
+  }
+
+  .cost-factors-cta .btn-primary-pill {
+    width: 100%;
+  }
+
+  .partner-actions .btn-primary-pill {
+    width: 100%;
+  }
+
+  .service-area-col-left .btn-primary-pill {
+    width: 100%;
+  }
+
+  .hire-dev-actions .btn-primary-pill {
+    width: 100%;
+  }
+
+  .faq-bottom-cta .btn-primary-pill {
+    width: 100%;
+  }
+}
