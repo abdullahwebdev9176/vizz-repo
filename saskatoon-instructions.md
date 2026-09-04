@@ -41,10 +41,10 @@ Use the exact same color system and design tokens from `index.html`:
   --font-family: 'Poppins', sans-serif;
 
   /* 🔘 Button & Accent Colors */
-  --btn-primary: #17a1fe;
+  --btn-primary: #248fce;
   --btn-primary-hover: #006ed4;
-  --btn-cyan: #00b4d8;
-  --btn-color: #17a1fe;
+  --btn-cyan: #248fce;
+  --btn-color: #248fce;
   --btn-color-hover: #ffffff;
   --white-color: #ffffff;
 
@@ -59,7 +59,7 @@ Use the exact same color system and design tokens from `index.html`:
   --text-dark: #0b1a30;
   --text-muted-dark: #cbd5e1;
   --text-muted-light: #4a5568;
-  --text-cyan: #00b4d8;
+  --text-cyan: #248fce;
 
   /* UI Borders & Radii */
   --border-radius-pill: 10px;
@@ -191,7 +191,7 @@ Use the exact same color system and design tokens from `index.html`:
 
 - [ ] **CSS Separation**: All styles reside in `assets/css/saskatoon-style.css`.
 - [ ] **Typography**: Poppins font applied across all elements.
-- [ ] **Colors**: Exact hex color tokens used (`#17a1fe`, `#07152b`, `#0e2246`, `#00b4d8`, etc.).
+- [ ] **Colors**: Exact hex color tokens used (`#248fce`, `#07152b`, `#0e2246`, `#248fce`, etc.).
 - [ ] **Container**: Max width set to `calc(100% - 20%)` with `.vizz-container`.
 - [ ] **Hero Layout**: 2-column split with Lead Form on the right.
 - [ ] **Single H1**: Strictly one `<h1>` in the Hero section.

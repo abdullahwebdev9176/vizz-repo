@@ -13,8 +13,8 @@ Sirf zaroori aur selected colors use karne hain:
   /* 🔘 Button & Accent Colors */
   --btn-primary: #0088ff;
   --btn-primary-hover: #006ed4;
-  --btn-cyan: #00b4d8;
-  --btn-color: #17a1fe;
+  --btn-cyan: #248fce;
+  --btn-color: #248fce;
   --btn-color-hover: #ffffff;
 
   /* 🌌 Background Colors */
@@ -28,7 +28,7 @@ Sirf zaroori aur selected colors use karne hain:
   --text-dark: #0b1a30;
   --text-muted-dark: #cbd5e1;
   --text-muted-light: #4a5568;
-  --text-cyan: #00b4d8;
+  --text-cyan: #248fce;
   --white-color: #ffffff;
 
   /* UI Borders & Radii */

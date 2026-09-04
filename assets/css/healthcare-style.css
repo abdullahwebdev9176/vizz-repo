@@ -18,10 +18,10 @@
   --font-family: 'Poppins', sans-serif;
 
   /* 🔘 Brand, Accent & Interactive Colors */
-  --btn-primary: #17a1fe;
+  --btn-primary: #248fce;
   --btn-primary-hover: #006ed4;
-  --btn-cyan: #00b4d8;
-  --btn-color: #17a1fe;
+  --btn-cyan: #248fce;
+  --btn-color: #248fce;
   --btn-color-hover: #ffffff;
   --white-color: #ffffff;
   --accent-coral: #ff6b4a;
@@ -41,7 +41,7 @@
   --text-dark: #0b1a30;
   --text-muted-dark: #cbd5e1;
   --text-muted-light: #4a5568;
-  --text-cyan: #00b4d8;
+  --text-cyan: #248fce;
 
   /* UI Borders & Radii */
   --border-radius-pill: 10px;
@@ -167,9 +167,6 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 .text-highlight-cyan {
   font-family: var(--font-family);
   color: var(--text-cyan);
-  background: linear-gradient(90deg, #00b4d8 0%, #22d3ee 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   display: inline;
 }
 
