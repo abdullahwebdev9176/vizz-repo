@@ -63,27 +63,6 @@
   --max-width-container: 100%;
 }
 
-@media screen and (min-width: 768px) {
-  :root {
-    --container-padding: 24px;
-    --section-padding: 70px 0;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  :root {
-    --container-padding: 24px;
-    --section-padding: 90px 0;
-    --max-width-container: calc(100% - 10%);
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  :root {
-    --max-width-container: calc(100% - 18%);
-  }
-}
-
 /* --------------------------------------------------------------------------
    3. BASE RESETS & MOBILE-FIRST TYPOGRAPHY
    -------------------------------------------------------------------------- */
@@ -228,12 +207,6 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   z-index: 2;
 }
 
-@media screen and (min-width: 992px) {
-  .section-header-center {
-    margin-bottom: 50px;
-  }
-}
-
 .section-title {
   font-size: 24px;
   font-weight: 700;
@@ -242,34 +215,12 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   text-align: center;
 }
 
-@media screen and (min-width: 768px) {
-  .section-title {
-    font-size: 30px;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .section-title {
-    font-size: 36px;
-  }
-  .feature-content-col .section-title,
-  .why-partner-text-side .section-title {
-    text-align: left;
-  }
-}
-
 .section-intro-text {
   font-size: 14.5px;
   line-height: 1.7;
   max-width: 800px;
   margin: 0 auto;
   text-align: center;
-}
-
-@media screen and (min-width: 768px) {
-  .section-intro-text {
-    font-size: 16px;
-  }
 }
 
 /* --------------------------------------------------------------------------
@@ -296,14 +247,6 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   text-transform: uppercase;
   box-shadow: var(--shadow-btn);
   text-align: center;
-}
-
-@media screen and (max-width: 576px) {
-  .btn-primary-pill {
-    width: 100%;
-    padding-left: 18px !important;
-    padding-right: 18px !important;
-  }
 }
 
 .btn-primary-pill:hover {
@@ -340,14 +283,6 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   text-align: center;
 }
 
-@media screen and (max-width: 576px) {
-  .btn-secondary-pill {
-    width: 100%;
-    padding-left: 18px !important;
-    padding-right: 18px !important;
-  }
-}
-
 .btn-secondary-pill:hover {
   background: var(--btn-color);
   border: 1px solid var(--btn-color);
@@ -381,15 +316,6 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   align-items: stretch;
 }
 
-@media screen and (min-width: 992px) {
-  .hero-section-flex {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 48px;
-  }
-}
-
 .hero-col-1 {
   flex: 1 1 58%;
 }
@@ -408,27 +334,6 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   text-align: center;
 }
 
-@media screen and (min-width: 768px) {
-  .hero-title {
-    font-size: 36px;
-    line-height: 1.22;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .hero-title {
-    text-align: left;
-    font-size: 42px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .hero-title {
-    font-size: 46px;
-    line-height: 1.2;
-  }
-}
-
 .hero-description {
   color: var(--text-muted-dark);
   font-size: 14.5px;
@@ -437,22 +342,9 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   text-align: center;
 }
 
-@media screen and (min-width: 992px) {
-  .hero-description {
-    text-align: left;
-    font-size: 15.5px;
-  }
-}
-
 .hero-actions {
   margin-top: 10px;
   text-align: center;
-}
-
-@media screen and (min-width: 992px) {
-  .hero-actions {
-    text-align: left;
-  }
 }
 
 /* Right Column: Hero Form Card */
@@ -462,12 +354,6 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   border-radius: var(--border-radius-card);
   padding: 22px 18px;
   box-shadow: var(--shadow-card-elevated);
-}
-
-@media screen and (min-width: 768px) {
-  .hero-form-card {
-    padding: 32px 28px;
-  }
 }
 
 .form-card-header {
@@ -500,16 +386,6 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   display: flex;
   flex-direction: column;
   gap: 14px;
-}
-
-@media screen and (min-width: 576px) {
-  .form-row-2col {
-    flex-direction: row;
-    gap: 14px;
-  }
-  .form-row-2col .form-group {
-    flex: 1;
-  }
 }
 
 .form-group {
@@ -582,22 +458,9 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   align-items: center;
 }
 
-@media screen and (min-width: 992px) {
-  .experience-flex {
-    flex-direction: row;
-    gap: 48px;
-  }
-}
-
 .experience-col-content {
   flex: 1 1 54%;
   text-align: center;
-}
-
-@media screen and (min-width: 992px) {
-  .experience-col-content {
-    text-align: left;
-  }
 }
 
 .experience-col-visual {
@@ -613,12 +476,6 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   margin-bottom: 14px;
 }
 
-@media screen and (min-width: 768px) {
-  .section-lead-text {
-    font-size: 16px;
-  }
-}
-
 .section-description {
   font-size: 14.5px;
   line-height: 1.7;
@@ -628,12 +485,6 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 
 .experience-actions {
   text-align: center;
-}
-
-@media screen and (min-width: 992px) {
-  .experience-actions {
-    text-align: left;
-  }
 }
 
 .experience-visual-wrapper {
@@ -676,17 +527,6 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   gap: 10px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
   z-index: 2;
-}
-
-@media screen and (max-width: 576px) {
-  .experience-floating-card {
-    position: relative;
-    top: auto !important;
-    bottom: auto !important;
-    left: auto !important;
-    right: auto !important;
-    margin: 8px 0;
-  }
 }
 
 .section-dark .experience-floating-card {
@@ -828,6 +668,7 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   background: #07152b;
   position: relative;
 }
+
 .left-aligned-title {
   text-align: left !important;
 }
@@ -910,23 +751,6 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 
 .transport-content-box::-webkit-scrollbar-thumb:hover {
   background: var(--btn-color);
-}
-
-/* Mobile Rules (<= 768px): No Fixed Height, No Scrollbar, Height Increases Naturally */
-@media screen and (max-width: 768px) {
-  .transport-content-box {
-    height: auto !important;
-    max-height: none !important;
-    overflow-y: visible !important;
-    padding-right: 0 !important;
-  }
-
-  .transport-style-card.is-expanded .transport-content-box {
-    height: auto !important;
-    max-height: none !important;
-    overflow-y: visible !important;
-    padding-right: 0 !important;
-  }
 }
 
 .transport-card-footer {
@@ -1073,13 +897,6 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   height: 100%;
 }
 
-@media screen and (min-width: 992px) {
-  .bento-card {
-    padding: 30px 26px;
-    text-align: left;
-  }
-}
-
 .bento-card:hover {
   transform: translateY(-4px);
   border-color: var(--btn-cyan);
@@ -1105,25 +922,12 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   align-self: center;
 }
 
-@media screen and (min-width: 992px) {
-  .bento-badge {
-    align-self: flex-start;
-  }
-}
-
 .bento-icon-title-wrap {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 12px;
   margin-bottom: 14px;
-}
-
-@media screen and (min-width: 992px) {
-  .bento-icon-title-wrap {
-    flex-direction: row;
-    align-items: center;
-  }
 }
 
 .bento-icon {
@@ -1232,13 +1036,6 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   text-align: center;
 }
 
-@media screen and (min-width: 992px) {
-  .deck-card {
-    text-align: left;
-    padding: 28px 24px;
-  }
-}
-
 .deck-card:hover {
   transform: translateY(-5px);
   border-color: rgba(23, 161, 254, 0.5);
@@ -1256,12 +1053,6 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   font-size: 24px;
   margin: 0 auto 16px auto;
   border: 1px solid rgba(0, 180, 216, 0.25);
-}
-
-@media screen and (min-width: 992px) {
-  .deck-card-top-icon {
-    margin: 0 0 18px 0;
-  }
 }
 
 .deck-card-title {
@@ -1363,13 +1154,6 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   text-align: center;
 }
 
-@media screen and (min-width: 992px) {
-  .connected-card {
-    text-align: left;
-    padding: 28px 24px;
-  }
-}
-
 .connected-card:hover {
   transform: translateY(-6px);
   border-color: var(--btn-cyan);
@@ -1449,13 +1233,6 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   height: 100%;
 }
 
-@media screen and (min-width: 992px) {
-  .process-step-card {
-    text-align: left;
-    padding: 30px 24px;
-  }
-}
-
 .process-step-card:hover {
   transform: translateY(-5px);
   border-color: var(--btn-color);
@@ -1530,15 +1307,6 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   height: 100%;
 }
 
-@media screen and (min-width: 992px) {
-  .sector-card {
-    flex-direction: row;
-    align-items: center;
-    text-align: left;
-    gap: 16px;
-  }
-}
-
 .sector-card:hover {
   transform: translateY(-4px);
   border-color: rgba(0, 180, 216, 0.5);
@@ -1586,23 +1354,9 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   margin-bottom: 40px;
 }
 
-@media screen and (min-width: 992px) {
-  .why-partner-top-split {
-    flex-direction: row;
-    gap: 48px;
-    margin-bottom: 48px;
-  }
-}
-
 .why-partner-text-side {
   flex: 1 1 54%;
   text-align: center;
-}
-
-@media screen and (min-width: 992px) {
-  .why-partner-text-side {
-    text-align: left;
-  }
 }
 
 .why-partner-visual-side {
@@ -1614,18 +1368,6 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   display: grid;
   grid-template-columns: 1fr;
   gap: 18px;
-}
-
-@media screen and (min-width: 768px) {
-  .partner-value-grid-6 {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .partner-value-grid-6 {
-    grid-template-columns: repeat(3, 1fr);
-  }
 }
 
 .partner-value-card {
@@ -1709,13 +1451,6 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   text-align: center;
 }
 
-@media screen and (min-width: 992px) {
-  .tech-category-card {
-    text-align: left;
-    padding: 26px 20px;
-  }
-}
-
 .tech-category-card:hover {
   transform: translateY(-5px);
   border-color: var(--btn-cyan);
@@ -1730,14 +1465,6 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   margin-bottom: 16px;
   padding-bottom: 12px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-@media screen and (min-width: 992px) {
-  .tech-card-header {
-    flex-direction: row;
-    align-items: center;
-    gap: 12px;
-  }
 }
 
 .tech-card-icon {
@@ -1767,12 +1494,6 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   justify-content: center;
   gap: 8px;
   margin-top: auto;
-}
-
-@media screen and (min-width: 992px) {
-  .tech-chips-wrap {
-    justify-content: flex-start;
-  }
 }
 
 .tech-chip {
@@ -1815,13 +1536,6 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   position: relative;
   transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
-}
-
-@media screen and (min-width: 992px) {
-  .cost-factor-card {
-    text-align: left;
-    padding: 26px 22px;
-  }
 }
 
 .cost-factor-card:hover {
@@ -1893,13 +1607,6 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   z-index: 2;
 }
 
-@media screen and (min-width: 768px) {
-  .faq-accordion-wrapper {
-    gap: 16px;
-    margin-bottom: 48px;
-  }
-}
-
 .faq-item {
   background: var(--bg-light-alt);
   border: 1px solid var(--border-light);
@@ -1939,14 +1646,6 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   gap: 14px;
 }
 
-@media screen and (min-width: 768px) {
-  .faq-question-btn {
-    padding: 20px 24px;
-    font-size: 16.5px;
-    gap: 16px;
-  }
-}
-
 .faq-item.active .faq-question-btn {
   color: var(--btn-primary);
 }
@@ -1970,13 +1669,6 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
 }
 
-@media screen and (min-width: 768px) {
-  .faq-icon {
-    width: 32px;
-    height: 32px;
-  }
-}
-
 .faq-item.active .faq-icon {
   transform: rotate(45deg);
   background: var(--btn-primary);
@@ -1996,12 +1688,6 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 .faq-answer-content {
   padding: 0 18px 18px;
   text-align: left;
-}
-
-@media screen and (min-width: 768px) {
-  .faq-answer-content {
-    padding: 0 24px 22px;
-  }
 }
 
 .faq-answer-content p {
@@ -2024,12 +1710,6 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   overflow: hidden;
 }
 
-@media screen and (min-width: 768px) {
-  .mid-page-cta-section {
-    padding: 70px 0;
-  }
-}
-
 .mid-cta-box {
   max-width: 820px;
   margin: 0 auto;
@@ -2044,24 +1724,12 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   text-align: center;
 }
 
-@media screen and (min-width: 768px) {
-  .mid-cta-title {
-    font-size: 32px;
-  }
-}
-
 .mid-cta-desc {
   color: var(--text-muted-dark);
   font-size: 14.5px;
   line-height: 1.7;
   margin-bottom: 24px;
   text-align: center;
-}
-
-@media screen and (min-width: 768px) {
-  .mid-cta-desc {
-    font-size: 16px;
-  }
 }
 
 .mid-cta-actions {
@@ -2072,16 +1740,419 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   gap: 14px;
 }
 
+/* ==========================================================================
+   20. CONSOLIDATED RESPONSIVE MEDIA QUERIES (Mobile-First & Desktop Overrides)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   20.1 MIN-WIDTH: 576px (Phablets / Small Devices Upwards)
+   -------------------------------------------------------------------------- */
 @media screen and (min-width: 576px) {
+  /* Hero Form */
+  .form-row-2col {
+    flex-direction: row;
+    gap: 14px;
+  }
+
+  .form-row-2col .form-group {
+    flex: 1;
+  }
+
+  /* Mid CTA Actions */
   .mid-cta-actions {
     flex-direction: row;
     gap: 16px;
   }
 }
 
-/* ==========================================================================
-   20. MOBILE & TABLET SLIDER OVERRIDES (<= 991px)
-   ========================================================================== */
+/* --------------------------------------------------------------------------
+   20.2 MIN-WIDTH: 768px (Tablets / Medium Devices Upwards)
+   -------------------------------------------------------------------------- */
+@media screen and (min-width: 768px) {
+  :root {
+    --container-padding: 24px;
+    --section-padding: 70px 0;
+  }
+
+  /* Typography */
+  .section-title {
+    font-size: 30px;
+  }
+
+  .section-intro-text {
+    font-size: 16px;
+  }
+
+  .section-lead-text {
+    font-size: 16px;
+  }
+
+  /* Hero Section */
+  .hero-title {
+    font-size: 36px;
+    line-height: 1.22;
+  }
+
+  .hero-form-card {
+    padding: 32px 28px;
+  }
+
+  /* Partner Values 6-Grid */
+  .partner-value-grid-6 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* FAQ Accordion */
+  .faq-accordion-wrapper {
+    gap: 16px;
+    margin-bottom: 48px;
+  }
+
+  .faq-question-btn {
+    padding: 20px 24px;
+    font-size: 16.5px;
+    gap: 16px;
+  }
+
+  .faq-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .faq-answer-content {
+    padding: 0 24px 22px;
+  }
+
+  /* Mid-Page CTA */
+  .mid-page-cta-section {
+    padding: 70px 0;
+  }
+
+  .mid-cta-title {
+    font-size: 32px;
+  }
+
+  .mid-cta-desc {
+    font-size: 16px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   20.3 MIN-WIDTH: 992px (Desktop & Large Screens - Native Grids & Desktop Layout)
+   -------------------------------------------------------------------------- */
+@media screen and (min-width: 992px) {
+  :root {
+    --container-padding: 24px;
+    --section-padding: 90px 0;
+    --max-width-container: calc(100% - 10%);
+  }
+
+  /* Section Header */
+  .section-header-center {
+    margin-bottom: 50px;
+  }
+
+  .section-title {
+    font-size: 36px;
+  }
+
+  .feature-content-col .section-title,
+  .why-partner-text-side .section-title {
+    text-align: left;
+  }
+
+  /* Hero Section */
+  .hero-section-flex {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+  }
+
+  .hero-title {
+    text-align: left;
+    font-size: 42px;
+  }
+
+  .hero-description {
+    text-align: left;
+    font-size: 15.5px;
+  }
+
+  .hero-actions {
+    text-align: left;
+  }
+
+  /* Digital Experience Section */
+  .experience-flex {
+    flex-direction: row;
+    gap: 48px;
+  }
+
+  .experience-col-content {
+    text-align: left;
+  }
+
+  .experience-actions {
+    text-align: left;
+  }
+
+  /* Bento Clinical Cards */
+  .bento-card {
+    padding: 30px 26px;
+    text-align: left;
+  }
+
+  .bento-badge {
+    align-self: flex-start;
+  }
+
+  .bento-icon-title-wrap {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  /* Operations Deck */
+  .deck-card {
+    text-align: left;
+    padding: 28px 24px;
+  }
+
+  .deck-card-top-icon {
+    margin: 0 0 18px 0;
+  }
+
+  /* Connected Health */
+  .connected-card {
+    text-align: left;
+    padding: 28px 24px;
+  }
+
+  /* Development Process */
+  .process-step-card {
+    text-align: left;
+    padding: 30px 24px;
+  }
+
+  /* Sector Cards */
+  .sector-card {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    gap: 16px;
+  }
+
+  /* Why Partner Split */
+  .why-partner-top-split {
+    flex-direction: row;
+    gap: 48px;
+    margin-bottom: 48px;
+  }
+
+  .why-partner-text-side {
+    text-align: left;
+  }
+
+  /* Tech Stack */
+  .tech-category-card {
+    text-align: left;
+    padding: 26px 20px;
+  }
+
+  .tech-card-header {
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .tech-chips-wrap {
+    justify-content: flex-start;
+  }
+
+  /* Cost Factors */
+  .cost-factor-card {
+    text-align: left;
+    padding: 26px 22px;
+  }
+
+  /* Desktop Grids for Responsive Sliders */
+  #clinical-workflows-slider,
+  #operations-deck-slider,
+  #connected-health-slider,
+  #development-process-slider,
+  #health-sectors-slider,
+  #tech-stack-slider,
+  #cost-factors-slider {
+    visibility: visible !important;
+  }
+
+  #clinical-workflows-slider .splide__track,
+  #operations-deck-slider .splide__track,
+  #connected-health-slider .splide__track,
+  #development-process-slider .splide__track,
+  #health-sectors-slider .splide__track,
+  #tech-stack-slider .splide__track,
+  #cost-factors-slider .splide__track {
+    overflow: visible !important;
+    position: static !important;
+    width: 100% !important;
+    padding: 0 !important;
+  }
+
+  /* 1. Bento Clinical 3-Grid */
+  #clinical-workflows-slider .splide__list,
+  .bento-grid-3 {
+    display: grid !important;
+    grid-template-columns: 1.2fr 1fr !important;
+    grid-template-rows: auto auto !important;
+    gap: 24px !important;
+    transform: none !important;
+    margin: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  #clinical-workflows-slider .bento-slide-featured {
+    grid-row: span 2 !important;
+  }
+
+  /* 2. Operations Deck 3-Grid */
+  #operations-deck-slider .splide__list,
+  .operations-deck-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 24px !important;
+    transform: none !important;
+    margin: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* 3. Connected Health 5-Grid */
+  #connected-health-slider .splide__list,
+  .connected-health-grid-5 {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 24px !important;
+    transform: none !important;
+    margin: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  #connected-health-slider .connected-slide-featured {
+    grid-column: span 2 !important;
+  }
+
+  /* 4. Development Process 6-Grid */
+  #development-process-slider .splide__list,
+  .process-grid-6 {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 24px !important;
+    transform: none !important;
+    margin: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* 5. Health Sectors 9-Grid */
+  #health-sectors-slider .splide__list,
+  .sectors-grid-9 {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 20px !important;
+    transform: none !important;
+    margin: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* 6. Tech Stack 8-Grid */
+  #tech-stack-slider .splide__list,
+  .tech-grid-8 {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 24px !important;
+    transform: none !important;
+    margin: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* 7. Cost Factors 8-Grid */
+  #cost-factors-slider .splide__list,
+  .cost-factors-grid-8 {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 24px !important;
+    transform: none !important;
+    margin: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Slide items on desktop: fill grid cell */
+  #clinical-workflows-slider .splide__slide,
+  #operations-deck-slider .splide__slide,
+  #connected-health-slider .splide__slide,
+  #development-process-slider .splide__slide,
+  #health-sectors-slider .splide__slide,
+  #tech-stack-slider .splide__slide,
+  #cost-factors-slider .splide__slide {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    height: auto !important;
+    flex: none !important;
+    display: block !important;
+  }
+
+  /* Hide splide controls completely on desktop for static grid sections */
+  #clinical-workflows-slider .splide__pagination,
+  #clinical-workflows-slider .splide__arrows,
+  #operations-deck-slider .splide__pagination,
+  #operations-deck-slider .splide__arrows,
+  #connected-health-slider .splide__pagination,
+  #connected-health-slider .splide__arrows,
+  #development-process-slider .splide__pagination,
+  #development-process-slider .splide__arrows,
+  #health-sectors-slider .splide__pagination,
+  #health-sectors-slider .splide__arrows,
+  #tech-stack-slider .splide__pagination,
+  #tech-stack-slider .splide__arrows,
+  #cost-factors-slider .splide__pagination,
+  #cost-factors-slider .splide__arrows {
+    display: none !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   20.4 MIN-WIDTH: 1200px (Extra Large Screens)
+   -------------------------------------------------------------------------- */
+@media screen and (min-width: 1200px) {
+  .hero-title {
+    font-size: 46px;
+    line-height: 1.2;
+  }
+
+  .partner-value-grid-6 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   20.5 MIN-WIDTH: 1280px (Wide Desktop Screens)
+   -------------------------------------------------------------------------- */
+@media screen and (min-width: 1280px) {
+  :root {
+    --max-width-container: calc(100% - 18%);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   20.6 MAX-WIDTH: 991px (Mobile & Tablet Sliders Active)
+   -------------------------------------------------------------------------- */
 @media screen and (max-width: 991px) {
   #clinical-workflows-slider .splide__track,
   #operations-deck-slider .splide__track,
@@ -2173,157 +2244,47 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   }
 }
 
-/* ==========================================================================
-   21. DESKTOP OVERRIDES (>= 992px) - PURE NATIVE GRID SYSTEM, SLIDER INACTIVE
-   ========================================================================== */
-@media screen and (min-width: 992px) {
-  #clinical-workflows-slider,
-  #operations-deck-slider,
-  #connected-health-slider,
-  #development-process-slider,
-  #health-sectors-slider,
-  #tech-stack-slider,
-  #cost-factors-slider {
-    visibility: visible !important;
-  }
-
-  #clinical-workflows-slider .splide__track,
-  #operations-deck-slider .splide__track,
-  #connected-health-slider .splide__track,
-  #development-process-slider .splide__track,
-  #health-sectors-slider .splide__track,
-  #tech-stack-slider .splide__track,
-  #cost-factors-slider .splide__track {
-    overflow: visible !important;
-    position: static !important;
-    width: 100% !important;
-    padding: 0 !important;
-  }
-
-  /* 1. Bento Clinical 3-Grid (Asymmetric Desktop Bento) */
-  #clinical-workflows-slider .splide__list,
-  .bento-grid-3 {
-    display: grid !important;
-    grid-template-columns: 1.2fr 1fr !important;
-    grid-template-rows: auto auto !important;
-    gap: 24px !important;
-    transform: none !important;
-    margin: 0 !important;
-    width: 100% !important;
+/* --------------------------------------------------------------------------
+   20.7 MAX-WIDTH: 768px (Mobile Cards & Content Adjustments)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 768px) {
+  .transport-content-box {
     height: auto !important;
+    max-height: none !important;
+    overflow-y: visible !important;
+    padding-right: 0 !important;
   }
 
-  #clinical-workflows-slider .bento-slide-featured {
-    grid-row: span 2 !important;
-  }
-
-  /* 2. Operations Deck 3-Grid */
-  #operations-deck-slider .splide__list,
-  .operations-deck-grid {
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important;
-    gap: 24px !important;
-    transform: none !important;
-    margin: 0 !important;
-    width: 100% !important;
+  .transport-style-card.is-expanded .transport-content-box {
     height: auto !important;
+    max-height: none !important;
+    overflow-y: visible !important;
+    padding-right: 0 !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   20.8 MAX-WIDTH: 576px (Small Mobile Screens)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 576px) {
+  .btn-primary-pill {
+    width: 100%;
+    padding-left: 18px !important;
+    padding-right: 18px !important;
   }
 
-  /* 3. Connected Health 5-Grid */
-  #connected-health-slider .splide__list,
-  .connected-health-grid-5 {
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important;
-    gap: 24px !important;
-    transform: none !important;
-    margin: 0 !important;
-    width: 100% !important;
-    height: auto !important;
+  .btn-secondary-pill {
+    width: 100%;
+    padding-left: 18px !important;
+    padding-right: 18px !important;
   }
 
-  #connected-health-slider .connected-slide-featured {
-    grid-column: span 2 !important;
-  }
-
-  /* 4. Development Process 6-Grid */
-  #development-process-slider .splide__list,
-  .process-grid-6 {
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important;
-    gap: 24px !important;
-    transform: none !important;
-    margin: 0 !important;
-    width: 100% !important;
-    height: auto !important;
-  }
-
-  /* 5. Health Sectors 9-Grid */
-  #health-sectors-slider .splide__list,
-  .sectors-grid-9 {
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important;
-    gap: 20px !important;
-    transform: none !important;
-    margin: 0 !important;
-    width: 100% !important;
-    height: auto !important;
-  }
-
-  /* 6. Tech Stack 8-Grid (4 Columns Desktop) */
-  #tech-stack-slider .splide__list,
-  .tech-grid-8 {
-    display: grid !important;
-    grid-template-columns: repeat(4, 1fr) !important;
-    gap: 24px !important;
-    transform: none !important;
-    margin: 0 !important;
-    width: 100% !important;
-    height: auto !important;
-  }
-
-  /* 7. Cost Factors 8-Grid (4 Columns Desktop) */
-  #cost-factors-slider .splide__list,
-  .cost-factors-grid-8 {
-    display: grid !important;
-    grid-template-columns: repeat(4, 1fr) !important;
-    gap: 24px !important;
-    transform: none !important;
-    margin: 0 !important;
-    width: 100% !important;
-    height: auto !important;
-  }
-
-  /* Slide items on desktop: fill grid cell */
-  #clinical-workflows-slider .splide__slide,
-  #operations-deck-slider .splide__slide,
-  #connected-health-slider .splide__slide,
-  #development-process-slider .splide__slide,
-  #health-sectors-slider .splide__slide,
-  #tech-stack-slider .splide__slide,
-  #cost-factors-slider .splide__slide {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 !important;
-    height: auto !important;
-    flex: none !important;
-    display: block !important;
-  }
-
-  /* Hide splide controls completely on desktop for static grid sections */
-  #clinical-workflows-slider .splide__pagination,
-  #clinical-workflows-slider .splide__arrows,
-  #operations-deck-slider .splide__pagination,
-  #operations-deck-slider .splide__arrows,
-  #connected-health-slider .splide__pagination,
-  #connected-health-slider .splide__arrows,
-  #development-process-slider .splide__pagination,
-  #development-process-slider .splide__arrows,
-  #health-sectors-slider .splide__pagination,
-  #health-sectors-slider .splide__arrows,
-  #tech-stack-slider .splide__pagination,
-  #tech-stack-slider .splide__arrows,
-  #cost-factors-slider .splide__pagination,
-  #cost-factors-slider .splide__arrows {
-    display: none !important;
+  .experience-floating-card {
+    position: relative;
+    top: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    right: auto !important;
+    margin: 8px 0;
   }
 }
