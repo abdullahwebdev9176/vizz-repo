@@ -316,4 +316,72 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // =========================================================================
+  // 6. AI INNOVATION THEATER INTERACTIVE HOVER / TAB CONTROLLER
+  // =========================================================================
+  const theaterContainer = document.getElementById('ai-theater-container');
+  if (theaterContainer) {
+    const navCards = theaterContainer.querySelectorAll('.ai-nav-card');
+    const stageImg = document.getElementById('ai-stage-active-img');
+    const stageTag = document.getElementById('ai-stage-tag');
+    const stageTitlePreview = document.getElementById('ai-stage-title-preview');
+
+    if (navCards.length > 0 && stageImg) {
+      navCards.forEach((card) => {
+        const activateCard = () => {
+          if (card.classList.contains('active')) return;
+
+          // Update active state on all cards
+          navCards.forEach((c) => {
+            c.classList.remove('active');
+            c.setAttribute('aria-selected', 'false');
+          });
+          card.classList.add('active');
+          card.setAttribute('aria-selected', 'true');
+
+          const newSrc = card.getAttribute('data-img-src');
+          const newAlt = card.getAttribute('data-img-alt') || '';
+          const newTag = card.getAttribute('data-tag') || 'AGENTIC COMMERCE';
+          const newTitle = card.getAttribute('data-title') || '';
+
+          // Smooth Stage Update
+          if (stageTag) {
+            stageTag.textContent = newTag;
+          }
+          if (stageTitlePreview) {
+            stageTitlePreview.innerHTML = newTitle;
+          }
+
+          if (newSrc && stageImg.src !== newSrc) {
+            stageImg.style.opacity = '0.35';
+            stageImg.style.transform = 'scale(0.96)';
+
+            setTimeout(() => {
+              stageImg.src = newSrc;
+              stageImg.alt = newAlt;
+              stageImg.style.opacity = '1';
+              stageImg.style.transform = 'scale(1)';
+            }, 120);
+          }
+        };
+
+        // Desktop Mouse Hover
+        card.addEventListener('mouseenter', activateCard);
+
+        // Keyboard Navigation (Enter or Space)
+        card.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            activateCard();
+          }
+        });
+
+        // Click / Touch for Mobile & Tablet
+        card.addEventListener('click', activateCard);
+      });
+    }
+  }
 });
+
+
