@@ -318,22 +318,24 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // =========================================================================
-  // 6. AI INNOVATION THEATER INTERACTIVE HOVER / TAB CONTROLLER
+  // 6. INTERACTIVE THEATER SHOWCASE CONTROLLERS (AI & Lifecycle Theaters)
   // =========================================================================
-  const theaterContainer = document.getElementById('ai-theater-container');
-  if (theaterContainer) {
-    const navCards = theaterContainer.querySelectorAll('.ai-nav-card');
-    const stageImg = document.getElementById('ai-stage-active-img');
-    const stageTag = document.getElementById('ai-stage-tag');
-    const stageTitlePreview = document.getElementById('ai-stage-title-preview');
+  function initInteractiveTheater(containerId, cardSelector, imgId, tagId, titlePreviewId, defaultTag) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
 
-    if (navCards.length > 0 && stageImg) {
-      navCards.forEach((card) => {
+    const cards = container.querySelectorAll(cardSelector);
+    const stageImg = document.getElementById(imgId);
+    const stageTag = document.getElementById(tagId);
+    const stageTitlePreview = document.getElementById(titlePreviewId);
+
+    if (cards.length > 0 && stageImg) {
+      cards.forEach((card) => {
         const activateCard = () => {
           if (card.classList.contains('active')) return;
 
-          // Update active state on all cards
-          navCards.forEach((c) => {
+          // Update active state on all cards in this container
+          cards.forEach((c) => {
             c.classList.remove('active');
             c.setAttribute('aria-selected', 'false');
           });
@@ -342,7 +344,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
           const newSrc = card.getAttribute('data-img-src');
           const newAlt = card.getAttribute('data-img-alt') || '';
-          const newTag = card.getAttribute('data-tag') || 'AGENTIC COMMERCE';
+          const newTag = card.getAttribute('data-tag') || defaultTag;
           const newTitle = card.getAttribute('data-title') || '';
 
           // Smooth Stage Update
@@ -382,6 +384,27 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   }
+
+  // Initialize Section 4: AI Theater
+  initInteractiveTheater(
+    'ai-theater-container',
+    '.ai-nav-card',
+    'ai-stage-active-img',
+    'ai-stage-tag',
+    'ai-stage-title-preview',
+    'AGENTIC COMMERCE'
+  );
+
+  // Initialize Section 5: Development Lifecycle Theater
+  initInteractiveTheater(
+    'lifecycle-theater-container',
+    '.lifecycle-nav-card',
+    'lifecycle-stage-active-img',
+    'lifecycle-stage-tag',
+    'lifecycle-stage-title-preview',
+    'DEVELOPMENT LIFECYCLE'
+  );
 });
+
 
 
