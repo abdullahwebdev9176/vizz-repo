@@ -332,49 +332,55 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   6. SECTION 2: CAPABILITIES & OMNICHANNEL COMMERCE SOLUTIONS
+   6. SECTION HEADERS & EYEBROW PILLS (Inspired by TransHub Design System)
    -------------------------------------------------------------------------- */
-.capabilities-section {
-  background-color: var(--bg-light-alt);
-  padding: var(--section-padding);
-  position: relative;
-  border-bottom: 1px solid var(--border-light);
-}
-
 .section-header-center {
   text-align: center;
   max-width: 900px;
-  margin: 0 auto 36px auto;
+  margin: 0 auto 38px auto;
 }
 
-.section-eyebrow {
-  display: inline-block;
-  font-size: 13px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
+.section-eyebrow-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 107, 74, 0.12);
+  border: 1px solid rgba(255, 107, 74, 0.3);
   color: var(--accent-coral);
-  margin-bottom: 12px;
+  padding: 5px 16px;
+  border-radius: 50px;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.eyebrow-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent-coral);
 }
 
 .section-title {
-  color: var(--text-dark);
+  color: var(--text-white);
   font-size: 24px;
   font-weight: 700;
   line-height: 1.28;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
   text-align: center;
 }
 
 .section-lead-text {
-  color: var(--text-muted-light);
+  color: var(--text-muted-dark);
   font-size: 14.5px;
   line-height: 1.7;
   margin: 0 auto;
   text-align: center;
 }
 
-.inline-link {
+.inline-link-cyan {
   color: var(--btn-color);
   font-weight: 500;
   text-decoration: underline;
@@ -382,11 +388,23 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   transition: color 0.25s ease;
 }
 
-.inline-link:hover {
-  color: var(--btn-primary-hover);
+.inline-link-cyan:hover {
+  color: #ffffff;
 }
 
-/* TransHub-Style Capabilities Cards */
+/* --------------------------------------------------------------------------
+   7. SECTION 2: CAPABILITIES & OMNICHANNEL COMMERCE SOLUTIONS (TransHub Layout)
+   -------------------------------------------------------------------------- */
+.capabilities-section {
+  background: #07152b;
+  background-image: 
+    radial-gradient(circle at 15% 30%, rgba(36, 143, 206, 0.1) 0%, transparent 45%),
+    radial-gradient(circle at 85% 70%, rgba(255, 107, 74, 0.08) 0%, transparent 45%);
+  padding: var(--section-padding);
+  position: relative;
+  border-bottom: 1px solid #132b57;
+}
+
 .capabilities-grid {
   display: flex;
   list-style: none;
@@ -395,11 +413,11 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 .transport-style-card {
-  background: var(--bg-light);
-  border-radius: var(--border-radius-card);
+  background: #0e2246;
+  border-radius: 16px;
   padding: 22px 18px;
-  border: 1px solid var(--border-light);
-  box-shadow: var(--shadow-card);
+  border: 1px solid #1b3a66;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   display: flex;
   flex-direction: column;
@@ -409,52 +427,57 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 
 .transport-style-card:hover {
   transform: translateY(-5px);
-  box-shadow: var(--shadow-card-elevated);
-  border-color: rgba(36, 143, 206, 0.5);
+  box-shadow: 0 16px 36px rgba(0, 136, 255, 0.25);
+  border-color: rgba(36, 143, 206, 0.6);
 }
 
-.transport-card-header {
+.transport-card-top-row {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: space-between;
   gap: 12px;
   margin-bottom: 14px;
   min-height: 48px;
 }
 
-.transport-icon-box {
-  width: 42px;
-  height: 42px;
-  min-width: 42px;
-  border-radius: 10px;
-  background: rgba(255, 107, 74, 0.1);
-  color: var(--accent-coral);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
-}
-
-.transport-style-card:hover .transport-icon-box {
-  background: var(--accent-coral);
-  color: var(--white-color);
-  transform: scale(1.05);
-}
-
 .transport-card-title {
   font-size: 16px;
   font-weight: 700;
-  color: var(--text-dark);
+  color: var(--text-white);
   line-height: 1.35;
   margin: 0;
 }
 
+.card-action-circle {
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  border-radius: 50%;
+  background: rgba(36, 143, 206, 0.12);
+  color: var(--btn-color);
+  border: 1px solid rgba(36, 143, 206, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.transport-style-card:hover .card-action-circle {
+  background: var(--accent-coral);
+  color: #ffffff;
+  border-color: var(--accent-coral);
+  transform: rotate(45deg);
+  box-shadow: 0 0 12px rgba(255, 107, 74, 0.5);
+}
+
 .transport-card-media {
+  position: relative;
   width: 100%;
   height: 145px;
-  border-radius: 10px;
+  border-radius: 12px;
   overflow: hidden;
   margin-bottom: 14px;
-  background: #e2e8f0;
+  background: #07152b;
 }
 
 .transport-card-img {
@@ -462,11 +485,18 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.5s ease;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .transport-style-card:hover .transport-card-img {
-  transform: scale(1.06);
+  transform: scale(1.08);
+}
+
+.media-overlay-glow {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 60%, rgba(7, 21, 43, 0.6) 100%);
+  pointer-events: none;
 }
 
 .transport-content-box {
@@ -481,7 +511,7 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 .transport-card-desc {
   font-size: 13.5px;
   line-height: 1.65;
-  color: var(--text-muted-light);
+  color: var(--text-muted-dark);
   margin: 0;
 }
 
@@ -510,26 +540,29 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 .transport-card-footer {
   margin-top: auto;
   padding-top: 10px;
-  border-top: 1px solid rgba(226, 232, 240, 0.7);
+  border-top: 1px solid rgba(226, 232, 240, 0.1);
 }
 
 .transport-read-more-btn {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: transparent;
-  border: none;
+  background: rgba(36, 143, 206, 0.1);
+  border: 1px solid rgba(36, 143, 206, 0.25);
   color: var(--btn-color);
-  font-size: 13px;
+  border-radius: 20px;
+  padding: 5px 14px;
+  font-size: 12.5px;
   font-weight: 600;
   font-family: var(--font-family);
   cursor: pointer;
-  padding: 4px 0;
   transition: all 0.25s ease;
 }
 
 .transport-read-more-btn:hover {
-  color: var(--btn-primary-hover);
+  background: var(--btn-color);
+  color: #ffffff;
+  border-color: var(--btn-color);
   transform: translateX(2px);
 }
 
@@ -542,61 +575,256 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   7. SPLIDE SLIDER CUSTOM CONTROLS, PAGINATION & VISIBILITY OVERRIDES
+   8. SECTION 3: MODERN RETAIL SOFTWARE & DIGITAL COMMERCE SOLUTIONS
+      Asymmetric Split Hero with Floating Badges & Dual-Column Matrix Deck
    -------------------------------------------------------------------------- */
-/* Ensure Splide containers remain visible across desktop even when unmounted */
-.splide,
-.splide:not(.is-rendered),
-.splide:not(.is-active),
-.splide__track,
-.splide__list,
-.splide__slide {
-  visibility: visible !important;
-  opacity: 1 !important;
+.solutions-delivery-section {
+  background: #051022;
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(36, 143, 206, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(255, 107, 74, 0.06) 0%, transparent 40%);
+  padding: var(--section-padding);
+  position: relative;
+  border-bottom: 1px solid #132b57;
 }
 
-.splide__pagination {
-  bottom: -28px !important;
+/* Part 1: Asymmetric Overview Split */
+.solutions-overview-split {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 40px;
+  align-items: stretch;
 }
 
-.splide__pagination__page {
-  background: #cbd5e1 !important;
-  opacity: 1 !important;
-  width: 8px !important;
-  height: 8px !important;
-  transition: all 0.3s ease !important;
+.solutions-overview-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
 }
 
-.splide__pagination__page.is-active {
-  background: var(--btn-primary) !important;
-  transform: scale(1.3) !important;
-  border-radius: 8px !important;
-  width: 22px !important;
+.solutions-main-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.26;
+  margin-bottom: 16px;
+  text-align: left;
 }
 
-.splide__arrow {
-  background: var(--bg-light) !important;
-  border: 1px solid var(--border-light) !important;
-  box-shadow: var(--shadow-card) !important;
-  opacity: 0.9 !important;
-  transition: all 0.25s ease !important;
+.solutions-main-desc {
+  font-size: 14.5px;
+  line-height: 1.7;
+  margin-bottom: 22px;
+  text-align: left;
 }
 
-.splide__arrow:hover {
-  background: var(--btn-primary) !important;
-  color: var(--white-color) !important;
+.solutions-action-group {
+  margin-top: 4px;
 }
 
-.splide__arrow svg {
-  fill: currentColor !important;
+/* Overview Right: Visual Frame & Floating Badges */
+.solutions-overview-right {
+  position: relative;
+  width: 100%;
+}
+
+.solutions-collage-frame {
+  position: relative;
+  width: 100%;
+  border-radius: 18px;
+  padding: 0;
+}
+
+.solutions-hero-banner {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 1px solid rgba(36, 143, 206, 0.35);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
+  display: block;
+}
+
+/* Floating Glassmorphic Badges */
+.floating-stat-badge {
+  position: absolute;
+  background: rgba(9, 26, 51, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(36, 143, 206, 0.35);
+  border-radius: 14px;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+
+.floating-stat-badge:hover {
+  transform: translateY(-3px);
+  border-color: var(--btn-color);
+}
+
+.stat-badge-top {
+  top: -12px;
+  right: -8px;
+}
+
+.stat-badge-bottom {
+  bottom: -12px;
+  left: -8px;
+}
+
+.stat-badge-icon-wrap {
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  border-radius: 10px;
+  background: rgba(36, 143, 206, 0.15);
+  color: var(--btn-color);
+  border: 1px solid rgba(36, 143, 206, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-badge-icon-wrap.icon-coral {
+  background: rgba(255, 107, 74, 0.15);
+  color: var(--accent-coral);
+  border-color: rgba(255, 107, 74, 0.3);
+}
+
+.stat-badge-number {
+  font-size: 18px;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.15;
+}
+
+.stat-badge-number.stat-cyan {
+  color: var(--btn-color);
+}
+
+.stat-badge-label {
+  font-size: 11.5px;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+/* Part 2: Dual-Column Connected Solution Matrix */
+.solutions-matrix-deck {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.solution-matrix-item {
+  background: #0b1e3b;
+  border: 1px solid #16365f;
+  border-radius: 16px;
+  padding: 20px 18px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  height: 100%;
+  position: relative;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.solution-matrix-item:hover {
+  transform: translateY(-4px);
+  background: #0f274c;
+  border-color: rgba(36, 143, 206, 0.65);
+  box-shadow: 0 14px 32px rgba(0, 136, 255, 0.2);
+}
+
+.matrix-node-num {
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  border-radius: 50%;
+  background: #07152b;
+  border: 2px solid rgba(36, 143, 206, 0.4);
+  color: var(--btn-color);
+  font-size: 15px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.solution-matrix-item:hover .matrix-node-num {
+  background: var(--accent-coral);
+  border-color: var(--accent-coral);
+  color: #ffffff;
+  box-shadow: 0 0 16px rgba(255, 107, 74, 0.5);
+  transform: scale(1.06);
+}
+
+.matrix-content-block {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.matrix-header-flex {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.matrix-item-title {
+  font-size: 16.5px;
+  font-weight: 700;
+  color: var(--text-white);
+  line-height: 1.35;
+  margin: 0;
+}
+
+.matrix-arrow-badge {
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  border-radius: 50%;
+  background: rgba(36, 143, 206, 0.1);
+  border: 1px solid rgba(36, 143, 206, 0.25);
+  color: var(--btn-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.solution-matrix-item:hover .matrix-arrow-badge {
+  background: var(--btn-color);
+  color: #ffffff;
+  border-color: var(--btn-color);
+  transform: rotate(45deg);
+}
+
+.matrix-item-desc {
+  font-size: 13.5px;
+  line-height: 1.68;
+  color: var(--text-muted-dark);
+  margin: 0;
 }
 
 /* ==========================================================================
-   8. CONSOLIDATED RESPONSIVE MEDIA QUERIES (Mobile-First & Desktop Overrides)
+   9. CONSOLIDATED RESPONSIVE MEDIA QUERIES (Mobile-First & Desktop Overrides)
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   8.1 MIN-WIDTH: 576px (Phablets / Small Devices Upwards)
+   9.1 MIN-WIDTH: 576px (Phablets / Small Devices Upwards)
    -------------------------------------------------------------------------- */
 @media screen and (min-width: 576px) {
   /* Hero Form */
@@ -608,10 +836,14 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   .form-row-2col .form-group {
     flex: 1;
   }
+
+  .solutions-hero-banner {
+    height: 280px;
+  }
 }
 
 /* --------------------------------------------------------------------------
-   8.2 MIN-WIDTH: 768px (Tablets / Medium Devices Upwards)
+   9.2 MIN-WIDTH: 768px (Tablets / Medium Devices Upwards)
    -------------------------------------------------------------------------- */
 @media screen and (min-width: 768px) {
   :root {
@@ -629,7 +861,7 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
     padding: 32px 28px;
   }
 
-  /* Section 2 */
+  /* Section Titles */
   .section-title {
     font-size: 30px;
   }
@@ -641,10 +873,26 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   .section-header-center {
     margin-bottom: 44px;
   }
+
+  .solutions-main-title {
+    font-size: 32px;
+  }
+
+  .solutions-hero-banner {
+    height: 310px;
+  }
+
+  .floating-stat-badge {
+    padding: 12px 18px;
+  }
+
+  .stat-badge-number {
+    font-size: 20px;
+  }
 }
 
 /* --------------------------------------------------------------------------
-   8.3 MIN-WIDTH: 992px (Desktop & Large Screens - Native Grids & Desktop Layout)
+   9.3 MIN-WIDTH: 992px (Desktop & Large Screens - Native Grids & Desktop Layout)
    -------------------------------------------------------------------------- */
 @media screen and (min-width: 992px) {
   :root {
@@ -675,7 +923,36 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
     text-align: left;
   }
 
-  /* Section 2: Desktop 4-Column Native Grid */
+  /* Section 3: Asymmetric Overview Split on Desktop */
+  .solutions-overview-split {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+    margin-bottom: 50px;
+  }
+
+  .solutions-overview-left {
+    flex: 1 1 52%;
+  }
+
+  .solutions-overview-right {
+    flex: 1 1 48%;
+  }
+
+  .solutions-main-title {
+    font-size: 38px;
+  }
+
+  .solutions-main-desc {
+    font-size: 15.5px;
+  }
+
+  .solutions-hero-banner {
+    height: 320px;
+  }
+
+  /* Universal Splide Desktop Grid Overrides */
   .splide,
   .splide:not(.is-rendered),
   .splide__track {
@@ -687,9 +964,9 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
     transform: none !important;
   }
 
+  /* Section 2: Desktop 4-Column Native Grid */
   .capabilities-grid,
-  .splide__list.capabilities-grid,
-  .splide__list {
+  .splide__list.capabilities-grid {
     display: grid !important;
     grid-template-columns: repeat(4, 1fr) !important;
     gap: 22px !important;
@@ -702,7 +979,23 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
     list-style: none !important;
   }
 
+  /* Section 3: Desktop 2-Column Connected Solutions Matrix Grid */
+  .solutions-matrix-deck,
+  .splide__list.solutions-matrix-deck {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 22px !important;
+    transform: none !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    list-style: none !important;
+  }
+
   .capabilities-grid .splide__slide,
+  .solutions-matrix-deck .splide__slide,
   .splide__slide {
     width: 100% !important;
     max-width: 100% !important;
@@ -735,7 +1028,7 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   }
 
   .transport-content-box.expanded::-webkit-scrollbar-track {
-    background: #f1f5f9;
+    background: #07152b;
     border-radius: 4px;
   }
 
@@ -746,7 +1039,7 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   8.4 MIN-WIDTH: 1200px (Extra Large Screens)
+   9.4 MIN-WIDTH: 1200px (Extra Large Screens)
    -------------------------------------------------------------------------- */
 @media screen and (min-width: 1200px) {
   .hero-title {
@@ -758,14 +1051,27 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
     font-size: 36px;
   }
 
+  .solutions-main-title {
+    font-size: 42px;
+  }
+
   .capabilities-grid,
   .splide__list.capabilities-grid {
-    gap: 26px !important;
+    gap: 24px !important;
+  }
+
+  .solutions-matrix-deck,
+  .splide__list.solutions-matrix-deck {
+    gap: 24px !important;
+  }
+
+  .solution-matrix-item {
+    padding: 22px 22px;
   }
 }
 
 /* --------------------------------------------------------------------------
-   8.5 MIN-WIDTH: 1280px (Wide Desktop Screens)
+   9.5 MIN-WIDTH: 1280px (Wide Desktop Screens)
    -------------------------------------------------------------------------- */
 @media screen and (min-width: 1280px) {
   :root {
@@ -774,7 +1080,7 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   8.6 MAX-WIDTH: 576px (Small Mobile Screens)
+   9.6 MAX-WIDTH: 576px (Small Mobile Screens)
    -------------------------------------------------------------------------- */
 @media screen and (max-width: 576px) {
   .btn-primary-pill {
@@ -783,9 +1089,37 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
     padding-right: 18px !important;
   }
 
-  .transport-card-header {
-    min-height: auto;
+  .floating-stat-badge {
+    padding: 8px 12px;
+    gap: 8px;
+  }
+
+  .stat-badge-icon-wrap {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+  }
+
+  .stat-badge-number {
+    font-size: 15px;
+  }
+
+  .stat-badge-label {
+    font-size: 10.5px;
+  }
+
+  .solution-matrix-item {
+    padding: 16px 14px;
+    gap: 12px;
+  }
+
+  .matrix-node-num {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    font-size: 13px;
   }
 }
+
 
 
