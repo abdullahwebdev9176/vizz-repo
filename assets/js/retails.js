@@ -81,8 +81,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // =========================================================================
   const sliderConfigs = [
     {
-      id: 'retail-workflows-slider',
-      perPageTablet: 1,
+      id: 'connected-retail-slider',
+      perPageTablet: 2,
       perPageMobile: 1,
       gapTablet: '20px',
       gapMobile: '14px',
@@ -95,45 +95,44 @@ document.addEventListener('DOMContentLoaded', () => {
       gapMobile: '14px',
     },
     {
-      id: 'connected-retail-slider',
-      perPageTablet: 2,
+      id: 'retail-ai-slider',
+      perPageTablet: 1,
       perPageMobile: 1,
-      gapTablet: '20px',
+      gapTablet: '16px',
       gapMobile: '14px',
     },
     {
-      id: 'development-process-slider',
-      perPageTablet: 2,
+      id: 'retail-lifecycle-slider',
+      perPageTablet: 1,
       perPageMobile: 1,
-      gapTablet: '20px',
+      gapTablet: '16px',
       gapMobile: '14px',
     },
     {
       id: 'retail-sectors-slider',
-      perPageTablet: 3,
-      perPageMobile: 2,
+      perPageTablet: 2,
+      perPageMobile: 1,
       gapTablet: '16px',
-      gapMobile: '12px',
+      gapMobile: '14px',
       extraBreakpoints: {
-        576: {
+        767: {
           perPage: 1,
-          gap: '12px',
+          gap: '14px',
         },
       },
     },
     {
-      id: 'tech-stack-slider',
-      perPageTablet: 2,
-      perPageMobile: 1,
-      gapTablet: '18px',
-      gapMobile: '14px',
-    },
-    {
-      id: 'cost-factors-slider',
+      id: 'why-choose-slider',
       perPageTablet: 2,
       perPageMobile: 1,
       gapTablet: '20px',
       gapMobile: '14px',
+      extraBreakpoints: {
+        767: {
+          perPage: 1,
+          gap: '14px',
+        },
+      },
     },
   ];
 

@@ -805,134 +805,138 @@
         <!-- Interactive 2-Column Showcase Theater -->
         <div class="ai-theater-grid" id="ai-theater-container">
 
-          <!-- Left Column: Interactive Capability Cards Stack -->
-          <div class="ai-theater-nav-stack" role="tablist" aria-label="Retail AI Capabilities">
+          <!-- Left Column: Interactive Capability Cards Stack (Splide on Mobile/Tablet) -->
+          <div class="ai-theater-nav-stack splide" id="retail-ai-slider" role="tablist" aria-label="Retail AI Capabilities">
+            <div class="splide__track">
+              <div class="splide__list ai-nav-card-list">
 
-            <!-- TAB 1: AI-Powered Personalization & Recommendations -->
-            <div class="ai-nav-card active" role="tab" aria-selected="true" tabindex="0"
-                 data-img-src="assets/images/retails/showcase-ai-chatbots.webp"
-                 data-img-alt="AI-Powered Retail Personalization and Recommendations"
-                 data-tag="AGENTIC COMMERCE"
-                 data-title="AI-Powered Personalization &amp; Recommendations">
-              <div class="ai-nav-card-header">
-                <div class="ai-nav-node">01</div>
-                <h3 class="ai-nav-title">AI-Powered Personalization &amp; Recommendations</h3>
-                <div class="ai-nav-chevron" aria-hidden="true">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="9 18 15 12 9 6"></polyline>
-                  </svg>
+                <!-- TAB 1: AI-Powered Personalization & Recommendations -->
+                <div class="ai-nav-card active splide__slide" role="tab" aria-selected="true" tabindex="0"
+                     data-img-src="assets/images/retails/showcase-ai-chatbots.webp"
+                     data-img-alt="AI-Powered Retail Personalization and Recommendations"
+                     data-tag="AGENTIC COMMERCE"
+                     data-title="AI-Powered Personalization &amp; Recommendations">
+                  <div class="ai-nav-card-header">
+                    <div class="ai-nav-node">01</div>
+                    <h3 class="ai-nav-title">AI-Powered Personalization &amp; Recommendations</h3>
+                    <div class="ai-nav-chevron" aria-hidden="true">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="ai-nav-card-body">
+                    <p class="ai-nav-desc">
+                      We integrate AI in retail software to power product recommendations, dynamic pricing, and personalized offers based on real-time customer behavior. Agentic workflows can also automate inventory checks, supplier coordination, and support escalation, making retail software proactive rather than reactive.
+                    </p>
+                    <div class="ai-mobile-inline-media">
+                      <img src="assets/images/retails/showcase-ai-chatbots.webp" alt="AI-Powered Retail Personalization and Recommendations" width="380" height="200" loading="lazy">
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div class="ai-nav-card-body">
-                <p class="ai-nav-desc">
-                  We integrate AI in retail software to power product recommendations, dynamic pricing, and personalized offers based on real-time customer behavior. Agentic workflows can also automate inventory checks, supplier coordination, and support escalation, making retail software proactive rather than reactive.
-                </p>
-                <div class="ai-mobile-inline-media">
-                  <img src="assets/images/retails/showcase-ai-chatbots.webp" alt="AI-Powered Retail Personalization and Recommendations" width="380" height="200" loading="lazy">
+
+                <!-- TAB 2: RFID Technology & Smart Inventory -->
+                <div class="ai-nav-card splide__slide" role="tab" aria-selected="false" tabindex="0"
+                     data-img-src="assets/images/retails/showcase-api-integration.webp"
+                     data-img-alt="RFID Technology and Smart Connected Retail Inventory"
+                     data-tag="CONNECTED IOT &amp; SENSORS"
+                     data-title="RFID Technology &amp; Smart Inventory">
+                  <div class="ai-nav-card-header">
+                    <div class="ai-nav-node">02</div>
+                    <h3 class="ai-nav-title">RFID Technology &amp; Smart Inventory</h3>
+                    <div class="ai-nav-chevron" aria-hidden="true">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="ai-nav-card-body">
+                    <p class="ai-nav-desc">
+                      RFID technology and connected sensors give retailers granular, real-time visibility into stock levels, shelf availability, and product movement from warehouse to shelf. This data can power automated replenishment, loss-prevention alerts, and self-checkout accuracy without manual stock counts.
+                    </p>
+                    <div class="ai-mobile-inline-media">
+                      <img src="assets/images/retails/showcase-api-integration.webp" alt="RFID Technology and Smart Connected Retail Inventory" width="380" height="200" loading="lazy">
+                    </div>
+                  </div>
                 </div>
+
+                <!-- TAB 3: Computer Vision & Cashierless Retail -->
+                <div class="ai-nav-card splide__slide" role="tab" aria-selected="false" tabindex="0"
+                     data-img-src="assets/images/retails/showcase-ui-ux.webp"
+                     data-img-alt="Computer Vision and Cashierless Store Formats"
+                     data-tag="SMART VISION SYSTEMS"
+                     data-title="Computer Vision &amp; Cashierless Retail">
+                  <div class="ai-nav-card-header">
+                    <div class="ai-nav-node">03</div>
+                    <h3 class="ai-nav-title">Computer Vision &amp; Cashierless Retail</h3>
+                    <div class="ai-nav-chevron" aria-hidden="true">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="ai-nav-card-body">
+                    <p class="ai-nav-desc">
+                      Computer vision enables self-checkout, shelf-monitoring, and store-layout optimization by analyzing customer movement and product placement in real time. Retailers can use it to reduce shrinkage, improve planogram compliance, and explore cashierless store formats.
+                    </p>
+                    <div class="ai-mobile-inline-media">
+                      <img src="assets/images/retails/showcase-ui-ux.webp" alt="Computer Vision and Cashierless Store Formats" width="380" height="200" loading="lazy">
+                    </div>
+                  </div>
+                </div>
+
+                <!-- TAB 4: Machine Learning & Demand Forecasting -->
+                <div class="ai-nav-card splide__slide" role="tab" aria-selected="false" tabindex="0"
+                     data-img-src="assets/images/retails/showcase-bi-analytics.webp"
+                     data-img-alt="Machine Learning and Demand Forecasting Analytics"
+                     data-tag="PREDICTIVE INTELLIGENCE"
+                     data-title="Machine Learning &amp; Demand Forecasting">
+                  <div class="ai-nav-card-header">
+                    <div class="ai-nav-node">04</div>
+                    <h3 class="ai-nav-title">Machine Learning &amp; Demand Forecasting</h3>
+                    <div class="ai-nav-chevron" aria-hidden="true">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="ai-nav-card-body">
+                    <p class="ai-nav-desc">
+                      Our <a href="https://vizzwebsolutions.com/services/machine-learning-and-ai-development/" class="inline-link-cyan" aria-label="Explore our machine learning and AI development solutions" title="Machine Learning Solutions">machine learning solutions</a> for retail analyze historical and real-time sales data to forecast demand, optimize pricing, and detect fraud. Effective ML solutions are built around reliable data and clearly defined business objectives, from avoiding stockouts to reducing overstock carrying costs.
+                    </p>
+                    <div class="ai-mobile-inline-media">
+                      <img src="assets/images/retails/showcase-bi-analytics.webp" alt="Machine Learning and Demand Forecasting Analytics" width="380" height="200" loading="lazy">
+                    </div>
+                  </div>
+                </div>
+
+                <!-- TAB 5: Cloud Computing & Composable Commerce -->
+                <div class="ai-nav-card splide__slide" role="tab" aria-selected="false" tabindex="0"
+                     data-img-src="assets/images/retails/showcase-cloud-solutions.webp"
+                     data-img-alt="Cloud Computing and Scalable Composable Commerce Architecture"
+                     data-tag="CLOUD-NATIVE SCALE"
+                     data-title="Cloud Computing &amp; Composable Commerce">
+                  <div class="ai-nav-card-header">
+                    <div class="ai-nav-node">05</div>
+                    <h3 class="ai-nav-title">Cloud Computing &amp; Composable Commerce</h3>
+                    <div class="ai-nav-chevron" aria-hidden="true">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="ai-nav-card-body">
+                    <p class="ai-nav-desc">
+                      We use cloud-native, composable architecture to build scalable retail applications, headless storefronts, and centralized data environments that support rapid iteration across web, mobile, and in-store channels.
+                    </p>
+                    <div class="ai-mobile-inline-media">
+                      <img src="assets/images/retails/showcase-cloud-solutions.webp" alt="Cloud Computing and Scalable Composable Commerce Architecture" width="380" height="200" loading="lazy">
+                    </div>
+                  </div>
+                </div>
+
               </div>
             </div>
-
-            <!-- TAB 2: RFID Technology & Smart Inventory -->
-            <div class="ai-nav-card" role="tab" aria-selected="false" tabindex="0"
-                 data-img-src="assets/images/retails/showcase-api-integration.webp"
-                 data-img-alt="RFID Technology and Smart Connected Retail Inventory"
-                 data-tag="CONNECTED IOT &amp; SENSORS"
-                 data-title="RFID Technology &amp; Smart Inventory">
-              <div class="ai-nav-card-header">
-                <div class="ai-nav-node">02</div>
-                <h3 class="ai-nav-title">RFID Technology &amp; Smart Inventory</h3>
-                <div class="ai-nav-chevron" aria-hidden="true">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="9 18 15 12 9 6"></polyline>
-                  </svg>
-                </div>
-              </div>
-              <div class="ai-nav-card-body">
-                <p class="ai-nav-desc">
-                  RFID technology and connected sensors give retailers granular, real-time visibility into stock levels, shelf availability, and product movement from warehouse to shelf. This data can power automated replenishment, loss-prevention alerts, and self-checkout accuracy without manual stock counts.
-                </p>
-                <div class="ai-mobile-inline-media">
-                  <img src="assets/images/retails/showcase-api-integration.webp" alt="RFID Technology and Smart Connected Retail Inventory" width="380" height="200" loading="lazy">
-                </div>
-              </div>
-            </div>
-
-            <!-- TAB 3: Computer Vision & Cashierless Retail -->
-            <div class="ai-nav-card" role="tab" aria-selected="false" tabindex="0"
-                 data-img-src="assets/images/retails/showcase-ui-ux.webp"
-                 data-img-alt="Computer Vision and Cashierless Store Formats"
-                 data-tag="SMART VISION SYSTEMS"
-                 data-title="Computer Vision &amp; Cashierless Retail">
-              <div class="ai-nav-card-header">
-                <div class="ai-nav-node">03</div>
-                <h3 class="ai-nav-title">Computer Vision &amp; Cashierless Retail</h3>
-                <div class="ai-nav-chevron" aria-hidden="true">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="9 18 15 12 9 6"></polyline>
-                  </svg>
-                </div>
-              </div>
-              <div class="ai-nav-card-body">
-                <p class="ai-nav-desc">
-                  Computer vision enables self-checkout, shelf-monitoring, and store-layout optimization by analyzing customer movement and product placement in real time. Retailers can use it to reduce shrinkage, improve planogram compliance, and explore cashierless store formats.
-                </p>
-                <div class="ai-mobile-inline-media">
-                  <img src="assets/images/retails/showcase-ui-ux.webp" alt="Computer Vision and Cashierless Store Formats" width="380" height="200" loading="lazy">
-                </div>
-              </div>
-            </div>
-
-            <!-- TAB 4: Machine Learning & Demand Forecasting -->
-            <div class="ai-nav-card" role="tab" aria-selected="false" tabindex="0"
-                 data-img-src="assets/images/retails/showcase-bi-analytics.webp"
-                 data-img-alt="Machine Learning and Demand Forecasting Analytics"
-                 data-tag="PREDICTIVE INTELLIGENCE"
-                 data-title="Machine Learning &amp; Demand Forecasting">
-              <div class="ai-nav-card-header">
-                <div class="ai-nav-node">04</div>
-                <h3 class="ai-nav-title">Machine Learning &amp; Demand Forecasting</h3>
-                <div class="ai-nav-chevron" aria-hidden="true">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="9 18 15 12 9 6"></polyline>
-                  </svg>
-                </div>
-              </div>
-              <div class="ai-nav-card-body">
-                <p class="ai-nav-desc">
-                  Our <a href="https://vizzwebsolutions.com/services/machine-learning-and-ai-development/" class="inline-link-cyan" aria-label="Explore our machine learning and AI development solutions" title="Machine Learning Solutions">machine learning solutions</a> for retail analyze historical and real-time sales data to forecast demand, optimize pricing, and detect fraud. Effective ML solutions are built around reliable data and clearly defined business objectives, from avoiding stockouts to reducing overstock carrying costs.
-                </p>
-                <div class="ai-mobile-inline-media">
-                  <img src="assets/images/retails/showcase-bi-analytics.webp" alt="Machine Learning and Demand Forecasting Analytics" width="380" height="200" loading="lazy">
-                </div>
-              </div>
-            </div>
-
-            <!-- TAB 5: Cloud Computing & Composable Commerce -->
-            <div class="ai-nav-card" role="tab" aria-selected="false" tabindex="0"
-                 data-img-src="assets/images/retails/showcase-cloud-solutions.webp"
-                 data-img-alt="Cloud Computing and Scalable Composable Commerce Architecture"
-                 data-tag="CLOUD-NATIVE SCALE"
-                 data-title="Cloud Computing &amp; Composable Commerce">
-              <div class="ai-nav-card-header">
-                <div class="ai-nav-node">05</div>
-                <h3 class="ai-nav-title">Cloud Computing &amp; Composable Commerce</h3>
-                <div class="ai-nav-chevron" aria-hidden="true">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="9 18 15 12 9 6"></polyline>
-                  </svg>
-                </div>
-              </div>
-              <div class="ai-nav-card-body">
-                <p class="ai-nav-desc">
-                  We use cloud-native, composable architecture to build scalable retail applications, headless storefronts, and centralized data environments that support rapid iteration across web, mobile, and in-store channels.
-                </p>
-                <div class="ai-mobile-inline-media">
-                  <img src="assets/images/retails/showcase-cloud-solutions.webp" alt="Cloud Computing and Scalable Composable Commerce Architecture" width="380" height="200" loading="lazy">
-                </div>
-              </div>
-            </div>
-
           </div>
 
           <!-- Right Column: Interactive Visual Terminal Stage (Desktop) -->
@@ -1001,159 +1005,163 @@
         <!-- Interactive 2-Column Lifecycle Theater -->
         <div class="lifecycle-theater-grid" id="lifecycle-theater-container">
 
-          <!-- Left Column: Scrollable Interactive Phase Cards Stack -->
-          <div class="lifecycle-nav-stack" role="tablist" aria-label="Retail Software Development Lifecycle Phases">
+          <!-- Left Column: Scrollable Interactive Phase Cards Stack (Splide on Mobile/Tablet) -->
+          <div class="lifecycle-nav-stack splide" id="retail-lifecycle-slider" role="tablist" aria-label="Retail Software Development Lifecycle Phases">
+            <div class="splide__track">
+              <div class="splide__list lifecycle-nav-card-list">
 
-            <!-- PHASE 1: Requirements Analysis & Consultation -->
-            <div class="lifecycle-nav-card active" role="tab" aria-selected="true" tabindex="0"
-                 data-img-src="assets/images/retails/showcase-bi-analytics.webp"
-                 data-img-alt="Retail Software Requirements Analysis and Consultation"
-                 data-tag="DISCOVERY &amp; SCOPE"
-                 data-title="Requirements Analysis &amp; Consultation">
-              <div class="lifecycle-nav-card-header">
-                <div class="lifecycle-nav-node">01</div>
-                <h3 class="lifecycle-nav-title">Requirements Analysis &amp; Consultation</h3>
-                <div class="lifecycle-nav-chevron" aria-hidden="true">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="9 18 15 12 9 6"></polyline>
-                  </svg>
+                <!-- PHASE 1: Requirements Analysis & Consultation -->
+                <div class="lifecycle-nav-card active splide__slide" role="tab" aria-selected="true" tabindex="0"
+                     data-img-src="assets/images/retails/showcase-bi-analytics.webp"
+                     data-img-alt="Retail Software Requirements Analysis and Consultation"
+                     data-tag="DISCOVERY &amp; SCOPE"
+                     data-title="Requirements Analysis &amp; Consultation">
+                  <div class="lifecycle-nav-card-header">
+                    <div class="lifecycle-nav-node">01</div>
+                    <h3 class="lifecycle-nav-title">Requirements Analysis &amp; Consultation</h3>
+                    <div class="lifecycle-nav-chevron" aria-hidden="true">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="lifecycle-nav-card-body">
+                    <p class="lifecycle-nav-desc">
+                      We analyze your retail workflows, users, systems, and integration needs to define clear requirements and a scalable project scope.
+                    </p>
+                    <div class="lifecycle-mobile-inline-media">
+                      <img src="assets/images/retails/showcase-bi-analytics.webp" alt="Retail Software Requirements Analysis and Consultation" width="380" height="200" loading="lazy">
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div class="lifecycle-nav-card-body">
-                <p class="lifecycle-nav-desc">
-                  We analyze your retail workflows, users, systems, and integration needs to define clear requirements and a scalable project scope.
-                </p>
-                <div class="lifecycle-mobile-inline-media">
-                  <img src="assets/images/retails/showcase-bi-analytics.webp" alt="Retail Software Requirements Analysis and Consultation" width="380" height="200" loading="lazy">
+
+                <!-- PHASE 2: Solution Design & Architecture -->
+                <div class="lifecycle-nav-card splide__slide" role="tab" aria-selected="false" tabindex="0"
+                     data-img-src="assets/images/retails/showcase-cloud-solutions.webp"
+                     data-img-alt="Secure and Scalable Retail Solution Design and Architecture"
+                     data-tag="SYSTEM ARCHITECTURE"
+                     data-title="Solution Design &amp; Architecture">
+                  <div class="lifecycle-nav-card-header">
+                    <div class="lifecycle-nav-node">02</div>
+                    <h3 class="lifecycle-nav-title">Solution Design &amp; Architecture</h3>
+                    <div class="lifecycle-nav-chevron" aria-hidden="true">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="lifecycle-nav-card-body">
+                    <p class="lifecycle-nav-desc">
+                      We design secure, scalable, AI-ready retail software architecture, data flows, and user experiences built for future growth.
+                    </p>
+                    <div class="lifecycle-mobile-inline-media">
+                      <img src="assets/images/retails/showcase-cloud-solutions.webp" alt="Secure and Scalable Retail Solution Design and Architecture" width="380" height="200" loading="lazy">
+                    </div>
+                  </div>
                 </div>
+
+                <!-- PHASE 3: Custom Development & Integration -->
+                <div class="lifecycle-nav-card splide__slide" role="tab" aria-selected="false" tabindex="0"
+                     data-img-src="assets/images/retails/showcase-web-app.webp"
+                     data-img-alt="Custom Retail Software Development and Systems Integration"
+                     data-tag="ENGINEERING &amp; BUILD"
+                     data-title="Custom Development &amp; Integration">
+                  <div class="lifecycle-nav-card-header">
+                    <div class="lifecycle-nav-node">03</div>
+                    <h3 class="lifecycle-nav-title">Custom Development &amp; Integration</h3>
+                    <div class="lifecycle-nav-chevron" aria-hidden="true">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="lifecycle-nav-card-body">
+                    <p class="lifecycle-nav-desc">
+                      We develop custom features, workflows, dashboards, APIs, and integrations tailored to your stores, channels, and retail operations.
+                    </p>
+                    <div class="lifecycle-mobile-inline-media">
+                      <img src="assets/images/retails/showcase-web-app.webp" alt="Custom Retail Software Development and Systems Integration" width="380" height="200" loading="lazy">
+                    </div>
+                  </div>
+                </div>
+
+                <!-- PHASE 4: Testing & Quality Assurance -->
+                <div class="lifecycle-nav-card splide__slide" role="tab" aria-selected="false" tabindex="0"
+                     data-img-src="assets/images/retails/showcase-mobile-app.webp"
+                     data-img-alt="Retail Software Testing and Quality Assurance"
+                     data-tag="QA &amp; VERIFICATION"
+                     data-title="Testing &amp; Quality Assurance">
+                  <div class="lifecycle-nav-card-header">
+                    <div class="lifecycle-nav-node">04</div>
+                    <h3 class="lifecycle-nav-title">Testing &amp; Quality Assurance</h3>
+                    <div class="lifecycle-nav-chevron" aria-hidden="true">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="lifecycle-nav-card-body">
+                    <p class="lifecycle-nav-desc">
+                      We conduct functional, integration, performance, security, and usability testing to ensure reliable retail software before deployment.
+                    </p>
+                    <div class="lifecycle-mobile-inline-media">
+                      <img src="assets/images/retails/showcase-mobile-app.webp" alt="Retail Software Testing and Quality Assurance" width="380" height="200" loading="lazy">
+                    </div>
+                  </div>
+                </div>
+
+                <!-- PHASE 5: Deployment & Rollout -->
+                <div class="lifecycle-nav-card splide__slide" role="tab" aria-selected="false" tabindex="0"
+                     data-img-src="assets/images/retails/showcase-api-integration.webp"
+                     data-img-alt="Retail Software Deployment and Pilot Rollout"
+                     data-tag="PRODUCTION ROLLOUT"
+                     data-title="Deployment &amp; Rollout">
+                  <div class="lifecycle-nav-card-header">
+                    <div class="lifecycle-nav-node">05</div>
+                    <h3 class="lifecycle-nav-title">Deployment &amp; Rollout</h3>
+                    <div class="lifecycle-nav-chevron" aria-hidden="true">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="lifecycle-nav-card-body">
+                    <p class="lifecycle-nav-desc">
+                      We integrate and deploy your retail software through pilot stores, phased launches, or full migration aligned with your trading calendar.
+                    </p>
+                    <div class="lifecycle-mobile-inline-media">
+                      <img src="assets/images/retails/showcase-api-integration.webp" alt="Retail Software Deployment and Pilot Rollout" width="380" height="200" loading="lazy">
+                    </div>
+                  </div>
+                </div>
+
+                <!-- PHASE 6: Support, Maintenance & Optimization -->
+                <div class="lifecycle-nav-card splide__slide" role="tab" aria-selected="false" tabindex="0"
+                     data-img-src="assets/images/retails/showcase-maintenance.webp"
+                     data-img-alt="Retail Technology Support, Maintenance and Long-Term Optimization"
+                     data-tag="24/7 SUPPORT &amp; EVOLUTION"
+                     data-title="Support, Maintenance &amp; Optimization">
+                  <div class="lifecycle-nav-card-header">
+                    <div class="lifecycle-nav-node">06</div>
+                    <h3 class="lifecycle-nav-title">Support, Maintenance &amp; Optimization</h3>
+                    <div class="lifecycle-nav-chevron" aria-hidden="true">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="lifecycle-nav-card-body">
+                    <p class="lifecycle-nav-desc">
+                      We provide ongoing monitoring, security updates, performance optimization, and feature enhancements to keep your retail technology reliable.
+                    </p>
+                    <div class="lifecycle-mobile-inline-media">
+                      <img src="assets/images/retails/showcase-maintenance.webp" alt="Retail Technology Support, Maintenance and Long-Term Optimization" width="380" height="200" loading="lazy">
+                    </div>
+                  </div>
+                </div>
+
               </div>
             </div>
-
-            <!-- PHASE 2: Solution Design & Architecture -->
-            <div class="lifecycle-nav-card" role="tab" aria-selected="false" tabindex="0"
-                 data-img-src="assets/images/retails/showcase-cloud-solutions.webp"
-                 data-img-alt="Secure and Scalable Retail Solution Design and Architecture"
-                 data-tag="SYSTEM ARCHITECTURE"
-                 data-title="Solution Design &amp; Architecture">
-              <div class="lifecycle-nav-card-header">
-                <div class="lifecycle-nav-node">02</div>
-                <h3 class="lifecycle-nav-title">Solution Design &amp; Architecture</h3>
-                <div class="lifecycle-nav-chevron" aria-hidden="true">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="9 18 15 12 9 6"></polyline>
-                  </svg>
-                </div>
-              </div>
-              <div class="lifecycle-nav-card-body">
-                <p class="lifecycle-nav-desc">
-                  We design secure, scalable, AI-ready retail software architecture, data flows, and user experiences built for future growth.
-                </p>
-                <div class="lifecycle-mobile-inline-media">
-                  <img src="assets/images/retails/showcase-cloud-solutions.webp" alt="Secure and Scalable Retail Solution Design and Architecture" width="380" height="200" loading="lazy">
-                </div>
-              </div>
-            </div>
-
-            <!-- PHASE 3: Custom Development & Integration -->
-            <div class="lifecycle-nav-card" role="tab" aria-selected="false" tabindex="0"
-                 data-img-src="assets/images/retails/showcase-web-app.webp"
-                 data-img-alt="Custom Retail Software Development and Systems Integration"
-                 data-tag="ENGINEERING &amp; BUILD"
-                 data-title="Custom Development &amp; Integration">
-              <div class="lifecycle-nav-card-header">
-                <div class="lifecycle-nav-node">03</div>
-                <h3 class="lifecycle-nav-title">Custom Development &amp; Integration</h3>
-                <div class="lifecycle-nav-chevron" aria-hidden="true">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="9 18 15 12 9 6"></polyline>
-                  </svg>
-                </div>
-              </div>
-              <div class="lifecycle-nav-card-body">
-                <p class="lifecycle-nav-desc">
-                  We develop custom features, workflows, dashboards, APIs, and integrations tailored to your stores, channels, and retail operations.
-                </p>
-                <div class="lifecycle-mobile-inline-media">
-                  <img src="assets/images/retails/showcase-web-app.webp" alt="Custom Retail Software Development and Systems Integration" width="380" height="200" loading="lazy">
-                </div>
-              </div>
-            </div>
-
-            <!-- PHASE 4: Testing & Quality Assurance -->
-            <div class="lifecycle-nav-card" role="tab" aria-selected="false" tabindex="0"
-                 data-img-src="assets/images/retails/showcase-mobile-app.webp"
-                 data-img-alt="Retail Software Testing and Quality Assurance"
-                 data-tag="QA &amp; VERIFICATION"
-                 data-title="Testing &amp; Quality Assurance">
-              <div class="lifecycle-nav-card-header">
-                <div class="lifecycle-nav-node">04</div>
-                <h3 class="lifecycle-nav-title">Testing &amp; Quality Assurance</h3>
-                <div class="lifecycle-nav-chevron" aria-hidden="true">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="9 18 15 12 9 6"></polyline>
-                  </svg>
-                </div>
-              </div>
-              <div class="lifecycle-nav-card-body">
-                <p class="lifecycle-nav-desc">
-                  We conduct functional, integration, performance, security, and usability testing to ensure reliable retail software before deployment.
-                </p>
-                <div class="lifecycle-mobile-inline-media">
-                  <img src="assets/images/retails/showcase-mobile-app.webp" alt="Retail Software Testing and Quality Assurance" width="380" height="200" loading="lazy">
-                </div>
-              </div>
-            </div>
-
-            <!-- PHASE 5: Deployment & Rollout -->
-            <div class="lifecycle-nav-card" role="tab" aria-selected="false" tabindex="0"
-                 data-img-src="assets/images/retails/showcase-api-integration.webp"
-                 data-img-alt="Retail Software Deployment and Pilot Rollout"
-                 data-tag="PRODUCTION ROLLOUT"
-                 data-title="Deployment &amp; Rollout">
-              <div class="lifecycle-nav-card-header">
-                <div class="lifecycle-nav-node">05</div>
-                <h3 class="lifecycle-nav-title">Deployment &amp; Rollout</h3>
-                <div class="lifecycle-nav-chevron" aria-hidden="true">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="9 18 15 12 9 6"></polyline>
-                  </svg>
-                </div>
-              </div>
-              <div class="lifecycle-nav-card-body">
-                <p class="lifecycle-nav-desc">
-                  We integrate and deploy your retail software through pilot stores, phased launches, or full migration aligned with your trading calendar.
-                </p>
-                <div class="lifecycle-mobile-inline-media">
-                  <img src="assets/images/retails/showcase-api-integration.webp" alt="Retail Software Deployment and Pilot Rollout" width="380" height="200" loading="lazy">
-                </div>
-              </div>
-            </div>
-
-            <!-- PHASE 6: Support, Maintenance & Optimization -->
-            <div class="lifecycle-nav-card" role="tab" aria-selected="false" tabindex="0"
-                 data-img-src="assets/images/retails/showcase-maintenance.webp"
-                 data-img-alt="Retail Technology Support, Maintenance and Long-Term Optimization"
-                 data-tag="24/7 SUPPORT &amp; EVOLUTION"
-                 data-title="Support, Maintenance &amp; Optimization">
-              <div class="lifecycle-nav-card-header">
-                <div class="lifecycle-nav-node">06</div>
-                <h3 class="lifecycle-nav-title">Support, Maintenance &amp; Optimization</h3>
-                <div class="lifecycle-nav-chevron" aria-hidden="true">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="9 18 15 12 9 6"></polyline>
-                  </svg>
-                </div>
-              </div>
-              <div class="lifecycle-nav-card-body">
-                <p class="lifecycle-nav-desc">
-                  We provide ongoing monitoring, security updates, performance optimization, and feature enhancements to keep your retail technology reliable.
-                </p>
-                <div class="lifecycle-mobile-inline-media">
-                  <img src="assets/images/retails/showcase-maintenance.webp" alt="Retail Technology Support, Maintenance and Long-Term Optimization" width="380" height="200" loading="lazy">
-                </div>
-              </div>
-            </div>
-
           </div>
 
           <!-- Right Column: Interactive Lifecycle Terminal Stage (Desktop) -->
@@ -1488,75 +1496,10 @@
           </p>
         </div>
 
-        <!-- Dual-Wing Center Core Architecture Layout -->
+        <!-- Dual-Wing Center Core Architecture Layout (Desktop Grid & Mobile Slider) -->
         <div class="why-choose-grid">
 
-          <!-- Left Wing (Pillars 1-3) -->
-          <div class="why-choose-wing left-wing">
-
-            <!-- PILLAR 1: Custom-Built Solutions -->
-            <article class="why-pillar-card">
-              <div class="why-pillar-glow-accent"></div>
-              <div class="why-pillar-top">
-                <div class="why-pillar-icon" aria-hidden="true">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
-                  </svg>
-                </div>
-                <span class="why-pillar-index">01</span>
-              </div>
-              <h3 class="why-pillar-title">Custom-Built Solutions</h3>
-              <p class="why-pillar-desc">
-                We design software around your store formats and merchandising processes rather than forcing them into a generic template.
-              </p>
-            </article>
-
-            <!-- PILLAR 2: Integration-Focused Development -->
-            <article class="why-pillar-card">
-              <div class="why-pillar-glow-accent"></div>
-              <div class="why-pillar-top">
-                <div class="why-pillar-icon" aria-hidden="true">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="2" y="2" width="8" height="8" rx="2"></rect>
-                    <rect x="14" y="2" width="8" height="8" rx="2"></rect>
-                    <rect x="2" y="14" width="8" height="8" rx="2"></rect>
-                    <rect x="14" y="14" width="8" height="8" rx="2"></rect>
-                    <line x1="6" y1="10" x2="6" y2="14"></line>
-                    <line x1="18" y1="10" x2="18" y2="14"></line>
-                    <line x1="10" y1="6" x2="14" y2="6"></line>
-                    <line x1="10" y1="18" x2="14" y2="18"></line>
-                  </svg>
-                </div>
-                <span class="why-pillar-index">02</span>
-              </div>
-              <h3 class="why-pillar-title">Integration-Focused Development</h3>
-              <p class="why-pillar-desc">
-                We treat existing POS, ERP, CRM, and marketplace connections as part of the solution architecture from day one.
-              </p>
-            </article>
-
-            <!-- PILLAR 3: Scalable Architecture -->
-            <article class="why-pillar-card">
-              <div class="why-pillar-glow-accent"></div>
-              <div class="why-pillar-top">
-                <div class="why-pillar-icon" aria-hidden="true">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="18" y1="20" x2="18" y2="10"></line>
-                    <line x1="12" y1="20" x2="12" y2="4"></line>
-                    <line x1="6" y1="20" x2="6" y2="14"></line>
-                  </svg>
-                </div>
-                <span class="why-pillar-index">03</span>
-              </div>
-              <h3 class="why-pillar-title">Scalable Architecture</h3>
-              <p class="why-pillar-desc">
-                Applications can be structured to support future stores, channels, and product lines as your business grows.
-              </p>
-            </article>
-
-          </div>
-
-          <!-- Center Strategic Cyber-Core Pillar -->
+          <!-- Center Strategic Cyber-Core Pillar (Featured on Desktop Center / Mobile Top) -->
           <div class="why-choose-center-pillar">
             <div class="center-pillar-inner">
               <div class="center-core-beacon-wrap" aria-hidden="true">
@@ -1594,64 +1537,140 @@
             </div>
           </div>
 
-          <!-- Right Wing (Pillars 4-6) -->
-          <div class="why-choose-wing right-wing">
+          <!-- Splide Slider Wrapper for Pillars 1-6 (Mobile Slider & Desktop Wings) -->
+          <div class="splide why-choose-slider-wrap" id="why-choose-slider" aria-label="Why Retailers Choose Us Pillars Slider">
+            <div class="splide__track">
+              <div class="splide__list why-choose-pillars-list">
 
-            <!-- PILLAR 4: Conversion-Focused Interfaces -->
-            <article class="why-pillar-card">
-              <div class="why-pillar-glow-accent"></div>
-              <div class="why-pillar-top">
-                <div class="why-pillar-icon" aria-hidden="true">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                  </svg>
+                <!-- PILLAR 1: Custom-Built Solutions -->
+                <div class="splide__slide why-pillar-slide pillar-slide-1">
+                  <article class="why-pillar-card">
+                    <div class="why-pillar-glow-accent"></div>
+                    <div class="why-pillar-top">
+                      <div class="why-pillar-icon" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                        </svg>
+                      </div>
+                      <span class="why-pillar-index">01</span>
+                    </div>
+                    <h3 class="why-pillar-title">Custom-Built Solutions</h3>
+                    <p class="why-pillar-desc">
+                      We design software around your store formats and merchandising processes rather than forcing them into a generic template.
+                    </p>
+                  </article>
                 </div>
-                <span class="why-pillar-index">04</span>
-              </div>
-              <h3 class="why-pillar-title">Conversion-Focused Interfaces</h3>
-              <p class="why-pillar-desc">
-                Software is designed around the people who actually use it shoppers, associates, and store managers - with speed and checkout conversion in mind.
-              </p>
-            </article>
 
-            <!-- PILLAR 5: Modern Technology -->
-            <article class="why-pillar-card">
-              <div class="why-pillar-glow-accent"></div>
-              <div class="why-pillar-top">
-                <div class="why-pillar-icon" aria-hidden="true">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                    <polyline points="2 17 12 22 22 17"></polyline>
-                    <polyline points="2 12 12 17 22 12"></polyline>
-                  </svg>
+                <!-- PILLAR 2: Integration-Focused Development -->
+                <div class="splide__slide why-pillar-slide pillar-slide-2">
+                  <article class="why-pillar-card">
+                    <div class="why-pillar-glow-accent"></div>
+                    <div class="why-pillar-top">
+                      <div class="why-pillar-icon" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                          <rect x="2" y="2" width="8" height="8" rx="2"></rect>
+                          <rect x="14" y="2" width="8" height="8" rx="2"></rect>
+                          <rect x="2" y="14" width="8" height="8" rx="2"></rect>
+                          <rect x="14" y="14" width="8" height="8" rx="2"></rect>
+                          <line x1="6" y1="10" x2="6" y2="14"></line>
+                          <line x1="18" y1="10" x2="18" y2="14"></line>
+                          <line x1="10" y1="6" x2="14" y2="6"></line>
+                          <line x1="10" y1="18" x2="14" y2="18"></line>
+                        </svg>
+                      </div>
+                      <span class="why-pillar-index">02</span>
+                    </div>
+                    <h3 class="why-pillar-title">Integration-Focused Development</h3>
+                    <p class="why-pillar-desc">
+                      We treat existing POS, ERP, CRM, and marketplace connections as part of the solution architecture from day one.
+                    </p>
+                  </article>
                 </div>
-                <span class="why-pillar-index">05</span>
-              </div>
-              <h3 class="why-pillar-title">Modern Technology</h3>
-              <p class="why-pillar-desc">
-                Where appropriate, we can incorporate cloud infrastructure, APIs, RFID, computer vision, and agentic AI.
-              </p>
-            </article>
 
-            <!-- PILLAR 6: Long-Term Development Support -->
-            <article class="why-pillar-card">
-              <div class="why-pillar-glow-accent"></div>
-              <div class="why-pillar-top">
-                <div class="why-pillar-icon" aria-hidden="true">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <polyline points="12 6 12 12 16 14"></polyline>
-                  </svg>
+                <!-- PILLAR 3: Scalable Architecture -->
+                <div class="splide__slide why-pillar-slide pillar-slide-3">
+                  <article class="why-pillar-card">
+                    <div class="why-pillar-glow-accent"></div>
+                    <div class="why-pillar-top">
+                      <div class="why-pillar-icon" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                          <line x1="18" y1="20" x2="18" y2="10"></line>
+                          <line x1="12" y1="20" x2="12" y2="4"></line>
+                          <line x1="6" y1="20" x2="6" y2="14"></line>
+                        </svg>
+                      </div>
+                      <span class="why-pillar-index">03</span>
+                    </div>
+                    <h3 class="why-pillar-title">Scalable Architecture</h3>
+                    <p class="why-pillar-desc">
+                      Applications can be structured to support future stores, channels, and product lines as your business grows.
+                    </p>
+                  </article>
                 </div>
-                <span class="why-pillar-index">06</span>
-              </div>
-              <h3 class="why-pillar-title">Long-Term Development Support</h3>
-              <p class="why-pillar-desc">
-                Retail technology and shopper expectations keep evolving. Your software should be able to evolve with them.
-              </p>
-            </article>
 
+                <!-- PILLAR 4: Conversion-Focused Interfaces -->
+                <div class="splide__slide why-pillar-slide pillar-slide-4">
+                  <article class="why-pillar-card">
+                    <div class="why-pillar-glow-accent"></div>
+                    <div class="why-pillar-top">
+                      <div class="why-pillar-icon" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                          <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                      </div>
+                      <span class="why-pillar-index">04</span>
+                    </div>
+                    <h3 class="why-pillar-title">Conversion-Focused Interfaces</h3>
+                    <p class="why-pillar-desc">
+                      Software is designed around the people who actually use it shoppers, associates, and store managers - with speed and checkout conversion in mind.
+                    </p>
+                  </article>
+                </div>
+
+                <!-- PILLAR 5: Modern Technology -->
+                <div class="splide__slide why-pillar-slide pillar-slide-5">
+                  <article class="why-pillar-card">
+                    <div class="why-pillar-glow-accent"></div>
+                    <div class="why-pillar-top">
+                      <div class="why-pillar-icon" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                          <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                          <polyline points="2 17 12 22 22 17"></polyline>
+                          <polyline points="2 12 12 17 22 12"></polyline>
+                        </svg>
+                      </div>
+                      <span class="why-pillar-index">05</span>
+                    </div>
+                    <h3 class="why-pillar-title">Modern Technology</h3>
+                    <p class="why-pillar-desc">
+                      Where appropriate, we can incorporate cloud infrastructure, APIs, RFID, computer vision, and agentic AI.
+                    </p>
+                  </article>
+                </div>
+
+                <!-- PILLAR 6: Long-Term Development Support -->
+                <div class="splide__slide why-pillar-slide pillar-slide-6">
+                  <article class="why-pillar-card">
+                    <div class="why-pillar-glow-accent"></div>
+                    <div class="why-pillar-top">
+                      <div class="why-pillar-icon" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                          <circle cx="12" cy="12" r="10"></circle>
+                          <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                      </div>
+                      <span class="why-pillar-index">06</span>
+                    </div>
+                    <h3 class="why-pillar-title">Long-Term Development Support</h3>
+                    <p class="why-pillar-desc">
+                      Retail technology and shopper expectations keep evolving. Your software should be able to evolve with them.
+                    </p>
+                  </article>
+                </div>
+
+              </div>
+            </div>
           </div>
 
         </div>

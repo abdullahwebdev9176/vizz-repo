@@ -897,6 +897,23 @@ b {
   scrollbar-color: var(--btn-color) #e2e8f0;
 }
 
+.ai-theater-nav-stack.splide,
+.ai-theater-nav-stack .splide__track {
+  overflow: visible;
+}
+
+.ai-theater-nav-stack .splide__track,
+.ai-theater-nav-stack .splide__list,
+.ai-nav-card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .ai-theater-nav-stack::-webkit-scrollbar {
   width: 6px;
 }
@@ -1212,6 +1229,23 @@ b {
   scroll-behavior: smooth;
   scrollbar-width: thin;
   scrollbar-color: var(--btn-color) rgba(7, 21, 43, 0.6);
+}
+
+.lifecycle-nav-stack.splide,
+.lifecycle-nav-stack .splide__track {
+  overflow: visible;
+}
+
+.lifecycle-nav-stack .splide__track,
+.lifecycle-nav-stack .splide__list,
+.lifecycle-nav-card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .lifecycle-nav-stack::-webkit-scrollbar {
@@ -1576,10 +1610,58 @@ b {
   align-items: stretch !important;
 }
 
-.why-choose-wing {
+.why-choose-center-pillar {
+  grid-column: 2;
+  grid-row: 1 / span 3;
   display: flex;
-  flex-direction: column;
-  gap: 20px;
+  height: 100%;
+}
+
+.why-choose-slider-wrap,
+.why-choose-slider-wrap .splide__track {
+  display: contents !important;
+}
+
+.why-choose-pillars-list {
+  display: contents !important;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.why-pillar-slide {
+  display: flex !important;
+  height: auto;
+}
+
+.why-pillar-slide.pillar-slide-1 {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.why-pillar-slide.pillar-slide-2 {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.why-pillar-slide.pillar-slide-3 {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.why-pillar-slide.pillar-slide-4 {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.why-pillar-slide.pillar-slide-5 {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.why-pillar-slide.pillar-slide-6 {
+  grid-column: 3;
+  grid-row: 3;
 }
 
 /* Advantage Wing Cards */
@@ -2588,20 +2670,57 @@ b {
     text-align: center;
   }
 
-  /* Section 7 (Why Choose Us) on Tablet */
+  /* Section 7 (Why Choose Us) on Tablet & Mobile (Splide Slider) */
   .why-choose-grid {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 20px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 24px !important;
   }
 
-  .why-choose-wing {
-    display: contents;
+  .why-choose-center-pillar {
+    order: -1;
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .why-choose-slider-wrap {
+    display: block !important;
+    width: 100% !important;
+    visibility: visible !important;
+  }
+
+  .why-choose-slider-wrap .splide__track {
+    display: block !important;
+    overflow: hidden !important;
+    position: relative !important;
+    width: 100% !important;
+    padding: 8px 0 !important;
+  }
+
+  .why-choose-pillars-list {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    gap: 0 !important;
+    width: auto !important;
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .why-pillar-slide {
+    display: flex !important;
+    flex-direction: column !important;
+    flex-shrink: 0 !important;
+    height: auto !important;
+    min-width: 0 !important;
   }
 
   .why-pillar-card {
     text-align: center;
     align-items: center;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .why-pillar-top {
@@ -2615,13 +2734,6 @@ b {
   }
 
   .why-pillar-desc {
-    text-align: center;
-  }
-
-  .why-choose-center-pillar {
-    grid-column: span 2;
-    order: -1;
-    margin-bottom: 8px;
     text-align: center;
   }
 
@@ -2720,9 +2832,15 @@ b {
   .splide__list.capabilities-grid,
   .splide__list.solutions-matrix-deck,
   .splide__list.retail-sectors-grid,
+  .splide__list.ai-nav-card-list,
+  .splide__list.lifecycle-nav-card-list,
+  .splide__list.why-choose-pillars-list,
   .capabilities-grid,
   .solutions-matrix-deck,
-  .retail-sectors-grid {
+  .retail-sectors-grid,
+  .ai-nav-card-list,
+  .lifecycle-nav-card-list,
+  .why-choose-pillars-list {
     display: flex !important;
     flex-direction: row !important;
     flex-wrap: nowrap !important;
@@ -2737,7 +2855,8 @@ b {
   }
 
   .splide .splide__slide,
-  .splide__slide {
+  .splide__slide,
+  .why-pillar-slide {
     display: flex !important;
     flex-direction: column !important;
     flex-shrink: 0 !important;
@@ -2749,7 +2868,10 @@ b {
 
   .splide .transport-style-card,
   .splide .solution-matrix-item,
-  .splide .sector-holo-card {
+  .splide .sector-holo-card,
+  .splide .ai-nav-card,
+  .splide .lifecycle-nav-card,
+  .splide .why-pillar-card {
     min-width: 0 !important;
     width: 100% !important;
     max-width: 100% !important;
@@ -2818,14 +2940,9 @@ b {
     gap: 14px;
   }
 
-  /* Section 7 Single Column on Phone */
+  /* Section 7 on Mobile */
   .why-choose-grid {
-    grid-template-columns: 1fr !important;
-    gap: 16px !important;
-  }
-
-  .why-choose-center-pillar {
-    grid-column: auto;
+    gap: 18px !important;
   }
 
   /* Pipeline Mobile adjustments */
