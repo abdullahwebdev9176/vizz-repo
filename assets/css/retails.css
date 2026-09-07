@@ -60,7 +60,7 @@
   /* Layout Spacing (Desktop Default) */
   --container-padding: 24px;
   --section-padding: 90px 0;
-  --max-width-container: calc(100% - 15%)
+  --max-width-container: calc(100% - 15%);
 }
 
 /* --------------------------------------------------------------------------
@@ -365,13 +365,15 @@ b {
   max-width: 900px;
   margin: 0 auto 48px auto;
 }
-
+.bg-tansparent {
+  background: transparent !important;
+}
 .section-eyebrow-pill {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(255, 107, 74, 0.12);
-  border: 1px solid rgba(255, 107, 74, 0.3);
+  background: #dfedf5;
+  border: 1px solid #248fce;
   color: var(--accent-coral);
   padding: 5px 16px;
   border-radius: 50px;
@@ -895,6 +897,12 @@ b {
   flex-direction: column;
   gap: 14px;
   max-height: 480px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 12px;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--btn-color) #e2e8f0;
 }
 
 .ai-theater-nav-stack::-webkit-scrollbar {
@@ -1109,9 +1117,11 @@ b {
   0% {
     box-shadow: 0 0 0 0 rgba(39, 201, 63, 0.7);
   }
+
   70% {
     box-shadow: 0 0 0 8px rgba(39, 201, 63, 0);
   }
+
   100% {
     box-shadow: 0 0 0 0 rgba(39, 201, 63, 0);
   }
@@ -2618,6 +2628,7 @@ b {
    10.5 MAX-WIDTH: 575px (Standard Small Mobile Phones)
    -------------------------------------------------------------------------- */
 @media screen and (max-width: 575px) {
+
   .btn-primary-pill,
   .btn-secondary-pill {
     width: 100%;
