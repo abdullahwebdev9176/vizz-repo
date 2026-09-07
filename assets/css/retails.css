@@ -807,9 +807,9 @@ b {
 }
 
 .stat-badge-icon-wrap.icon-coral {
-  background: rgba(255, 107, 74, 0.15);
+  background: rgba(36, 143, 206, 0.15);
   color: var(--accent-coral);
-  border-color: rgba(255, 107, 74, 0.3);
+  border-color: rgba(36, 143, 206, 0.3);
 }
 
 .stat-badge-number {
@@ -882,7 +882,7 @@ b {
   background: var(--accent-coral);
   border-color: var(--accent-coral);
   color: #ffffff;
-  box-shadow: 0 0 16px rgba(255, 107, 74, 0.5);
+  box-shadow: 0 0 16px var(--accent-coral);
   transform: scale(1.06);
 }
 
