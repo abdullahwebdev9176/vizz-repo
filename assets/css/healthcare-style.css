@@ -252,13 +252,8 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 .btn-primary-pill:hover {
   background: var(--btn-color-hover);
   border: 1px solid var(--btn-color);
-  transform: translateY(-2px);
   box-shadow: 0 12px 30px rgba(0, 136, 255, 0.5);
   color: var(--btn-color) !important;
-}
-
-.btn-primary-pill:active {
-  transform: translateY(0);
 }
 
 .btn-secondary-pill {
@@ -286,13 +281,8 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 .btn-secondary-pill:hover {
   background: var(--btn-color);
   border: 1px solid var(--btn-color);
-  transform: translateY(-2px);
   box-shadow: 0 12px 30px rgba(0, 136, 255, 0.5);
   color: var(--btn-color-hover) !important;
-}
-
-.btn-secondary-pill:active {
-  transform: translateY(0);
 }
 
 /* --------------------------------------------------------------------------
@@ -420,11 +410,9 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 @keyframes heroFadeIn {
   from {
     opacity: 0;
-    transform: translateY(-6px);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
   }
 }
 
@@ -715,7 +703,6 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 .transport-style-card:hover {
-  transform: translateY(-6px);
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.09);
   border-color: rgba(23, 161, 254, 0.3);
 }
@@ -798,11 +785,9 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 @keyframes fadeInContent {
   from {
     opacity: 0;
-    transform: translateY(4px);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
   }
 }
 
@@ -984,7 +969,6 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 .bento-card:hover {
-  transform: translateY(-4px);
   border-color: var(--btn-cyan);
   box-shadow: 0 16px 36px rgba(0, 180, 216, 0.15);
 }
@@ -1123,7 +1107,6 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 .deck-card:hover {
-  transform: translateY(-5px);
   border-color: rgba(23, 161, 254, 0.5);
   box-shadow: 0 14px 32px rgba(0, 0, 0, 0.4);
 }
@@ -1175,7 +1158,6 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 .lims-card-item:hover {
-  transform: translateY(-2px);
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
 }
 
@@ -1241,7 +1223,6 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 .connected-card:hover {
-  transform: translateY(-6px);
   border-color: var(--btn-cyan);
   box-shadow: 0 16px 36px rgba(0, 180, 216, 0.2);
 }
@@ -1320,7 +1301,6 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 .process-step-card:hover {
-  transform: translateY(-5px);
   border-color: var(--btn-color);
   box-shadow: 0 14px 30px rgba(23, 161, 254, 0.12);
 }
@@ -1394,7 +1374,6 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 .sector-card:hover {
-  transform: translateY(-4px);
   border-color: rgba(0, 180, 216, 0.5);
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
 }
@@ -1469,7 +1448,6 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 .partner-value-card:hover {
-  transform: translateY(-4px);
   border-color: var(--btn-color);
   box-shadow: 0 12px 28px rgba(23, 161, 254, 0.12);
 }
@@ -1538,7 +1516,6 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 .tech-category-card:hover {
-  transform: translateY(-5px);
   border-color: var(--btn-cyan);
   box-shadow: 0 14px 32px rgba(0, 180, 216, 0.15);
 }
@@ -1597,7 +1574,6 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   background: rgba(0, 180, 216, 0.18);
   border-color: var(--btn-cyan);
   color: var(--white-color);
-  transform: translateY(-1px);
 }
 
 /* --------------------------------------------------------------------------
@@ -1625,7 +1601,6 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 .cost-factor-card:hover {
-  transform: translateY(-5px);
   border-top-color: var(--btn-cyan);
   box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
 }
