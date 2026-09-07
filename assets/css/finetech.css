@@ -1,7 +1,7 @@
 /* ==========================================================================
-   VIZZ WEB SOLUTIONS - RETAIL & E-COMMERCE DEDICATED STYLESHEET
-   Page: retails.html
-   Focus: Retail Software Development Services - Hero Section & Lead Capture Form
+   VIZZ WEB SOLUTIONS - FINTECH SOFTWARE DEVELOPMENT DEDICATED STYLESHEET
+   Page: finetech.html
+   Focus: Fintech & Financial Software Development Services
    Design Philosophy: Desktop-First Base Architecture, Only Max-Width Responsive Cascade, Rich Aesthetics & SEO Compliance
    ========================================================================== */
 
@@ -301,9 +301,11 @@ b {
   flex-direction: row;
   gap: 14px;
 }
+
 .form-row-2col .form-group {
   width: 50%;
 }
+
 .form-group {
   display: flex;
   flex-direction: column;
@@ -367,9 +369,11 @@ b {
   max-width: 900px;
   margin: 0 auto 48px auto;
 }
+
 .bg-tansparent {
   background: transparent !important;
 }
+
 .section-eyebrow-pill {
   display: inline-flex;
   align-items: center;
@@ -2365,21 +2369,26 @@ b {
    10.3 MAX-WIDTH: 991px (Tablets & Mobile Viewports - Sliders & Mobile Layouts)
    -------------------------------------------------------------------------- */
 @media screen and (max-width: 991px) {
-  
+
   :root {
     --container-padding: 20px;
     --section-padding: 65px 0;
     --max-width-container: 100%;
   }
+
   .form-row-2col .form-group {
-  width: 100%;
-}
-.sector-icon-badge, .matrix-arrow-badge {
-  display: none;
-}
-.lifecycle-nav-desc {
-  text-align: center;
-}
+    width: 100%;
+  }
+
+  .sector-icon-badge,
+  .matrix-arrow-badge {
+    display: none;
+  }
+
+  .lifecycle-nav-desc {
+    text-align: center;
+  }
+
   /* Section Headers Center Alignment */
   .section-header-center {
     text-align: center;
@@ -2853,7 +2862,8 @@ b {
     display: flex !important;
     flex-direction: row !important;
     flex-wrap: nowrap !important;
-    gap: 0 !important; /* CRITICAL: Must be 0 so Splide calculates exact slide width and positioning */
+    gap: 0 !important;
+    /* CRITICAL: Must be 0 so Splide calculates exact slide width and positioning */
     grid-template-columns: none !important;
     margin: 0 !important;
     padding: 0 !important;
