@@ -151,13 +151,8 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 .btn-primary-pill:hover {
   background: var(--btn-color-hover);
   border: 1px solid var(--btn-color);
-  transform: translateY(-2px);
   box-shadow: 0 12px 30px rgba(0, 136, 255, 0.5);
   color: var(--btn-color) !important;
-}
-
-.btn-primary-pill:active {
-  transform: translateY(0);
 }
 
 .btn-secondary-pill,
@@ -187,14 +182,8 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 .btn-outline-pill:hover {
   background: var(--btn-color);
   border: 1px solid var(--btn-color);
-  transform: translateY(-2px);
   box-shadow: 0 12px 30px rgba(0, 136, 255, 0.5);
   color: var(--white-color) !important;
-}
-
-.btn-secondary-pill:active,
-.btn-outline-pill:active {
-  transform: translateY(0);
 }
 
 /* --------------------------------------------------------------------------
@@ -658,10 +647,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   transition: transform 0.3s ease;
 }
 
-.experience-floating-card:hover {
-  transform: translateY(-4px);
-}
-
 .top-floating-card {
   top: -15px;
   right: -15px;
@@ -975,7 +960,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 }
 
 .api-outcome-card:hover {
-  transform: translateY(-3px);
   border-color: var(--btn-primary);
   box-shadow: 0 10px 25px rgba(0, 180, 216, 0.15);
 }
@@ -1049,7 +1033,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 }
 
 .invest-card:hover {
-  transform: translateY(-3px);
   border-color: var(--btn-primary);
   box-shadow: 0 12px 30px rgba(0, 136, 255, 0.12);
 }
@@ -1222,7 +1205,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 }
 
 .tech-card:hover {
-  transform: translateY(-4px);
   border-color: var(--btn-primary);
   box-shadow: 0 14px 35px rgba(0, 136, 255, 0.2);
   background: rgba(14, 34, 70, 0.85);
@@ -1296,7 +1278,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   background: rgba(0, 180, 216, 0.15);
   border-color: var(--btn-primary);
   color: var(--white-color);
-  transform: translateY(-1px);
 }
 
 .highlight-tag {
@@ -1349,7 +1330,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 }
 
 .industry-card:hover {
-  transform: translateY(-4px);
   background: var(--bg-light);
   border-color: var(--btn-primary);
   box-shadow: 0 12px 30px rgba(0, 136, 255, 0.12);
@@ -1498,7 +1478,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 .tech-stack-slider .splide__arrow:hover:not(:disabled) {
   background: var(--btn-primary);
   border-color: var(--btn-primary);
-  transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(0, 136, 255, 0.4);
 }
 
@@ -1581,7 +1560,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 .industries-slider .splide__arrow:hover:not(:disabled) {
   background: var(--btn-primary);
   border-color: var(--btn-primary);
-  transform: translateY(-2px);
   box-shadow: 0 8px 22px rgba(0, 136, 255, 0.3);
 }
 
@@ -1796,7 +1774,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 }
 
 .process-step-card:hover {
-  transform: translateY(-5px);
   border-color: var(--btn-primary);
   box-shadow: 0 14px 35px rgba(0, 136, 255, 0.14);
 }
@@ -1903,7 +1880,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 }
 
 .case-study-card:hover {
-  transform: translateY(-5px);
   border-color: var(--btn-primary);
   background: rgba(14, 34, 70, 0.85);
   box-shadow: 0 16px 40px rgba(0, 136, 255, 0.2);

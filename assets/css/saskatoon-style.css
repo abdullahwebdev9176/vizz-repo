@@ -268,13 +268,8 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 .btn-primary-pill:hover {
   background: var(--btn-color-hover);
   border: 1px solid var(--btn-color);
-  transform: translateY(-2px);
   box-shadow: 0 12px 30px rgba(0, 136, 255, 0.5);
   color: var(--btn-color) !important;
-}
-
-.btn-primary-pill:active {
-  transform: translateY(0);
 }
 
 .btn-secondary-pill {
@@ -286,7 +281,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 .btn-secondary-pill:hover {
   background: var(--btn-color);
   border: 1px solid var(--btn-color);
-  transform: translateY(-2px);
   box-shadow: 0 12px 30px rgba(0, 136, 255, 0.5);
   color: var(--white-color) !important;
 }
@@ -417,11 +411,9 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 @keyframes heroFadeIn {
   from {
     opacity: 0;
-    transform: translateY(-6px);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
   }
 }
 
@@ -719,7 +711,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 
 
 .service-card-item:hover {
-  transform: translateY(-4px);
   border-color: rgba(0, 180, 216, 0.4);
   box-shadow: 0 16px 40px rgba(0, 136, 255, 0.18);
 }
@@ -801,7 +792,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 
 
 .pillar-card:hover {
-  transform: translateY(-4px);
   border-color: rgba(0, 180, 216, 0.4);
   box-shadow: 0 16px 36px rgba(7, 21, 43, 0.08);
 }
@@ -876,7 +866,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 
 
 .ai-card-item:hover {
-  transform: translateY(-4px);
   border-color: rgba(0, 180, 216, 0.4);
   box-shadow: 0 16px 40px rgba(0, 136, 255, 0.18);
 }
@@ -957,7 +946,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 }
 
 .tech-card:hover {
-  transform: translateY(-3px);
   border-color: var(--btn-primary);
   box-shadow: 0 12px 30px rgba(0, 136, 255, 0.2);
 }
@@ -1126,7 +1114,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 
 
 .challenge-card:hover {
-  transform: translateY(-4px);
   border-color: rgba(0, 180, 216, 0.45);
   box-shadow: 0 16px 36px rgba(7, 21, 43, 0.08);
 }
@@ -1201,7 +1188,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 
 
 .process-card:hover {
-  transform: translateY(-4px);
   border-color: rgba(0, 180, 216, 0.45);
   box-shadow: 0 16px 36px rgba(0, 136, 255, 0.2);
 }
@@ -1294,7 +1280,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 }
 
 .saskatoon-industry-card:hover {
-  transform: translateY(-4px);
   border-color: rgba(0, 180, 216, 0.45);
   box-shadow: 0 14px 30px rgba(7, 21, 43, 0.08);
   background: #ffffff;
@@ -1362,7 +1347,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 
 
 .cost-factor-card:hover {
-  transform: translateY(-4px);
   border-color: rgba(0, 180, 216, 0.45);
   box-shadow: 0 16px 36px rgba(0, 136, 255, 0.2);
 }
@@ -1467,7 +1451,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 }
 
 .partner-point-item:hover {
-  transform: translateY(-3px);
   border-color: rgba(0, 180, 216, 0.45);
   box-shadow: 0 10px 24px rgba(7, 21, 43, 0.07);
 }
@@ -1610,7 +1593,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 
 
 .service-zone-card:hover {
-  transform: translateY(-3px);
   border-color: var(--btn-primary);
   box-shadow: 0 14px 35px rgba(0, 136, 255, 0.18);
 }
@@ -1735,7 +1717,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 }
 
 .hire-dev-highlight-card:hover {
-  transform: translateY(-3px);
   border-color: rgba(0, 180, 216, 0.45);
   box-shadow: 0 10px 24px rgba(7, 21, 43, 0.06);
 }

@@ -196,13 +196,8 @@ b {
 .btn-primary-pill:hover {
   background: var(--btn-color-hover);
   border: 1px solid var(--btn-color);
-  transform: translateY(-2px);
   box-shadow: 0 12px 30px rgba(0, 136, 255, 0.5);
   color: var(--btn-color) !important;
-}
-
-.btn-primary-pill:active {
-  transform: translateY(0);
 }
 
 /* --------------------------------------------------------------------------
@@ -332,11 +327,9 @@ b {
 @keyframes heroFadeIn {
   from {
     opacity: 0;
-    transform: translateY(-6px);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
   }
 }
 
@@ -547,7 +540,6 @@ b {
 }
 
 .transport-style-card:hover {
-  transform: translateY(-5px);
   box-shadow: 0 16px 36px rgba(36, 143, 206, 0.14);
   border-color: rgba(36, 143, 206, 0.6);
 }
@@ -651,12 +643,10 @@ b {
 @keyframes fadeInContent {
   from {
     opacity: 0;
-    transform: translateY(4px);
   }
 
   to {
     opacity: 1;
-    transform: translateY(0);
   }
 }
 
@@ -790,7 +780,6 @@ b {
 }
 
 .floating-stat-badge:hover {
-  transform: translateY(-3px);
   border-color: var(--btn-color);
 }
 
@@ -866,7 +855,6 @@ b {
 }
 
 .solution-matrix-item:hover {
-  transform: translateY(-4px);
   background: #0f274c;
   border-color: rgba(36, 143, 206, 0.65);
   box-shadow: 0 14px 32px rgba(0, 136, 255, 0.2);
@@ -1569,7 +1557,6 @@ b {
 }
 
 .sector-holo-card:hover {
-  transform: translateY(-6px);
   background: #ffffff;
   border-color: rgba(36, 143, 206, 0.7);
   box-shadow: 0 16px 36px rgba(36, 143, 206, 0.14);
@@ -1752,7 +1739,6 @@ b {
 .why-pillar-card:hover {
   background: rgba(12, 35, 69, 0.95);
   border-color: rgba(36, 143, 206, 0.8);
-  transform: translateY(-4px);
   box-shadow: 0 14px 32px rgba(36, 143, 206, 0.22);
 }
 
@@ -2092,7 +2078,6 @@ b {
 .pipeline-node-card:hover {
   background: #ffffff;
   border-color: rgba(36, 143, 206, 0.7);
-  transform: translateY(-4px);
   box-shadow: 0 16px 36px rgba(36, 143, 206, 0.14);
 }
 
@@ -2105,7 +2090,6 @@ b {
   width: 20px;
   height: 2px;
   background: linear-gradient(90deg, rgba(36, 143, 206, 0.3), var(--btn-color));
-  transform: translateY(-50%);
   transition: all 0.35s ease;
 }
 
@@ -2117,7 +2101,6 @@ b {
   width: 20px;
   height: 2px;
   background: linear-gradient(90deg, var(--btn-color), rgba(36, 143, 206, 0.3));
-  transform: translateY(-50%);
   transition: all 0.35s ease;
 }
 
