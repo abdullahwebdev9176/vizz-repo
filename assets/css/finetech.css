@@ -242,14 +242,43 @@ b {
    5. SECTION 1: HERO SECTION & LEAD CAPTURE FORM
    -------------------------------------------------------------------------- */
 .hero-section {
-  background: var(--bg-dark);
-  background-image:
-    radial-gradient(circle at 15% 20%, rgba(0, 180, 216, 0.12) 0%, transparent 40%),
-    radial-gradient(circle at 85% 70%, rgba(23, 161, 254, 0.1) 0%, transparent 45%);
-  padding: var(--section-padding);
   position: relative;
+  background-color: var(--bg-dark);
+  background-image: linear-gradient(135deg, rgba(7, 21, 43, 0.92) 0%, rgba(11, 27, 54, 0.88) 50%, rgba(8, 29, 63, 0.94) 100%),
+                    url('../images/hero-img.webp');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: var(--section-padding);
   overflow: hidden;
   border-bottom: 1px solid var(--border-dark);
+}
+
+/* Glowing Background Accents */
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: -15%;
+  left: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(0, 180, 216, 0.18) 0%, rgba(7, 21, 43, 0) 70%);
+  pointer-events: none;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.hero-section::after {
+  content: '';
+  position: absolute;
+  bottom: -20%;
+  right: -10%;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(0, 136, 255, 0.15) 0%, rgba(7, 21, 43, 0) 70%);
+  pointer-events: none;
+  border-radius: 50%;
+  z-index: 1;
 }
 
 .hero-section-flex {
