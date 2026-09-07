@@ -54,7 +54,7 @@
 
   /* Shadows */
   --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.05);
-  --shadow-card-elevated: 0 16px 36px rgba(0, 0, 0, 0.22);
+  --shadow-card-elevated: 0 16px 36px rgba(0, 0, 0, 0.12);
   --shadow-btn: 0 8px 25px rgba(0, 136, 255, 0.35);
 
   /* Layout Spacing (Desktop Default) */
@@ -300,7 +300,7 @@ b {
   border: 1px solid var(--border-dark);
   border-radius: var(--border-radius-card);
   padding: 28px 26px;
-  box-shadow: var(--shadow-card-elevated);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.22);
 }
 
 .form-card-header {
@@ -394,12 +394,210 @@ b {
   gap: 6px;
 }
 
+/* --------------------------------------------------------------------------
+   6. SECTION 2: WHAT IS CUSTOM FINANCIAL SOFTWARE DEVELOPMENT
+   -------------------------------------------------------------------------- */
+.overview-section {
+  background: var(--bg-light);
+  padding: var(--section-padding);
+  position: relative;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.overview-split-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.overview-content-col {
+  text-align: left;
+}
+
+/* Eyebrow Pill */
+.section-eyebrow-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #dfedf5;
+  border: 1px solid #248fce;
+  color: var(--btn-color);
+  padding: 5px 16px;
+  border-radius: 50px;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.eyebrow-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--btn-color);
+}
+
+.overview-title {
+  color: var(--text-dark);
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 18px;
+}
+
+.overview-description {
+  color: var(--text-muted-light);
+  font-size: 15.5px;
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+
+/* Feature Points */
+.overview-feature-points {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 26px 0 30px 0;
+}
+
+.overview-point-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.point-icon-badge {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #dfedf5;
+  border: 1px solid rgba(36, 143, 206, 0.35);
+  color: var(--btn-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+}
+
+.point-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 3px;
+  line-height: 1.35;
+}
+
+.point-desc {
+  font-size: 14px;
+  color: var(--text-muted-light);
+  line-height: 1.55;
+  margin: 0;
+}
+
+.overview-action {
+  margin-top: 8px;
+}
+
+/* Right Media Column */
+.overview-media-col {
+  position: relative;
+}
+
+.overview-image-frame {
+  position: relative;
+  border-radius: var(--border-radius-card);
+}
+
+.overview-img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius-card);
+  border: 1px solid var(--border-light);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.1);
+}
+
+/* Floating Glassmorphic Badges */
+.overview-floating-badge {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: var(--border-radius-card-sm);
+  padding: 12px 18px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  z-index: 3;
+  animation: floatUpDown 4s ease-in-out infinite;
+}
+
+.badge-top-right {
+  top: -20px;
+  right: -20px;
+}
+
+.badge-bottom-left {
+  bottom: -20px;
+  left: -20px;
+  animation-delay: 2s;
+}
+
+@keyframes floatUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.badge-icon-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #dfedf5;
+  color: var(--btn-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.badge-icon-circle.icon-cyan {
+  background: #e0f2fe;
+  color: #0284c7;
+}
+
+.badge-text-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.badge-stat-num {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-dark);
+  line-height: 1.2;
+}
+
+.badge-stat-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-muted-light);
+  line-height: 1.3;
+}
+
 /* ==========================================================================
-   6. RESPONSIVE MEDIA QUERIES (Strict Desktop-First Max-Width Cascade)
+   7. RESPONSIVE MEDIA QUERIES (Strict Desktop-First Max-Width Cascade)
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   6.1 MAX-WIDTH: 1599px (Large Laptops & Desktops)
+   7.1 MAX-WIDTH: 1599px (Large Laptops & Desktops)
    -------------------------------------------------------------------------- */
 @media screen and (max-width: 1599px) {
   :root {
@@ -410,10 +608,14 @@ b {
   .hero-title {
     font-size: 42px;
   }
+
+  .overview-title {
+    font-size: 34px;
+  }
 }
 
 /* --------------------------------------------------------------------------
-   6.2 MAX-WIDTH: 1200px (Medium Desktops & Small Laptops)
+   7.2 MAX-WIDTH: 1200px (Medium Desktops & Small Laptops)
    -------------------------------------------------------------------------- */
 @media screen and (max-width: 1200px) {
   :root {
@@ -428,10 +630,28 @@ b {
   .hero-section-flex {
     gap: 32px;
   }
+
+  .overview-split-grid {
+    gap: 36px;
+  }
+
+  .overview-title {
+    font-size: 30px;
+  }
+
+  .badge-top-right {
+    top: -12px;
+    right: -10px;
+  }
+
+  .badge-bottom-left {
+    bottom: -12px;
+    left: -10px;
+  }
 }
 
 /* --------------------------------------------------------------------------
-   6.3 MAX-WIDTH: 991px (Tablets & Mobile Viewports)
+   7.3 MAX-WIDTH: 991px (Tablets & Mobile Viewports)
    -------------------------------------------------------------------------- */
 @media screen and (max-width: 991px) {
   :root {
@@ -440,6 +660,7 @@ b {
     --max-width-container: 100%;
   }
 
+  /* Section 1: Hero */
   .hero-section-flex {
     flex-direction: column;
     align-items: center;
@@ -486,10 +707,53 @@ b {
   .form-row-2col .form-group {
     width: 100%;
   }
+
+  /* Section 2: Overview */
+  .overview-split-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .overview-content-col {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .overview-title {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .overview-description {
+    text-align: center;
+    max-width: 660px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .overview-feature-points {
+    align-items: flex-start;
+    text-align: left;
+    max-width: 620px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .overview-action {
+    text-align: center;
+  }
+
+  .overview-media-col {
+    max-width: 580px;
+    margin: 0 auto;
+    width: 100%;
+  }
 }
 
 /* --------------------------------------------------------------------------
-   6.4 MAX-WIDTH: 767px (Large Mobile Devices)
+   7.4 MAX-WIDTH: 767px (Large Mobile Devices)
    -------------------------------------------------------------------------- */
 @media screen and (max-width: 767px) {
   :root {
@@ -514,10 +778,48 @@ b {
   .form-card-title {
     font-size: 18px;
   }
+
+  .overview-title {
+    font-size: 26px;
+    line-height: 1.25;
+  }
+
+  .overview-description {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .overview-floating-badge {
+    padding: 8px 12px;
+    gap: 8px;
+  }
+
+  .badge-icon-circle {
+    width: 32px;
+    height: 32px;
+  }
+
+  .badge-stat-num {
+    font-size: 15px;
+  }
+
+  .badge-stat-label {
+    font-size: 11px;
+  }
+
+  .badge-top-right {
+    top: -10px;
+    right: -6px;
+  }
+
+  .badge-bottom-left {
+    bottom: -10px;
+    left: -6px;
+  }
 }
 
 /* --------------------------------------------------------------------------
-   6.5 MAX-WIDTH: 575px (Standard Mobile Phones)
+   7.5 MAX-WIDTH: 575px (Standard Mobile Phones)
    -------------------------------------------------------------------------- */
 @media screen and (max-width: 575px) {
   :root {
@@ -529,16 +831,50 @@ b {
     font-size: 25px;
   }
 
+  .overview-title {
+    font-size: 23px;
+  }
+
   .btn-primary-pill,
   .btn-secondary-pill {
     width: 100%;
     padding-left: 18px !important;
     padding-right: 18px !important;
   }
+
+  .overview-point-item {
+    gap: 10px;
+  }
+
+  .point-icon-badge {
+    width: 32px;
+    height: 32px;
+  }
+
+  .point-title {
+    font-size: 15px;
+  }
+
+  .point-desc {
+    font-size: 13px;
+  }
+
+  .badge-top-right,
+  .badge-bottom-left {
+    position: static;
+    margin-top: 10px;
+    display: inline-flex;
+  }
+
+  .overview-image-frame {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 
 /* --------------------------------------------------------------------------
-   6.6 MAX-WIDTH: 380px (Small Screen Mobile Phones)
+   7.6 MAX-WIDTH: 380px (Small Screen Mobile Phones)
    -------------------------------------------------------------------------- */
 @media screen and (max-width: 380px) {
   :root {
@@ -556,5 +892,9 @@ b {
 
   .hero-form-card {
     padding: 18px 14px;
+  }
+
+  .overview-title {
+    font-size: 21px;
   }
 }
