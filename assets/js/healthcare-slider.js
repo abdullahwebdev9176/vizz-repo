@@ -306,4 +306,28 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // =========================================================================
+  // 6. HERO SECTION INLINE READ MORE / READ LESS TOGGLE
+  // =========================================================================
+  const heroReadMoreBtn = document.getElementById('hero-read-more-btn');
+  const heroMoreContent = document.getElementById('hero-more-content');
+
+  if (heroReadMoreBtn && heroMoreContent) {
+    heroReadMoreBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const isExpanded = heroReadMoreBtn.getAttribute('aria-expanded') === 'true';
+      const textSpan = heroReadMoreBtn.querySelector('.read-more-text');
+
+      if (isExpanded) {
+        heroMoreContent.style.display = 'none';
+        heroReadMoreBtn.setAttribute('aria-expanded', 'false');
+        if (textSpan) textSpan.textContent = 'Read More';
+      } else {
+        heroMoreContent.style.display = 'block';
+        heroReadMoreBtn.setAttribute('aria-expanded', 'true');
+        if (textSpan) textSpan.textContent = 'Read Less';
+      }
+    });
+  }
 });
