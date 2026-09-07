@@ -177,7 +177,9 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   box-shadow: 0 0 8px rgba(0, 180, 216, 0.6);
   flex-shrink: 0;
 }
-
+.ss-sm-badge {
+  max-width: 197px;
+}
 /* Section Header (Centered) */
 .section-header-center {
   text-align: center;
