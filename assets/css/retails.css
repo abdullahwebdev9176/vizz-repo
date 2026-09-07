@@ -1862,13 +1862,14 @@ b {
    8.5 SECTION 8: RETAIL TECHNOLOGY DEVELOPMENT COST (Alternating Laser Pipeline)
    -------------------------------------------------------------------------- */
 .cost-pipeline-section {
-  background: #051124;
+  background: #f8fafc;
   background-image:
-    radial-gradient(circle at 50% 10%, rgba(36, 143, 206, 0.15) 0%, transparent 60%),
-    radial-gradient(circle at 50% 90%, rgba(255, 107, 74, 0.1) 0%, transparent 60%);
+    radial-gradient(circle at 10% 20%, rgba(36, 143, 206, 0.05) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(36, 143, 206, 0.04) 0%, transparent 40%);
   padding: var(--section-padding);
   position: relative;
-  border-bottom: 1px solid #132b57;
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
   overflow: hidden;
 }
 
@@ -1889,8 +1890,8 @@ b {
   left: 50%;
   width: 3px;
   transform: translateX(-50%);
-  background: linear-gradient(180deg, var(--btn-color) 0%, var(--accent-coral) 50%, var(--btn-color) 100%);
-  box-shadow: 0 0 16px rgba(36, 143, 206, 0.6);
+  background: linear-gradient(180deg, rgba(36, 143, 206, 0.2) 0%, var(--btn-color) 50%, rgba(36, 143, 206, 0.2) 100%);
+  box-shadow: 0 0 10px rgba(36, 143, 206, 0.25);
   z-index: 1;
 }
 
@@ -1900,7 +1901,7 @@ b {
   left: 0;
   right: 0;
   height: 60px;
-  background: linear-gradient(180deg, transparent, #ffffff, transparent);
+  background: linear-gradient(180deg, transparent, var(--btn-color), transparent);
   animation: laserStream 3.5s linear infinite;
 }
 
@@ -1952,7 +1953,7 @@ b {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: #06152b;
+  background: #ffffff;
   border: 2px solid var(--btn-color);
   color: var(--btn-color);
   font-size: 14px;
@@ -1961,7 +1962,7 @@ b {
   align-items: center;
   justify-content: center;
   font-family: var(--font-family);
-  box-shadow: 0 0 18px rgba(36, 143, 206, 0.5);
+  box-shadow: 0 4px 14px rgba(36, 143, 206, 0.18);
   transition: all 0.35s ease;
   position: relative;
   z-index: 3;
@@ -1972,25 +1973,23 @@ b {
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  border: 1px solid rgba(36, 143, 206, 0.4);
+  border: 1.5px solid rgba(36, 143, 206, 0.3);
   animation: beaconPulse 2.8s infinite;
   pointer-events: none;
 }
 
 .pipeline-row:hover .milestone-core {
-  background: var(--accent-coral);
+  background: var(--btn-color);
   color: #ffffff;
-  border-color: var(--accent-coral);
-  box-shadow: 0 0 22px rgba(74, 174, 255, 0.7);
+  border-color: var(--btn-color);
+  box-shadow: 0 0 20px rgba(36, 143, 206, 0.5);
   transform: scale(1.1);
 }
 
-/* Futuristic Node Card */
+/* Light Pipeline Node Card */
 .pipeline-node-card {
-  background: rgba(9, 26, 51, 0.88);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(26, 60, 108, 0.85);
+  background: #ffffff;
+  border: 1px solid var(--border-light);
   border-radius: 18px;
   padding: 24px 22px;
   position: relative;
@@ -1998,14 +1997,14 @@ b {
   flex-direction: column;
   gap: 12px;
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
 }
 
 .pipeline-node-card:hover {
-  background: rgba(12, 35, 69, 0.96);
-  border-color: rgba(36, 143, 206, 0.8);
+  background: #ffffff;
+  border-color: rgba(36, 143, 206, 0.7);
   transform: translateY(-4px);
-  box-shadow: 0 16px 36px rgba(36, 143, 206, 0.22);
+  box-shadow: 0 16px 36px rgba(36, 143, 206, 0.14);
 }
 
 /* Connector beams from card to center spine */
@@ -2016,7 +2015,7 @@ b {
   right: -20px;
   width: 20px;
   height: 2px;
-  background: linear-gradient(90deg, rgba(36, 143, 206, 0.8), var(--btn-color));
+  background: linear-gradient(90deg, rgba(36, 143, 206, 0.3), var(--btn-color));
   transform: translateY(-50%);
   transition: all 0.35s ease;
 }
@@ -2028,15 +2027,15 @@ b {
   left: -20px;
   width: 20px;
   height: 2px;
-  background: linear-gradient(90deg, var(--btn-color), rgba(36, 143, 206, 0.8));
+  background: linear-gradient(90deg, var(--btn-color), rgba(36, 143, 206, 0.3));
   transform: translateY(-50%);
   transition: all 0.35s ease;
 }
 
 .pipeline-node-card:hover::after,
 .pipeline-node-card:hover::before {
-  background: var(--accent-coral) !important;
-  box-shadow: 0 0 8px var(--accent-coral);
+  background: var(--btn-color) !important;
+  box-shadow: 0 0 8px rgba(36, 143, 206, 0.5);
 }
 
 .pipeline-card-topbar {
@@ -2049,9 +2048,9 @@ b {
   font-size: 10.5px;
   font-weight: 800;
   letter-spacing: 1px;
-  color: var(--accent-coral);
-  background: rgba(255, 107, 74, 0.1);
-  border: 1px solid rgba(255, 107, 74, 0.25);
+  color: var(--btn-color);
+  background: rgba(36, 143, 206, 0.08);
+  border: 1px solid rgba(36, 143, 206, 0.22);
   padding: 4px 10px;
   border-radius: 12px;
   text-transform: uppercase;
@@ -2062,9 +2061,9 @@ b {
   height: 42px;
   min-width: 42px;
   border-radius: 12px;
-  background: rgba(36, 143, 206, 0.12);
+  background: rgba(36, 143, 206, 0.08);
   color: var(--btn-color);
-  border: 1px solid rgba(36, 143, 206, 0.3);
+  border: 1px solid rgba(36, 143, 206, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2076,13 +2075,13 @@ b {
   color: #ffffff;
   border-color: var(--btn-color);
   transform: scale(1.08);
-  box-shadow: 0 0 14px rgba(36, 143, 206, 0.6);
+  box-shadow: 0 0 14px rgba(36, 143, 206, 0.45);
 }
 
 .pipeline-node-title {
   font-size: 17.5px;
   font-weight: 700;
-  color: var(--text-white);
+  color: var(--text-dark);
   line-height: 1.35;
   margin: 0;
 }
@@ -2090,7 +2089,7 @@ b {
 .pipeline-node-desc {
   font-size: 13.5px;
   line-height: 1.68;
-  color: var(--text-muted-dark);
+  color: var(--text-muted-light);
   margin: 0;
 }
 
@@ -2364,13 +2363,17 @@ b {
    10.3 MAX-WIDTH: 991px (Tablets & Mobile Viewports - Sliders & Mobile Layouts)
    -------------------------------------------------------------------------- */
 @media screen and (max-width: 991px) {
+  
   :root {
     --container-padding: 20px;
     --section-padding: 65px 0;
     --max-width-container: 100%;
   }
-.sector-icon-badge {
+.sector-icon-badge, .matrix-arrow-badge {
   display: none;
+}
+.lifecycle-nav-desc {
+  text-align: center;
 }
   /* Section Headers Center Alignment */
   .section-header-center {
