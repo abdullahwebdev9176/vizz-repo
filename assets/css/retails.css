@@ -2310,7 +2310,30 @@ b {
     --max-width-container: 100%;
   }
 
-  /* Hero Section */
+  /* Section Headers Center Alignment */
+  .section-header-center {
+    text-align: center;
+    margin-bottom: 36px;
+  }
+
+  .section-eyebrow-pill {
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-flex;
+  }
+
+  .section-title {
+    text-align: center;
+  }
+
+  .section-lead-text {
+    text-align: center;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Section 1: Hero Section */
   .hero-section-flex {
     flex-direction: column;
     align-items: center;
@@ -2318,7 +2341,15 @@ b {
     gap: 36px;
   }
 
-  .hero-col-1,
+  .hero-col-1 {
+    width: 100%;
+    max-width: 680px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .hero-col-2 {
     width: 100%;
     max-width: 620px;
@@ -2332,10 +2363,16 @@ b {
   .hero-description {
     font-size: 14.5px;
     text-align: center;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .hero-actions {
     text-align: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
     margin-top: 14px;
   }
 
@@ -2343,7 +2380,36 @@ b {
     padding: 24px 20px;
   }
 
-  /* Section 3 Overview Split */
+  /* Section 2: Capabilities Cards Center Alignment */
+  .transport-style-card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .transport-card-top-row {
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .transport-card-title {
+    text-align: center;
+  }
+
+  .transport-card-desc {
+    text-align: center;
+  }
+
+  .transport-card-footer {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  /* Section 3: Overview Split & Solution Matrix Center Alignment */
   .solutions-overview-split {
     flex-direction: column;
     align-items: center;
@@ -2357,6 +2423,9 @@ b {
     width: 100%;
     max-width: 640px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .solutions-overview-left .section-eyebrow-pill {
@@ -2367,6 +2436,7 @@ b {
   .solutions-main-title {
     font-size: 28px;
     text-align: center;
+    width: 100%;
   }
 
   .solutions-main-desc {
@@ -2374,6 +2444,32 @@ b {
   }
 
   .solutions-action-group {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .solution-matrix-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .matrix-header-flex {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .matrix-item-title {
+    text-align: center;
+  }
+
+  .matrix-item-desc {
     text-align: center;
   }
 
@@ -2392,6 +2488,63 @@ b {
     padding-right: 0;
   }
 
+  .ai-nav-card,
+  .lifecycle-nav-card {
+    text-align: left;
+    align-items: stretch;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .ai-nav-card-header,
+  .lifecycle-nav-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    text-align: left;
+    box-sizing: border-box;
+  }
+
+  .ai-nav-node,
+  .lifecycle-nav-node {
+    flex-shrink: 0;
+  }
+
+  .ai-nav-title,
+  .lifecycle-nav-title {
+    flex: 1 1 auto;
+    min-width: 0;
+    font-size: 15px;
+    line-height: 1.35;
+    text-align: left;
+    margin: 0;
+    word-break: normal;
+    overflow-wrap: break-word;
+  }
+
+  .ai-nav-chevron,
+  .lifecycle-nav-chevron {
+    flex-shrink: 0;
+  }
+
+  .ai-nav-card-body,
+  .lifecycle-nav-card-body {
+    padding-left: 0;
+    text-align: left;
+    align-items: stretch;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .ai-nav-desc,
+  .lifecycle-nav-desc {
+    text-align: left;
+    font-size: 13.5px;
+    line-height: 1.6;
+  }
+
   .ai-theater-stage-wrap,
   .lifecycle-theater-stage-wrap {
     display: none !important;
@@ -2404,14 +2557,35 @@ b {
     padding-top: 56.25%;
     height: 0;
     margin-top: 10px;
+    width: 100%;
   }
-  .ai-mobile-inline-media img, .lifecycle-mobile-inline-media img{
+
+  .ai-mobile-inline-media img,
+  .lifecycle-mobile-inline-media img {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  /* Section 6: Retail Sectors Cards Center Alignment */
+  .sector-holo-card {
+    text-align: center;
+    align-items: center;
+  }
+
+  .sector-card-top {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .sector-card-title {
+    text-align: center;
   }
 
   /* Section 7 (Why Choose Us) on Tablet */
@@ -2425,10 +2599,49 @@ b {
     display: contents;
   }
 
+  .why-pillar-card {
+    text-align: center;
+    align-items: center;
+  }
+
+  .why-pillar-top {
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .why-pillar-title {
+    text-align: center;
+  }
+
+  .why-pillar-desc {
+    text-align: center;
+  }
+
   .why-choose-center-pillar {
     grid-column: span 2;
     order: -1;
     margin-bottom: 8px;
+    text-align: center;
+  }
+
+  .center-pillar-inner {
+    text-align: center;
+    align-items: center;
+  }
+
+  .center-core-title {
+    text-align: center;
+  }
+
+  .center-core-checklist {
+    text-align: center;
+    align-items: center;
+  }
+
+  .center-core-checklist li {
+    justify-content: center;
+    text-align: center;
   }
 
   /* Section 8 (Cost Pipeline) on Tablet/Mobile */
@@ -2452,6 +2665,27 @@ b {
   .pipeline-card-col {
     flex: 1;
     max-width: calc(100% - 68px);
+  }
+
+  .pipeline-node-card {
+    text-align: center;
+    align-items: center;
+  }
+
+  .pipeline-card-topbar {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .pipeline-node-title {
+    text-align: center;
+  }
+
+  .pipeline-node-desc {
+    text-align: center;
   }
 
   .pipeline-empty-col {
