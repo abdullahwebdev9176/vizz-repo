@@ -2458,7 +2458,9 @@ b {
   color: #10b981;
   font-weight: 800;
 }
-
+.left-card-text p {
+    margin-bottom: 0;
+  }
 /* ==========================================================================
    10. CONSOLIDATED RESPONSIVE MEDIA QUERIES (ONLY MAX-WIDTH CASCADING)
    ========================================================================== */
@@ -2574,6 +2576,9 @@ b {
     --container-padding: 20px;
     --section-padding: 65px 0;
     --max-width-container: 100%;
+  }
+   .left-card-text {
+    text-align: left;
   }
   .left-align-text {
   text-align: center !important;

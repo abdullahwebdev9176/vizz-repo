@@ -188,7 +188,9 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   position: relative;
   z-index: 2;
 }
-
+.contact-info-card p {
+  margin-bottom: 0;
+}
 
 .section-title {
   font-family: var(--font-family);
