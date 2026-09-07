@@ -153,6 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       if (isMobileOrTablet) {
+        sliderElement.classList.remove('is-rendered');
         // Initialize slider only if not currently mounted
         if (!activeSplideInstances[config.id]) {
           try {
@@ -171,7 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
               type: 'slide',
               perPage: config.perPageTablet,
               gap: config.gapTablet,
-              arrows: true,
+              arrows: false,
               pagination: true,
               drag: true,
               speed: 400,
