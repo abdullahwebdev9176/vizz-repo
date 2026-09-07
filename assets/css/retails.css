@@ -397,16 +397,17 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   7. SECTION 2: CAPABILITIES & OMNICHANNEL COMMERCE SOLUTIONS (TransHub Layout)
+   7. SECTION 2: CAPABILITIES & OMNICHANNEL COMMERCE SOLUTIONS (Light Section)
    -------------------------------------------------------------------------- */
 .capabilities-section {
-  background: #07152b;
+  background: var(--bg-light);
   background-image: 
-    radial-gradient(circle at 15% 30%, rgba(36, 143, 206, 0.1) 0%, transparent 45%),
-    radial-gradient(circle at 85% 70%, rgba(255, 107, 74, 0.08) 0%, transparent 45%);
+    radial-gradient(circle at 15% 30%, rgba(36, 143, 206, 0.05) 0%, transparent 45%),
+    radial-gradient(circle at 85% 70%, rgba(36, 143, 206, 0.04) 0%, transparent 45%);
   padding: var(--section-padding);
   position: relative;
-  border-bottom: 1px solid #132b57;
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
 }
 
 .capabilities-grid {
@@ -417,11 +418,11 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 .transport-style-card {
-  background: #0e2246;
+  background: #ffffff;
   border-radius: 16px;
   padding: 22px 18px;
-  border: 1px solid #1b3a66;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--border-light);
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.04);
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   display: flex;
   flex-direction: column;
@@ -431,7 +432,7 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 
 .transport-style-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 16px 36px rgba(0, 136, 255, 0.25);
+  box-shadow: 0 16px 36px rgba(36, 143, 206, 0.14);
   border-color: rgba(36, 143, 206, 0.6);
 }
 
@@ -447,7 +448,7 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 .transport-card-title {
   font-size: 16px;
   font-weight: 700;
-  color: var(--text-white);
+  color: var(--text-dark);
   line-height: 1.35;
   margin: 0;
 }
@@ -457,9 +458,9 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   height: 32px;
   min-width: 32px;
   border-radius: 50%;
-  background: rgba(36, 143, 206, 0.12);
+  background: rgba(36, 143, 206, 0.08);
   color: var(--btn-color);
-  border: 1px solid rgba(36, 143, 206, 0.3);
+  border: 1px solid rgba(36, 143, 206, 0.25);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -467,11 +468,11 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 .transport-style-card:hover .card-action-circle {
-  background: var(--accent-coral);
+  background: var(--btn-color);
   color: #ffffff;
-  border-color: var(--accent-coral);
+  border-color: var(--btn-color);
   transform: rotate(45deg);
-  box-shadow: 0 0 12px rgba(255, 107, 74, 0.5);
+  box-shadow: 0 0 12px rgba(36, 143, 206, 0.5);
 }
 
 .transport-card-media {
@@ -481,7 +482,8 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   border-radius: 12px;
   overflow: hidden;
   margin-bottom: 14px;
-  background: #07152b;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
 }
 
 .transport-card-img {
@@ -499,7 +501,7 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 .media-overlay-glow {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, transparent 60%, rgba(7, 21, 43, 0.6) 100%);
+  background: linear-gradient(180deg, transparent 60%, rgba(15, 23, 42, 0.2) 100%);
   pointer-events: none;
 }
 
@@ -515,7 +517,7 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 .transport-card-desc {
   font-size: 13.5px;
   line-height: 1.65;
-  color: var(--text-muted-dark);
+  color: var(--text-muted-light);
   margin: 0;
 }
 
@@ -544,14 +546,14 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 .transport-card-footer {
   margin-top: auto;
   padding-top: 10px;
-  border-top: 1px solid rgba(226, 232, 240, 0.1);
+  border-top: 1px solid var(--border-light);
 }
 
 .transport-read-more-btn {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: rgba(36, 143, 206, 0.1);
+  background: rgba(36, 143, 206, 0.08);
   border: 1px solid rgba(36, 143, 206, 0.25);
   color: var(--btn-color);
   border-radius: 20px;
@@ -824,27 +826,170 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 /* --------------------------------------------------------------------------
-   8.1 SECTION 4 & SECTION 5: INTERACTIVE INNOVATION & LIFECYCLE THEATERS
+   8.1 SECTION 4: AI INNOVATION THEATER (Light Section)
    -------------------------------------------------------------------------- */
-.ai-theater-section,
-.lifecycle-theater-section {
-  background: #061326;
+.ai-theater-section {
+  background: var(--bg-light-alt);
   background-image: 
-    radial-gradient(circle at 10% 20%, rgba(36, 143, 206, 0.12) 0%, transparent 45%),
-    radial-gradient(circle at 90% 80%, rgba(255, 107, 74, 0.09) 0%, transparent 45%);
+    radial-gradient(circle at 10% 20%, rgba(36, 143, 206, 0.05) 0%, transparent 45%),
+    radial-gradient(circle at 90% 80%, rgba(36, 143, 206, 0.04) 0%, transparent 45%);
   padding: var(--section-padding);
   position: relative;
-  border-bottom: 1px solid #132b57;
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
 }
 
+.ai-theater-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ai-theater-nav-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+}
+
+.ai-nav-card {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: 16px;
+  padding: 18px 20px;
+  cursor: pointer;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+}
+
+.ai-nav-card:hover {
+  background: #ffffff;
+  border-color: rgba(36, 143, 206, 0.6);
+  transform: translateX(3px);
+  box-shadow: 0 8px 24px rgba(36, 143, 206, 0.1);
+}
+
+.ai-nav-card.active {
+  background: #ffffff;
+  border-color: var(--btn-color);
+  box-shadow: 0 10px 28px rgba(36, 143, 206, 0.16);
+}
+
+.ai-nav-card-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.ai-nav-node {
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  border-radius: 50%;
+  background: rgba(36, 143, 206, 0.08);
+  border: 1.5px solid rgba(36, 143, 206, 0.25);
+  color: var(--btn-color);
+  font-size: 14px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family);
+  transition: all 0.3s ease;
+}
+
+.ai-nav-card:hover .ai-nav-node,
+.ai-nav-card.active .ai-nav-node {
+  background: var(--btn-color);
+  color: #ffffff;
+  border-color: var(--btn-color);
+  box-shadow: 0 0 12px rgba(36, 143, 206, 0.5);
+  transform: scale(1.05);
+}
+
+.ai-nav-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-dark);
+  line-height: 1.35;
+  margin: 0;
+  flex: 1;
+}
+
+.ai-nav-card.active .ai-nav-title {
+  color: var(--btn-color);
+}
+
+.ai-nav-chevron {
+  color: var(--btn-color);
+  opacity: 0.6;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ai-nav-card:hover .ai-nav-chevron,
+.ai-nav-card.active .ai-nav-chevron {
+  opacity: 1;
+  transform: translateX(3px);
+}
+
+.ai-nav-card-body {
+  padding-left: 52px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ai-nav-desc {
+  font-size: 13.5px;
+  line-height: 1.68;
+  color: var(--text-muted-light);
+  margin: 0;
+}
+
+.ai-mobile-inline-media {
+  width: 100%;
+  height: 180px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: 6px;
+  border: 1px solid var(--border-light);
+  background: #f8fafc;
+}
+
+.ai-mobile-inline-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.ai-theater-stage-wrap {
+  display: none;
+}
+
+/* --------------------------------------------------------------------------
+   8.2 SECTION 5: DEVELOPMENT PROCESS LIFECYCLE THEATER (Dark Section)
+   -------------------------------------------------------------------------- */
 .lifecycle-theater-section {
   background: #051022;
   background-image: 
     radial-gradient(circle at 85% 20%, rgba(36, 143, 206, 0.1) 0%, transparent 45%),
     radial-gradient(circle at 15% 80%, rgba(255, 107, 74, 0.08) 0%, transparent 45%);
+  padding: var(--section-padding);
+  position: relative;
+  border-bottom: 1px solid #132b57;
 }
 
-.ai-theater-grid,
 .lifecycle-theater-grid {
   display: flex;
   flex-direction: column;
@@ -854,8 +999,6 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   margin: 0 auto;
 }
 
-/* Left Column: Interactive Nav Stack */
-.ai-theater-nav-stack,
 .lifecycle-nav-stack {
   display: flex;
   flex-direction: column;
@@ -863,7 +1006,6 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   width: 100%;
 }
 
-.ai-nav-card,
 .lifecycle-nav-card {
   background: #091a33;
   border: 1px solid #143257;
@@ -878,28 +1020,24 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
 }
 
-.ai-nav-card:hover,
 .lifecycle-nav-card:hover {
   background: #0d2549;
   border-color: rgba(36, 143, 206, 0.6);
   transform: translateX(3px);
 }
 
-.ai-nav-card.active,
 .lifecycle-nav-card.active {
   background: linear-gradient(135deg, rgba(36, 143, 206, 0.16) 0%, rgba(13, 37, 73, 0.95) 100%);
   border-color: var(--btn-color);
   box-shadow: 0 12px 30px rgba(0, 136, 255, 0.22);
 }
 
-.ai-nav-card-header,
 .lifecycle-nav-card-header {
   display: flex;
   align-items: center;
   gap: 14px;
 }
 
-.ai-nav-node,
 .lifecycle-nav-node {
   width: 38px;
   height: 38px;
@@ -917,8 +1055,6 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   transition: all 0.3s ease;
 }
 
-.ai-nav-card:hover .ai-nav-node,
-.ai-nav-card.active .ai-nav-node,
 .lifecycle-nav-card:hover .lifecycle-nav-node,
 .lifecycle-nav-card.active .lifecycle-nav-node {
   background: var(--btn-color);
@@ -928,7 +1064,6 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   transform: scale(1.05);
 }
 
-.ai-nav-title,
 .lifecycle-nav-title {
   font-size: 16px;
   font-weight: 700;
@@ -938,7 +1073,6 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   flex: 1;
 }
 
-.ai-nav-chevron,
 .lifecycle-nav-chevron {
   color: var(--btn-color);
   opacity: 0.6;
@@ -948,8 +1082,6 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   justify-content: center;
 }
 
-.ai-nav-card:hover .ai-nav-chevron,
-.ai-nav-card.active .ai-nav-chevron,
 .lifecycle-nav-card:hover .lifecycle-nav-chevron,
 .lifecycle-nav-card.active .lifecycle-nav-chevron {
   opacity: 1;
@@ -957,7 +1089,6 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   transform: translateX(3px);
 }
 
-.ai-nav-card-body,
 .lifecycle-nav-card-body {
   padding-left: 52px;
   display: flex;
@@ -965,7 +1096,6 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   gap: 12px;
 }
 
-.ai-nav-desc,
 .lifecycle-nav-desc {
   font-size: 13.5px;
   line-height: 1.68;
@@ -973,7 +1103,6 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   margin: 0;
 }
 
-.ai-mobile-inline-media,
 .lifecycle-mobile-inline-media {
   width: 100%;
   height: 180px;
@@ -983,7 +1112,6 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   border: 1px solid rgba(36, 143, 206, 0.3);
 }
 
-.ai-mobile-inline-media img,
 .lifecycle-mobile-inline-media img {
   width: 100%;
   height: 100%;
@@ -991,23 +1119,22 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   display: block;
 }
 
-/* Right Column: Visual Stage Terminal (Desktop) */
-.ai-theater-stage-wrap,
 .lifecycle-theater-stage-wrap {
   display: none;
 }
 
 /* --------------------------------------------------------------------------
-   8.2 SECTION 6: INDUSTRIES & RETAIL BUSINESSES WE SERVE (3x3 Holographic Matrix)
+   8.3 SECTION 6: INDUSTRIES & RETAIL BUSINESSES WE SERVE (Light Section)
    -------------------------------------------------------------------------- */
 .retail-sectors-section {
-  background: #07152b;
+  background: var(--bg-light);
   background-image: 
-    radial-gradient(circle at 50% 20%, rgba(36, 143, 206, 0.12) 0%, transparent 50%),
-    radial-gradient(circle at 10% 80%, rgba(255, 107, 74, 0.08) 0%, transparent 45%);
+    radial-gradient(circle at 50% 20%, rgba(36, 143, 206, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 10% 80%, rgba(36, 143, 206, 0.04) 0%, transparent 45%);
   padding: var(--section-padding);
   position: relative;
-  border-bottom: 1px solid #132b57;
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
 }
 
 .retail-sectors-grid {
@@ -1018,8 +1145,8 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 .sector-holo-card {
-  background: #091a33;
-  border: 1px solid #143257;
+  background: #ffffff;
+  border: 1px solid var(--border-light);
   border-radius: 18px;
   padding: 24px 22px;
   position: relative;
@@ -1028,15 +1155,15 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   flex-direction: column;
   gap: 16px;
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
   height: 100%;
 }
 
 .sector-holo-card:hover {
   transform: translateY(-6px);
-  background: #0c2345;
+  background: #ffffff;
   border-color: rgba(36, 143, 206, 0.7);
-  box-shadow: 0 16px 36px rgba(0, 136, 255, 0.22);
+  box-shadow: 0 16px 36px rgba(36, 143, 206, 0.14);
 }
 
 .sector-card-glow-bar {
@@ -1045,7 +1172,7 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, transparent, var(--btn-color), var(--accent-coral), transparent);
+  background: linear-gradient(90deg, transparent, var(--btn-color), var(--btn-cyan), transparent);
   opacity: 0;
   transition: opacity 0.35s ease;
 }
@@ -1065,9 +1192,9 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   height: 50px;
   min-width: 50px;
   border-radius: 14px;
-  background: rgba(36, 143, 206, 0.12);
+  background: rgba(36, 143, 206, 0.08);
   color: var(--btn-color);
-  border: 1px solid rgba(36, 143, 206, 0.3);
+  border: 1px solid rgba(36, 143, 206, 0.22);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1079,7 +1206,7 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   color: #ffffff;
   border-color: var(--btn-color);
   transform: scale(1.08);
-  box-shadow: 0 0 16px rgba(36, 143, 206, 0.6);
+  box-shadow: 0 0 16px rgba(36, 143, 206, 0.5);
 }
 
 .sector-badge-tag {
@@ -1088,7 +1215,7 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   gap: 8px;
   font-size: 13px;
   font-weight: 800;
-  color: #94a3b8;
+  color: var(--text-muted-light);
   font-family: var(--font-family);
 }
 
@@ -1096,8 +1223,8 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  background: rgba(36, 143, 206, 0.1);
-  border: 1px solid rgba(36, 143, 206, 0.25);
+  background: rgba(36, 143, 206, 0.08);
+  border: 1px solid rgba(36, 143, 206, 0.2);
   color: var(--btn-color);
   display: flex;
   align-items: center;
@@ -1106,17 +1233,17 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
 }
 
 .sector-holo-card:hover .sector-arrow-circle {
-  background: var(--accent-coral);
+  background: var(--btn-color);
   color: #ffffff;
-  border-color: var(--accent-coral);
+  border-color: var(--btn-color);
   transform: rotate(45deg);
-  box-shadow: 0 0 12px rgba(255, 107, 74, 0.5);
+  box-shadow: 0 0 12px rgba(36, 143, 206, 0.5);
 }
 
 .sector-card-title {
   font-size: 17.5px;
   font-weight: 700;
-  color: var(--text-white);
+  color: var(--text-dark);
   line-height: 1.35;
   margin: 0;
 }
@@ -1746,7 +1873,17 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
     gap: 36px;
   }
 
-  .ai-theater-nav-stack,
+  .ai-theater-nav-stack {
+    flex: 1 1 48%;
+    max-height: 450px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 12px;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: var(--btn-color) #e2e8f0;
+  }
+
   .lifecycle-nav-stack {
     flex: 1 1 48%;
     max-height: 450px;
@@ -1763,7 +1900,11 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
     width: 6px;
   }
 
-  .ai-theater-nav-stack::-webkit-scrollbar-track,
+  .ai-theater-nav-stack::-webkit-scrollbar-track {
+    background: #e2e8f0;
+    border-radius: 6px;
+  }
+
   .lifecycle-nav-stack::-webkit-scrollbar-track {
     background: rgba(7, 21, 43, 0.6);
     border-radius: 6px;
@@ -1773,7 +1914,6 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   .lifecycle-nav-stack::-webkit-scrollbar-thumb {
     background: var(--btn-color);
     border-radius: 6px;
-    border: 1px solid rgba(14, 34, 70, 0.5);
   }
 
   .ai-theater-nav-stack::-webkit-scrollbar-thumb:hover,
@@ -2025,7 +2165,7 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   }
 
   .transport-content-box.expanded::-webkit-scrollbar-track {
-    background: #07152b;
+    background: #f1f5f9;
     border-radius: 4px;
   }
 

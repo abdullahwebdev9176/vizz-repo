@@ -1739,7 +1739,9 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   justify-content: center;
   gap: 14px;
 }
-
+.left-aligned-text {
+  text-align: left;
+}
 /* ==========================================================================
    20. CONSOLIDATED RESPONSIVE MEDIA QUERIES (Mobile-First & Desktop Overrides)
    ========================================================================== */
@@ -2154,6 +2156,9 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
    20.6 MAX-WIDTH: 991px (Mobile & Tablet Sliders Active)
    -------------------------------------------------------------------------- */
 @media screen and (max-width: 991px) {
+  .workflow-showcase-section{
+    padding: 40px 0px;
+  }
   #clinical-workflows-slider .splide__track,
   #operations-deck-slider .splide__track,
   #connected-health-slider .splide__track,
