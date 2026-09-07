@@ -24,7 +24,7 @@
   --btn-color: #248fce;
   --btn-color-hover: #ffffff;
   --white-color: #ffffff;
-  --accent-coral: #ff6b4a;
+  --accent-coral: #248fce;
 
   /* 🌌 Background Colors */
   --bg-dark: #07152b;
@@ -1481,7 +1481,7 @@ p, span, a, li, label, input, textarea, button, small, strong, em, b {
   background: var(--accent-coral);
   color: #ffffff;
   border-color: var(--accent-coral);
-  box-shadow: 0 0 22px rgba(255, 107, 74, 0.7);
+  box-shadow: 0 0 22px rgba(74, 174, 255, 0.7);
   transform: scale(1.1);
 }
 
