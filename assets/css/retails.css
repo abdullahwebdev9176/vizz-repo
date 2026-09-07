@@ -505,7 +505,7 @@ b {
 .transport-card-media {
   position: relative;
   width: 100%;
-  height: 160px;
+  height: 200px;
   border-radius: 12px;
   overflow: hidden;
   margin-bottom: 14px;
@@ -675,7 +675,7 @@ b {
 
 .solutions-hero-banner {
   width: 100%;
-  height: 340px;
+  height: 450px;
   object-fit: cover;
   border-radius: 16px;
   border: 1px solid rgba(36, 143, 206, 0.35);
