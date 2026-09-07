@@ -282,39 +282,30 @@ document.addEventListener('DOMContentLoaded', () => {
   // =========================================================================
   // 5. ACCESSIBLE SINGLE-OPEN FAQ ACCORDION CONTROLLER
   // =========================================================================
-  const faqItems = document.querySelectorAll('.faq-accordion-item');
+  const faqItems = document.querySelectorAll('.faq-item');
 
   faqItems.forEach((item) => {
-    const trigger = item.querySelector('.faq-accordion-trigger');
-    const content = item.querySelector('.faq-accordion-content');
+    const questionBtn = item.querySelector('.faq-question-btn');
+    if (questionBtn) {
+      questionBtn.addEventListener('click', () => {
+        const isCurrentlyActive = item.classList.contains('active');
 
-    if (!trigger || !content) return;
-
-    trigger.addEventListener('click', () => {
-      const isOpen = item.classList.contains('active');
-
-      // Close all other open items (Single-Open accordion)
-      faqItems.forEach((otherItem) => {
-        if (otherItem !== item && otherItem.classList.contains('active')) {
+        // Close all other open FAQ items (Single-Open accordion)
+        faqItems.forEach((otherItem) => {
           otherItem.classList.remove('active');
-          const otherTrigger = otherItem.querySelector('.faq-accordion-trigger');
-          const otherContent = otherItem.querySelector('.faq-accordion-content');
-          if (otherTrigger) otherTrigger.setAttribute('aria-expanded', 'false');
-          if (otherContent) otherContent.style.maxHeight = null;
+          const otherBtn = otherItem.querySelector('.faq-question-btn');
+          if (otherBtn) {
+            otherBtn.setAttribute('aria-expanded', 'false');
+          }
+        });
+
+        // Toggle clicked item
+        if (!isCurrentlyActive) {
+          item.classList.add('active');
+          questionBtn.setAttribute('aria-expanded', 'true');
         }
       });
-
-      // Toggle clicked item
-      if (isOpen) {
-        item.classList.remove('active');
-        trigger.setAttribute('aria-expanded', 'false');
-        content.style.maxHeight = null;
-      } else {
-        item.classList.add('active');
-        trigger.setAttribute('aria-expanded', 'true');
-        content.style.maxHeight = content.scrollHeight + 'px';
-      }
-    });
+    }
   });
 
   // =========================================================================
