@@ -687,6 +687,11 @@ b {
   transform: rotate(180deg);
 }
 
+.capabilities-action-group {
+  text-align: center;
+  margin-top: 48px;
+}
+
 /* --------------------------------------------------------------------------
    8. SECTION 3: MODERN RETAIL SOFTWARE & DIGITAL COMMERCE SOLUTIONS
       Asymmetric Split Hero with Floating Badges & Dual-Column Matrix Deck
@@ -1642,6 +1647,11 @@ b {
   color: var(--text-dark);
   line-height: 1.35;
   margin: 0;
+}
+
+.retail-sectors-action-group {
+  text-align: center;
+  margin-top: 48px;
 }
 
 /* --------------------------------------------------------------------------
@@ -3244,6 +3254,11 @@ b {
 
   .bottom-contact-section {
     padding: 70px 0;
+  }
+
+  .capabilities-action-group,
+  .retail-sectors-action-group {
+    margin-top: 32px;
   }
 }
 
