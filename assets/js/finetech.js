@@ -29,35 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // =========================================================================
-  // 2. HERO SECTION INLINE READ MORE / READ LESS TOGGLE
-  // =========================================================================
-  const heroReadMoreBtn = document.getElementById('hero-read-more-btn');
-  const heroMoreContent = document.getElementById('hero-more-content');
-  const heroDesc1 = document.getElementById('hero-desc-1');
-  const heroDesc2 = document.getElementById('hero-desc-2');
-
-  if (heroReadMoreBtn && heroMoreContent && heroDesc1 && heroDesc2) {
-    heroReadMoreBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      const isExpanded = heroReadMoreBtn.getAttribute('aria-expanded') === 'true';
-      const textSpan = heroReadMoreBtn.querySelector('.read-more-text');
-
-      if (isExpanded) {
-        heroDesc1.appendChild(heroReadMoreBtn);
-        heroMoreContent.style.display = 'none';
-        heroReadMoreBtn.setAttribute('aria-expanded', 'false');
-        if (textSpan) textSpan.textContent = 'Read More';
-      } else {
-        heroMoreContent.style.display = 'block';
-        heroDesc2.appendChild(heroReadMoreBtn);
-        heroReadMoreBtn.setAttribute('aria-expanded', 'true');
-        if (textSpan) textSpan.textContent = 'Read Less';
-      }
-    });
-  }
-
-  // =========================================================================
-  // 3. RESPONSIVE SPLIDE SLIDER MANAGER (Active <= 991px, Native Grid on Desktop)
+  // 2. RESPONSIVE SPLIDE SLIDER MANAGER (Active <= 991px, Native Grid on Desktop)
   // =========================================================================
   const activeSplideInstances = {};
 

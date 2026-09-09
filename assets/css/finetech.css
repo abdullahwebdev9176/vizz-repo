@@ -318,66 +318,6 @@ b {
   text-align: left;
 }
 
-/* Hero Inline Read More Button */
-.hero-read-more-inline-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  background: transparent;
-  border: none;
-  padding: 0;
-  margin-left: 6px;
-  color: var(--color-cyan-light);
-  font-family: inherit;
-  font-size: 15.5px;
-  font-weight: 600;
-  cursor: pointer;
-  vertical-align: baseline;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  transition: color 0.25s ease, opacity 0.25s ease;
-}
-
-.hero-read-more-inline-btn:hover {
-  color: #ffffff;
-}
-
-.hero-read-more-inline-btn:focus-visible {
-  outline: 2px solid var(--color-cyan-light);
-  outline-offset: 2px;
-  border-radius: 2px;
-}
-
-.hero-read-more-inline-btn .read-more-chevron {
-  transition: transform 0.3s ease;
-  vertical-align: middle;
-}
-
-.hero-read-more-inline-btn[aria-expanded="true"] .read-more-chevron {
-  transform: rotate(180deg);
-}
-
-.hero-more-content {
-  overflow: hidden;
-  animation: heroFadeIn 0.35s ease-out;
-}
-
-@keyframes heroFadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-6px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.hero-actions {
-  margin-top: 10px;
-  text-align: left;
-}
-
 /* Right Column: Hero Form Card */
 .hero-form-card {
   background: var(--bg-dark-card);
@@ -538,49 +478,6 @@ b {
   margin-bottom: 14px;
 }
 
-/* Feature Points */
-.overview-feature-points {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  margin: 26px 0 30px 0;
-}
-
-.overview-point-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 14px;
-}
-
-.point-icon-badge {
-  width: 38px;
-  height: 38px;
-  flex-shrink: 0;
-  border-radius: 50%;
-  background: #dfedf5;
-  border: 1px solid rgba(36, 143, 206, 0.35);
-  color: var(--btn-color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 2px;
-}
-
-.point-title {
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--text-dark);
-  margin-bottom: 3px;
-  line-height: 1.35;
-}
-
-.point-desc {
-  font-size: 14px;
-  color: var(--text-muted-light);
-  line-height: 1.55;
-  margin: 0;
-}
-
 .overview-action {
   margin-top: 8px;
 }
@@ -723,12 +620,6 @@ b {
   margin-bottom: 14px;
 }
 
-.section-lead-text {
-  font-size: 15.5px;
-  line-height: 1.7;
-  margin-bottom: 0;
-}
-
 /* Desktop Grid Layout: 6-column system for 3 top + 2 bottom balanced cards */
 .advantages-slider {
   position: relative;
@@ -786,7 +677,6 @@ b {
 }
 
 .advantage-card:hover {
-  transform: translateY(-6px);
   border-color: rgba(36, 143, 206, 0.55);
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35), 0 0 25px rgba(36, 143, 206, 0.18);
 }
@@ -863,48 +753,6 @@ b {
   color: #ffffff;
 }
 
-/* Bottom CTA Action Card */
-.advantages-bottom-action {
-  margin-top: 50px;
-  position: relative;
-  z-index: 2;
-}
-
-.advantages-cta-card {
-  background: linear-gradient(135deg, rgba(14, 34, 70, 0.95) 0%, rgba(19, 43, 87, 0.9) 100%);
-  border: 1px solid rgba(36, 143, 206, 0.3);
-  border-radius: var(--border-radius-card);
-  padding: 30px 38px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 28px;
-  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.25);
-}
-
-.cta-card-content {
-  text-align: left;
-}
-
-.cta-card-title {
-  font-size: 22px;
-  font-weight: 700;
-  line-height: 1.3;
-  margin-bottom: 6px;
-  text-align: left;
-}
-
-.cta-card-desc {
-  font-size: 14.5px;
-  line-height: 1.6;
-  margin: 0;
-  text-align: left;
-}
-
-.cta-card-btn-wrap {
-  flex-shrink: 0;
-}
-
 /* Splide Pagination for Dark Sections */
 .advantages-slider .splide__pagination {
   bottom: -32px;
@@ -929,11 +777,11 @@ b {
 }
 
 /* ==========================================================================
-   8. RESPONSIVE MEDIA QUERIES (Strict Desktop-First Max-Width Cascade)
+   7. RESPONSIVE MEDIA QUERIES (Strict Desktop-First Max-Width Cascade)
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   8.1 MAX-WIDTH: 1599px (Large Laptops & Desktops)
+   7.1 MAX-WIDTH: 1599px (Large Laptops & Desktops)
    -------------------------------------------------------------------------- */
 @media screen and (max-width: 1599px) {
   :root {
@@ -955,7 +803,7 @@ b {
 }
 
 /* --------------------------------------------------------------------------
-   8.2 MAX-WIDTH: 1200px (Medium Desktops & Small Laptops)
+   7.2 MAX-WIDTH: 1200px (Medium Desktops & Small Laptops)
    -------------------------------------------------------------------------- */
 @media screen and (max-width: 1200px) {
   :root {
@@ -999,10 +847,6 @@ b {
     font-size: 14px;
   }
 
-  .cta-card-title {
-    font-size: 20px;
-  }
-
   .badge-top-right {
     top: -12px;
     right: -10px;
@@ -1015,7 +859,7 @@ b {
 }
 
 /* --------------------------------------------------------------------------
-   8.3 MAX-WIDTH: 991px (Tablets & Mobile Viewports)
+   7.3 MAX-WIDTH: 991px (Tablets & Mobile Viewports)
    -------------------------------------------------------------------------- */
 @media screen and (max-width: 991px) {
   :root {
@@ -1059,10 +903,6 @@ b {
     margin-right: auto;
   }
 
-  .hero-actions {
-    text-align: center;
-  }
-
   .form-row-2col {
     flex-direction: column;
     gap: 14px;
@@ -1097,14 +937,6 @@ b {
     margin-right: auto;
   }
 
-  .overview-feature-points {
-    align-items: flex-start;
-    text-align: left;
-    max-width: 620px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
   .overview-action {
     text-align: center;
   }
@@ -1124,13 +956,6 @@ b {
     font-size: 28px;
   }
 
-  .section-lead-text {
-    font-size: 14.5px;
-    max-width: 620px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
   /* Splide slider when active on <= 991px */
   .advantages-slider.splide:not(.is-rendered) .advantages-grid {
     display: flex !important;
@@ -1145,35 +970,10 @@ b {
   .advantages-slider.splide:not(.is-rendered) .advantage-card {
     height: 100%;
   }
-
-  .advantages-cta-card {
-    flex-direction: column;
-    text-align: center;
-    padding: 26px 22px;
-    gap: 20px;
-  }
-
-  .cta-card-content {
-    text-align: center;
-  }
-
-  .cta-card-title {
-    text-align: center;
-  }
-
-  .cta-card-desc {
-    text-align: center;
-  }
-
-  .cta-card-btn-wrap {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
 }
 
 /* --------------------------------------------------------------------------
-   8.4 MAX-WIDTH: 767px (Large Mobile Devices)
+   7.4 MAX-WIDTH: 767px (Large Mobile Devices)
    -------------------------------------------------------------------------- */
 @media screen and (max-width: 767px) {
   :root {
@@ -1242,10 +1042,6 @@ b {
     font-size: 25px;
   }
 
-  .section-lead-text {
-    font-size: 14px;
-  }
-
   .advantage-card {
     padding: 22px 18px;
   }
@@ -1257,18 +1053,10 @@ b {
   .advantage-card-desc {
     font-size: 13.5px;
   }
-
-  .cta-card-title {
-    font-size: 18px;
-  }
-
-  .cta-card-desc {
-    font-size: 13px;
-  }
 }
 
 /* --------------------------------------------------------------------------
-   8.5 MAX-WIDTH: 575px (Standard Mobile Phones)
+   7.5 MAX-WIDTH: 575px (Standard Mobile Phones)
    -------------------------------------------------------------------------- */
 @media screen and (max-width: 575px) {
   :root {
@@ -1291,23 +1079,6 @@ b {
     padding-right: 18px !important;
   }
 
-  .overview-point-item {
-    gap: 10px;
-  }
-
-  .point-icon-badge {
-    width: 32px;
-    height: 32px;
-  }
-
-  .point-title {
-    font-size: 15px;
-  }
-
-  .point-desc {
-    font-size: 13px;
-  }
-
   .badge-top-right,
   .badge-bottom-left {
     position: static;
@@ -1325,14 +1096,10 @@ b {
   .section-title {
     font-size: 22px;
   }
-
-  .cta-card-btn-wrap .btn-primary-pill {
-    width: 100%;
-  }
 }
 
 /* --------------------------------------------------------------------------
-   8.6 MAX-WIDTH: 380px (Small Screen Mobile Phones)
+   7.6 MAX-WIDTH: 380px (Small Screen Mobile Phones)
    -------------------------------------------------------------------------- */
 @media screen and (max-width: 380px) {
   :root {
@@ -1367,9 +1134,5 @@ b {
 
   .advantage-card-desc {
     font-size: 13px;
-  }
-
-  .cta-card-title {
-    font-size: 17px;
   }
 }
