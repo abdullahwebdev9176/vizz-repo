@@ -283,9 +283,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const indicatorBtns = document.querySelectorAll('.deck-indicator-btn');
   let hoverIntentTimer = null;
 
+  let currentHorizonActiveIndex = 0;
+
   if (horizonPanels.length > 0) {
     function setActiveHorizonPanel(index) {
-      if (index < 0 || index >= horizonPanels.length) return;
+      if (index < 0 || index >= horizonPanels.length || index === currentHorizonActiveIndex) return;
+      currentHorizonActiveIndex = index;
 
       horizonPanels.forEach((panel, i) => {
         if (i === index) {
@@ -310,13 +313,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Panel interaction
     horizonPanels.forEach((panel, index) => {
-      // Desktop smooth hover-intent (prevents rapid jumpy expansions when cursor moves across cards)
+      // Desktop smooth hover-intent (prevents rapid jumpy expansions when cursor sweeps across cards)
       panel.addEventListener('mouseenter', () => {
         if (window.innerWidth > 991) {
+          if (index === currentHorizonActiveIndex) return;
           clearTimeout(hoverIntentTimer);
           hoverIntentTimer = setTimeout(() => {
             setActiveHorizonPanel(index);
-          }, 140); // 140ms dwell threshold ensures smooth deliberate intent
+          }, 160); // 160ms dwell threshold ensures deliberate, calm intent
         }
       });
 

@@ -1734,7 +1734,6 @@ b {
   height: 500px;
   align-items: stretch;
   position: relative;
-  contain: paint layout;
 }
 
 .horizon-deck-wrapper > .splide__track {
@@ -1754,28 +1753,84 @@ b {
     transform: none !important;
     height: 100% !important;
     width: 100%;
+    gap: 14px;
   }
 
   .horizon-deck-wrapper .splide__slide.horizon-panel {
-    flex: 1 1 85px !important;
-    min-width: 75px !important;
+    flex: 1 1 0% !important;
+    min-width: 0 !important;
     height: 100% !important;
+    transition: flex 0.48s cubic-bezier(0.22, 1, 0.36, 1),
+      background 0.35s ease,
+      border-color 0.35s ease,
+      box-shadow 0.35s ease !important;
+    will-change: flex;
   }
 
   .horizon-deck-wrapper .splide__slide.horizon-panel.is-active {
-    flex: 4 1 440px !important;
-    min-width: 320px !important;
+    flex: 4 1 0% !important;
+    min-width: 0 !important;
   }
 
   .horizon-deck-wrapper .splide__pagination {
     display: none !important;
   }
+
+  /* Stabilized expanded stage: fixed min-width prevents text reflow and layout jitter while card expands */
+  .horizon-deck-wrapper .horizon-panel .horizon-expanded-stage {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    right: auto !important;
+    width: 100% !important;
+    min-width: 380px !important;
+    max-width: 520px !important;
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    padding: 30px 28px !important;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(10px);
+    transition: opacity 0.3s ease 0.08s, transform 0.4s cubic-bezier(0.22, 1, 0.36, 1) 0.05s;
+    overflow: hidden !important;
+  }
+
+  .horizon-deck-wrapper .horizon-panel.is-active .horizon-expanded-stage {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(0);
+  }
+
+  .horizon-deck-wrapper .horizon-panel .horizon-collapsed-bar {
+    position: absolute;
+    inset: 0;
+    padding: 26px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.25s ease;
+    user-select: none;
+    z-index: 1;
+  }
+
+  .horizon-deck-wrapper .horizon-panel.is-active .horizon-collapsed-bar {
+    opacity: 0;
+    pointer-events: none;
+    transform: none;
+  }
 }
 
 /* Individual Horizon Panel - Buttery Smooth Transition */
 .horizon-panel {
-  flex: 1 1 85px;
-  min-width: 75px;
+  flex: 1 1 0%;
+  min-width: 0;
   height: 100%;
   background: rgba(14, 34, 70, 0.65);
   backdrop-filter: blur(14px);
@@ -1785,7 +1840,7 @@ b {
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  transition: flex 0.45s cubic-bezier(0.25, 1, 0.5, 1),
+  transition: flex 0.48s cubic-bezier(0.22, 1, 0.36, 1),
     background 0.35s ease,
     border-color 0.35s ease,
     box-shadow 0.35s ease;
@@ -1805,7 +1860,8 @@ b {
 }
 
 .horizon-panel.is-active {
-  flex: 2.9 1 320px;
+  flex: 4 1 0%;
+  min-width: 0;
   background: linear-gradient(165deg, rgba(14, 43, 61, 0.96) 0%, rgba(8, 26, 39, 0.98) 100%);
   border-color: rgba(36, 143, 206, 0.7);
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4), 0 0 28px rgba(36, 143, 206, 0.2), inset 0 0 20px rgba(0, 180, 216, 0.08);
