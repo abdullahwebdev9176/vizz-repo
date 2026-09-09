@@ -1737,6 +1737,41 @@ b {
   contain: paint layout;
 }
 
+.horizon-deck-wrapper > .splide__track {
+  overflow: visible;
+  width: 100%;
+}
+
+@media screen and (min-width: 992px) {
+  .horizon-deck-wrapper > .splide__track {
+    overflow: visible !important;
+    width: 100%;
+    height: 500px;
+  }
+
+  .horizon-deck-wrapper .horizon-deck-container {
+    display: flex !important;
+    transform: none !important;
+    height: 100% !important;
+    width: 100%;
+  }
+
+  .horizon-deck-wrapper .splide__slide.horizon-panel {
+    flex: 1 1 85px !important;
+    min-width: 75px !important;
+    height: 100% !important;
+  }
+
+  .horizon-deck-wrapper .splide__slide.horizon-panel.is-active {
+    flex: 4 1 440px !important;
+    min-width: 320px !important;
+  }
+
+  .horizon-deck-wrapper .splide__pagination {
+    display: none !important;
+  }
+}
+
 /* Individual Horizon Panel - Buttery Smooth Transition */
 .horizon-panel {
   flex: 1 1 85px;
@@ -3709,8 +3744,13 @@ b {
   .fintech-cost-slider {
       padding-bottom: 30px;
   }
-  .splide__arrows.splide__arrows--ltr {
-    display: none;
+  /* Remove all slider navigation arrows on mobile/tablet (only show on desktop) */
+  .splide__arrows,
+  .splide__arrows--ltr,
+  .splide__arrows.splide__arrows--ltr,
+  .fintech-cost-slider .splide__arrows,
+  .solutions-slider .splide__arrows {
+    display: none !important;
   }
   :root {
     --container-padding: 20px;
@@ -3924,78 +3964,126 @@ b {
     width: 100%;
   }
 
-  /* Section 7: Horizon Deck (Converts to Mobile/Tablet Interactive Accordion Deck) */
-  .horizon-deck-container {
-    flex-direction: column;
-    height: auto !important;
-    min-height: auto;
-    gap: 14px;
-  }
-
-  .horizon-panel {
-    flex: none !important;
+  /* Section 7: Horizon Deck (Converts to Full-Card Mobile Splide Slider) */
+  .horizon-deck-wrapper.splide:not(.is-rendered) {
+    display: block !important;
     width: 100%;
-    height: auto !important;
-    display: flex;
-    flex-direction: column;
     position: relative;
   }
 
-  .horizon-collapsed-bar {
-    position: relative !important;
-    inset: auto !important;
-    display: flex !important;
-    opacity: 1 !important;
-    pointer-events: auto !important;
+  .horizon-deck-wrapper.splide:not(.is-rendered) .splide__track {
+    overflow: hidden !important;
     width: 100% !important;
     height: auto !important;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 18px 20px;
-    gap: 16px;
-    transform: none !important;
-    border-bottom: 1px solid transparent;
+    padding: 6px 4px 14px 4px !important;
   }
 
-  .horizon-vertical-title {
-    writing-mode: horizontal-tb;
-    transform: none;
-    font-size: 16px;
-    margin: 0;
-    text-align: left;
-    flex: 1;
-    white-space: normal;
+  .horizon-deck-wrapper.splide:not(.is-rendered) .horizon-deck-container {
+    display: flex !important;
+    flex-direction: row !important;
+    height: auto !important;
+    min-height: auto !important;
+    gap: 0 !important;
+    contain: none !important;
   }
 
-  .horizon-panel.is-active .horizon-collapsed-bar {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    background: rgba(36, 143, 206, 0.08);
+  .horizon-deck-wrapper .horizon-panel {
+    flex: none !important;
+    width: 100%;
+    height: auto !important;
+    min-height: 100%;
+    display: flex !important;
+    flex-direction: column !important;
+    position: relative;
+    background: rgba(14, 34, 70, 0.85) !important;
+    border: 1px solid var(--border-dark) !important;
+    border-radius: var(--border-radius-card) !important;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.4) !important;
+    overflow: hidden !important;
+    cursor: default;
+    transition: none;
   }
 
-  .horizon-expanded-stage {
+  /* Completely remove the collapsed bar on mobile - no accordion behavior */
+  .horizon-deck-wrapper .horizon-collapsed-bar {
+    display: none !important;
+  }
+
+  /* Full card content is always fully visible on every card in the slider */
+  .horizon-deck-wrapper .horizon-expanded-stage {
     position: relative !important;
     inset: auto !important;
     display: flex !important;
-    max-height: 0;
-    opacity: 0;
-    padding: 0 20px;
-    overflow: hidden;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    max-height: none !important;
+    opacity: 1 !important;
+    padding: 28px 22px !important;
+    pointer-events: auto !important;
     transform: none !important;
-    transition: max-height 0.4s cubic-bezier(0.25, 1, 0.5, 1),
-      opacity 0.35s ease,
-      padding 0.35s ease;
+    overflow: visible !important;
+    min-height: 420px;
+    height: 100% !important;
+    z-index: 1;
   }
 
-  .horizon-panel.is-active .horizon-expanded-stage {
-    max-height: 700px;
-    opacity: 1;
-    padding: 22px 20px;
-    pointer-events: auto;
+  .horizon-deck-wrapper .horizon-stage-title {
+    font-size: 20px;
+    line-height: 1.35;
+    margin-bottom: 12px;
   }
 
+  .horizon-deck-wrapper .horizon-stage-desc {
+    font-size: 14px;
+    line-height: 1.65;
+    margin-bottom: 24px;
+  }
+
+  .horizon-deck-wrapper .horizon-stage-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+    margin-top: auto;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .horizon-deck-wrapper .horizon-cta-link {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Hide desktop indicator pills on mobile */
   .horizon-deck-indicators {
-    display: none;
+    display: none !important;
+  }
+
+  /* Splide pagination dots on mobile for Section 7 */
+  .horizon-deck-wrapper .splide__pagination {
+    position: static;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+    padding: 0;
+  }
+
+  .horizon-deck-wrapper .splide__pagination__page {
+    width: 8px;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+    border: none;
+    padding: 0;
+    transition: all 0.3s ease;
+  }
+
+  .horizon-deck-wrapper .splide__pagination__page.is-active {
+    background: var(--btn-color);
+    width: 24px;
+    border-radius: 4px;
+    transform: none;
   }
 
   /* Section 8: Comparison Matrix */
@@ -4436,7 +4524,7 @@ b {
 
   /* Section 11: Cost Slider */
   .fintech-cost-slider .splide__arrows {
-    justify-content: center;
+    display: none !important;
   }
 
   .cost-card-image-wrap {

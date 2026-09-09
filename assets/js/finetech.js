@@ -81,6 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
           991: {
             perPage: 2,
             gap: '18px',
+            arrows: false,
           },
           767: {
             perPage: 1,
@@ -128,16 +129,17 @@ document.addEventListener('DOMContentLoaded', () => {
           991: {
             perPage: 2,
             gap: '18px',
+            arrows: false,
           },
           767: {
             perPage: 1,
             gap: '14px',
-            arrows: true,
+            arrows: false,
           },
           575: {
             perPage: 1,
             gap: '12px',
-            arrows: true,
+            arrows: false,
           },
         },
       });
@@ -190,6 +192,23 @@ document.addEventListener('DOMContentLoaded', () => {
         767: {
           perPage: 1,
           gap: '14px',
+        },
+      },
+    },
+    {
+      id: 'fintech-benefits-slider',
+      perPageTablet: 1,
+      perPageMobile: 1,
+      gapTablet: '16px',
+      gapMobile: '14px',
+      extraBreakpoints: {
+        767: {
+          perPage: 1,
+          gap: '14px',
+        },
+        575: {
+          perPage: 1,
+          gap: '12px',
         },
       },
     },
@@ -305,27 +324,31 @@ document.addEventListener('DOMContentLoaded', () => {
         clearTimeout(hoverIntentTimer);
       });
 
-      // Immediate click activation without delay
+      // Immediate click activation without delay (Desktop only)
       panel.addEventListener('click', () => {
-        clearTimeout(hoverIntentTimer);
-        setActiveHorizonPanel(index);
+        if (window.innerWidth > 991) {
+          clearTimeout(hoverIntentTimer);
+          setActiveHorizonPanel(index);
+        }
       });
 
-      // Keyboard accessibility
+      // Keyboard accessibility (Desktop only)
       panel.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          setActiveHorizonPanel(index);
-        } else if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
-          e.preventDefault();
-          const nextIndex = (index + 1) % horizonPanels.length;
-          horizonPanels[nextIndex].focus();
-          setActiveHorizonPanel(nextIndex);
-        } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
-          e.preventDefault();
-          const prevIndex = (index - 1 + horizonPanels.length) % horizonPanels.length;
-          horizonPanels[prevIndex].focus();
-          setActiveHorizonPanel(prevIndex);
+        if (window.innerWidth > 991) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            setActiveHorizonPanel(index);
+          } else if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+            e.preventDefault();
+            const nextIndex = (index + 1) % horizonPanels.length;
+            horizonPanels[nextIndex].focus();
+            setActiveHorizonPanel(nextIndex);
+          } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+            e.preventDefault();
+            const prevIndex = (index - 1 + horizonPanels.length) % horizonPanels.length;
+            horizonPanels[prevIndex].focus();
+            setActiveHorizonPanel(prevIndex);
+          }
         }
       });
     });
