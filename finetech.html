@@ -36,7 +36,7 @@
       <div class="vizz-container">
 
         <div class="hero-section-flex">
-          <!-- LEFT COLUMN: CONTENT & VALUE PROPOSITION -->
+          <!-- LEFT COLUMN: CONTENT & VALUE PROPOSITION --> 
           <div class="hero-col-1">
 
             <!-- SINGLE H1 ON THE ENTIRE PAGE -->
@@ -1776,227 +1776,249 @@
           <button type="button" class="tech-filter-btn" data-filter="enterprise" role="tab" aria-selected="false">Enterprise &amp; Security</button>
         </div>
 
-        <!-- 3x3 Bento Ecosystem Matrix Grid -->
-        <div class="techstack-bento-grid" id="techstack-grid">
+        <!-- Splide Slider Wrapper (Mobile/Tablet Slider & Desktop Grid) -->
+        <div class="splide techstack-slider" id="fintech-techstack-slider" aria-label="Technology Stack Slider">
+          <div class="splide__track">
+            <ul class="splide__list techstack-bento-grid" id="techstack-grid">
 
-          <!-- 1. BACKEND -->
-          <article class="techstack-card" data-category="core">
-            <div class="techstack-card-header">
-              <div class="tech-category-icon-box" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
-                  <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
-                  <line x1="6" y1="6" x2="6.01" y2="6"></line>
-                  <line x1="6" y1="18" x2="6.01" y2="18"></line>
-                </svg>
-              </div>
-              <div class="tech-header-info">
-                <span class="tech-domain-pill">CORE RUNTIME</span>
-                <h3 class="tech-category-title text-white">Backend</h3>
-              </div>
-              <span class="tech-count-badge">6 Techs</span>
-            </div>
-            <p class="tech-category-desc text-muted-dark">High-concurrency microservices, resilient APIs, and deterministic ledger computing.</p>
-            <div class="tech-pills-list">
-              <span class="tech-pill"><span class="tech-pill-dot"></span>Java</span>
-              <span class="tech-pill"><span class="tech-pill-dot"></span>.NET / ASP.NET Core</span>
-              <span class="tech-pill"><span class="tech-pill-dot"></span>Python</span>
-              <span class="tech-pill"><span class="tech-pill-dot"></span>Node.js</span>
-              <span class="tech-pill"><span class="tech-pill-dot"></span>PHP</span>
-              <span class="tech-pill"><span class="tech-pill-dot"></span>Golang</span>
-            </div>
-          </article>
+              <!-- 1. BACKEND -->
+              <li class="splide__slide techstack-slide" data-category="core">
+                <article class="techstack-card" data-category="core">
+                  <div class="techstack-card-header">
+                    <div class="tech-category-icon-box" aria-hidden="true">
+                      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                        <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                        <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                        <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                      </svg>
+                    </div>
+                    <div class="tech-header-info">
+                      <span class="tech-domain-pill">CORE RUNTIME</span>
+                      <h3 class="tech-category-title text-white">Backend</h3>
+                    </div>
+                    <span class="tech-count-badge">6 Techs</span>
+                  </div>
+                  <p class="tech-category-desc text-muted-dark">High-concurrency microservices, resilient APIs, and deterministic ledger computing.</p>
+                  <div class="tech-pills-list">
+                    <span class="tech-pill"><span class="tech-pill-dot"></span>Java</span>
+                    <span class="tech-pill"><span class="tech-pill-dot"></span>.NET / ASP.NET Core</span>
+                    <span class="tech-pill"><span class="tech-pill-dot"></span>Python</span>
+                    <span class="tech-pill"><span class="tech-pill-dot"></span>Node.js</span>
+                    <span class="tech-pill"><span class="tech-pill-dot"></span>PHP</span>
+                    <span class="tech-pill"><span class="tech-pill-dot"></span>Golang</span>
+                  </div>
+                </article>
+              </li>
 
-          <!-- 2. FRONTEND -->
-          <article class="techstack-card" data-category="core">
-            <div class="techstack-card-header">
-              <div class="tech-category-icon-box" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="16 18 22 12 16 6"></polyline>
-                  <polyline points="8 6 2 12 8 18"></polyline>
-                </svg>
-              </div>
-              <div class="tech-header-info">
-                <span class="tech-domain-pill">REACTIVE CLIENTS</span>
-                <h3 class="tech-category-title text-white">Frontend</h3>
-              </div>
-              <span class="tech-count-badge">5 Techs</span>
-            </div>
-            <p class="tech-category-desc text-muted-dark">Pixel-precise, type-safe trading desks, portal views, and dynamic investor dashboards.</p>
-            <div class="tech-pills-list">
-              <span class="tech-pill"><span class="tech-pill-dot"></span>React</span>
-              <span class="tech-pill"><span class="tech-pill-dot"></span>Angular</span>
-              <span class="tech-pill"><span class="tech-pill-dot"></span>Vue.js</span>
-              <span class="tech-pill"><span class="tech-pill-dot"></span>Next.js</span>
-              <span class="tech-pill"><span class="tech-pill-dot"></span>TypeScript</span>
-            </div>
-          </article>
+              <!-- 2. FRONTEND -->
+              <li class="splide__slide techstack-slide" data-category="core">
+                <article class="techstack-card" data-category="core">
+                  <div class="techstack-card-header">
+                    <div class="tech-category-icon-box" aria-hidden="true">
+                      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="16 18 22 12 16 6"></polyline>
+                        <polyline points="8 6 2 12 8 18"></polyline>
+                      </svg>
+                    </div>
+                    <div class="tech-header-info">
+                      <span class="tech-domain-pill">REACTIVE CLIENTS</span>
+                      <h3 class="tech-category-title text-white">Frontend</h3>
+                    </div>
+                    <span class="tech-count-badge">5 Techs</span>
+                  </div>
+                  <p class="tech-category-desc text-muted-dark">Pixel-precise, type-safe trading desks, portal views, and dynamic investor dashboards.</p>
+                  <div class="tech-pills-list">
+                    <span class="tech-pill"><span class="tech-pill-dot"></span>React</span>
+                    <span class="tech-pill"><span class="tech-pill-dot"></span>Angular</span>
+                    <span class="tech-pill"><span class="tech-pill-dot"></span>Vue.js</span>
+                    <span class="tech-pill"><span class="tech-pill-dot"></span>Next.js</span>
+                    <span class="tech-pill"><span class="tech-pill-dot"></span>TypeScript</span>
+                  </div>
+                </article>
+              </li>
 
-          <!-- 3. MOBILE -->
-          <article class="techstack-card" data-category="core">
-            <div class="techstack-card-header">
-              <div class="tech-category-icon-box" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
-                  <line x1="12" y1="18" x2="12.01" y2="18"></line>
-                </svg>
-              </div>
-              <div class="tech-header-info">
-                <span class="tech-domain-pill">NATIVE &amp; HYBRID</span>
-                <h3 class="tech-category-title text-white">Mobile</h3>
-              </div>
-              <span class="tech-count-badge">4 Techs</span>
-            </div>
-            <p class="tech-category-desc text-muted-dark">Biometric-secured mobile banking and frictionless digital wallet experiences.</p>
-            <div class="tech-pills-list">
-              <span class="tech-pill"><span class="tech-pill-dot"></span>Swift</span>
-              <span class="tech-pill"><span class="tech-pill-dot"></span>Kotlin</span>
-              <span class="tech-pill"><span class="tech-pill-dot"></span>Flutter</span>
-              <span class="tech-pill"><span class="tech-pill-dot"></span>React Native</span>
-            </div>
-          </article>
+              <!-- 3. MOBILE -->
+              <li class="splide__slide techstack-slide" data-category="core">
+                <article class="techstack-card" data-category="core">
+                  <div class="techstack-card-header">
+                    <div class="tech-category-icon-box" aria-hidden="true">
+                      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                        <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                      </svg>
+                    </div>
+                    <div class="tech-header-info">
+                      <span class="tech-domain-pill">NATIVE &amp; HYBRID</span>
+                      <h3 class="tech-category-title text-white">Mobile</h3>
+                    </div>
+                    <span class="tech-count-badge">4 Techs</span>
+                  </div>
+                  <p class="tech-category-desc text-muted-dark">Biometric-secured mobile banking and frictionless digital wallet experiences.</p>
+                  <div class="tech-pills-list">
+                    <span class="tech-pill"><span class="tech-pill-dot"></span>Swift</span>
+                    <span class="tech-pill"><span class="tech-pill-dot"></span>Kotlin</span>
+                    <span class="tech-pill"><span class="tech-pill-dot"></span>Flutter</span>
+                    <span class="tech-pill"><span class="tech-pill-dot"></span>React Native</span>
+                  </div>
+                </article>
+              </li>
 
-          <!-- 4. DATA STORAGE -->
-          <article class="techstack-card" data-category="data-cloud">
-            <div class="techstack-card-header">
-              <div class="tech-category-icon-box" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
-                  <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
-                  <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
-                </svg>
-              </div>
-              <div class="tech-header-info">
-                <span class="tech-domain-pill">PERSISTENCE &amp; CACHE</span>
-                <h3 class="tech-category-title text-white">Data Storage</h3>
-              </div>
-              <span class="tech-count-badge">4 Techs</span>
-            </div>
-            <p class="tech-category-desc text-muted-dark">ACID-compliant transaction logging, sub-millisecond memory caching, and scalable document stores.</p>
-            <div class="tech-pills-list">
-              <span class="tech-pill"><span class="tech-pill-dot"></span>PostgreSQL</span>
-              <span class="tech-pill"><span class="tech-pill-dot"></span>Microsoft SQL Server</span>
-              <span class="tech-pill"><span class="tech-pill-dot"></span>MongoDB</span>
-              <span class="tech-pill"><span class="tech-pill-dot"></span>Redis</span>
-            </div>
-          </article>
+              <!-- 4. DATA STORAGE -->
+              <li class="splide__slide techstack-slide" data-category="data-cloud">
+                <article class="techstack-card" data-category="data-cloud">
+                  <div class="techstack-card-header">
+                    <div class="tech-category-icon-box" aria-hidden="true">
+                      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                        <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                        <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                      </svg>
+                    </div>
+                    <div class="tech-header-info">
+                      <span class="tech-domain-pill">PERSISTENCE &amp; CACHE</span>
+                      <h3 class="tech-category-title text-white">Data Storage</h3>
+                    </div>
+                    <span class="tech-count-badge">4 Techs</span>
+                  </div>
+                  <p class="tech-category-desc text-muted-dark">ACID-compliant transaction logging, sub-millisecond memory caching, and scalable document stores.</p>
+                  <div class="tech-pills-list">
+                    <span class="tech-pill"><span class="tech-pill-dot"></span>PostgreSQL</span>
+                    <span class="tech-pill"><span class="tech-pill-dot"></span>Microsoft SQL Server</span>
+                    <span class="tech-pill"><span class="tech-pill-dot"></span>MongoDB</span>
+                    <span class="tech-pill"><span class="tech-pill-dot"></span>Redis</span>
+                  </div>
+                </article>
+              </li>
 
-          <!-- 5. CLOUD & DEVOPS -->
-          <article class="techstack-card" data-category="data-cloud">
-            <div class="techstack-card-header">
-              <div class="tech-category-icon-box" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
-                </svg>
-              </div>
-              <div class="tech-header-info">
-                <span class="tech-domain-pill">INFRASTRUCTURE &amp; CI/CD</span>
-                <h3 class="tech-category-title text-white">Cloud &amp; DevOps</h3>
-              </div>
-              <span class="tech-count-badge">5 Techs</span>
-            </div>
-            <p class="tech-category-desc text-muted-dark">Automated zero-downtime deployment pipelines, container orchestration, and multi-region failover.</p>
-            <div class="tech-pills-list">
-              <span class="tech-pill"><span class="tech-pill-dot"></span>AWS</span>
-              <span class="tech-pill"><span class="tech-pill-dot"></span>Microsoft Azure</span>
-              <span class="tech-pill"><span class="tech-pill-dot"></span>Google Cloud Platform</span>
-              <span class="tech-pill"><span class="tech-pill-dot"></span>Docker</span>
-              <span class="tech-pill"><span class="tech-pill-dot"></span>Kubernetes</span>
-            </div>
-          </article>
+              <!-- 5. CLOUD & DEVOPS -->
+              <li class="splide__slide techstack-slide" data-category="data-cloud">
+                <article class="techstack-card" data-category="data-cloud">
+                  <div class="techstack-card-header">
+                    <div class="tech-category-icon-box" aria-hidden="true">
+                      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+                      </svg>
+                    </div>
+                    <div class="tech-header-info">
+                      <span class="tech-domain-pill">INFRASTRUCTURE &amp; CI/CD</span>
+                      <h3 class="tech-category-title text-white">Cloud &amp; DevOps</h3>
+                    </div>
+                    <span class="tech-count-badge">5 Techs</span>
+                  </div>
+                  <p class="tech-category-desc text-muted-dark">Automated zero-downtime deployment pipelines, container orchestration, and multi-region failover.</p>
+                  <div class="tech-pills-list">
+                    <span class="tech-pill"><span class="tech-pill-dot"></span>AWS</span>
+                    <span class="tech-pill"><span class="tech-pill-dot"></span>Microsoft Azure</span>
+                    <span class="tech-pill"><span class="tech-pill-dot"></span>Google Cloud Platform</span>
+                    <span class="tech-pill"><span class="tech-pill-dot"></span>Docker</span>
+                    <span class="tech-pill"><span class="tech-pill-dot"></span>Kubernetes</span>
+                  </div>
+                </article>
+              </li>
 
-          <!-- 6. AI & DATA -->
-          <article class="techstack-card" data-category="data-cloud">
-            <div class="techstack-card-header">
-              <div class="tech-category-icon-box" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
-                </svg>
-              </div>
-              <div class="tech-header-info">
-                <span class="tech-domain-pill">INTELLIGENCE &amp; BI</span>
-                <h3 class="tech-category-title text-white">AI &amp; Data</h3>
-              </div>
-              <span class="tech-count-badge">5 Techs</span>
-            </div>
-            <p class="tech-category-desc text-muted-dark">Predictive fraud detection, autonomous underwriting models, and real-time financial reporting.</p>
-            <div class="tech-pills-list">
-              <span class="tech-pill"><span class="tech-pill-dot"></span>Python (ML/AI)</span>
-              <span class="tech-pill"><span class="tech-pill-dot"></span>TensorFlow</span>
-              <span class="tech-pill"><span class="tech-pill-dot"></span>LLM / RAG Frameworks</span>
-              <span class="tech-pill"><span class="tech-pill-dot"></span>Power BI</span>
-              <span class="tech-pill"><span class="tech-pill-dot"></span>Tableau</span>
-            </div>
-          </article>
+              <!-- 6. AI & DATA -->
+              <li class="splide__slide techstack-slide" data-category="data-cloud">
+                <article class="techstack-card" data-category="data-cloud">
+                  <div class="techstack-card-header">
+                    <div class="tech-category-icon-box" aria-hidden="true">
+                      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
+                      </svg>
+                    </div>
+                    <div class="tech-header-info">
+                      <span class="tech-domain-pill">INTELLIGENCE &amp; BI</span>
+                      <h3 class="tech-category-title text-white">AI &amp; Data</h3>
+                    </div>
+                    <span class="tech-count-badge">5 Techs</span>
+                  </div>
+                  <p class="tech-category-desc text-muted-dark">Predictive fraud detection, autonomous underwriting models, and real-time financial reporting.</p>
+                  <div class="tech-pills-list">
+                    <span class="tech-pill"><span class="tech-pill-dot"></span>Python (ML/AI)</span>
+                    <span class="tech-pill"><span class="tech-pill-dot"></span>TensorFlow</span>
+                    <span class="tech-pill"><span class="tech-pill-dot"></span>LLM / RAG Frameworks</span>
+                    <span class="tech-pill"><span class="tech-pill-dot"></span>Power BI</span>
+                    <span class="tech-pill"><span class="tech-pill-dot"></span>Tableau</span>
+                  </div>
+                </article>
+              </li>
 
-          <!-- 7. BLOCKCHAIN -->
-          <article class="techstack-card" data-category="enterprise">
-            <div class="techstack-card-header">
-              <div class="tech-category-icon-box" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                  <polyline points="2 17 12 22 22 17"></polyline>
-                  <polyline points="2 12 12 17 22 12"></polyline>
-                </svg>
-              </div>
-              <div class="tech-header-info">
-                <span class="tech-domain-pill">DISTRIBUTED LEDGERS</span>
-                <h3 class="tech-category-title text-white">Blockchain</h3>
-              </div>
-              <span class="tech-count-badge">3 Techs</span>
-            </div>
-            <p class="tech-category-desc text-muted-dark">Decentralized asset tokenization, verifiable smart contracts, and private permissioned networks.</p>
-            <div class="tech-pills-list">
-              <span class="tech-pill"><span class="tech-pill-dot"></span>Ethereum</span>
-              <span class="tech-pill"><span class="tech-pill-dot"></span>Hyperledger</span>
-              <span class="tech-pill"><span class="tech-pill-dot"></span>Smart Contract Frameworks</span>
-            </div>
-          </article>
+              <!-- 7. BLOCKCHAIN -->
+              <li class="splide__slide techstack-slide" data-category="enterprise">
+                <article class="techstack-card" data-category="enterprise">
+                  <div class="techstack-card-header">
+                    <div class="tech-category-icon-box" aria-hidden="true">
+                      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                        <polyline points="2 17 12 22 22 17"></polyline>
+                        <polyline points="2 12 12 17 22 12"></polyline>
+                      </svg>
+                    </div>
+                    <div class="tech-header-info">
+                      <span class="tech-domain-pill">DISTRIBUTED LEDGERS</span>
+                      <h3 class="tech-category-title text-white">Blockchain</h3>
+                    </div>
+                    <span class="tech-count-badge">3 Techs</span>
+                  </div>
+                  <p class="tech-category-desc text-muted-dark">Decentralized asset tokenization, verifiable smart contracts, and private permissioned networks.</p>
+                  <div class="tech-pills-list">
+                    <span class="tech-pill"><span class="tech-pill-dot"></span>Ethereum</span>
+                    <span class="tech-pill"><span class="tech-pill-dot"></span>Hyperledger</span>
+                    <span class="tech-pill"><span class="tech-pill-dot"></span>Smart Contract Frameworks</span>
+                  </div>
+                </article>
+              </li>
 
-          <!-- 8. PLATFORMS -->
-          <article class="techstack-card" data-category="enterprise">
-            <div class="techstack-card-header">
-              <div class="tech-category-icon-box" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-                </svg>
-              </div>
-              <div class="tech-header-info">
-                <span class="tech-domain-pill">ENTERPRISE ECOSYSTEMS</span>
-                <h3 class="tech-category-title text-white">Platforms</h3>
-              </div>
-              <span class="tech-count-badge">3 Techs</span>
-            </div>
-            <p class="tech-category-desc text-muted-dark">Industry-standard banking CRMs, enterprise ERP orchestration, and wealth management suites.</p>
-            <div class="tech-pills-list">
-              <span class="tech-pill"><span class="tech-pill-dot"></span>Salesforce Financial Services Cloud</span>
-              <span class="tech-pill"><span class="tech-pill-dot"></span>Microsoft Dynamics 365</span>
-              <span class="tech-pill"><span class="tech-pill-dot"></span>Odoo</span>
-            </div>
-          </article>
+              <!-- 8. PLATFORMS -->
+              <li class="splide__slide techstack-slide" data-category="enterprise">
+                <article class="techstack-card" data-category="enterprise">
+                  <div class="techstack-card-header">
+                    <div class="tech-category-icon-box" aria-hidden="true">
+                      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                      </svg>
+                    </div>
+                    <div class="tech-header-info">
+                      <span class="tech-domain-pill">ENTERPRISE ECOSYSTEMS</span>
+                      <h3 class="tech-category-title text-white">Platforms</h3>
+                    </div>
+                    <span class="tech-count-badge">3 Techs</span>
+                  </div>
+                  <p class="tech-category-desc text-muted-dark">Industry-standard banking CRMs, enterprise ERP orchestration, and wealth management suites.</p>
+                  <div class="tech-pills-list">
+                    <span class="tech-pill"><span class="tech-pill-dot"></span>Salesforce Financial Services Cloud</span>
+                    <span class="tech-pill"><span class="tech-pill-dot"></span>Microsoft Dynamics 365</span>
+                    <span class="tech-pill"><span class="tech-pill-dot"></span>Odoo</span>
+                  </div>
+                </article>
+              </li>
 
-          <!-- 9. SECURITY -->
-          <article class="techstack-card" data-category="enterprise">
-            <div class="techstack-card-header">
-              <div class="tech-category-icon-box" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                </svg>
-              </div>
-              <div class="tech-header-info">
-                <span class="tech-domain-pill">ZERO-TRUST PROTOCOLS</span>
-                <h3 class="tech-category-title text-white">Security</h3>
-              </div>
-              <span class="tech-count-badge">3 Techs</span>
-            </div>
-            <p class="tech-category-desc text-muted-dark">Hardware-level key management, robust identity federation, and PCI-compliant data tokenization.</p>
-            <div class="tech-pills-list">
-              <span class="tech-pill"><span class="tech-pill-dot"></span>OAuth 2.0 / OpenID Connect</span>
-              <span class="tech-pill"><span class="tech-pill-dot"></span>Tokenization</span>
-              <span class="tech-pill"><span class="tech-pill-dot"></span>HSM-Based Key Management</span>
-            </div>
-          </article>
+              <!-- 9. SECURITY -->
+              <li class="splide__slide techstack-slide" data-category="enterprise">
+                <article class="techstack-card" data-category="enterprise">
+                  <div class="techstack-card-header">
+                    <div class="tech-category-icon-box" aria-hidden="true">
+                      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                      </svg>
+                    </div>
+                    <div class="tech-header-info">
+                      <span class="tech-domain-pill">ZERO-TRUST PROTOCOLS</span>
+                      <h3 class="tech-category-title text-white">Security</h3>
+                    </div>
+                    <span class="tech-count-badge">3 Techs</span>
+                  </div>
+                  <p class="tech-category-desc text-muted-dark">Hardware-level key management, robust identity federation, and PCI-compliant data tokenization.</p>
+                  <div class="tech-pills-list">
+                    <span class="tech-pill"><span class="tech-pill-dot"></span>OAuth 2.0 / OpenID Connect</span>
+                    <span class="tech-pill"><span class="tech-pill-dot"></span>Tokenization</span>
+                    <span class="tech-pill"><span class="tech-pill-dot"></span>HSM-Based Key Management</span>
+                  </div>
+                </article>
+              </li>
 
+            </ul>
+          </div>
         </div>
 
         <!-- Interactive Architecture Banner Strip -->
@@ -2321,141 +2343,157 @@
           </h2>
         </div>
 
-        <!-- 6-Pillar Value Grid -->
-        <div class="why-choose-grid">
+        <!-- Splide Slider Wrapper (Mobile/Tablet Slider & Desktop Grid) -->
+        <div class="splide why-slider" id="fintech-why-slider" aria-label="Why Choose Our Custom Financial Software Services Slider">
+          <div class="splide__track">
+            <ul class="splide__list why-choose-grid">
 
-          <!-- 1. Deep Financial Sector Expertise -->
-          <article class="why-choose-card">
-            <div class="why-card-top">
-              <div class="why-icon-box" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M3 21h18"></path>
-                  <path d="M3 10h18"></path>
-                  <path d="M5 6l7-3 7 3"></path>
-                  <path d="M4 10v11"></path>
-                  <path d="M20 10v11"></path>
-                  <path d="M8 14v4"></path>
-                  <path d="M12 14v4"></path>
-                  <path d="M16 14v4"></path>
-                </svg>
-              </div>
-              <span class="why-step-num">01</span>
-            </div>
-            <div class="why-card-body">
-              <h3 class="why-card-title">Deep Financial Sector Expertise</h3>
-              <p class="why-card-desc">
-                Vizz Web Solutions team understands the operational realities of banking, lending, wealth management, and fintech not just software engineering in the abstract.
-              </p>
-            </div>
-          </article>
+              <!-- 1. Deep Financial Sector Expertise -->
+              <li class="splide__slide why-choose-slide">
+                <article class="why-choose-card">
+                  <div class="why-card-top">
+                    <div class="why-icon-box" aria-hidden="true">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 21h18"></path>
+                        <path d="M3 10h18"></path>
+                        <path d="M5 6l7-3 7 3"></path>
+                        <path d="M4 10v11"></path>
+                        <path d="M20 10v11"></path>
+                        <path d="M8 14v4"></path>
+                        <path d="M12 14v4"></path>
+                        <path d="M16 14v4"></path>
+                      </svg>
+                    </div>
+                    <span class="why-step-num">01</span>
+                  </div>
+                  <div class="why-card-body">
+                    <h3 class="why-card-title">Deep Financial Sector Expertise</h3>
+                    <p class="why-card-desc">
+                      Vizz Web Solutions team understands the operational realities of banking, lending, wealth management, and fintech not just software engineering in the abstract.
+                    </p>
+                  </div>
+                </article>
+              </li>
 
-          <!-- 2. Security-First Development -->
-          <article class="why-choose-card">
-            <div class="why-card-top">
-              <div class="why-icon-box" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                  <polyline points="9 12 11 14 15 10"></polyline>
-                </svg>
-              </div>
-              <span class="why-step-num">02</span>
-            </div>
-            <div class="why-card-body">
-              <h3 class="why-card-title">Security-First Development</h3>
-              <p class="why-card-desc">
-                Every project follows secure-by-design principles, with encryption, access controls, and security testing built in from day one, not added as an afterthought.
-              </p>
-            </div>
-          </article>
+              <!-- 2. Security-First Development -->
+              <li class="splide__slide why-choose-slide">
+                <article class="why-choose-card">
+                  <div class="why-card-top">
+                    <div class="why-icon-box" aria-hidden="true">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        <polyline points="9 12 11 14 15 10"></polyline>
+                      </svg>
+                    </div>
+                    <span class="why-step-num">02</span>
+                  </div>
+                  <div class="why-card-body">
+                    <h3 class="why-card-title">Security-First Development</h3>
+                    <p class="why-card-desc">
+                      Every project follows secure-by-design principles, with encryption, access controls, and security testing built in from day one, not added as an afterthought.
+                    </p>
+                  </div>
+                </article>
+              </li>
 
-          <!-- 3. Compliance-Focused Delivery -->
-          <article class="why-choose-card">
-            <div class="why-card-top">
-              <div class="why-icon-box" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                  <polyline points="14 2 14 8 20 8"></polyline>
-                  <line x1="16" y1="13" x2="8" y2="13"></line>
-                  <line x1="16" y1="17" x2="8" y2="17"></line>
-                  <polyline points="10 9 9 9 8 9"></polyline>
-                </svg>
-              </div>
-              <span class="why-step-num">03</span>
-            </div>
-            <div class="why-card-body">
-              <h3 class="why-card-title">Compliance-Focused Delivery</h3>
-              <p class="why-card-desc">
-                We build software aligned with GDPR, PCI DSS, SOC 2, ISO 27001, AML, FINRA, and SEC regulations relevant to your business, helping you avoid costly compliance gaps.
-              </p>
-            </div>
-          </article>
+              <!-- 3. Compliance-Focused Delivery -->
+              <li class="splide__slide why-choose-slide">
+                <article class="why-choose-card">
+                  <div class="why-card-top">
+                    <div class="why-icon-box" aria-hidden="true">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                      </svg>
+                    </div>
+                    <span class="why-step-num">03</span>
+                  </div>
+                  <div class="why-card-body">
+                    <h3 class="why-card-title">Compliance-Focused Delivery</h3>
+                    <p class="why-card-desc">
+                      We build software aligned with GDPR, PCI DSS, SOC 2, ISO 27001, AML, FINRA, and SEC regulations relevant to your business, helping you avoid costly compliance gaps.
+                    </p>
+                  </div>
+                </article>
+              </li>
 
-          <!-- 4. Custom-Built, Not Templated -->
-          <article class="why-choose-card">
-            <div class="why-card-top">
-              <div class="why-icon-box" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                  <polyline points="2 17 12 22 22 17"></polyline>
-                  <polyline points="2 12 12 17 22 12"></polyline>
-                </svg>
-              </div>
-              <span class="why-step-num">04</span>
-            </div>
-            <div class="why-card-body">
-              <h3 class="why-card-title">Custom-Built, Not Templated</h3>
-              <p class="why-card-desc">
-                We design software around your workflows and compliance obligations rather than forcing your institution into a generic platform.
-              </p>
-            </div>
-          </article>
+              <!-- 4. Custom-Built, Not Templated -->
+              <li class="splide__slide why-choose-slide">
+                <article class="why-choose-card">
+                  <div class="why-card-top">
+                    <div class="why-icon-box" aria-hidden="true">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                        <polyline points="2 17 12 22 22 17"></polyline>
+                        <polyline points="2 12 12 17 22 12"></polyline>
+                      </svg>
+                    </div>
+                    <span class="why-step-num">04</span>
+                  </div>
+                  <div class="why-card-body">
+                    <h3 class="why-card-title">Custom-Built, Not Templated</h3>
+                    <p class="why-card-desc">
+                      We design software around your workflows and compliance obligations rather than forcing your institution into a generic platform.
+                    </p>
+                  </div>
+                </article>
+              </li>
 
-          <!-- 5. Integration-Focused Architecture -->
-          <article class="why-choose-card">
-            <div class="why-card-top">
-              <div class="why-icon-box" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="2" y="2" width="8" height="8" rx="2"></rect>
-                  <rect x="14" y="2" width="8" height="8" rx="2"></rect>
-                  <rect x="14" y="14" width="8" height="8" rx="2"></rect>
-                  <rect x="2" y="14" width="8" height="8" rx="2"></rect>
-                  <line x1="6" y1="10" x2="6" y2="14"></line>
-                  <line x1="18" y1="10" x2="18" y2="14"></line>
-                  <line x1="10" y1="6" x2="14" y2="6"></line>
-                  <line x1="10" y1="18" x2="14" y2="18"></line>
-                </svg>
-              </div>
-              <span class="why-step-num">05</span>
-            </div>
-            <div class="why-card-body">
-              <h3 class="why-card-title">Integration-Focused Architecture</h3>
-              <p class="why-card-desc">
-                Your existing core banking, CRM, and payment systems are treated as part of the solution architecture from the outset.
-              </p>
-            </div>
-          </article>
+              <!-- 5. Integration-Focused Architecture -->
+              <li class="splide__slide why-choose-slide">
+                <article class="why-choose-card">
+                  <div class="why-card-top">
+                    <div class="why-icon-box" aria-hidden="true">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="2" width="8" height="8" rx="2"></rect>
+                        <rect x="14" y="2" width="8" height="8" rx="2"></rect>
+                        <rect x="14" y="14" width="8" height="8" rx="2"></rect>
+                        <rect x="2" y="14" width="8" height="8" rx="2"></rect>
+                        <line x1="6" y1="10" x2="6" y2="14"></line>
+                        <line x1="18" y1="10" x2="18" y2="14"></line>
+                        <line x1="10" y1="6" x2="14" y2="6"></line>
+                        <line x1="10" y1="18" x2="14" y2="18"></line>
+                      </svg>
+                    </div>
+                    <span class="why-step-num">05</span>
+                  </div>
+                  <div class="why-card-body">
+                    <h3 class="why-card-title">Integration-Focused Architecture</h3>
+                    <p class="why-card-desc">
+                      Your existing core banking, CRM, and payment systems are treated as part of the solution architecture from the outset.
+                    </p>
+                  </div>
+                </article>
+              </li>
 
-          <!-- 6. Long-Term Partnership -->
-          <article class="why-choose-card">
-            <div class="why-card-top">
-              <div class="why-icon-box" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                  <circle cx="9" cy="7" r="4"></circle>
-                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                </svg>
-              </div>
-              <span class="why-step-num">06</span>
-            </div>
-            <div class="why-card-body">
-              <h3 class="why-card-title">Long-Term Partnership</h3>
-              <p class="why-card-desc">
-                Financial regulations and technology continue evolving — our post-launch support keeps your software compliant, secure, and aligned with your business as it grows.
-              </p>
-            </div>
-          </article>
+              <!-- 6. Long-Term Partnership -->
+              <li class="splide__slide why-choose-slide">
+                <article class="why-choose-card">
+                  <div class="why-card-top">
+                    <div class="why-icon-box" aria-hidden="true">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                      </svg>
+                    </div>
+                    <span class="why-step-num">06</span>
+                  </div>
+                  <div class="why-card-body">
+                    <h3 class="why-card-title">Long-Term Partnership</h3>
+                    <p class="why-card-desc">
+                      Financial regulations and technology continue evolving — our post-launch support keeps your software compliant, secure, and aligned with your business as it grows.
+                    </p>
+                  </div>
+                </article>
+              </li>
 
+            </ul>
+          </div>
         </div>
 
       </div>

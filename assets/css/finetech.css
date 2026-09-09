@@ -989,6 +989,15 @@ b {
   color: #ffffff;
 }
 
+/* Splide Responsive Utility Rules */
+.splide.is-active .splide__list {
+  display: flex !important;
+}
+
+.splide.is-rendered .splide__list {
+  display: grid;
+}
+
 /* Splide Pagination for Dark Sections */
 .advantages-slider .splide__pagination {
   bottom: -32px;
@@ -2357,16 +2366,34 @@ b {
   box-shadow: 0 4px 16px rgba(36, 143, 206, 0.45);
 }
 
-/* 3x3 Bento Grid */
+/* 3x3 Bento Grid & Responsive Splide */
+.techstack-slider {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 44px;
+}
+
 .techstack-bento-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
-  margin-bottom: 44px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.techstack-slide {
+  display: flex;
+  height: auto;
+}
+
+.techstack-slide.is-hidden {
+  display: none !important;
 }
 
 /* Individual Tech Stack Card */
 .techstack-card {
+  width: 100%;
   background: linear-gradient(165deg, rgba(14, 34, 70, 0.65) 0%, rgba(8, 20, 42, 0.85) 100%);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
@@ -2406,6 +2433,29 @@ b {
 
 .techstack-card.is-hidden {
   display: none !important;
+}
+
+/* Splide Pagination for Tech Stack (Dark Theme) */
+.techstack-slider .splide__pagination {
+  bottom: -30px;
+  gap: 8px;
+}
+
+.techstack-slider .splide__pagination__page {
+  width: 8px;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+.techstack-slider .splide__pagination__page.is-active {
+  background: var(--btn-color);
+  width: 24px;
+  border-radius: 4px;
+  transform: none;
 }
 
 /* Card Header */
@@ -2962,13 +3012,27 @@ b {
   overflow: hidden;
 }
 
+.why-slider {
+  position: relative;
+  z-index: 2;
+}
+
 .why-choose-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.why-choose-slide {
+  display: flex;
+  height: auto;
 }
 
 .why-choose-card {
+  width: 100%;
   background: #ffffff;
   border: 1px solid var(--border-light);
   border-radius: var(--border-radius-card);
@@ -2986,6 +3050,29 @@ b {
 .why-choose-card:hover {
   border-color: rgba(36, 143, 206, 0.45);
   box-shadow: 0 16px 36px rgba(0, 0, 0, 0.06), 0 0 20px rgba(36, 143, 206, 0.08);
+}
+
+/* Splide Pagination for Why Choose Us (Light Theme) */
+.why-slider .splide__pagination {
+  bottom: -30px;
+  gap: 8px;
+}
+
+.why-slider .splide__pagination__page {
+  width: 8px;
+  height: 8px;
+  background: rgba(7, 21, 43, 0.2);
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+.why-slider .splide__pagination__page.is-active {
+  background: var(--btn-color);
+  width: 24px;
+  border-radius: 4px;
+  transform: none;
 }
 
 .why-card-top {
@@ -4001,6 +4088,9 @@ b {
   :root {
     --container-padding: 16px;
     --section-padding: 55px 0;
+  }
+  .comparison-takeaway-card::before {
+    display: none;
   }
 
   .hero-title {

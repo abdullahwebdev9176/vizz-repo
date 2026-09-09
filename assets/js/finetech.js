@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // =========================================================================
-  // 3. RESPONSIVE SPLIDE SLIDER MANAGER (Active <= 991px for Advantages Section)
+  // 3. RESPONSIVE SPLIDE SLIDER MANAGER (Active <= 991px for Advantages, Tech Stack & Why Choose Us)
   // =========================================================================
   const activeSplideInstances = {};
 
@@ -159,6 +159,32 @@ document.addEventListener('DOMContentLoaded', () => {
       perPageTablet: 2,
       perPageMobile: 1,
       gapTablet: '20px',
+      gapMobile: '14px',
+      extraBreakpoints: {
+        767: {
+          perPage: 1,
+          gap: '14px',
+        },
+      },
+    },
+    {
+      id: 'fintech-techstack-slider',
+      perPageTablet: 2,
+      perPageMobile: 1,
+      gapTablet: '18px',
+      gapMobile: '14px',
+      extraBreakpoints: {
+        767: {
+          perPage: 1,
+          gap: '14px',
+        },
+      },
+    },
+    {
+      id: 'fintech-why-slider',
+      perPageTablet: 2,
+      perPageMobile: 1,
+      gapTablet: '18px',
       gapMobile: '14px',
       extraBreakpoints: {
         767: {
@@ -311,9 +337,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // 5. SECTION 9: TECH STACK INTERACTIVE CATEGORY FILTER
   // =========================================================================
   const techFilterBtns = document.querySelectorAll('.tech-filter-btn');
+  const techSlides = document.querySelectorAll('.techstack-slide');
   const techCards = document.querySelectorAll('.techstack-card');
 
-  if (techFilterBtns.length > 0 && techCards.length > 0) {
+  if (techFilterBtns.length > 0 && (techSlides.length > 0 || techCards.length > 0)) {
     techFilterBtns.forEach((btn) => {
       btn.addEventListener('click', () => {
         const filterVal = btn.getAttribute('data-filter');
@@ -326,21 +353,34 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.classList.add('is-active');
         btn.setAttribute('aria-selected', 'true');
 
-        // Filter tech cards with smooth animation
-        techCards.forEach((card) => {
-          const cardCategory = card.getAttribute('data-category');
-          if (filterVal === 'all' || cardCategory === filterVal) {
-            card.classList.remove('is-hidden');
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(8px)';
+        // Filter tech slides/cards with smooth animation
+        const items = techSlides.length > 0 ? techSlides : techCards;
+        items.forEach((item) => {
+          const itemCategory = item.getAttribute('data-category');
+          if (filterVal === 'all' || itemCategory === filterVal) {
+            item.classList.remove('is-hidden');
+            item.style.display = '';
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(8px)';
             setTimeout(() => {
-              card.style.opacity = '1';
-              card.style.transform = 'translateY(0)';
+              item.style.opacity = '1';
+              item.style.transform = 'translateY(0)';
             }, 30);
           } else {
-            card.classList.add('is-hidden');
+            item.classList.add('is-hidden');
+            item.style.display = 'none';
           }
         });
+
+        // Reset Splide slider index to 0 when filter changes on mobile/tablet
+        if (activeSplideInstances['fintech-techstack-slider']) {
+          try {
+            activeSplideInstances['fintech-techstack-slider'].go(0);
+            activeSplideInstances['fintech-techstack-slider'].refresh();
+          } catch (err) {
+            console.warn('[Splide] Error refreshing #fintech-techstack-slider:', err);
+          }
+        }
       });
     });
   }
