@@ -2823,7 +2823,119 @@ b {
 }
 
 /* ==========================================================================
-   16. RESPONSIVE MEDIA QUERIES (Strict Desktop-First Max-Width Cascade)
+   16. SECTION 13: FREQUENTLY ASKED QUESTIONS (FAQS - ACCESSIBLE ACCORDION)
+   ========================================================================== */
+.faq-section {
+  position: relative;
+  background-color: var(--bg-light);
+  padding: var(--section-padding);
+  overflow: hidden;
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.faq-accordion-wrapper {
+  max-width: 920px;
+  margin: 0 auto 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  position: relative;
+  z-index: 2;
+}
+
+.faq-item {
+  background: var(--bg-light-alt);
+  border: 1px solid var(--border-light);
+  border-radius: var(--border-radius-card-sm);
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+}
+
+.faq-item.active {
+  border-color: var(--btn-color);
+  box-shadow: 0 8px 25px rgba(23, 161, 254, 0.12);
+  background: var(--bg-light);
+}
+
+.faq-question-heading {
+  margin: 0;
+  padding: 0;
+}
+
+.faq-question-btn {
+  width: 100%;
+  min-height: 48px;
+  padding: 16px 18px;
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  font-family: var(--font-family);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-dark);
+  cursor: pointer;
+  transition: color 0.2s ease;
+  gap: 14px;
+}
+
+.faq-item.active .faq-question-btn {
+  color: var(--btn-color);
+}
+
+.faq-question-btn:hover {
+  color: var(--btn-color);
+}
+
+.faq-icon {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--btn-color);
+  width: 30px;
+  height: 30px;
+  background: rgba(23, 161, 254, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(45deg);
+  background: var(--btn-color);
+  color: var(--white-color);
+}
+
+.faq-answer-pane {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease-in-out;
+}
+
+.faq-item.active .faq-answer-pane {
+  max-height: 600px;
+}
+
+.faq-answer-content {
+  padding: 0 18px 18px;
+  text-align: left;
+}
+
+.faq-answer-content p {
+  font-size: 14.5px;
+  color: var(--text-muted-light);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ==========================================================================
+   17. RESPONSIVE MEDIA QUERIES (Strict Desktop-First Max-Width Cascade)
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -2890,6 +3002,11 @@ b {
 
   .why-choose-card {
     padding: 28px 24px;
+  }
+
+  /* Section 13: FAQ */
+  .faq-accordion-wrapper {
+    max-width: 880px;
   }
 }
 
@@ -3087,6 +3204,11 @@ b {
 
   .why-card-title {
     font-size: 17.5px;
+  }
+
+  /* Section 13: FAQ */
+  .faq-accordion-wrapper {
+    max-width: 840px;
   }
 }
 
@@ -3416,6 +3538,11 @@ b {
   .why-choose-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
+  }
+
+  /* Section 13: FAQ */
+  .faq-accordion-wrapper {
+    max-width: 100%;
   }
 }
 
@@ -3749,6 +3876,20 @@ b {
   .why-card-desc {
     font-size: 13px;
   }
+
+  /* Section 13: FAQ */
+  .faq-question-btn {
+    font-size: 14.5px;
+    padding: 14px 16px;
+  }
+
+  .faq-answer-content {
+    padding: 0 16px 16px;
+  }
+
+  .faq-answer-content p {
+    font-size: 13.5px;
+  }
 }
 
 /* --------------------------------------------------------------------------
@@ -3980,6 +4121,27 @@ b {
   .why-step-num {
     font-size: 18px;
   }
+
+  /* Section 13: FAQ */
+  .faq-question-btn {
+    font-size: 14px;
+    padding: 12px 14px;
+    gap: 10px;
+  }
+
+  .faq-icon {
+    width: 26px;
+    height: 26px;
+    font-size: 18px;
+  }
+
+  .faq-answer-content {
+    padding: 0 14px 14px;
+  }
+
+  .faq-answer-content p {
+    font-size: 13px;
+  }
 }
 
 /* --------------------------------------------------------------------------
@@ -4125,5 +4287,10 @@ b {
 
   .why-card-desc {
     font-size: 12.5px;
+  }
+
+  /* Section 13: FAQ */
+  .faq-question-btn {
+    font-size: 13.5px;
   }
 }

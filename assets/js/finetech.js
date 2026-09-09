@@ -319,6 +319,35 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // =========================================================================
+  // 6. ACCESSIBLE SINGLE-OPEN FAQ ACCORDION (Same as Healthcare Page)
+  // =========================================================================
+  const faqItems = document.querySelectorAll('.faq-item');
+
+  faqItems.forEach((item) => {
+    const questionBtn = item.querySelector('.faq-question-btn');
+    if (questionBtn) {
+      questionBtn.addEventListener('click', () => {
+        const isCurrentlyActive = item.classList.contains('active');
+
+        // Close all FAQ items
+        faqItems.forEach((otherItem) => {
+          otherItem.classList.remove('active');
+          const otherBtn = otherItem.querySelector('.faq-question-btn');
+          if (otherBtn) {
+            otherBtn.setAttribute('aria-expanded', 'false');
+          }
+        });
+
+        // Toggle clicked item if it was closed
+        if (!isCurrentlyActive) {
+          item.classList.add('active');
+          questionBtn.setAttribute('aria-expanded', 'true');
+        }
+      });
+    }
+  });
+
   handleResponsiveSliders();
 
   let resizeDebounceTimer = null;
