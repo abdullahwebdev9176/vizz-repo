@@ -2723,7 +2723,107 @@ b {
 }
 
 /* ==========================================================================
-   15. RESPONSIVE MEDIA QUERIES (Strict Desktop-First Max-Width Cascade)
+   15. SECTION 12: WHY CHOOSE OUR CUSTOM FINANCIAL SOFTWARE DEVELOPMENT SERVICES?
+   ========================================================================== */
+.fintech-why-section {
+  position: relative;
+  background-color: var(--bg-light-alt);
+  background-image: radial-gradient(circle at 10% 20%, rgba(36, 143, 206, 0.05) 0%, transparent 50%),
+                    radial-gradient(circle at 90% 80%, rgba(0, 180, 216, 0.05) 0%, transparent 50%);
+  padding: var(--section-padding);
+  border-bottom: 1px solid var(--border-light);
+  overflow: hidden;
+}
+
+.why-choose-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.why-choose-card {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--border-radius-card);
+  padding: 30px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  position: relative;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.35s ease,
+              box-shadow 0.35s ease;
+}
+
+.why-choose-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(36, 143, 206, 0.45);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.06), 0 0 20px rgba(36, 143, 206, 0.08);
+}
+
+.why-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.why-icon-box {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  background: #edf6fb;
+  border: 1px solid rgba(36, 143, 206, 0.25);
+  color: var(--btn-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.35s ease;
+}
+
+.why-choose-card:hover .why-icon-box {
+  background: var(--btn-color);
+  color: #ffffff;
+  border-color: var(--btn-color);
+  transform: scale(1.08) rotate(3deg);
+  box-shadow: 0 6px 16px rgba(23, 161, 254, 0.3);
+}
+
+.why-step-num {
+  font-size: 20px;
+  font-weight: 800;
+  color: rgba(11, 26, 48, 0.12);
+  letter-spacing: -0.5px;
+  transition: color 0.35s ease;
+}
+
+.why-choose-card:hover .why-step-num {
+  color: rgba(23, 161, 254, 0.35);
+}
+
+.why-card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.why-card-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 0 0 10px 0;
+  line-height: 1.35;
+}
+
+.why-card-desc {
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: var(--text-muted-light);
+  margin: 0;
+}
+
+/* ==========================================================================
+   16. RESPONSIVE MEDIA QUERIES (Strict Desktop-First Max-Width Cascade)
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -2781,6 +2881,15 @@ b {
   /* Section 11: Cost Slider */
   .cost-card-image-wrap {
     height: 190px;
+  }
+
+  /* Section 12: Why Choose Us */
+  .why-choose-grid {
+    gap: 20px;
+  }
+
+  .why-choose-card {
+    padding: 28px 24px;
   }
 }
 
@@ -2965,6 +3074,19 @@ b {
 
   .cost-consultation-card {
     padding: 24px 24px;
+  }
+
+  /* Section 12: Why Choose Us */
+  .why-choose-grid {
+    gap: 18px;
+  }
+
+  .why-choose-card {
+    padding: 24px 20px;
+  }
+
+  .why-card-title {
+    font-size: 17.5px;
   }
 }
 
@@ -3289,6 +3411,12 @@ b {
   .cost-consultation-action .btn-primary-pill {
     width: 100%;
   }
+
+  /* Section 12: Why Choose Us */
+  .why-choose-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
 }
 
 /* --------------------------------------------------------------------------
@@ -3603,6 +3731,24 @@ b {
   .cost-consultation-text {
     font-size: 13.5px;
   }
+
+  /* Section 12: Why Choose Us */
+  .why-choose-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .why-choose-card {
+    padding: 20px 18px;
+  }
+
+  .why-card-title {
+    font-size: 17px;
+  }
+
+  .why-card-desc {
+    font-size: 13px;
+  }
 }
 
 /* --------------------------------------------------------------------------
@@ -3815,6 +3961,25 @@ b {
     width: 42px;
     height: 42px;
   }
+
+  /* Section 12: Why Choose Us */
+  .why-choose-card {
+    padding: 18px 16px;
+    gap: 14px;
+  }
+
+  .why-icon-box {
+    width: 44px;
+    height: 44px;
+  }
+
+  .why-card-title {
+    font-size: 16px;
+  }
+
+  .why-step-num {
+    font-size: 18px;
+  }
 }
 
 /* --------------------------------------------------------------------------
@@ -3950,6 +4115,15 @@ b {
   }
 
   .cost-consultation-text {
+    font-size: 12.5px;
+  }
+
+  /* Section 12: Why Choose Us */
+  .why-card-title {
+    font-size: 15px;
+  }
+
+  .why-card-desc {
     font-size: 12.5px;
   }
 }
