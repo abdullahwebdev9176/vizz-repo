@@ -423,6 +423,32 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // =========================================================================
+  // 8. VIDEO SHOWCASE INTERACTIVE PLAY CONTROLLER
+  // =========================================================================
+  const videoPoster = document.getElementById('retail-video-poster') || document.querySelector('.video-poster-overlay');
+  const videoBox = document.getElementById('retail-video-box') || document.querySelector('.video-player-box');
+  const videoIframe = document.getElementById('retail-video-iframe') || (videoBox ? videoBox.querySelector('iframe') : null);
+
+  if (videoPoster && videoBox && videoIframe) {
+    const playVideo = () => {
+      videoBox.classList.add('is-playing');
+      let currentSrc = videoIframe.getAttribute('src');
+      if (currentSrc && !currentSrc.includes('autoplay=1')) {
+        const separator = currentSrc.includes('?') ? '&' : '?';
+        videoIframe.setAttribute('src', currentSrc + separator + 'autoplay=1');
+      }
+    };
+
+    videoPoster.addEventListener('click', playVideo);
+    videoPoster.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        playVideo();
+      }
+    });
+  }
 });
 
 

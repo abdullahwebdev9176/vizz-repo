@@ -3071,3 +3071,286 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
     width: 100%;
   }
 }
+
+/* ==========================================================================
+   VIDEO SHOWCASE SECTION (BELOW HERO)
+   ========================================================================== */
+.fintech-video-section,
+.saskatoon-video-section {
+  background: var(--bg-light, #ffffff);
+  padding: 85px 0 95px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-header-center {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto 48px auto;
+}
+
+.section-eyebrow-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  border-radius: 50px;
+  background: rgba(36, 143, 206, 0.08);
+  border: 1px solid rgba(36, 143, 206, 0.22);
+  color: var(--btn-color, #248fce);
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.eyebrow-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--btn-color, #248fce);
+  box-shadow: 0 0 6px var(--btn-color, #248fce);
+}
+
+.section-lead-text {
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: var(--text-muted-light, #4a5568);
+  margin-top: 12px;
+}
+
+.text-highlight-cyan {
+  color: var(--btn-color, #248fce);
+}
+
+.video-theater-wrapper {
+  position: relative;
+  max-width: 1040px;
+  margin: 0 auto;
+  border-radius: var(--border-radius-card, 16px);
+}
+
+.video-ambient-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(36, 143, 206, 0.16) 0%, rgba(0, 180, 216, 0.05) 50%, transparent 75%);
+  filter: blur(45px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.video-player-box {
+  position: relative;
+  border-radius: var(--border-radius-card, 16px);
+  overflow: hidden;
+  border: 1px solid rgba(36, 143, 206, 0.25);
+  box-shadow: 0 20px 50px rgba(7, 21, 43, 0.12), 0 8px 24px rgba(36, 143, 206, 0.1);
+  background: #040d1c;
+  z-index: 2;
+  transition: border-color 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease;
+}
+
+.video-player-box:hover {
+  border-color: rgba(36, 143, 206, 0.55);
+  box-shadow: 0 28px 65px rgba(7, 21, 43, 0.18), 0 12px 32px rgba(36, 143, 206, 0.18);
+}
+
+.video-iframe-responsive {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+  background: #040d1c;
+}
+
+.video-iframe-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.video-poster-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.45s ease, visibility 0.45s ease;
+  outline: none;
+}
+
+.video-player-box.is-playing .video-poster-overlay {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.video-poster-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.video-poster-overlay:hover .video-poster-img {
+  transform: scale(1.03);
+}
+
+.video-poster-backdrop {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(7, 21, 43, 0.4) 0%, rgba(7, 21, 43, 0.75) 100%);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  transition: background 0.35s ease;
+}
+
+.video-poster-overlay:hover .video-poster-backdrop {
+  background: linear-gradient(180deg, rgba(7, 21, 43, 0.25) 0%, rgba(7, 21, 43, 0.6) 100%);
+}
+
+.video-play-trigger {
+  position: relative;
+  z-index: 6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.play-pulse-ring {
+  position: absolute;
+  top: 36px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 2px solid var(--btn-color, #248fce);
+  pointer-events: none;
+}
+
+.pulse-ring-1 {
+  animation: pulsePlay 2.4s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.pulse-ring-2 {
+  animation: pulsePlay 2.4s infinite cubic-bezier(0.215, 0.61, 0.355, 1) 0.8s;
+}
+
+@keyframes pulsePlay {
+  0% {
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0.9;
+  }
+  70% {
+    transform: translate(-50%, -50%) scale(1.75);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.85);
+    opacity: 0;
+  }
+}
+
+.video-play-btn {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--btn-color, #248fce) 0%, #0076d6 100%);
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 30px rgba(23, 161, 254, 0.5), 0 0 20px rgba(0, 180, 216, 0.4);
+  cursor: pointer;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  padding-left: 4px;
+}
+
+.video-poster-overlay:hover .video-play-btn,
+.video-play-btn:hover {
+  transform: scale(1.12);
+  background: linear-gradient(135deg, #26aaff 0%, var(--btn-color, #248fce) 100%);
+  box-shadow: 0 12px 40px rgba(23, 161, 254, 0.7), 0 0 30px rgba(0, 180, 216, 0.6);
+  border-color: #ffffff;
+}
+
+@media (max-width: 991px) {
+  .fintech-video-section,
+  .saskatoon-video-section {
+    padding: 60px 0 70px 0;
+  }
+
+  .video-theater-wrapper {
+    max-width: 820px;
+  }
+
+  .video-play-btn {
+    width: 64px;
+    height: 64px;
+  }
+
+  .play-pulse-ring {
+    width: 64px;
+    height: 64px;
+  }
+}
+
+@media (max-width: 768px) {
+  .fintech-video-section,
+  .saskatoon-video-section {
+    padding: 50px 0 60px 0;
+  }
+
+  .video-play-btn {
+    width: 56px;
+    height: 56px;
+  }
+
+  .video-play-btn svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .play-pulse-ring {
+    width: 56px;
+    height: 56px;
+  }
+}
+
+@media (max-width: 576px) {
+  .fintech-video-section,
+  .saskatoon-video-section {
+    padding: 40px 0 50px 0;
+  }
+
+  .video-play-btn {
+    width: 48px;
+    height: 48px;
+  }
+
+  .video-play-btn svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .play-pulse-ring {
+    width: 48px;
+    height: 48px;
+  }
+}
+
