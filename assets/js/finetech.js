@@ -152,6 +152,88 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // =========================================================================
+  // 4. SECTION 7: EXPANDING HORIZON DECK CONTROLLER (Desktop & Mobile)
+  // =========================================================================
+  const horizonPanels = document.querySelectorAll('.horizon-panel');
+  const indicatorBtns = document.querySelectorAll('.deck-indicator-btn');
+  let hoverIntentTimer = null;
+
+  if (horizonPanels.length > 0) {
+    function setActiveHorizonPanel(index) {
+      if (index < 0 || index >= horizonPanels.length) return;
+
+      horizonPanels.forEach((panel, i) => {
+        if (i === index) {
+          panel.classList.add('is-active');
+          panel.setAttribute('aria-expanded', 'true');
+        } else {
+          panel.classList.remove('is-active');
+          panel.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      indicatorBtns.forEach((btn, i) => {
+        if (i === index) {
+          btn.classList.add('is-active');
+          btn.setAttribute('aria-selected', 'true');
+        } else {
+          btn.classList.remove('is-active');
+          btn.setAttribute('aria-selected', 'false');
+        }
+      });
+    }
+
+    // Panel interaction
+    horizonPanels.forEach((panel, index) => {
+      // Desktop smooth hover-intent (prevents rapid jumpy expansions when cursor moves across cards)
+      panel.addEventListener('mouseenter', () => {
+        if (window.innerWidth > 991) {
+          clearTimeout(hoverIntentTimer);
+          hoverIntentTimer = setTimeout(() => {
+            setActiveHorizonPanel(index);
+          }, 140); // 140ms dwell threshold ensures smooth deliberate intent
+        }
+      });
+
+      panel.addEventListener('mouseleave', () => {
+        clearTimeout(hoverIntentTimer);
+      });
+
+      // Immediate click activation without delay
+      panel.addEventListener('click', () => {
+        clearTimeout(hoverIntentTimer);
+        setActiveHorizonPanel(index);
+      });
+
+      // Keyboard accessibility
+      panel.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          setActiveHorizonPanel(index);
+        } else if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+          e.preventDefault();
+          const nextIndex = (index + 1) % horizonPanels.length;
+          horizonPanels[nextIndex].focus();
+          setActiveHorizonPanel(nextIndex);
+        } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+          e.preventDefault();
+          const prevIndex = (index - 1 + horizonPanels.length) % horizonPanels.length;
+          horizonPanels[prevIndex].focus();
+          setActiveHorizonPanel(prevIndex);
+        }
+      });
+    });
+
+    // Indicator Buttons interaction
+    indicatorBtns.forEach((btn, index) => {
+      btn.addEventListener('click', () => {
+        clearTimeout(hoverIntentTimer);
+        setActiveHorizonPanel(index);
+      });
+    });
+  }
+
   handleResponsiveSliders();
 
   let resizeDebounceTimer = null;

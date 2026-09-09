@@ -1432,8 +1432,360 @@ b {
   margin: 0;
 }
 
+/* --------------------------------------------------------------------------
+   11. SECTION 7: STRATEGIC BENEFITS OF BESPOKE FINANCIAL SOFTWARE (EXPANDING HORIZON DECK)
+   -------------------------------------------------------------------------- */
+.fintech-horizon-section {
+  position: relative;
+  background-color: var(--bg-dark);
+  background-image: radial-gradient(circle at 50% 0%, rgba(36, 143, 206, 0.12) 0%, transparent 65%),
+                    radial-gradient(circle at 10% 80%, rgba(0, 110, 212, 0.08) 0%, transparent 45%),
+                    radial-gradient(circle at 90% 80%, rgba(36, 143, 206, 0.08) 0%, transparent 45%);
+  padding: var(--section-padding);
+  border-bottom: 1px solid var(--border-dark);
+  overflow: hidden;
+}
+
+.horizon-deck-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.horizon-deck-container {
+  display: flex;
+  gap: 14px;
+  width: 100%;
+  height: 500px;
+  align-items: stretch;
+  position: relative;
+  contain: paint layout;
+}
+
+/* Individual Horizon Panel - Buttery Smooth Transition */
+.horizon-panel {
+  flex: 1 1 85px;
+  min-width: 75px;
+  height: 100%;
+  background: rgba(14, 34, 70, 0.65);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--border-dark);
+  border-radius: var(--border-radius-card);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: flex 0.45s cubic-bezier(0.25, 1, 0.5, 1),
+              background 0.35s ease,
+              border-color 0.35s ease,
+              box-shadow 0.35s ease;
+  will-change: flex;
+  outline: none;
+}
+
+.horizon-panel:focus-visible {
+  border-color: var(--btn-color);
+  box-shadow: 0 0 0 3px rgba(36, 143, 206, 0.4);
+}
+
+.horizon-panel:hover:not(.is-active) {
+  background: rgba(14, 43, 61, 0.85);
+  border-color: rgba(36, 143, 206, 0.45);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3), 0 0 16px rgba(36, 143, 206, 0.12);
+}
+
+.horizon-panel.is-active {
+  flex: 2.9 1 320px;
+  background: linear-gradient(165deg, rgba(14, 43, 61, 0.96) 0%, rgba(8, 26, 39, 0.98) 100%);
+  border-color: rgba(36, 143, 206, 0.7);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4), 0 0 28px rgba(36, 143, 206, 0.2), inset 0 0 20px rgba(0, 180, 216, 0.08);
+  cursor: default;
+}
+
+/* Collapsed Slim State - Absolute Layered to prevent layout reflow jerks */
+.horizon-collapsed-bar {
+  position: absolute;
+  inset: 0;
+  padding: 26px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: scale(1);
+  user-select: none;
+  z-index: 1;
+}
+
+.horizon-panel.is-active .horizon-collapsed-bar {
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.94);
+}
+
+.horizon-num-ghost {
+  font-size: 18px;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.35);
+  letter-spacing: 1px;
+}
+
+.horizon-mini-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: rgba(36, 143, 206, 0.12);
+  border: 1px solid rgba(36, 143, 206, 0.25);
+  color: var(--cyan-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.horizon-panel:hover .horizon-mini-icon {
+  background: var(--btn-color);
+  color: #ffffff;
+  border-color: var(--btn-color);
+  transform: scale(1.06);
+}
+
+.horizon-vertical-title {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 14px;
+  font-weight: 600;
+  color: #cbd5e1;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  text-transform: uppercase;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+/* Expanded Rich Stage - Absolute Layered for instantaneous 60fps animations */
+.horizon-expanded-stage {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px 28px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(10px);
+  transition: opacity 0.35s ease 0.1s, transform 0.35s cubic-bezier(0.25, 1, 0.5, 1) 0.1s;
+  z-index: 2;
+  text-align: left;
+  overflow: hidden;
+}
+
+.horizon-panel.is-active .horizon-expanded-stage {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(0);
+}
+
+.horizon-stage-glow {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(0, 180, 216, 0.2) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.horizon-stage-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  gap: 14px;
+}
+
+.horizon-badge-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.horizon-step-pill {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #ffffff;
+  background: var(--btn-color);
+  padding: 4px 12px;
+  border-radius: 50px;
+  text-transform: uppercase;
+}
+
+.horizon-meta-tag {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--cyan-accent);
+  background: rgba(36, 143, 206, 0.12);
+  border: 1px solid rgba(36, 143, 206, 0.25);
+  padding: 4px 12px;
+  border-radius: 50px;
+  text-transform: uppercase;
+}
+
+.horizon-stage-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(36, 143, 206, 0.25) 0%, rgba(0, 110, 212, 0.2) 100%);
+  border: 1px solid rgba(36, 143, 206, 0.4);
+  color: var(--cyan-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+.horizon-stage-title {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+
+.horizon-stage-desc {
+  font-size: 14px;
+  line-height: 1.65;
+  margin-bottom: 16px;
+}
+
+.horizon-benefits-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 18px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.horizon-benefits-checklist li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: #e2e8f0;
+  font-weight: 500;
+}
+
+.check-dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  color: #10b981;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10.5px;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.horizon-stage-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  flex-wrap: wrap;
+}
+
+.horizon-metric-chip {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.metric-val {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--cyan-accent);
+}
+
+.metric-lbl {
+  font-size: 11.5px;
+  font-weight: 500;
+  color: #cbd5e1;
+}
+
+.horizon-cta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #ffffff;
+  background: rgba(36, 143, 206, 0.18);
+  border: 1px solid rgba(36, 143, 206, 0.4);
+  padding: 7px 16px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.horizon-cta-link:hover {
+  background: var(--btn-color);
+  border-color: var(--btn-color);
+  color: #ffffff;
+  transform: translateX(3px);
+  box-shadow: 0 6px 16px rgba(36, 143, 206, 0.4);
+}
+
+/* Quick Switcher Indicators */
+.horizon-deck-indicators {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.deck-indicator-btn {
+  font-size: 12px;
+  font-weight: 600;
+  font-family: var(--font-family);
+  color: #cbd5e1;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 7px 16px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.deck-indicator-btn:hover {
+  background: rgba(36, 143, 206, 0.15);
+  border-color: rgba(36, 143, 206, 0.3);
+  color: #ffffff;
+}
+
+.deck-indicator-btn.is-active {
+  background: var(--btn-color);
+  border-color: var(--btn-color);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(36, 143, 206, 0.4);
+}
+
 /* ==========================================================================
-   11. RESPONSIVE MEDIA QUERIES (Strict Desktop-First Max-Width Cascade)
+   12. RESPONSIVE MEDIA QUERIES (Strict Desktop-First Max-Width Cascade)
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -1455,6 +1807,15 @@ b {
 
   .section-title {
     font-size: 34px;
+  }
+
+  /* Section 7: Horizon Deck */
+  .horizon-deck-container {
+    min-height: 460px;
+  }
+
+  .horizon-stage-title {
+    font-size: 22px;
   }
 }
 
@@ -1555,6 +1916,28 @@ b {
 
   .feature-pod-card {
     padding: 14px 12px;
+  }
+
+  /* Section 7: Horizon Deck */
+  .horizon-deck-container {
+    min-height: 440px;
+    gap: 12px;
+  }
+
+  .horizon-expanded-stage {
+    padding: 26px 24px;
+  }
+
+  .horizon-stage-title {
+    font-size: 20px;
+  }
+
+  .horizon-stage-desc {
+    font-size: 13.5px;
+  }
+
+  .horizon-vertical-title {
+    font-size: 13.5px;
   }
 }
 
@@ -1726,6 +2109,64 @@ b {
     max-width: 580px;
     margin: 0 auto;
     width: 100%;
+  }
+
+  /* Section 7: Horizon Deck (Converts to Mobile/Tablet Interactive Accordion Deck) */
+  .horizon-deck-container {
+    flex-direction: column;
+    min-height: auto;
+    gap: 14px;
+  }
+
+  .horizon-panel {
+    flex: none !important;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .horizon-collapsed-bar {
+    display: flex !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    position: static !important;
+    width: 100% !important;
+    height: auto !important;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 18px 20px;
+    gap: 16px;
+  }
+
+  .horizon-vertical-title {
+    writing-mode: horizontal-tb;
+    transform: none;
+    font-size: 16px;
+    margin: 0;
+    text-align: left;
+    flex: 1;
+    white-space: normal;
+  }
+
+  .horizon-panel.is-active .horizon-collapsed-bar {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(36, 143, 206, 0.08);
+  }
+
+  .horizon-expanded-stage {
+    display: none;
+    padding: 22px 20px;
+    opacity: 1;
+    transform: none;
+  }
+
+  .horizon-panel.is-active .horizon-expanded-stage {
+    display: flex;
+  }
+
+  .horizon-deck-indicators {
+    display: none;
   }
 }
 
@@ -1903,6 +2344,48 @@ b {
   .feature-badge-lbl {
     font-size: 10px;
   }
+
+  /* Section 7: Horizon Deck */
+  .horizon-collapsed-bar {
+    padding: 16px 14px;
+    gap: 12px;
+  }
+
+  .horizon-num-ghost {
+    font-size: 16px;
+  }
+
+  .horizon-mini-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .horizon-vertical-title {
+    font-size: 15px;
+  }
+
+  .horizon-expanded-stage {
+    padding: 18px 16px;
+  }
+
+  .horizon-stage-title {
+    font-size: 18px;
+  }
+
+  .horizon-stage-desc {
+    font-size: 13.5px;
+  }
+
+  .horizon-stage-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .horizon-cta-link {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 /* --------------------------------------------------------------------------
@@ -2002,6 +2485,28 @@ b {
     flex-direction: column;
     gap: 10px;
   }
+
+  /* Section 7: Horizon Deck */
+  .horizon-collapsed-bar {
+    padding: 14px 12px;
+    gap: 10px;
+  }
+
+  .horizon-vertical-title {
+    font-size: 14px;
+  }
+
+  .horizon-stage-title {
+    font-size: 17px;
+  }
+
+  .horizon-stage-desc {
+    font-size: 13px;
+  }
+
+  .horizon-benefits-checklist li {
+    font-size: 12.5px;
+  }
 }
 
 /* --------------------------------------------------------------------------
@@ -2076,5 +2581,14 @@ b {
 
   .feature-pod-card {
     padding: 12px 10px;
+  }
+
+  /* Section 7: Horizon Deck */
+  .horizon-stage-title {
+    font-size: 16px;
+  }
+
+  .horizon-vertical-title {
+    font-size: 13px;
   }
 }
