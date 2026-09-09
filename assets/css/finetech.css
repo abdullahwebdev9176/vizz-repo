@@ -2345,8 +2345,160 @@ b {
   margin: 0;
 }
 
+/* --------------------------------------------------------------------------
+   14. SECTION 10: SECURITY & COMPLIANCE IN FINANCIAL SOFTWARE DEVELOPMENT
+   -------------------------------------------------------------------------- */
+.fintech-security-section {
+  position: relative;
+  background-color: var(--bg-light-alt);
+  background-image: radial-gradient(circle at 10% 20%, rgba(36, 143, 206, 0.04) 0%, transparent 50%),
+                    radial-gradient(circle at 90% 80%, rgba(0, 180, 216, 0.04) 0%, transparent 50%);
+  padding: var(--section-padding);
+  border-bottom: 1px solid var(--border-light);
+  overflow: hidden;
+}
+
+.security-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.security-card {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--border-radius-card);
+  padding: 30px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+.security-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(36, 143, 206, 0.45);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.06), 0 0 16px rgba(36, 143, 206, 0.08);
+}
+
+.security-card-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: #edf6fb;
+  border: 1px solid rgba(36, 143, 206, 0.25);
+  color: var(--btn-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.security-card:hover .security-card-icon {
+  background: var(--btn-color);
+  color: #ffffff;
+  border-color: var(--btn-color);
+  transform: scale(1.06);
+}
+
+.security-card-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.security-card-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 0 0 10px 0;
+  line-height: 1.35;
+}
+
+.security-card-text {
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: var(--text-muted-light);
+  margin: 0;
+}
+
+/* 4th Card: Regulatory Compliance (Full Width Showcase) */
+.security-card-compliance {
+  grid-column: 1 / -1;
+  padding: 34px 32px;
+  background: linear-gradient(180deg, #ffffff 0%, #f9fcfe 100%);
+  border-color: rgba(36, 143, 206, 0.3);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.02);
+}
+
+.security-compliance-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.security-compliance-title-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.compliance-items-grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.compliance-item {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: 10px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.25s ease;
+}
+
+.compliance-item:hover {
+  border-color: rgba(36, 143, 206, 0.45);
+  background: #f0f9ff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(36, 143, 206, 0.08);
+}
+
+.compliance-item.compliance-item-wide {
+  grid-column: 1 / -1;
+}
+
+.compliance-badge {
+  font-size: 11.5px;
+  font-weight: 800;
+  color: #ffffff;
+  background: var(--btn-color);
+  padding: 4px 10px;
+  border-radius: 6px;
+  flex-shrink: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.compliance-text {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text-dark);
+}
+
 /* ==========================================================================
-   14. RESPONSIVE MEDIA QUERIES (Strict Desktop-First Max-Width Cascade)
+   15. RESPONSIVE MEDIA QUERIES (Strict Desktop-First Max-Width Cascade)
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -2386,6 +2538,19 @@ b {
 
   .techstack-card {
     padding: 24px 20px;
+  }
+
+  /* Section 10: Security & Compliance */
+  .security-pillars-grid {
+    gap: 20px;
+  }
+
+  .security-card {
+    padding: 28px 24px;
+  }
+
+  .security-card-compliance {
+    padding: 30px 26px;
   }
 }
 
@@ -2540,6 +2705,23 @@ b {
 
   .techstack-footer-banner {
     padding: 26px 24px;
+  }
+
+  /* Section 10: Security & Compliance */
+  .security-pillars-grid {
+    gap: 18px;
+  }
+
+  .security-card {
+    padding: 24px 20px;
+  }
+
+  .security-card-compliance {
+    padding: 26px 22px;
+  }
+
+  .compliance-items-grid {
+    gap: 10px;
   }
 }
 
@@ -2833,6 +3015,22 @@ b {
   .techstack-footer-banner .btn-primary-pill {
     width: 100%;
   }
+
+  /* Section 10: Security & Compliance */
+  .security-pillars-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .security-card-compliance {
+    grid-column: 1 / -1;
+    padding: 24px 20px;
+  }
+
+  .compliance-items-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
 }
 
 /* --------------------------------------------------------------------------
@@ -3095,6 +3293,33 @@ b {
   .banner-subtext {
     font-size: 13px;
   }
+
+  /* Section 10: Security & Compliance */
+  .security-card {
+    padding: 20px 18px;
+  }
+
+  .security-card-title {
+    font-size: 17px;
+  }
+
+  .security-card-text {
+    font-size: 13px;
+  }
+
+  .security-compliance-header {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .compliance-items-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .compliance-item.compliance-item-wide {
+    grid-column: span 1;
+  }
 }
 
 /* --------------------------------------------------------------------------
@@ -3258,6 +3483,36 @@ b {
   .tech-category-desc {
     font-size: 12.5px;
   }
+
+  /* Section 10: Security & Compliance */
+  .security-card {
+    padding: 18px 16px;
+    gap: 14px;
+  }
+
+  .security-card-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .security-card-title {
+    font-size: 16px;
+  }
+
+  .compliance-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    padding: 10px 14px;
+  }
+
+  .compliance-badge {
+    font-size: 10.5px;
+  }
+
+  .compliance-text {
+    font-size: 12.5px;
+  }
 }
 
 /* --------------------------------------------------------------------------
@@ -3368,5 +3623,18 @@ b {
   .tech-pill {
     font-size: 11.5px;
     padding: 4px 9px;
+  }
+
+  /* Section 10: Security & Compliance */
+  .security-card-title {
+    font-size: 15px;
+  }
+
+  .security-card-text {
+    font-size: 12.5px;
+  }
+
+  .compliance-text {
+    font-size: 12px;
   }
 }
