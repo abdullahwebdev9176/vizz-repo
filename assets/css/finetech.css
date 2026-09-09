@@ -245,7 +245,7 @@ b {
   position: relative;
   background-color: var(--bg-dark);
   background-image: linear-gradient(135deg, rgba(7, 21, 43, 0.92) 0%, rgba(11, 27, 54, 0.88) 50%, rgba(8, 29, 63, 0.94) 100%),
-                    url('../images/hero-img.webp');
+    url('../images/hero-img.webp');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -444,16 +444,17 @@ b {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: #dfedf5;
-  border: 1px solid #248fce;
   color: var(--btn-color);
   padding: 5px 16px;
-  border-radius: 50px;
+  border-radius: 8px;
   font-size: 11.5px;
   font-weight: 700;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   margin-bottom: 14px;
+  background: rgba(0, 180, 216, 0.1);
+  color: var(--text-cyan);
+  border: 1px solid rgba(0, 180, 216, 0.25);
 }
 
 .eyebrow-dot {
@@ -529,9 +530,12 @@ b {
 }
 
 @keyframes floatUpDown {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-8px);
   }
@@ -580,7 +584,7 @@ b {
   position: relative;
   background-color: var(--bg-dark);
   background-image: radial-gradient(circle at 15% 25%, rgba(36, 143, 206, 0.08) 0%, transparent 45%),
-                    radial-gradient(circle at 85% 75%, rgba(0, 110, 212, 0.08) 0%, transparent 45%);
+    radial-gradient(circle at 85% 75%, rgba(0, 110, 212, 0.08) 0%, transparent 45%);
   padding: var(--section-padding);
   border-bottom: 1px solid var(--border-dark);
   overflow: hidden;
@@ -661,8 +665,8 @@ b {
   flex-direction: column;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
-              border-color 0.35s ease,
-              box-shadow 0.35s ease;
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
 }
 
 .advantage-card-glow-accent {
@@ -783,7 +787,7 @@ b {
   position: relative;
   background-color: var(--bg-light-alt);
   background-image: radial-gradient(circle at 85% 15%, rgba(36, 143, 206, 0.05) 0%, transparent 40%),
-                    radial-gradient(circle at 15% 85%, rgba(0, 110, 212, 0.04) 0%, transparent 40%);
+    radial-gradient(circle at 15% 85%, rgba(0, 110, 212, 0.04) 0%, transparent 40%);
   padding: var(--section-padding);
   border-bottom: 1px solid var(--border-light);
   overflow: hidden;
@@ -833,8 +837,8 @@ b {
   flex-direction: column;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
-              border-color 0.35s ease,
-              box-shadow 0.35s ease;
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
 }
 
 .solution-item-card::before {
@@ -1009,7 +1013,7 @@ b {
   position: relative;
   background-color: var(--bg-dark);
   background-image: radial-gradient(circle at 15% 20%, rgba(36, 143, 206, 0.08) 0%, transparent 45%),
-                    radial-gradient(circle at 85% 80%, rgba(0, 180, 216, 0.07) 0%, transparent 45%);
+    radial-gradient(circle at 85% 80%, rgba(0, 180, 216, 0.07) 0%, transparent 45%);
   padding: var(--section-padding);
   border-bottom: 1px solid var(--border-dark);
   overflow: hidden;
@@ -1093,10 +1097,12 @@ b {
     transform: scale(0.7);
     opacity: 0.85;
   }
+
   50% {
     transform: scale(1.3);
     opacity: 0.15;
   }
+
   100% {
     transform: scale(0.7);
     opacity: 0.85;
@@ -1123,8 +1129,8 @@ b {
   text-align: left;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
-              border-color 0.35s ease,
-              box-shadow 0.35s ease;
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
 }
 
 .row-left .spine-step-card {
@@ -1228,7 +1234,7 @@ b {
   position: relative;
   background-color: var(--bg-light);
   background-image: radial-gradient(circle at 10% 20%, rgba(36, 143, 206, 0.04) 0%, transparent 40%),
-                    radial-gradient(circle at 90% 80%, rgba(0, 180, 216, 0.04) 0%, transparent 40%);
+    radial-gradient(circle at 90% 80%, rgba(0, 180, 216, 0.04) 0%, transparent 40%);
   padding: var(--section-padding);
   border-bottom: 1px solid var(--border-light);
   overflow: hidden;
@@ -1381,8 +1387,8 @@ b {
   text-align: left;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
-              border-color 0.3s ease,
-              box-shadow 0.3s ease;
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .feature-pod-card:hover {
@@ -1439,8 +1445,8 @@ b {
   position: relative;
   background-color: var(--bg-dark);
   background-image: radial-gradient(circle at 50% 0%, rgba(36, 143, 206, 0.12) 0%, transparent 65%),
-                    radial-gradient(circle at 10% 80%, rgba(0, 110, 212, 0.08) 0%, transparent 45%),
-                    radial-gradient(circle at 90% 80%, rgba(36, 143, 206, 0.08) 0%, transparent 45%);
+    radial-gradient(circle at 10% 80%, rgba(0, 110, 212, 0.08) 0%, transparent 45%),
+    radial-gradient(circle at 90% 80%, rgba(36, 143, 206, 0.08) 0%, transparent 45%);
   padding: var(--section-padding);
   border-bottom: 1px solid var(--border-dark);
   overflow: hidden;
@@ -1478,9 +1484,9 @@ b {
   overflow: hidden;
   cursor: pointer;
   transition: flex 0.45s cubic-bezier(0.25, 1, 0.5, 1),
-              background 0.35s ease,
-              border-color 0.35s ease,
-              box-shadow 0.35s ease;
+    background 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
   will-change: flex;
   outline: none;
 }
@@ -1623,7 +1629,7 @@ b {
   color: #ffffff;
   background: var(--btn-color);
   padding: 4px 12px;
-  border-radius: 50px;
+  border-radius: 5px;
   text-transform: uppercase;
 }
 
@@ -1635,7 +1641,7 @@ b {
   background: rgba(36, 143, 206, 0.12);
   border: 1px solid rgba(36, 143, 206, 0.25);
   padding: 4px 12px;
-  border-radius: 50px;
+  border-radius: 8px;
   text-transform: uppercase;
 }
 
@@ -1791,7 +1797,7 @@ b {
   position: relative;
   background-color: var(--bg-light-alt);
   background-image: radial-gradient(circle at 10% 20%, rgba(36, 143, 206, 0.04) 0%, transparent 45%),
-                    radial-gradient(circle at 90% 80%, rgba(0, 180, 216, 0.04) 0%, transparent 45%);
+    radial-gradient(circle at 90% 80%, rgba(0, 180, 216, 0.04) 0%, transparent 45%);
   padding: var(--section-padding);
   border-bottom: 1px solid var(--border-light);
   overflow: hidden;
@@ -2079,8 +2085,8 @@ b {
   position: relative;
   background-color: var(--bg-dark);
   background-image: radial-gradient(circle at 50% 0%, rgba(36, 143, 206, 0.12) 0%, transparent 60%),
-                    radial-gradient(circle at 15% 90%, rgba(0, 110, 212, 0.08) 0%, transparent 45%),
-                    radial-gradient(circle at 85% 90%, rgba(36, 143, 206, 0.08) 0%, transparent 45%);
+    radial-gradient(circle at 15% 90%, rgba(0, 110, 212, 0.08) 0%, transparent 45%),
+    radial-gradient(circle at 85% 90%, rgba(36, 143, 206, 0.08) 0%, transparent 45%);
   padding: var(--section-padding);
   border-bottom: 1px solid var(--border-dark);
   overflow: hidden;
@@ -2143,9 +2149,9 @@ b {
   display: flex;
   flex-direction: column;
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
-              border-color 0.35s ease,
-              box-shadow 0.35s ease,
-              opacity 0.3s ease;
+    border-color 0.35s ease,
+    box-shadow 0.35s ease,
+    opacity 0.3s ease;
   position: relative;
   overflow: hidden;
 }
@@ -2352,7 +2358,7 @@ b {
   position: relative;
   background-color: var(--bg-light-alt);
   background-image: radial-gradient(circle at 10% 20%, rgba(36, 143, 206, 0.04) 0%, transparent 50%),
-                    radial-gradient(circle at 90% 80%, rgba(0, 180, 216, 0.04) 0%, transparent 50%);
+    radial-gradient(circle at 90% 80%, rgba(0, 180, 216, 0.04) 0%, transparent 50%);
   padding: var(--section-padding);
   border-bottom: 1px solid var(--border-light);
   overflow: hidden;
@@ -2374,8 +2380,8 @@ b {
   gap: 16px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
-              border-color 0.3s ease,
-              box-shadow 0.3s ease;
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .security-card:hover {
@@ -2504,7 +2510,7 @@ b {
   position: relative;
   background-color: var(--bg-dark);
   background-image: radial-gradient(circle at 15% 30%, rgba(36, 143, 206, 0.08) 0%, transparent 60%),
-                    radial-gradient(circle at 85% 70%, rgba(0, 180, 216, 0.06) 0%, transparent 60%);
+    radial-gradient(circle at 85% 70%, rgba(0, 180, 216, 0.06) 0%, transparent 60%);
   padding: var(--section-padding);
   border-bottom: 1px solid var(--border-dark);
   overflow: hidden;
@@ -2535,8 +2541,8 @@ b {
   width: 100%;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
-              border-color 0.35s ease,
-              box-shadow 0.35s ease;
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
 }
 
 .cost-factor-card:hover {
@@ -2729,7 +2735,7 @@ b {
   position: relative;
   background-color: var(--bg-light-alt);
   background-image: radial-gradient(circle at 10% 20%, rgba(36, 143, 206, 0.05) 0%, transparent 50%),
-                    radial-gradient(circle at 90% 80%, rgba(0, 180, 216, 0.05) 0%, transparent 50%);
+    radial-gradient(circle at 90% 80%, rgba(0, 180, 216, 0.05) 0%, transparent 50%);
   padding: var(--section-padding);
   border-bottom: 1px solid var(--border-light);
   overflow: hidden;
@@ -2752,8 +2758,8 @@ b {
   position: relative;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
-              border-color 0.35s ease,
-              box-shadow 0.35s ease;
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
 }
 
 .why-choose-card:hover {
@@ -2935,7 +2941,111 @@ b {
 }
 
 /* ==========================================================================
-   17. RESPONSIVE MEDIA QUERIES (Strict Desktop-First Max-Width Cascade)
+   17. SECTION 14: BOTTOM CONTACT SECTION (DARK OVERLAY)
+   ========================================================================== */
+.bottom-contact-section {
+  position: relative;
+  background-image: linear-gradient(135deg, rgba(7, 21, 43, 0.94) 0%, rgba(8, 29, 63, 0.96) 100%), url('../images/contact-office-bg.webp');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 110px 0;
+  overflow: hidden;
+  border-top: 1px solid var(--border-dark);
+}
+
+.bottom-contact-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 60px;
+}
+
+.bottom-contact-content {
+  flex: 1.05;
+}
+
+.bottom-contact-form-wrapper {
+  flex: 0.95;
+}
+
+.left-aligned-text {
+  text-align: left;
+}
+
+.contact-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 30px 0;
+}
+
+.contact-info-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: rgba(14, 34, 70, 0.7);
+  border: 1px solid rgba(0, 180, 216, 0.2);
+  border-radius: 12px;
+  padding: 16px 20px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+.contact-info-card:hover {
+  transform: translateX(5px);
+  border-color: var(--btn-color);
+  background: rgba(14, 34, 70, 0.9);
+  box-shadow: 0 10px 25px rgba(23, 161, 254, 0.16);
+}
+
+.contact-icon-box {
+  font-size: 22px;
+  width: 44px;
+  height: 44px;
+  background: rgba(0, 180, 216, 0.12);
+  border: 1px solid rgba(0, 180, 216, 0.25);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--btn-cyan);
+}
+
+.left-card-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-info-title {
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 0 2px 0;
+}
+
+.contact-channel-link {
+  color: var(--text-cyan);
+  font-family: var(--font-family);
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact-channel-link:hover {
+  color: var(--white-color);
+}
+
+.contact-info-desc {
+  font-family: var(--font-family);
+  font-size: 14px;
+  margin: 0;
+}
+
+/* ==========================================================================
+   18. RESPONSIVE MEDIA QUERIES (Strict Desktop-First Max-Width Cascade)
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -3007,6 +3117,11 @@ b {
   /* Section 13: FAQ */
   .faq-accordion-wrapper {
     max-width: 880px;
+  }
+
+  /* Section 14: Bottom Contact */
+  .bottom-contact-section {
+    padding: 95px 0;
   }
 }
 
@@ -3209,6 +3324,15 @@ b {
   /* Section 13: FAQ */
   .faq-accordion-wrapper {
     max-width: 840px;
+  }
+
+  /* Section 14: Bottom Contact */
+  .bottom-contact-section {
+    padding: 85px 0;
+  }
+
+  .bottom-contact-flex {
+    gap: 40px;
   }
 }
 
@@ -3441,8 +3565,8 @@ b {
     overflow: hidden;
     transform: none !important;
     transition: max-height 0.4s cubic-bezier(0.25, 1, 0.5, 1),
-                opacity 0.35s ease,
-                padding 0.35s ease;
+      opacity 0.35s ease,
+      padding 0.35s ease;
   }
 
   .horizon-panel.is-active .horizon-expanded-stage {
@@ -3543,6 +3667,35 @@ b {
   /* Section 13: FAQ */
   .faq-accordion-wrapper {
     max-width: 100%;
+  }
+
+  /* Section 14: Bottom Contact */
+  .bottom-contact-section {
+    padding: 70px 0;
+  }
+
+  .bottom-contact-flex {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .bottom-contact-content {
+    width: 100%;
+    text-align: center;
+  }
+
+  .bottom-contact-content .left-aligned-text {
+    text-align: center;
+  }
+
+  .bottom-contact-form-wrapper {
+    width: 100%;
+    max-width: 620px;
+    margin: 0 auto;
+  }
+
+  .contact-info-card {
+    text-align: left;
   }
 }
 
@@ -3890,6 +4043,26 @@ b {
   .faq-answer-content p {
     font-size: 13.5px;
   }
+
+  /* Section 14: Bottom Contact */
+  .bottom-contact-section {
+    padding: 60px 0;
+  }
+
+  .contact-info-card {
+    padding: 14px 16px;
+    gap: 12px;
+  }
+
+  .contact-icon-box {
+    width: 38px;
+    height: 38px;
+    font-size: 18px;
+  }
+
+  .contact-channel-link {
+    font-size: 14px;
+  }
 }
 
 /* --------------------------------------------------------------------------
@@ -4142,6 +4315,27 @@ b {
   .faq-answer-content p {
     font-size: 13px;
   }
+
+  /* Section 14: Bottom Contact */
+  .bottom-contact-section {
+    padding: 50px 0;
+  }
+
+  .contact-info-card {
+    padding: 12px 14px;
+  }
+
+  .contact-info-title {
+    font-size: 13px;
+  }
+
+  .contact-channel-link {
+    font-size: 13.5px;
+  }
+
+  .contact-info-desc {
+    font-size: 13px;
+  }
 }
 
 /* --------------------------------------------------------------------------
@@ -4292,5 +4486,10 @@ b {
   /* Section 13: FAQ */
   .faq-question-btn {
     font-size: 13.5px;
+  }
+
+  /* Section 14: Bottom Contact */
+  .contact-info-card {
+    padding: 10px 12px;
   }
 }
