@@ -76,6 +76,53 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // =========================================================================
+  // 2.1 SECTION 11: COST DRIVERS SPLIDE SLIDER (Desktop & Mobile)
+  // =========================================================================
+  const costSliderEl = document.getElementById('fintech-cost-slider');
+  if (costSliderEl && typeof Splide !== 'undefined') {
+    try {
+      const costSplide = new Splide('#fintech-cost-slider', {
+        type: 'loop',
+        perPage: 3,
+        perMove: 1,
+        gap: '24px',
+        autoplay: true,
+        interval: 4000,
+        speed: 700,
+        pauseOnHover: true,
+        pauseOnFocus: true,
+        drag: true,
+        arrows: true,
+        pagination: true,
+        breakpoints: {
+          1200: {
+            perPage: 3,
+            gap: '20px',
+          },
+          991: {
+            perPage: 2,
+            gap: '18px',
+          },
+          767: {
+            perPage: 1,
+            gap: '14px',
+            arrows: true,
+          },
+          575: {
+            perPage: 1,
+            gap: '12px',
+            arrows: true,
+          },
+        },
+      });
+
+      costSplide.mount();
+    } catch (err) {
+      console.warn('[Splide] Error initializing #fintech-cost-slider:', err);
+    }
+  }
+
+  // =========================================================================
   // 3. RESPONSIVE SPLIDE SLIDER MANAGER (Active <= 991px for Advantages Section)
   // =========================================================================
   const activeSplideInstances = {};
