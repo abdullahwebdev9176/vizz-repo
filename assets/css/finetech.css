@@ -3706,6 +3706,12 @@ b {
    9.3 MAX-WIDTH: 991px (Tablets & Mobile Viewports)
    -------------------------------------------------------------------------- */
 @media screen and (max-width: 991px) {
+  .fintech-cost-slider {
+      padding-bottom: 30px;
+  }
+  .splide__arrows.splide__arrows--ltr {
+    display: none;
+  }
   :root {
     --container-padding: 20px;
     --section-padding: 65px 0;
