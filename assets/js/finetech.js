@@ -29,11 +29,58 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // =========================================================================
-  // 2. RESPONSIVE SPLIDE SLIDER MANAGER (Active <= 991px, Native Grid on Desktop)
+  // 2. SECTION 4: FULL SPLIDE SLIDER (Desktop & Mobile)
+  // =========================================================================
+  const solutionsSliderEl = document.getElementById('fintech-solutions-slider');
+  if (solutionsSliderEl && typeof Splide !== 'undefined') {
+    try {
+      const solutionsSplide = new Splide('#fintech-solutions-slider', {
+        type: 'loop',
+        perPage: 3,
+        perMove: 1,
+        gap: '24px',
+        autoplay: true,
+        interval: 3500,
+        speed: 700,
+        pauseOnHover: true,
+        pauseOnFocus: true,
+        drag: true,
+        arrows: true,
+        pagination: true,
+        breakpoints: {
+          1200: {
+            perPage: 3,
+            gap: '20px',
+          },
+          991: {
+            perPage: 2,
+            gap: '18px',
+          },
+          767: {
+            perPage: 1,
+            gap: '14px',
+            arrows: false,
+          },
+          575: {
+            perPage: 1,
+            gap: '12px',
+            arrows: false,
+          },
+        },
+      });
+
+      solutionsSplide.mount();
+    } catch (err) {
+      console.warn('[Splide] Error initializing #fintech-solutions-slider:', err);
+    }
+  }
+
+  // =========================================================================
+  // 3. RESPONSIVE SPLIDE SLIDER MANAGER (Active <= 991px for Advantages Section)
   // =========================================================================
   const activeSplideInstances = {};
 
-  const sliderConfigs = [
+  const responsiveSliderConfigs = [
     {
       id: 'fintech-advantages-slider',
       perPageTablet: 2,
@@ -52,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function handleResponsiveSliders() {
     const isMobileOrTablet = window.innerWidth <= 991;
 
-    sliderConfigs.forEach((config) => {
+    responsiveSliderConfigs.forEach((config) => {
       const sliderElement = document.getElementById(config.id);
       if (!sliderElement || typeof Splide === 'undefined') {
         return;

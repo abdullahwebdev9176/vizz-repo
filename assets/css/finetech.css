@@ -776,12 +776,238 @@ b {
   transform: none;
 }
 
+/* --------------------------------------------------------------------------
+   8. SECTION 4: CUSTOM FINANCIAL SOFTWARE SOLUTIONS & FINTECH PLATFORMS (LIGHT)
+   -------------------------------------------------------------------------- */
+.fintech-solutions-section {
+  position: relative;
+  background-color: var(--bg-light-alt);
+  background-image: radial-gradient(circle at 85% 15%, rgba(36, 143, 206, 0.05) 0%, transparent 40%),
+                    radial-gradient(circle at 15% 85%, rgba(0, 110, 212, 0.04) 0%, transparent 40%);
+  padding: var(--section-padding);
+  border-bottom: 1px solid var(--border-light);
+  overflow: hidden;
+}
+
+.section-lead-text {
+  font-size: 15.5px;
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+/* Solutions Splide Slider (Desktop & Mobile) */
+.solutions-slider {
+  position: relative;
+  z-index: 2;
+  padding: 0 10px;
+}
+
+.solutions-slider .splide__track {
+  padding-top: 14px;
+  padding-bottom: 50px;
+  overflow: hidden;
+}
+
+.solutions-slider .splide__slide {
+  display: flex !important;
+  height: auto;
+}
+
+.solutions-matrix-grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Unique Solution Item Card */
+.solution-item-card {
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--border-radius-card);
+  padding: 30px 28px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.35s ease,
+              box-shadow 0.35s ease;
+}
+
+.solution-item-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--btn-color) 0%, #00b4d8 100%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.solution-item-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(36, 143, 206, 0.45);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08), 0 0 20px rgba(36, 143, 206, 0.1);
+}
+
+.solution-item-card:hover::before {
+  opacity: 1;
+}
+
+.solution-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+  gap: 16px;
+}
+
+.solution-icon-box {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: #dfedf5;
+  border: 1px solid rgba(36, 143, 206, 0.35);
+  color: var(--btn-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.35s ease;
+}
+
+.solution-item-card:hover .solution-icon-box {
+  background: var(--btn-color);
+  color: #ffffff;
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(36, 143, 206, 0.3);
+}
+
+.solution-meta-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.solution-category-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--btn-color);
+  background: #edf6fb;
+  border: 1px solid rgba(36, 143, 206, 0.25);
+  padding: 4px 12px;
+  border-radius: 50px;
+  text-transform: uppercase;
+}
+
+.solution-index-num {
+  font-size: 18px;
+  font-weight: 800;
+  color: #cbd5e1;
+  font-family: var(--font-family);
+  letter-spacing: 0.5px;
+  transition: color 0.35s ease;
+}
+
+.solution-item-card:hover .solution-index-num {
+  color: var(--btn-color);
+}
+
+.solution-card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.solution-card-title {
+  font-size: 18.5px;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.solution-card-desc {
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: var(--text-muted-light);
+  margin: 0;
+  text-align: left;
+}
+
+/* Splide Navigation Arrows for Section 4 */
+.solutions-slider .splide__arrow {
+  width: 44px;
+  height: 44px;
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  opacity: 0.95;
+  transition: all 0.3s ease;
+  top: calc(50% - 15px);
+}
+
+.solutions-slider .splide__arrow:hover:not(:disabled) {
+  background: var(--btn-color);
+  border-color: var(--btn-color);
+  opacity: 1;
+  box-shadow: 0 6px 20px rgba(36, 143, 206, 0.35);
+  transform: translateY(-50%) scale(1.06);
+}
+
+.solutions-slider .splide__arrow svg {
+  fill: var(--btn-color);
+  transition: fill 0.3s ease;
+}
+
+.solutions-slider .splide__arrow:hover:not(:disabled) svg {
+  fill: #ffffff;
+}
+
+.solutions-slider .splide__arrow--prev {
+  left: -18px;
+}
+
+.solutions-slider .splide__arrow--next {
+  right: -18px;
+}
+
+/* Splide Pagination for Light Sections */
+.solutions-slider .splide__pagination {
+  bottom: 12px;
+  gap: 8px;
+}
+
+.solutions-slider .splide__pagination__page {
+  width: 8px;
+  height: 8px;
+  background: rgba(11, 26, 48, 0.2);
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+.solutions-slider .splide__pagination__page.is-active {
+  background: var(--btn-color);
+  width: 24px;
+  border-radius: 4px;
+  transform: none;
+}
+
 /* ==========================================================================
-   7. RESPONSIVE MEDIA QUERIES (Strict Desktop-First Max-Width Cascade)
+   9. RESPONSIVE MEDIA QUERIES (Strict Desktop-First Max-Width Cascade)
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   7.1 MAX-WIDTH: 1599px (Large Laptops & Desktops)
+   9.1 MAX-WIDTH: 1599px (Large Laptops & Desktops)
    -------------------------------------------------------------------------- */
 @media screen and (max-width: 1599px) {
   :root {
@@ -803,7 +1029,7 @@ b {
 }
 
 /* --------------------------------------------------------------------------
-   7.2 MAX-WIDTH: 1200px (Medium Desktops & Small Laptops)
+   9.2 MAX-WIDTH: 1200px (Medium Desktops & Small Laptops)
    -------------------------------------------------------------------------- */
 @media screen and (max-width: 1200px) {
   :root {
@@ -856,10 +1082,23 @@ b {
     bottom: -12px;
     left: -10px;
   }
+
+  /* Section 4 */
+  .solution-item-card {
+    padding: 24px 22px;
+  }
+
+  .solution-card-title {
+    font-size: 17.5px;
+  }
+
+  .solution-card-desc {
+    font-size: 14px;
+  }
 }
 
 /* --------------------------------------------------------------------------
-   7.3 MAX-WIDTH: 991px (Tablets & Mobile Viewports)
+   9.3 MAX-WIDTH: 991px (Tablets & Mobile Viewports)
    -------------------------------------------------------------------------- */
 @media screen and (max-width: 991px) {
   :root {
@@ -947,7 +1186,7 @@ b {
     width: 100%;
   }
 
-  /* Section 3: Advantages */
+  /* Section 3 & 4 Shared Header */
   .section-header-center {
     margin-bottom: 38px;
   }
@@ -956,7 +1195,14 @@ b {
     font-size: 28px;
   }
 
-  /* Splide slider when active on <= 991px */
+  .section-lead-text {
+    font-size: 14.5px;
+    max-width: 620px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Section 3 Splide slider when active on <= 991px */
   .advantages-slider.splide:not(.is-rendered) .advantages-grid {
     display: flex !important;
     gap: 0;
@@ -973,7 +1219,7 @@ b {
 }
 
 /* --------------------------------------------------------------------------
-   7.4 MAX-WIDTH: 767px (Large Mobile Devices)
+   9.4 MAX-WIDTH: 767px (Large Mobile Devices)
    -------------------------------------------------------------------------- */
 @media screen and (max-width: 767px) {
   :root {
@@ -1037,9 +1283,13 @@ b {
     left: -6px;
   }
 
-  /* Section 3 */
+  /* Section 3 & 4 Shared */
   .section-title {
     font-size: 25px;
+  }
+
+  .section-lead-text {
+    font-size: 14px;
   }
 
   .advantage-card {
@@ -1053,10 +1303,23 @@ b {
   .advantage-card-desc {
     font-size: 13.5px;
   }
+
+  /* Section 4 */
+  .solution-item-card {
+    padding: 20px 18px;
+  }
+
+  .solution-card-title {
+    font-size: 16.5px;
+  }
+
+  .solution-card-desc {
+    font-size: 13.5px;
+  }
 }
 
 /* --------------------------------------------------------------------------
-   7.5 MAX-WIDTH: 575px (Standard Mobile Phones)
+   9.5 MAX-WIDTH: 575px (Standard Mobile Phones)
    -------------------------------------------------------------------------- */
 @media screen and (max-width: 575px) {
   :root {
@@ -1092,14 +1355,24 @@ b {
     gap: 10px;
   }
 
-  /* Section 3 */
+  /* Section 3 & 4 Shared */
   .section-title {
     font-size: 22px;
+  }
+
+  /* Section 4 */
+  .solution-card-top {
+    gap: 10px;
+  }
+
+  .solution-category-tag {
+    font-size: 10px;
+    padding: 3px 10px;
   }
 }
 
 /* --------------------------------------------------------------------------
-   7.6 MAX-WIDTH: 380px (Small Screen Mobile Phones)
+   9.6 MAX-WIDTH: 380px (Small Screen Mobile Phones)
    -------------------------------------------------------------------------- */
 @media screen and (max-width: 380px) {
   :root {
@@ -1123,7 +1396,7 @@ b {
     font-size: 21px;
   }
 
-  /* Section 3 */
+  /* Section 3 & 4 Shared */
   .section-title {
     font-size: 20px;
   }
@@ -1133,6 +1406,15 @@ b {
   }
 
   .advantage-card-desc {
+    font-size: 13px;
+  }
+
+  /* Section 4 */
+  .solution-card-title {
+    font-size: 15.5px;
+  }
+
+  .solution-card-desc {
     font-size: 13px;
   }
 }
