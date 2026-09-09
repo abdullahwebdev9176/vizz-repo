@@ -196,15 +196,9 @@ b {
 .btn-primary-pill:hover {
   background: var(--btn-color-hover);
   border: 1px solid var(--btn-color);
-  transform: translateY(-2px);
   box-shadow: 0 12px 30px rgba(0, 136, 255, 0.5);
   color: var(--btn-color) !important;
 }
-
-.btn-primary-pill:active {
-  transform: translateY(0);
-}
-
 .btn-secondary-pill {
   display: inline-flex;
   align-items: center;
@@ -229,13 +223,8 @@ b {
 .btn-secondary-pill:hover {
   background: var(--btn-color);
   border: 1px solid var(--btn-color);
-  transform: translateY(-2px);
   box-shadow: 0 12px 30px rgba(0, 136, 255, 0.5);
   color: var(--btn-color-hover) !important;
-}
-
-.btn-secondary-pill:active {
-  transform: translateY(0);
 }
 
 /* --------------------------------------------------------------------------
@@ -465,7 +454,6 @@ b {
 .video-player-box:hover {
   border-color: rgba(36, 143, 206, 0.55);
   box-shadow: 0 28px 65px rgba(7, 21, 43, 0.18), 0 12px 32px rgba(36, 143, 206, 0.18);
-  transform: translateY(-2px);
 }
 
 .video-iframe-responsive {
@@ -785,18 +773,6 @@ b {
   animation-delay: 2s;
 }
 
-@keyframes floatUpDown {
-
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-8px);
-  }
-}
-
 .badge-icon-circle {
   width: 40px;
   height: 40px;
@@ -1110,7 +1086,6 @@ b {
 }
 
 .solution-item-card:hover {
-  transform: translateY(-4px);
   border-color: rgba(36, 143, 206, 0.45);
   box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08), 0 0 20px rgba(36, 143, 206, 0.1);
 }
@@ -1219,7 +1194,6 @@ b {
   border-color: var(--btn-color);
   opacity: 1;
   box-shadow: 0 6px 20px rgba(36, 143, 206, 0.35);
-  transform: translateY(-50%) scale(1.06);
 }
 
 .solutions-slider .splide__arrow svg {
@@ -1398,7 +1372,6 @@ b {
 }
 
 .spine-step-card:hover {
-  transform: translateY(-4px);
   border-color: rgba(36, 143, 206, 0.6);
   box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35), 0 0 20px rgba(36, 143, 206, 0.18);
 }
@@ -1648,7 +1621,6 @@ b {
 }
 
 .feature-pod-card:hover {
-  transform: translateY(-3px);
   border-color: rgba(36, 143, 206, 0.45);
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06), 0 0 14px rgba(36, 143, 206, 0.08);
 }
@@ -2376,7 +2348,6 @@ b {
   background: rgba(36, 143, 206, 0.18);
   border-color: rgba(36, 143, 206, 0.4);
   color: #ffffff;
-  transform: translateY(-1px);
 }
 
 .tech-filter-btn.is-active {
@@ -2425,7 +2396,6 @@ b {
 }
 
 .techstack-card:hover {
-  transform: translateY(-5px);
   border-color: rgba(36, 143, 206, 0.6);
   box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4), 0 0 24px rgba(36, 143, 206, 0.15);
 }
@@ -2545,7 +2515,6 @@ b {
   background: rgba(36, 143, 206, 0.25);
   border-color: rgba(36, 143, 206, 0.6);
   color: #ffffff;
-  transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(36, 143, 206, 0.25);
 }
 
@@ -2641,7 +2610,6 @@ b {
 }
 
 .security-card:hover {
-  transform: translateY(-4px);
   border-color: rgba(36, 143, 206, 0.45);
   box-shadow: 0 14px 32px rgba(0, 0, 0, 0.06), 0 0 16px rgba(36, 143, 206, 0.08);
 }
@@ -2733,7 +2701,6 @@ b {
 .compliance-item:hover {
   border-color: rgba(36, 143, 206, 0.45);
   background: #f0f9ff;
-  transform: translateY(-2px);
   box-shadow: 0 4px 14px rgba(36, 143, 206, 0.08);
 }
 
@@ -2802,7 +2769,6 @@ b {
 }
 
 .cost-factor-card:hover {
-  transform: translateY(-6px);
   border-color: rgba(36, 143, 206, 0.55);
   box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4), 0 0 24px rgba(36, 143, 206, 0.15);
 }
@@ -2905,7 +2871,6 @@ b {
   background: var(--btn-color);
   border-color: var(--btn-color);
   color: #ffffff;
-  transform: translateY(-2px);
   box-shadow: 0 6px 16px rgba(23, 161, 254, 0.35);
 }
 
@@ -3019,7 +2984,6 @@ b {
 }
 
 .why-choose-card:hover {
-  transform: translateY(-6px);
   border-color: rgba(36, 143, 206, 0.45);
   box-shadow: 0 16px 36px rgba(0, 0, 0, 0.06), 0 0 20px rgba(36, 143, 206, 0.08);
 }
