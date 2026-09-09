@@ -213,6 +213,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 perPage: config.perPageMobile,
                 gap: config.gapMobile,
               },
+              575: {
+                perPage: 1,
+                gap: '12px',
+              },
             };
 
             if (config.extraBreakpoints) {
@@ -227,6 +231,8 @@ document.addEventListener('DOMContentLoaded', () => {
               pagination: true,
               drag: true,
               speed: 400,
+              padding: 0,
+              trimSpace: true,
               breakpoints: breakpointsObj,
             });
 

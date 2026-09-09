@@ -989,9 +989,39 @@ b {
   color: #ffffff;
 }
 
-/* Splide Responsive Utility Rules */
+/* Splide Responsive Utility Rules (Prevents Slide Clipping & Gap Drift) */
+.splide.is-active .splide__track {
+  overflow: hidden !important;
+  position: relative;
+  z-index: 0;
+  width: 100%;
+}
+
 .splide.is-active .splide__list {
   display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  gap: 0 !important;
+  row-gap: 0 !important;
+  column-gap: 0 !important;
+  grid-template-columns: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.splide.is-active .splide__slide {
+  display: flex !important;
+  height: auto !important;
+  box-sizing: border-box !important;
+  flex-shrink: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.splide.is-active .splide__slide article {
+  width: 100% !important;
+  height: 100% !important;
+  box-sizing: border-box !important;
 }
 
 .splide.is-rendered .splide__list {
