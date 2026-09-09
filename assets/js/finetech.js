@@ -29,6 +29,32 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // =========================================================================
+  // 1.1 VIDEO SHOWCASE INTERACTIVE PLAY CONTROLLER
+  // =========================================================================
+  const videoPoster = document.getElementById('video-poster');
+  const videoBox = document.getElementById('fintech-video-box');
+  const videoIframe = document.getElementById('fintech-video-iframe');
+
+  if (videoPoster && videoBox && videoIframe) {
+    const playVideo = () => {
+      videoBox.classList.add('is-playing');
+      let currentSrc = videoIframe.getAttribute('src');
+      if (!currentSrc.includes('autoplay=1')) {
+        const separator = currentSrc.includes('?') ? '&' : '?';
+        videoIframe.setAttribute('src', currentSrc + separator + 'autoplay=1');
+      }
+    };
+
+    videoPoster.addEventListener('click', playVideo);
+    videoPoster.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        playVideo();
+      }
+    });
+  }
+
+  // =========================================================================
   // 2. SECTION 4: FULL SPLIDE SLIDER (Desktop & Mobile)
   // =========================================================================
   const solutionsSliderEl = document.getElementById('fintech-solutions-slider');
