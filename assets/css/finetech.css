@@ -2072,8 +2072,281 @@ b {
   flex-shrink: 0;
 }
 
+/* --------------------------------------------------------------------------
+   13. SECTION 9: THE TECHNOLOGY STACK POWERING OUR FINANCIAL SOFTWARE SOLUTIONS
+   -------------------------------------------------------------------------- */
+.fintech-techstack-section {
+  position: relative;
+  background-color: var(--bg-dark);
+  background-image: radial-gradient(circle at 50% 0%, rgba(36, 143, 206, 0.12) 0%, transparent 60%),
+                    radial-gradient(circle at 15% 90%, rgba(0, 110, 212, 0.08) 0%, transparent 45%),
+                    radial-gradient(circle at 85% 90%, rgba(36, 143, 206, 0.08) 0%, transparent 45%);
+  padding: var(--section-padding);
+  border-bottom: 1px solid var(--border-dark);
+  overflow: hidden;
+}
+
+/* Filter Bar */
+.techstack-filter-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.tech-filter-btn {
+  font-family: var(--font-family);
+  font-size: 13px;
+  font-weight: 600;
+  color: #cbd5e1;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 8px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  outline: none;
+}
+
+.tech-filter-btn:hover {
+  background: rgba(36, 143, 206, 0.18);
+  border-color: rgba(36, 143, 206, 0.4);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.tech-filter-btn.is-active {
+  background: var(--btn-color);
+  border-color: var(--btn-color);
+  color: #ffffff;
+  box-shadow: 0 4px 16px rgba(36, 143, 206, 0.45);
+}
+
+/* 3x3 Bento Grid */
+.techstack-bento-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 44px;
+}
+
+/* Individual Tech Stack Card */
+.techstack-card {
+  background: linear-gradient(165deg, rgba(14, 34, 70, 0.65) 0%, rgba(8, 20, 42, 0.85) 100%);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--border-dark);
+  border-radius: var(--border-radius-card);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.35s ease,
+              box-shadow 0.35s ease,
+              opacity 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.techstack-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--cyan-accent), transparent);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.techstack-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(36, 143, 206, 0.6);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4), 0 0 24px rgba(36, 143, 206, 0.15);
+}
+
+.techstack-card:hover::after {
+  opacity: 1;
+}
+
+.techstack-card.is-hidden {
+  display: none !important;
+}
+
+/* Card Header */
+.techstack-card-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+  position: relative;
+}
+
+.tech-category-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(36, 143, 206, 0.12);
+  border: 1px solid rgba(36, 143, 206, 0.25);
+  color: var(--cyan-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.techstack-card:hover .tech-category-icon-box {
+  background: var(--btn-color);
+  color: #ffffff;
+  border-color: var(--btn-color);
+  transform: scale(1.06);
+}
+
+.tech-header-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.tech-domain-pill {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: var(--cyan-accent);
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.tech-category-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.25;
+}
+
+.tech-count-badge {
+  font-size: 11px;
+  font-weight: 600;
+  color: #94a3b8;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 3px 8px;
+  border-radius: 50px;
+  flex-shrink: 0;
+}
+
+.tech-category-desc {
+  font-size: 13px;
+  line-height: 1.55;
+  margin: 0 0 18px 0;
+  flex-grow: 0;
+}
+
+/* Tech Pills List */
+.tech-pills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.tech-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: #f1f5f9;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  padding: 6px 12px;
+  border-radius: 50px;
+  transition: all 0.25s ease;
+  user-select: none;
+}
+
+.tech-pill-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--cyan-accent);
+  box-shadow: 0 0 5px var(--cyan-accent);
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+
+.tech-pill:hover {
+  background: rgba(36, 143, 206, 0.25);
+  border-color: rgba(36, 143, 206, 0.6);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(36, 143, 206, 0.25);
+}
+
+.tech-pill:hover .tech-pill-dot {
+  transform: scale(1.4);
+  background: #ffffff;
+  box-shadow: 0 0 8px #ffffff;
+}
+
+/* Architecture Recommendation Footer Banner */
+.techstack-footer-banner {
+  background: linear-gradient(135deg, rgba(14, 34, 70, 0.95) 0%, rgba(8, 20, 42, 0.98) 100%);
+  border: 1px solid rgba(36, 143, 206, 0.4);
+  border-radius: var(--border-radius-card);
+  padding: 30px 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+  position: relative;
+  overflow: hidden;
+}
+
+.techstack-footer-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--cyan-accent);
+}
+
+.techstack-banner-content {
+  flex: 1;
+}
+
+.banner-badge-tag {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: var(--cyan-accent);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.banner-heading {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  line-height: 1.35;
+}
+
+.banner-subtext {
+  font-size: 13.5px;
+  line-height: 1.55;
+  margin: 0;
+}
+
 /* ==========================================================================
-   13. RESPONSIVE MEDIA QUERIES (Strict Desktop-First Max-Width Cascade)
+   14. RESPONSIVE MEDIA QUERIES (Strict Desktop-First Max-Width Cascade)
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -2104,6 +2377,15 @@ b {
 
   .horizon-stage-title {
     font-size: 21px;
+  }
+
+  /* Section 9: Tech Stack */
+  .techstack-bento-grid {
+    gap: 20px;
+  }
+
+  .techstack-card {
+    padding: 24px 20px;
   }
 }
 
@@ -2244,6 +2526,20 @@ b {
 
   .comparison-takeaway-card {
     padding: 28px 28px;
+  }
+
+  /* Section 9: Tech Stack */
+  .techstack-bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .techstack-card {
+    padding: 22px 18px;
+  }
+
+  .techstack-footer-banner {
+    padding: 26px 24px;
   }
 }
 
@@ -2511,6 +2807,32 @@ b {
   .takeaway-action .btn-primary-pill {
     width: 100%;
   }
+
+  /* Section 9: Tech Stack */
+  .techstack-filter-bar {
+    gap: 8px;
+  }
+
+  .tech-filter-btn {
+    padding: 7px 16px;
+    font-size: 12px;
+  }
+
+  .techstack-bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .techstack-footer-banner {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .techstack-footer-banner .btn-primary-pill {
+    width: 100%;
+  }
 }
 
 /* --------------------------------------------------------------------------
@@ -2746,6 +3068,33 @@ b {
   .comparison-takeaway-card {
     padding: 22px 18px;
   }
+
+  /* Section 9: Tech Stack */
+  .techstack-bento-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .techstack-card {
+    padding: 20px 16px;
+  }
+
+  .tech-category-title {
+    font-size: 17px;
+  }
+
+  .tech-pill {
+    font-size: 12px;
+    padding: 5px 11px;
+  }
+
+  .banner-heading {
+    font-size: 17px;
+  }
+
+  .banner-subtext {
+    font-size: 13px;
+  }
 }
 
 /* --------------------------------------------------------------------------
@@ -2889,6 +3238,26 @@ b {
   .takeaway-text {
     font-size: 13px;
   }
+
+  /* Section 9: Tech Stack */
+  .techstack-filter-bar {
+    gap: 6px;
+  }
+
+  .tech-filter-btn {
+    flex: 1 1 calc(50% - 6px);
+    text-align: center;
+    padding: 7px 10px;
+    font-size: 11.5px;
+  }
+
+  .techstack-card {
+    padding: 18px 14px;
+  }
+
+  .tech-category-desc {
+    font-size: 12.5px;
+  }
 }
 
 /* --------------------------------------------------------------------------
@@ -2985,5 +3354,19 @@ b {
 
   .takeaway-text {
     font-size: 12.5px;
+  }
+
+  /* Section 9: Tech Stack */
+  .tech-filter-btn {
+    flex: 1 1 100%;
+  }
+
+  .tech-category-title {
+    font-size: 16px;
+  }
+
+  .tech-pill {
+    font-size: 11.5px;
+    padding: 4px 9px;
   }
 }

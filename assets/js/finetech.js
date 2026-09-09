@@ -234,6 +234,44 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // =========================================================================
+  // 5. SECTION 9: TECH STACK INTERACTIVE CATEGORY FILTER
+  // =========================================================================
+  const techFilterBtns = document.querySelectorAll('.tech-filter-btn');
+  const techCards = document.querySelectorAll('.techstack-card');
+
+  if (techFilterBtns.length > 0 && techCards.length > 0) {
+    techFilterBtns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const filterVal = btn.getAttribute('data-filter');
+
+        // Update active button state
+        techFilterBtns.forEach((b) => {
+          b.classList.remove('is-active');
+          b.setAttribute('aria-selected', 'false');
+        });
+        btn.classList.add('is-active');
+        btn.setAttribute('aria-selected', 'true');
+
+        // Filter tech cards with smooth animation
+        techCards.forEach((card) => {
+          const cardCategory = card.getAttribute('data-category');
+          if (filterVal === 'all' || cardCategory === filterVal) {
+            card.classList.remove('is-hidden');
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(8px)';
+            setTimeout(() => {
+              card.style.opacity = '1';
+              card.style.transform = 'translateY(0)';
+            }, 30);
+          } else {
+            card.classList.add('is-hidden');
+          }
+        });
+      });
+    });
+  }
+
   handleResponsiveSliders();
 
   let resizeDebounceTimer = null;
