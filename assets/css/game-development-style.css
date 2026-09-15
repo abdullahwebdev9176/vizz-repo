@@ -1524,6 +1524,190 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   margin: 0;
 }
 
+/* --------------------------------------------------------------------------
+   12. SECTION 7: AR & VR IMMERSIVE EXPERIENCES (DARK HUD PORTALS)
+   -------------------------------------------------------------------------- */
+.arvr-games-section {
+  position: relative;
+  background-color: var(--bg-dark);
+  padding: var(--section-padding);
+  overflow: hidden;
+}
+
+.arvr-games-section::before {
+  content: '';
+  position: absolute;
+  top: -10%;
+  left: -5%;
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle, rgba(0, 180, 216, 0.12) 0%, rgba(7, 21, 43, 0) 70%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.arvr-games-section::after {
+  content: '';
+  position: absolute;
+  bottom: -10%;
+  right: -5%;
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle, rgba(36, 143, 206, 0.12) 0%, rgba(7, 21, 43, 0) 70%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.arvr-portals-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  margin-top: 36px;
+  position: relative;
+  z-index: 2;
+}
+
+@media screen and (min-width: 992px) {
+  .arvr-portals-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 36px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .arvr-portals-container {
+    gap: 44px;
+  }
+}
+
+/* Immersive Portal Card */
+.arvr-portal-card {
+  background: linear-gradient(145deg, rgba(14, 34, 70, 0.85) 0%, rgba(7, 21, 43, 0.95) 100%);
+  border: 1px solid rgba(0, 180, 216, 0.25);
+  border-radius: var(--border-radius-card);
+  padding: 38px 30px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.arvr-portal-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--btn-primary) 0%, #00d2ff 100%);
+  opacity: 0.7;
+  transition: opacity 0.35s ease;
+}
+
+.arvr-portal-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(0, 180, 216, 0.6);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.5), 0 0 35px rgba(36, 143, 206, 0.22);
+}
+
+.arvr-portal-card:hover::before {
+  opacity: 1;
+}
+
+/* Sci-Fi HUD Corner Brackets */
+.hud-corner {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-color: var(--btn-primary);
+  border-style: solid;
+  pointer-events: none;
+  transition: all 0.35s ease;
+  opacity: 0.55;
+}
+
+.hud-corner.top-left {
+  top: 12px;
+  left: 12px;
+  border-width: 2px 0 0 2px;
+}
+
+.hud-corner.top-right {
+  top: 12px;
+  right: 12px;
+  border-width: 2px 2px 0 0;
+}
+
+.hud-corner.bottom-left {
+  bottom: 12px;
+  left: 12px;
+  border-width: 0 0 2px 2px;
+}
+
+.hud-corner.bottom-right {
+  bottom: 12px;
+  right: 12px;
+  border-width: 0 2px 2px 0;
+}
+
+.arvr-portal-card:hover .hud-corner {
+  opacity: 1;
+  border-color: #00d2ff;
+  transform: scale(1.15);
+}
+
+/* Card Content */
+.arvr-card-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.arvr-icon-hud {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  background: rgba(0, 180, 216, 0.12);
+  border: 1px solid rgba(0, 180, 216, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-cyan-light);
+  margin-bottom: 22px;
+  box-shadow: 0 0 20px rgba(0, 180, 216, 0.15);
+  transition: all 0.35s ease;
+}
+
+.arvr-portal-card:hover .arvr-icon-hud {
+  background: var(--btn-primary);
+  color: #ffffff;
+  box-shadow: 0 8px 24px rgba(36, 143, 206, 0.5);
+  transform: scale(1.06);
+}
+
+.arvr-card-title {
+  font-family: var(--font-family);
+  font-size: clamp(20px, 2.4vw, 24px);
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--white-color);
+  margin: 0 0 14px;
+}
+
+.arvr-card-desc {
+  font-family: var(--font-family);
+  font-size: clamp(14px, 1.8vw, 15px);
+  line-height: 1.8;
+  color: var(--text-muted-dark);
+  margin: 0;
+  flex-grow: 1;
+}
+
+
 
 
 
