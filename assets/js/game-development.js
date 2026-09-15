@@ -60,4 +60,44 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // =========================================================================
+  // 3. GAME SERVICES SPLIDE SLIDER (ACTIVE ON BOTH SCREENS)
+  // =========================================================================
+  const servicesSliderElement = document.getElementById('game-services-slider');
+  if (servicesSliderElement && typeof Splide !== 'undefined') {
+    try {
+      const servicesSplide = new Splide('#game-services-slider', {
+        type: 'slide',
+        perPage: 3,
+        perMove: 1,
+        gap: '24px',
+        arrows: true,
+        pagination: true,
+        speed: 500,
+        drag: true,
+        snap: true,
+        flickPower: 400,
+        keyboard: true,
+        breakpoints: {
+          1200: {
+            perPage: 3,
+            gap: '20px',
+          },
+          991: {
+            perPage: 2,
+            gap: '18px',
+          },
+          640: {
+            perPage: 1,
+            gap: '14px',
+          },
+        },
+      });
+
+      servicesSplide.mount();
+    } catch (err) {
+      console.warn('[Splide] Error initializing #game-services-slider:', err);
+    }
+  }
 });
