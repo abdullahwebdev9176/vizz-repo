@@ -189,7 +189,7 @@ Use the exact same color system and design tokens from the Vizz Web design syste
 | **2** | **From Concept to Global Launch** | Light (`--bg-light-alt`) | `<h2>` / `<h3>` / `<h4>` | End-to-End Game Production & 13 Core Capabilities Grid |
 | **3** | **Building Next-Level Mobile Games** | Dark (`--bg-dark`) | `<h2>` / `<h3>` | 16 Mobile Game Development Services Splide Slider (Active on Both Screens) |
 | **4** | **What Kind of Game to Build? (Genres)** | Light (`--bg-light-alt`) | `<h2>` / `<h3>` | 10 Mobile Game Genres & Categories Splide Slider (Active on Both Screens) |
-| **5** | **Game Monetization & LiveOps** | Dark (`--bg-dark`) | `<h2>` / `<h3>` | In-App Purchases, Battle Pass systems, Analytics & Ongoing Support |
+| **5** | **Develop Cross-Platform Mobile Games** | Dark (`--bg-dark`) | `<h2>` / `<h3>` | 4 Key Platforms (iOS, Android, Cross-Platform, Mobile + Web) |
 | **6** | **Game Dev Process** | Light (`--bg-light`) | `<h2>` / `<h3>` | Pre-production &rarr; Prototyping &rarr; Production &rarr; QA &rarr; Launch |
 | **7** | **Frequently Asked Questions (FAQ)** | Light (`--bg-light`) | `<h2>` / `<h3>` | Accessible accordion answering game dev timelines, IP ownership, costs |
 | **8** | **Bottom Consultation & Contact** | Dark (`--bg-dark`) | `<h2>` / `<h3>` | Direct contact channels & tailored proposal form |
