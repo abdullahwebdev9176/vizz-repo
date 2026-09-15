@@ -190,9 +190,10 @@ Use the exact same color system and design tokens from the Vizz Web design syste
 | **3** | **Building Next-Level Mobile Games** | Dark (`--bg-dark`) | `<h2>` / `<h3>` | 16 Mobile Game Development Services Splide Slider (Active on Both Screens) |
 | **4** | **What Kind of Game to Build? (Genres)** | Light (`--bg-light-alt`) | `<h2>` / `<h3>` | 10 Mobile Game Genres & Categories Splide Slider (Active on Both Screens) |
 | **5** | **Develop Cross-Platform Mobile Games** | Dark (`--bg-dark`) | `<h2>` / `<h3>` | 4 Key Platforms (iOS, Android, Cross-Platform, Mobile + Web) |
-| **6** | **Game Dev Process** | Light (`--bg-light`) | `<h2>` / `<h3>` | Pre-production &rarr; Prototyping &rarr; Production &rarr; QA &rarr; Launch |
-| **7** | **Frequently Asked Questions (FAQ)** | Light (`--bg-light`) | `<h2>` / `<h3>` | Accessible accordion answering game dev timelines, IP ownership, costs |
-| **8** | **Bottom Consultation & Contact** | Dark (`--bg-dark`) | `<h2>` / `<h3>` | Direct contact channels & tailored proposal form |
+| **6** | **Advanced AI Technologies** | Light (`--bg-light-alt`) | `<h2>` / `<h3>` | 5 Core AI Gaming Pillars (NPCs, Personalization, Analytics, Content, Testing) |
+| **7** | **Game Dev Process** | Dark (`--bg-dark`) | `<h2>` / `<h3>` | Pre-production &rarr; Prototyping &rarr; Production &rarr; QA &rarr; Launch |
+| **8** | **Frequently Asked Questions (FAQ)** | Light (`--bg-light`) | `<h2>` / `<h3>` | Accessible accordion answering game dev timelines, IP ownership, costs |
+| **9** | **Bottom Consultation & Contact** | Dark (`--bg-dark`) | `<h2>` / `<h3>` | Direct contact channels & tailored proposal form |
 
 ---
 
