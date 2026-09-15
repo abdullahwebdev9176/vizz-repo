@@ -504,3 +504,218 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
     gap: 50px;
   }
 }
+
+/* --------------------------------------------------------------------------
+   7. SECTION 2: FROM CONCEPT TO GLOBAL LAUNCH (GAME EXPERIENCE)
+   -------------------------------------------------------------------------- */
+.game-experience-section {
+  position: relative;
+  background-color: var(--bg-light-alt);
+  padding: var(--section-padding);
+  overflow: hidden;
+}
+
+.experience-header-content {
+  max-width: 960px;
+  margin-bottom: 24px;
+}
+
+.section-badge-light {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: var(--border-radius-pill);
+  font-family: var(--font-family);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  background: rgba(0, 180, 216, 0.1);
+  border: 1px solid rgba(0, 180, 216, 0.25);
+  color: var(--btn-primary);
+}
+
+.badge-dot-cyan {
+  width: 8px;
+  height: 8px;
+  background-color: var(--btn-primary);
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(0, 180, 216, 0.6);
+  flex-shrink: 0;
+}
+
+.section-title {
+  font-family: var(--font-family);
+  font-size: clamp(24px, 4.2vw, 36px);
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--text-dark);
+  margin-bottom: 16px;
+  letter-spacing: -0.3px;
+}
+
+.section-lead-text {
+  font-family: var(--font-family);
+  font-size: clamp(15px, 2vw, 16.5px);
+  font-weight: 500;
+  color: var(--text-dark);
+  line-height: 1.75;
+  margin-bottom: 14px;
+}
+
+.section-description {
+  font-family: var(--font-family);
+  font-size: clamp(14px, 1.8vw, 15px);
+  color: var(--text-muted-light);
+  line-height: 1.75;
+  margin-bottom: 24px;
+}
+
+.inline-brand-link {
+  color: var(--btn-primary);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease-in-out;
+}
+
+.inline-brand-link:hover {
+  color: var(--btn-primary-hover);
+}
+
+.capabilities-header-wrapper {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(226, 232, 240, 0.85);
+}
+
+.capabilities-subheading {
+  font-family: var(--font-family);
+  font-size: clamp(19px, 2.5vw, 23px);
+  font-weight: 700;
+  color: var(--text-dark);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+}
+
+.capabilities-subheading::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 22px;
+  background: var(--btn-primary);
+  border-radius: 4px;
+}
+
+.game-capabilities-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px 0;
+}
+
+@media screen and (min-width: 576px) {
+  .game-capabilities-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .game-capabilities-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .game-capabilities-grid {
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 20px;
+  }
+}
+
+.capability-grid-item {
+  display: flex;
+}
+
+.game-capability-card {
+  width: 100%;
+  background: var(--white-color);
+  border: 1px solid var(--border-light);
+  border-radius: var(--border-radius-card);
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: var(--shadow-card);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.game-capability-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 0;
+  background: linear-gradient(180deg, var(--btn-primary) 0%, #00d2ff 100%);
+  transition: height 0.3s ease-in-out;
+}
+
+.game-capability-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(36, 143, 206, 0.45);
+  box-shadow: 0 12px 30px rgba(7, 21, 43, 0.08), 0 0 18px rgba(36, 143, 206, 0.12);
+}
+
+.game-capability-card:hover::before {
+  height: 100%;
+}
+
+.capability-icon-box {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: rgba(36, 143, 206, 0.08);
+  border: 1px solid rgba(36, 143, 206, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--btn-primary);
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.game-capability-card:hover .capability-icon-box {
+  background: var(--btn-primary);
+  color: var(--white-color);
+  box-shadow: 0 6px 18px rgba(36, 143, 206, 0.35);
+  transform: scale(1.05);
+}
+
+.capability-title {
+  font-family: var(--font-family);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-dark);
+  line-height: 1.4;
+  margin: 0;
+}
+
+.experience-bottom-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+}
+

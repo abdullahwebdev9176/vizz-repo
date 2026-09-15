@@ -186,7 +186,7 @@ Use the exact same color system and design tokens from the Vizz Web design syste
 | # | Section Name | Background Theme | Heading Level | Description / Key Focus |
 | :-: | :--- | :--- | :-: | :--- |
 | **1** | **Hero Section** | Dark (`--bg-dark`) | `<h1>` | Custom Game Development + High-Conversion Lead Capture Form |
-| **2** | **Core Game Engines & Tech** | Light (`--bg-light`) | `<h2>` | Unity, Unreal Engine 5, Godot, WebGL, Custom C++ / Rust Pipelines |
+| **2** | **From Concept to Global Launch** | Light (`--bg-light-alt`) | `<h2>` / `<h3>` / `<h4>` | End-to-End Game Production & 13 Core Capabilities Grid |
 | **3** | **Game Platforms & Genres** | Dark (`--bg-dark`) | `<h2>` / `<h3>` | PC, Console (PlayStation/Xbox/Switch), Mobile (iOS/Android), Web3 & XR |
 | **4** | **Full-Cycle Game Production** | Light (`--bg-light`) | `<h2>` / `<h3>` | Concept Art, 3D Modeling, Animation, Sound Design, Multiplayer Backend |
 | **5** | **Game Monetization & LiveOps** | Dark (`--bg-dark`) | `<h2>` / `<h3>` | In-App Purchases, Battle Pass systems, Analytics & Ongoing Support |
