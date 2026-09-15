@@ -193,9 +193,10 @@ Use the exact same color system and design tokens from the Vizz Web design syste
 | **6** | **Advanced AI Technologies** | Light (`--bg-light-alt`) | `<h2>` / `<h3>` | 5 Core AI Gaming Pillars Alternating Neural Pathway |
 | **7** | **AR & VR Game Experiences** | Dark (`--bg-dark`) | `<h2>` / `<h3>` | Dual Sci-Fi HUD Immersive Portals (Augmented & Virtual Reality) |
 | **8** | **Monetization & Business Results** | Light (`--bg-light-alt`) | `<h2>` / `<h3>` | Interactive Monetization Engine Console (Split Tech Selector + Holographic Live Stage) |
-| **9** | **Game Dev Process** | Dark (`--bg-dark`) | `<h2>` / `<h3>` | Pre-production &rarr; Prototyping &rarr; Production &rarr; QA &rarr; Launch |
-| **10** | **Frequently Asked Questions (FAQ)** | Light (`--bg-light`) | `<h2>` / `<h3>` | Accessible accordion answering game dev timelines, IP ownership, costs |
-| **11** | **Bottom Consultation & Contact** | Dark (`--bg-dark`) | `<h2>` / `<h3>` | Direct contact channels & tailored proposal form |
+| **9** | **LiveOps & Post-Launch Support** | Dark (`--bg-dark`) | `<h2>` / `<h3>` | LiveOps Mission Control Hub (Dual-Wing Telemetry Nodes + Central Holographic Reactor) |
+| **10** | **Game Dev Process** | Light (`--bg-light-alt`) | `<h2>` / `<h3>` | Pre-production &rarr; Prototyping &rarr; Production &rarr; QA &rarr; Launch |
+| **11** | **Frequently Asked Questions (FAQ)** | Dark (`--bg-dark`) | `<h2>` / `<h3>` | Accessible accordion answering game dev timelines, IP ownership, costs |
+| **12** | **Bottom Consultation & Contact** | Light (`--bg-light-alt`) | `<h2>` / `<h3>` | Direct contact channels & tailored proposal form |
 
 ---
 

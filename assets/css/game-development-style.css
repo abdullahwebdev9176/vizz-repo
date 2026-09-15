@@ -190,6 +190,19 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   color: var(--white-color) !important;
 }
 
+/* Service Section CTA Action Container */
+.service-section-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 56px;
+  margin-bottom: 24px;
+  position: relative;
+  z-index: 2;
+}
+
 /* --------------------------------------------------------------------------
    5. HERO SECTION (Mobile-First 2-Column Split Layout)
    -------------------------------------------------------------------------- */
@@ -1713,7 +1726,7 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 .monetization-section {
   position: relative;
   background-color: var(--bg-light-alt);
-  padding: var(--section-padding);
+  padding: 85px 0 95px;
   overflow: hidden;
 }
 
@@ -2183,6 +2196,475 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   transform: translateX(3px);
   box-shadow: 0 4px 14px rgba(36, 143, 206, 0.25);
 }
+
+/* --------------------------------------------------------------------------
+   14. SECTION 9: LIVEOPS & POST-LAUNCH SUPPORT (MISSION CONTROL HUB)
+   -------------------------------------------------------------------------- */
+.liveops-section {
+  position: relative;
+  background-color: var(--bg-dark);
+  padding: 100px 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.liveops-section .vizz-container {
+  width: 100%;
+  max-width: min(calc(100% - 6%), 1440px);
+}
+
+.liveops-section::before {
+  content: '';
+  position: absolute;
+  top: -15%;
+  left: -5%;
+  width: 580px;
+  height: 580px;
+  background: radial-gradient(circle, rgba(0, 180, 216, 0.12) 0%, rgba(10, 17, 24, 0) 70%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.liveops-section::after {
+  content: '';
+  position: absolute;
+  bottom: -15%;
+  right: -5%;
+  width: 580px;
+  height: 580px;
+  background: radial-gradient(circle, rgba(0, 136, 255, 0.09) 0%, rgba(10, 17, 24, 0) 70%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Sub-heading Lead Bar */
+.liveops-lead-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin: 32px auto 0;
+  max-width: 620px;
+  position: relative;
+  z-index: 2;
+}
+
+.liveops-bar-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(36, 143, 206, 0.4) 50%, transparent 100%);
+}
+
+.liveops-bar-label {
+  font-family: var(--font-family);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--btn-primary);
+  background: rgba(0, 180, 216, 0.08);
+  border: 1px solid rgba(0, 180, 216, 0.25);
+  padding: 6px 18px;
+  border-radius: var(--border-radius-pill);
+}
+
+/* Mission Control Hub Container */
+.liveops-control-hub {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  margin-top: 48px;
+  width: 100%;
+  z-index: 2;
+}
+
+@media screen and (min-width: 992px) {
+  .liveops-control-hub {
+    grid-template-columns: 1fr 340px 1fr;
+    gap: 28px;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .liveops-control-hub {
+    grid-template-columns: 1fr 370px 1fr;
+    gap: 36px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .liveops-control-hub {
+    grid-template-columns: 1fr 400px 1fr;
+    gap: 48px;
+  }
+}
+
+/* Left & Right Wings */
+.liveops-wing {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+@media screen and (max-width: 991px) {
+  .liveops-wing {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+@media screen and (min-width: 640px) and (max-width: 991px) {
+  .liveops-wing {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Operational Telemetry Node Card */
+.liveops-node {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(0, 180, 216, 0.16);
+  border-radius: var(--border-radius-card);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+
+.wing-left .liveops-node {
+  justify-content: flex-start;
+}
+
+.wing-right .liveops-node {
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 991px) {
+  .wing-right .liveops-node {
+    justify-content: flex-start;
+  }
+}
+
+/* Node Elements */
+.node-index {
+  font-family: var(--font-family);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--btn-primary);
+  background: rgba(0, 180, 216, 0.08);
+  border: 1px solid rgba(0, 180, 216, 0.2);
+  padding: 4px 8px;
+  border-radius: 6px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.node-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: rgba(0, 180, 216, 0.08);
+  border: 1px solid rgba(0, 180, 216, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--btn-primary);
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.node-title {
+  font-family: var(--font-family);
+  font-size: clamp(14px, 1.5vw, 15px);
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.4;
+  flex-grow: 1;
+  transition: color 0.3s ease;
+}
+
+.node-indicator {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(0, 180, 216, 0.4);
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+/* Laser Beams on Desktop connecting toward Center */
+.node-beam {
+  display: none;
+}
+
+@media screen and (min-width: 992px) {
+  .node-beam {
+    display: block;
+    width: 8px;
+    height: 2px;
+    background: rgba(0, 180, 216, 0.25);
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+  }
+}
+
+/* Node Hover & Active States */
+.liveops-node:hover,
+.liveops-node.is-active {
+  background: rgba(0, 180, 216, 0.08);
+  border-color: rgba(36, 143, 206, 0.55);
+  box-shadow: 0 8px 24px rgba(0, 180, 216, 0.2), 0 0 1px rgba(0, 210, 255, 0.5);
+}
+
+.wing-left .liveops-node:hover,
+.wing-left .liveops-node.is-active {
+  transform: translateX(4px);
+}
+
+.wing-right .liveops-node:hover,
+.wing-right .liveops-node.is-active {
+  transform: translateX(-4px);
+}
+
+@media screen and (max-width: 991px) {
+  .wing-right .liveops-node:hover,
+  .wing-right .liveops-node.is-active {
+    transform: translateY(-2px);
+  }
+}
+
+.liveops-node:hover .node-icon,
+.liveops-node.is-active .node-icon {
+  background: var(--btn-primary);
+  color: #ffffff;
+  box-shadow: 0 0 14px rgba(36, 143, 206, 0.6);
+  transform: scale(1.08);
+}
+
+.liveops-node:hover .node-title,
+.liveops-node.is-active .node-title {
+  color: #00d2ff;
+}
+
+.liveops-node:hover .node-indicator,
+.liveops-node.is-active .node-indicator {
+  background: #00ffff;
+  box-shadow: 0 0 10px #00ffff;
+  transform: scale(1.4);
+}
+
+.liveops-node:hover .node-beam,
+.liveops-node.is-active .node-beam {
+  background: #00ffff;
+  box-shadow: 0 0 8px #00ffff;
+  width: 14px;
+}
+
+/* =========================================================================
+   CENTER: HOLOGRAPHIC LIVEOPS CORE REACTOR
+   ========================================================================= */
+.liveops-center-stage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 20px 0;
+}
+
+@media screen and (max-width: 991px) {
+  .liveops-center-stage {
+    order: -1;
+    margin-bottom: 8px;
+  }
+}
+
+.core-reactor-housing {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle, rgba(0, 180, 216, 0.08) 0%, rgba(10, 17, 24, 0.95) 75%);
+  box-shadow: 0 0 50px rgba(0, 180, 216, 0.15), inset 0 0 30px rgba(0, 180, 216, 0.1);
+}
+
+@media screen and (min-width: 1200px) {
+  .core-reactor-housing {
+    width: 350px;
+    height: 350px;
+  }
+}
+
+/* Concentric Radar Rings */
+.reactor-ring {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.reactor-ring.ring-1 {
+  width: 100%;
+  height: 100%;
+  border: 1px dashed rgba(0, 180, 216, 0.35);
+  animation: rotateClockwise 30s linear infinite;
+}
+
+.reactor-ring.ring-2 {
+  width: 86%;
+  height: 86%;
+  border: 1px solid rgba(0, 180, 216, 0.2);
+}
+
+.reactor-ring.ring-3 {
+  width: 72%;
+  height: 72%;
+  border: 1px dashed rgba(0, 210, 255, 0.25);
+  animation: rotateCounterClockwise 20s linear infinite;
+}
+
+@keyframes rotateClockwise {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes rotateCounterClockwise {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); }
+}
+
+/* Rotating Radar Sweep Line */
+.reactor-sweep {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, rgba(0, 210, 255, 0.18) 0deg, transparent 60deg, transparent 360deg);
+  animation: rotateClockwise 8s linear infinite;
+  pointer-events: none;
+}
+
+/* Holographic Display Surface inside Core */
+.core-display-surface {
+  position: relative;
+  width: 210px;
+  height: 210px;
+  border-radius: 50%;
+  background: rgba(10, 17, 24, 0.88);
+  border: 1px solid rgba(0, 180, 216, 0.35);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 16px;
+  box-shadow: 0 0 25px rgba(0, 180, 216, 0.25), inset 0 0 15px rgba(0, 180, 216, 0.15);
+  z-index: 2;
+}
+
+.core-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-family);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--btn-primary);
+  background: rgba(0, 180, 216, 0.1);
+  padding: 2px 8px;
+  border-radius: var(--border-radius-pill);
+  border: 1px solid rgba(0, 180, 216, 0.25);
+  margin-bottom: 8px;
+}
+
+.core-pulsing-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #00ffff;
+  box-shadow: 0 0 8px #00ffff;
+  animation: pulseDot 2s infinite ease-in-out;
+}
+
+.core-icon-orb {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(36, 143, 206, 0.2) 0%, rgba(0, 210, 255, 0.2) 100%);
+  border: 1px solid rgba(0, 180, 216, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00ffff;
+  box-shadow: 0 0 18px rgba(0, 180, 216, 0.35);
+  margin-bottom: 8px;
+  transition: all 0.3s ease;
+}
+
+.core-index-tag {
+  font-family: var(--font-family);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--btn-primary);
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.core-active-title {
+  font-family: var(--font-family);
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1.3;
+  max-width: 170px;
+  min-height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Frequency Bars Animation */
+.core-frequency-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  height: 10px;
+  margin-top: 6px;
+}
+
+.freq-bar {
+  width: 3px;
+  background: var(--btn-primary);
+  border-radius: 2px;
+  animation: freqJump 1.2s infinite ease-in-out alternate;
+}
+
+.freq-bar.b1 { height: 40%; animation-delay: 0.1s; }
+.freq-bar.b2 { height: 80%; animation-delay: 0.3s; }
+.freq-bar.b3 { height: 100%; animation-delay: 0.5s; }
+.freq-bar.b4 { height: 60%; animation-delay: 0.2s; }
+.freq-bar.b5 { height: 30%; animation-delay: 0.4s; }
+
+@keyframes freqJump {
+  0% { transform: scaleY(0.3); }
+  100% { transform: scaleY(1); }
+}
+
+
 
 
 

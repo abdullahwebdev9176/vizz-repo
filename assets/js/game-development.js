@@ -214,6 +214,95 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  // =========================================================================
+  // 6. LIVEOPS MISSION CONTROL HUB INTERACTIVE CONTROLLER
+  // =========================================================================
+  const liveopsHub = document.getElementById('liveops-control-hub');
+
+  if (liveopsHub) {
+    const nodes = Array.from(liveopsHub.querySelectorAll('.liveops-node'));
+    const coreIcon = document.getElementById('liveops-core-icon');
+    const coreIndex = document.getElementById('liveops-core-index');
+    const coreTitle = document.getElementById('liveops-core-title');
+    let activeNodeIndex = 0;
+    let autoScanInterval = null;
+    let isUserHovering = false;
+
+    function setLiveopsNode(index) {
+      if (index < 0 || index >= nodes.length) return;
+      activeNodeIndex = index;
+      const targetNode = nodes[index];
+
+      // Update Node active classes
+      nodes.forEach((node, i) => {
+        node.classList.toggle('is-active', i === index);
+      });
+
+      // Update Center Core Display
+      const nodeNum = targetNode.getAttribute('data-num') || `0${index + 1}`;
+      const nodeTitleText = targetNode.getAttribute('data-title') || targetNode.querySelector('.node-title')?.textContent || '';
+      const nodeSvg = targetNode.querySelector('.node-icon svg');
+
+      if (coreIndex) {
+        coreIndex.textContent = `PHASE ${nodeNum} / 12`;
+      }
+      if (coreTitle) {
+        coreTitle.textContent = nodeTitleText;
+      }
+      if (coreIcon && nodeSvg) {
+        coreIcon.innerHTML = nodeSvg.outerHTML;
+        const iconSvg = coreIcon.querySelector('svg');
+        if (iconSvg) {
+          iconSvg.setAttribute('width', '38');
+          iconSvg.setAttribute('height', '38');
+        }
+      }
+    }
+
+    // Node Event Listeners
+    nodes.forEach((node, i) => {
+      // Hover on desktop
+      node.addEventListener('mouseenter', () => {
+        setLiveopsNode(i);
+      });
+
+      // Tap / Click for mobile & touch
+      node.addEventListener('click', () => {
+        setLiveopsNode(i);
+      });
+
+      // Keyboard navigation (Enter / Space)
+      node.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          setLiveopsNode(i);
+        }
+      });
+    });
+
+    // Auto-scanning radar cycle
+    function startAutoScan() {
+      if (autoScanInterval) clearInterval(autoScanInterval);
+      autoScanInterval = setInterval(() => {
+        if (!isUserHovering) {
+          const nextIndex = (activeNodeIndex + 1) % nodes.length;
+          setLiveopsNode(nextIndex);
+        }
+      }, 3500);
+    }
+
+    liveopsHub.addEventListener('mouseenter', () => {
+      isUserHovering = true;
+    });
+
+    liveopsHub.addEventListener('mouseleave', () => {
+      isUserHovering = false;
+    });
+
+    startAutoScan();
+  }
 });
+
 
 
