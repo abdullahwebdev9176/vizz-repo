@@ -196,8 +196,9 @@ Use the exact same color system and design tokens from the Vizz Web design syste
 | **9** | **LiveOps & Post-Launch Support** | Dark (`--bg-dark`) | `<h2>` / `<h3>` | LiveOps Mission Control Hub (Dual-Wing Telemetry Nodes + Central Holographic Reactor) |
 | **10** | **From First Idea to App Store Our Game Development Process** | Light (`--bg-light-alt`) | `<h2>` / `<h3>` | Gamified Splide Carousel (01–10 Stages) with Interactive Live XP Milestone Tracker HUD |
 | **11** | **Scalable Mobile Game Development Models Built Around Your Vision** | Dark (`--bg-dark`) | `<h2>` / `<h3>` | Split-Screen Studio Showcase with Holographic Telemetry Stage & 4 Architecture Cards |
-| **12** | **Frequently Asked Questions (FAQ)** | Light (`--bg-light-alt`) | `<h2>` / `<h3>` | Accessible accordion answering game dev timelines, IP ownership, costs |
-| **13** | **Bottom Consultation & Contact** | Dark (`--bg-dark`) | `<h2>` / `<h3>` | Direct contact channels & tailored proposal form |
+| **12** | **Build Mobile Games That Deliver More Than Entertainment** | Light (`--bg-light-alt`) | `<h2>` / `<h3>` | Cross-Industry Splide Slider (10 Sectors with Custom Icon Pods & Responsive Cards) |
+| **13** | **Frequently Asked Questions (FAQ)** | Dark (`--bg-dark`) | `<h2>` / `<h3>` | Accessible accordion answering game dev timelines, IP ownership, costs |
+| **14** | **Bottom Consultation & Contact** | Light (`--bg-light-alt`) | `<h2>` / `<h3>` | Direct contact channels & tailored proposal form |
 
 ---
 

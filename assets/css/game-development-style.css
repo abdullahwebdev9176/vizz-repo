@@ -3365,6 +3365,249 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   opacity: 1;
 }
 
+/* --------------------------------------------------------------------------
+   17. SECTION 12: MOBILE GAMES ACROSS INDUSTRIES (SPLIDE CAROUSEL)
+   -------------------------------------------------------------------------- */
+.game-industries-section {
+  position: relative;
+  background-color: var(--bg-light-alt);
+  padding: 95px 0 100px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.game-industries-section .vizz-container {
+  width: 100%;
+  max-width: min(calc(100% - 6%), 1440px);
+}
+
+.game-industries-section::before {
+  content: '';
+  position: absolute;
+  top: -10%;
+  right: -5%;
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle, rgba(0, 180, 216, 0.08) 0%, rgba(244, 248, 252, 0) 70%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.game-industries-section::after {
+  content: '';
+  position: absolute;
+  bottom: -10%;
+  left: -5%;
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle, rgba(0, 136, 255, 0.06) 0%, rgba(244, 248, 252, 0) 70%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Splide Industries Slider */
+.game-industries-slider {
+  position: relative;
+  z-index: 2;
+  padding: 10px 0 20px;
+  margin-top: 40px;
+}
+
+.game-industries-slider .splide__track {
+  overflow: hidden;
+  padding: 12px 6px 20px;
+}
+
+.game-industries-slider .splide__list {
+  display: flex;
+}
+
+.game-industries-slider .splide__slide {
+  display: flex;
+  height: auto;
+  box-sizing: border-box;
+}
+
+/* Industry Slide Card */
+.industry-slide-card {
+  background: var(--white-color);
+  border: 1px solid var(--border-light);
+  border-radius: var(--border-radius-card);
+  padding: 28px 26px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.industry-slide-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(36, 143, 206, 0.45);
+  box-shadow: 0 14px 32px rgba(36, 143, 206, 0.12), 0 4px 10px rgba(0, 0, 0, 0.03);
+}
+
+/* Card Top Row */
+.industry-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.industry-num-badge {
+  font-family: var(--font-family);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--btn-primary);
+  background: rgba(0, 180, 216, 0.08);
+  border: 1px solid rgba(0, 180, 216, 0.2);
+  padding: 5px 12px;
+  border-radius: 6px;
+  line-height: 1;
+}
+
+.industry-icon-pod {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: rgba(0, 180, 216, 0.08);
+  border: 1px solid rgba(0, 180, 216, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--btn-primary);
+  transition: all 0.3s ease;
+}
+
+.industry-slide-card:hover .industry-icon-pod {
+  background: var(--btn-primary);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(36, 143, 206, 0.35);
+  transform: scale(1.06);
+}
+
+/* Card Titles & Descriptions */
+.industry-slide-title {
+  font-family: var(--font-family);
+  font-size: clamp(17px, 2vw, 19px);
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--text-dark);
+  margin: 0 0 12px;
+  transition: color 0.3s ease;
+}
+
+.industry-slide-card:hover .industry-slide-title {
+  color: var(--btn-primary);
+}
+
+.industry-slide-desc {
+  font-family: var(--font-family);
+  font-size: clamp(14px, 1.8vw, 15px);
+  line-height: 1.75;
+  color: var(--text-muted-light);
+  margin: 0;
+}
+
+/* Bottom Laser Line */
+.industry-card-laser {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--btn-primary) 0%, #00d2ff 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.industry-slide-card:hover .industry-card-laser {
+  opacity: 1;
+}
+
+/* Splide Arrows (Light Theme Game Styling) */
+.game-industries-slider .splide__arrows {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.game-industries-slider .splide__arrow {
+  position: static;
+  transform: none;
+  width: 46px;
+  height: 46px;
+  background: var(--white-color);
+  border: 1px solid rgba(36, 143, 206, 0.35);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  opacity: 1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.game-industries-slider .splide__arrow svg {
+  fill: var(--btn-primary);
+  width: 16px;
+  height: 16px;
+  transition: fill 0.25s ease;
+}
+
+.game-industries-slider .splide__arrow:hover:not(:disabled) {
+  background: var(--btn-primary);
+  border-color: var(--btn-primary);
+  box-shadow: 0 6px 20px rgba(36, 143, 206, 0.35);
+  transform: scale(1.05);
+}
+
+.game-industries-slider .splide__arrow:hover:not(:disabled) svg {
+  fill: #ffffff;
+}
+
+.game-industries-slider .splide__arrow:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* Splide Pagination */
+.game-industries-slider .splide__pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 18px;
+  padding: 0;
+  position: static;
+}
+
+.game-industries-slider .splide__pagination__page {
+  width: 10px;
+  height: 10px;
+  background: rgba(36, 143, 206, 0.2);
+  border-radius: 50%;
+  border: none;
+  margin: 0;
+  padding: 0;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.game-industries-slider .splide__pagination__page.is-active {
+  width: 26px;
+  border-radius: 8px;
+  background: var(--btn-primary);
+  box-shadow: 0 0 10px rgba(36, 143, 206, 0.5);
+}
+
 
 
 

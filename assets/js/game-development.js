@@ -438,6 +438,47 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  // =========================================================================
+  // 9. MOBILE GAMES ACROSS INDUSTRIES SPLIDE SLIDER
+  // =========================================================================
+  const industriesSliderElement = document.getElementById('game-industries-slider');
+
+  if (industriesSliderElement && typeof Splide !== 'undefined') {
+    try {
+      const industriesSplide = new Splide('#game-industries-slider', {
+        type: 'slide',
+        perPage: 3,
+        perMove: 1,
+        gap: '24px',
+        arrows: true,
+        pagination: true,
+        speed: 500,
+        drag: true,
+        snap: true,
+        flickPower: 400,
+        keyboard: true,
+        breakpoints: {
+          1200: {
+            perPage: 3,
+            gap: '20px',
+          },
+          991: {
+            perPage: 2,
+            gap: '18px',
+          },
+          640: {
+            perPage: 1,
+            gap: '14px',
+          },
+        },
+      });
+
+      industriesSplide.mount();
+    } catch (err) {
+      console.warn('[Splide] Error initializing #game-industries-slider:', err);
+    }
+  }
 });
 
 
