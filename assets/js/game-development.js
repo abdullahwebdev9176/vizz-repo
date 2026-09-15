@@ -621,4 +621,37 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  // --------------------------------------------------------------------------
+  // 12. SECTION 15: 5-BLADE CYBER TECH SERVER DECK INTERACTIVITY
+  // --------------------------------------------------------------------------
+  const techSection = document.querySelector('.game-tech-section');
+  if (techSection) {
+    const blades = techSection.querySelectorAll('.tech-deck-blade');
+
+    const activateBlade = (bladeNum) => {
+      const numStr = String(bladeNum);
+      blades.forEach((blade) => {
+        const bNum = blade.getAttribute('data-blade');
+        blade.classList.toggle('is-active', bNum === numStr);
+      });
+    };
+
+    // Click and hover on blades
+    blades.forEach((blade) => {
+      const bNum = blade.getAttribute('data-blade');
+      blade.addEventListener('mouseenter', () => {
+        if (bNum) activateBlade(bNum);
+      });
+      blade.addEventListener('click', () => {
+        if (bNum) activateBlade(bNum);
+      });
+      blade.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          if (bNum) activateBlade(bNum);
+        }
+      });
+    });
+  }
 });
