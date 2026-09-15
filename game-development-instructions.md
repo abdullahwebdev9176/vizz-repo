@@ -194,9 +194,10 @@ Use the exact same color system and design tokens from the Vizz Web design syste
 | **7** | **AR & VR Game Experiences** | Dark (`--bg-dark`) | `<h2>` / `<h3>` | Dual Sci-Fi HUD Immersive Portals (Augmented & Virtual Reality) |
 | **8** | **Monetization & Business Results** | Light (`--bg-light-alt`) | `<h2>` / `<h3>` | Interactive Monetization Engine Console (Split Tech Selector + Holographic Live Stage) |
 | **9** | **LiveOps & Post-Launch Support** | Dark (`--bg-dark`) | `<h2>` / `<h3>` | LiveOps Mission Control Hub (Dual-Wing Telemetry Nodes + Central Holographic Reactor) |
-| **10** | **Game Dev Process** | Light (`--bg-light-alt`) | `<h2>` / `<h3>` | Pre-production &rarr; Prototyping &rarr; Production &rarr; QA &rarr; Launch |
-| **11** | **Frequently Asked Questions (FAQ)** | Dark (`--bg-dark`) | `<h2>` / `<h3>` | Accessible accordion answering game dev timelines, IP ownership, costs |
-| **12** | **Bottom Consultation & Contact** | Light (`--bg-light-alt`) | `<h2>` / `<h3>` | Direct contact channels & tailored proposal form |
+| **10** | **From First Idea to App Store Our Game Development Process** | Light (`--bg-light-alt`) | `<h2>` / `<h3>` | Gamified Splide Carousel (01–10 Stages) with Interactive Live XP Milestone Tracker HUD |
+| **11** | **Scalable Mobile Game Development Models Built Around Your Vision** | Dark (`--bg-dark`) | `<h2>` / `<h3>` | Split-Screen Studio Showcase with Holographic Telemetry Stage & 4 Architecture Cards |
+| **12** | **Frequently Asked Questions (FAQ)** | Light (`--bg-light-alt`) | `<h2>` / `<h3>` | Accessible accordion answering game dev timelines, IP ownership, costs |
+| **13** | **Bottom Consultation & Contact** | Dark (`--bg-dark`) | `<h2>` / `<h3>` | Direct contact channels & tailored proposal form |
 
 ---
 

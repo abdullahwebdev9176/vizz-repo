@@ -2664,6 +2664,708 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   100% { transform: scaleY(1); }
 }
 
+/* --------------------------------------------------------------------------
+   15. SECTION 10: GAME DEVELOPMENT PROCESS (GAMIFIED PROCESS SLIDER)
+   -------------------------------------------------------------------------- */
+.game-process-section {
+  position: relative;
+  background-color: var(--bg-light-alt);
+  padding: 95px 0 100px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.game-process-section .vizz-container {
+  width: 100%;
+  max-width: min(calc(100% - 6%), 1440px);
+}
+
+.game-process-section::before {
+  content: '';
+  position: absolute;
+  top: -10%;
+  right: -5%;
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle, rgba(0, 180, 216, 0.08) 0%, rgba(244, 248, 252, 0) 70%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.game-process-section::after {
+  content: '';
+  position: absolute;
+  bottom: -10%;
+  left: -5%;
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle, rgba(0, 136, 255, 0.06) 0%, rgba(244, 248, 252, 0) 70%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Interactive Gamified Progress Tracker HUD */
+.process-tracker-hud {
+  background: var(--white-color);
+  border: 1px solid var(--border-light);
+  border-radius: var(--border-radius-card);
+  padding: 20px 26px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02);
+  margin: 36px auto 38px;
+  max-width: 920px;
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.tracker-info-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.tracker-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tracker-pulsing-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--btn-primary);
+  box-shadow: 0 0 8px var(--btn-primary);
+  animation: pulseDot 2s infinite ease-in-out;
+}
+
+.tracker-tag {
+  font-family: var(--font-family);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-muted-light);
+  letter-spacing: 0.8px;
+}
+
+.tracker-current-name {
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--btn-primary);
+  letter-spacing: 0.2px;
+}
+
+.tracker-level-badge {
+  font-family: var(--font-family);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--btn-primary);
+  background: rgba(0, 180, 216, 0.08);
+  border: 1px solid rgba(0, 180, 216, 0.2);
+  padding: 4px 12px;
+  border-radius: var(--border-radius-pill);
+  letter-spacing: 0.8px;
+}
+
+.tracker-progress-track {
+  width: 100%;
+  height: 8px;
+  background: rgba(0, 180, 216, 0.1);
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+}
+
+.tracker-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--btn-primary) 0%, #00d2ff 100%);
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0, 180, 216, 0.4);
+  transition: width 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Splide Process Slider */
+.game-process-slider {
+  position: relative;
+  z-index: 2;
+  padding: 10px 0 20px;
+}
+
+.game-process-slider .splide__track {
+  overflow: hidden;
+  padding: 12px 6px 20px;
+}
+
+.game-process-slider .splide__list {
+  display: flex;
+}
+
+.game-process-slider .splide__slide {
+  display: flex;
+  height: auto;
+  box-sizing: border-box;
+}
+
+/* Process Slide Card */
+.process-slide-card {
+  background: var(--white-color);
+  border: 1px solid var(--border-light);
+  border-radius: var(--border-radius-card);
+  padding: 28px 26px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.process-slide-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(36, 143, 206, 0.45);
+  box-shadow: 0 14px 32px rgba(36, 143, 206, 0.12), 0 4px 10px rgba(0, 0, 0, 0.03);
+}
+
+/* Bottom Laser Indicator */
+.process-card-laser {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--btn-primary) 0%, #00d2ff 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.process-slide-card:hover .process-card-laser {
+  opacity: 1;
+}
+
+/* Card Header */
+.process-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.process-num-badge {
+  font-family: var(--font-family);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--btn-primary);
+  background: rgba(0, 180, 216, 0.08);
+  border: 1px solid rgba(0, 180, 216, 0.2);
+  padding: 5px 12px;
+  border-radius: 6px;
+  line-height: 1;
+}
+
+.process-icon-pod {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(0, 180, 216, 0.08);
+  border: 1px solid rgba(0, 180, 216, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--btn-primary);
+  transition: all 0.3s ease;
+}
+
+.process-slide-card:hover .process-icon-pod {
+  background: var(--btn-primary);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(36, 143, 206, 0.4);
+  transform: scale(1.06);
+}
+
+/* Card Titles & Descriptions */
+.process-slide-title {
+  font-family: var(--font-family);
+  font-size: clamp(17px, 2vw, 19px);
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--text-dark);
+  margin: 0 0 12px;
+  transition: color 0.3s ease;
+}
+
+.process-slide-card:hover .process-slide-title {
+  color: var(--btn-primary);
+}
+
+.process-slide-desc {
+  font-family: var(--font-family);
+  font-size: clamp(14px, 1.8vw, 15px);
+  line-height: 1.75;
+  color: var(--text-muted-light);
+  margin: 0;
+}
+
+/* Splide Arrows (Light Theme Game Cockpit Styling) */
+.game-process-slider .splide__arrows {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.game-process-slider .splide__arrow {
+  position: static;
+  transform: none;
+  width: 46px;
+  height: 46px;
+  background: var(--white-color);
+  border: 1px solid rgba(36, 143, 206, 0.35);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  opacity: 1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.game-process-slider .splide__arrow svg {
+  fill: var(--btn-primary);
+  width: 16px;
+  height: 16px;
+  transition: fill 0.25s ease;
+}
+
+.game-process-slider .splide__arrow:hover:not(:disabled) {
+  background: var(--btn-primary);
+  border-color: var(--btn-primary);
+  box-shadow: 0 6px 20px rgba(36, 143, 206, 0.35);
+  transform: scale(1.05);
+}
+
+.game-process-slider .splide__arrow:hover:not(:disabled) svg {
+  fill: #ffffff;
+}
+
+.game-process-slider .splide__arrow:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* Splide Pagination */
+.game-process-slider .splide__pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 18px;
+  padding: 0;
+  position: static;
+}
+
+.game-process-slider .splide__pagination__page {
+  width: 10px;
+  height: 10px;
+  background: rgba(36, 143, 206, 0.2);
+  border-radius: 50%;
+  border: none;
+  margin: 0;
+  padding: 0;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.game-process-slider .splide__pagination__page.is-active {
+  width: 26px;
+  border-radius: 8px;
+  background: var(--btn-primary);
+  box-shadow: 0 0 10px rgba(36, 143, 206, 0.5);
+}
+
+/* --------------------------------------------------------------------------
+   16. SECTION 11: SCALABLE MOBILE GAME DEVELOPMENT MODELS (SPLIT SHOWCASE)
+   -------------------------------------------------------------------------- */
+.game-models-section {
+  position: relative;
+  background-color: var(--bg-dark);
+  padding: 100px 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.game-models-section .vizz-container {
+  width: 100%;
+  max-width: min(calc(100% - 6%), 1440px);
+}
+
+.game-models-section::before {
+  content: '';
+  position: absolute;
+  top: -15%;
+  left: -5%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(0, 180, 216, 0.12) 0%, rgba(7, 21, 43, 0) 70%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.game-models-section::after {
+  content: '';
+  position: absolute;
+  bottom: -15%;
+  right: -5%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(0, 136, 255, 0.1) 0%, rgba(7, 21, 43, 0) 70%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Models Showcase Grid */
+.models-showcase-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 36px;
+  margin-top: 48px;
+  position: relative;
+  z-index: 2;
+  align-items: center;
+}
+
+@media screen and (min-width: 992px) {
+  .models-showcase-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .models-showcase-grid {
+    grid-template-columns: 1fr 1.12fr;
+    gap: 52px;
+  }
+}
+
+/* Left Column: Holographic Studio Visual Stage */
+.models-visual-stage {
+  width: 100%;
+  position: relative;
+}
+
+.models-portal-chassis {
+  position: relative;
+  background: rgba(14, 34, 70, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 180, 216, 0.35);
+  border-radius: var(--border-radius-card);
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45), 0 0 30px rgba(0, 180, 216, 0.14);
+  transition: all 0.4s ease;
+}
+
+.models-portal-chassis:hover {
+  border-color: rgba(0, 180, 216, 0.65);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 35px rgba(0, 180, 216, 0.25);
+}
+
+/* Top Telemetry Status Bar */
+.portal-status-bar {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 4;
+  background: rgba(7, 21, 43, 0.88);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 180, 216, 0.35);
+  padding: 6px 14px;
+  border-radius: var(--border-radius-pill);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.portal-pulsing-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-cyan-light);
+  box-shadow: 0 0 8px var(--color-cyan-light);
+  animation: pulseDot 2s infinite ease-in-out;
+}
+
+.portal-status-label {
+  font-family: var(--font-family);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  color: var(--color-cyan-light);
+}
+
+/* Studio Figure & Image */
+.models-portal-figure {
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--border-radius-card);
+  line-height: 0;
+}
+
+.models-portal-img {
+  width: 100%;
+  height: 100%;
+  min-height: 380px;
+  max-height: 480px;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.models-portal-chassis:hover .models-portal-img {
+  transform: scale(1.03);
+}
+
+/* Subtle Sci-Fi Scanline */
+.models-portal-scanline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent 0%, rgba(0, 255, 255, 0.65) 50%, transparent 100%);
+  opacity: 0.7;
+  pointer-events: none;
+  animation: portalScan 4s infinite linear;
+}
+
+@keyframes portalScan {
+  0% { top: -5%; opacity: 0; }
+  10% { opacity: 0.8; }
+  90% { opacity: 0.8; }
+  100% { top: 105%; opacity: 0; }
+}
+
+/* Bottom Telemetry Highlights Dock */
+.portal-telemetry-dock {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+  z-index: 4;
+  background: rgba(7, 21, 43, 0.9);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 180, 216, 0.3);
+  padding: 12px 18px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.telemetry-dock-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-family);
+  font-size: 13px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.dock-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--color-cyan-light);
+  box-shadow: 0 0 6px var(--color-cyan-light);
+}
+
+.telemetry-dock-tag {
+  font-family: var(--font-family);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-cyan-light);
+  background: rgba(0, 180, 216, 0.12);
+  border: 1px solid rgba(0, 180, 216, 0.25);
+  padding: 3px 10px;
+  border-radius: var(--border-radius-pill);
+  letter-spacing: 0.8px;
+}
+
+/* Right Column: Interactive Engagement Models Stack */
+.models-cards-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Model Card Item */
+.model-card-item {
+  background: rgba(14, 34, 70, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 180, 216, 0.2);
+  border-radius: var(--border-radius-card);
+  padding: 20px 22px;
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.model-card-item:hover {
+  background: rgba(14, 34, 70, 0.95);
+  border-color: rgba(0, 180, 216, 0.65);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35), 0 0 20px rgba(0, 180, 216, 0.18);
+  transform: translateX(6px);
+}
+
+.model-card-item:focus-visible {
+  outline: 2px solid var(--btn-primary);
+  outline-offset: 2px;
+  border-color: rgba(0, 180, 216, 0.7);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4), 0 0 25px rgba(0, 180, 216, 0.25);
+}
+
+.model-card-item.is-active {
+  background: rgba(14, 34, 70, 0.95);
+  border-color: rgba(0, 180, 216, 0.75);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4), 0 0 25px rgba(0, 180, 216, 0.22);
+}
+
+@media screen and (max-width: 991px) {
+  .model-card-item:hover {
+    transform: translateY(-3px);
+  }
+}
+
+/* Numerical Circuit Indicator */
+.model-card-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.model-index-badge {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: rgba(0, 180, 216, 0.1);
+  border: 1px solid rgba(0, 180, 216, 0.28);
+  font-family: var(--font-family);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-cyan-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.model-card-item:hover .model-index-badge,
+.model-card-item.is-active .model-index-badge {
+  background: var(--btn-primary);
+  color: #ffffff;
+  box-shadow: 0 0 14px rgba(0, 180, 216, 0.6);
+  border-color: var(--btn-primary);
+}
+
+.model-circuit-line {
+  width: 2px;
+  flex: 1;
+  min-height: 16px;
+  background: linear-gradient(180deg, rgba(0, 180, 216, 0.4) 0%, rgba(0, 180, 216, 0.05) 100%);
+  margin-top: 6px;
+}
+
+/* Card Content Area */
+.model-card-content {
+  flex: 1;
+}
+
+.model-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.model-icon-pod {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: rgba(0, 180, 216, 0.08);
+  border: 1px solid rgba(0, 180, 216, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-cyan-light);
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.model-card-item:hover .model-icon-pod,
+.model-card-item.is-active .model-icon-pod {
+  background: rgba(0, 180, 216, 0.22);
+  color: #ffffff;
+  border-color: rgba(0, 180, 216, 0.5);
+  box-shadow: 0 0 10px rgba(0, 180, 216, 0.4);
+}
+
+.model-card-title {
+  font-family: var(--font-family);
+  font-size: clamp(16px, 1.9vw, 18px);
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--text-white);
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.model-card-item:hover .model-card-title,
+.model-card-item.is-active .model-card-title {
+  color: var(--color-cyan-light);
+}
+
+.model-card-desc {
+  font-family: var(--font-family);
+  font-size: clamp(13.5px, 1.7vw, 14.5px);
+  line-height: 1.7;
+  color: var(--text-muted-dark);
+  margin: 0;
+}
+
+/* Bottom Laser Line */
+.model-card-laser {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--btn-primary) 0%, #00d2ff 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.model-card-item:hover .model-card-laser,
+.model-card-item.is-active .model-card-laser {
+  opacity: 1;
+}
+
+
 
 
 

@@ -302,6 +302,142 @@ document.addEventListener('DOMContentLoaded', () => {
 
     startAutoScan();
   }
+
+  // =========================================================================
+  // 7. GAME DEVELOPMENT PROCESS SPLIDE SLIDER & HUD CONTROLLER
+  // =========================================================================
+  const processSliderElement = document.getElementById('game-process-slider');
+
+  if (processSliderElement && typeof Splide !== 'undefined') {
+    try {
+      const processSplide = new Splide('#game-process-slider', {
+        type: 'slide',
+        perPage: 3,
+        perMove: 1,
+        gap: '24px',
+        arrows: true,
+        pagination: true,
+        speed: 550,
+        drag: true,
+        snap: true,
+        flickPower: 400,
+        keyboard: true,
+        breakpoints: {
+          1200: {
+            perPage: 3,
+            gap: '20px',
+          },
+          991: {
+            perPage: 2,
+            gap: '18px',
+          },
+          640: {
+            perPage: 1,
+            gap: '14px',
+          },
+        },
+      });
+
+      const progressFill = document.getElementById('tracker-progress-fill');
+      const currentName = document.getElementById('tracker-current-name');
+      const levelBadge = document.getElementById('tracker-level-badge');
+      const slideCards = Array.from(processSliderElement.querySelectorAll('.process-slide-card'));
+
+      function updateProcessHUD(slideIndex) {
+        const activeCard = slideCards[slideIndex];
+        if (!activeCard) return;
+
+        const step = parseInt(activeCard.getAttribute('data-step'), 10) || (slideIndex + 1);
+        const title = activeCard.getAttribute('data-title') || '';
+        const percent = activeCard.getAttribute('data-percent') || `${step * 10}`;
+
+        if (progressFill) {
+          progressFill.style.width = `${percent}%`;
+        }
+        if (currentName) {
+          currentName.textContent = title;
+        }
+        if (levelBadge) {
+          const formattedStep = step < 10 ? `0${step}` : `${step}`;
+          levelBadge.textContent = `STAGE ${formattedStep} / 10`;
+        }
+
+        // Highlight active card
+        slideCards.forEach((c, idx) => {
+          c.classList.toggle('is-active', idx === slideIndex);
+        });
+      }
+
+      // Sync on mount and move
+      processSplide.on('mounted move', (newIndex) => {
+        updateProcessHUD(typeof newIndex === 'number' ? newIndex : processSplide.index);
+      });
+
+      // Hover on card to focus & sync HUD
+      slideCards.forEach((card, idx) => {
+        card.addEventListener('mouseenter', () => {
+          updateProcessHUD(idx);
+        });
+      });
+
+      processSplide.mount();
+    } catch (err) {
+      console.warn('[Splide] Error initializing #game-process-slider:', err);
+    }
+  }
+
+  // =========================================================================
+  // 8. SCALABLE MOBILE GAME DEVELOPMENT MODELS INTERACTIVE CONTROLLER
+  // =========================================================================
+  const modelsGrid = document.getElementById('models-showcase-grid');
+
+  if (modelsGrid) {
+    const modelCards = Array.from(modelsGrid.querySelectorAll('.model-card-item'));
+    const portalModelTitle = document.getElementById('portal-active-model-title');
+    const portalModelTag = document.getElementById('portal-active-model-tag');
+
+    function activateModel(card) {
+      const modelNum = card.getAttribute('data-model') || '1';
+      const title = card.getAttribute('data-title') || '';
+
+      // Update active card class
+      modelCards.forEach((c) => {
+        c.classList.toggle('is-active', c === card);
+      });
+
+      // Update Visual Portal Dock
+      if (portalModelTitle) {
+        portalModelTitle.textContent = title;
+      }
+      if (portalModelTag) {
+        portalModelTag.textContent = `MODEL 0${modelNum} / 04`;
+      }
+    }
+
+    modelCards.forEach((card) => {
+      // Hover on desktop
+      card.addEventListener('mouseenter', () => {
+        activateModel(card);
+      });
+
+      // Tap / Click
+      card.addEventListener('click', () => {
+        activateModel(card);
+      });
+
+      // Keyboard focus & activation
+      card.addEventListener('focus', () => {
+        activateModel(card);
+      });
+
+      card.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          activateModel(card);
+        }
+      });
+    });
+  }
 });
 
 
