@@ -544,4 +544,81 @@ document.addEventListener('DOMContentLoaded', () => {
       console.warn('[Splide] Error initializing #game-perks-slider:', err);
     }
   }
+
+  // --------------------------------------------------------------------------
+  // 11. SECTION 14: TRUSTED PARTNER ARCHITECTURE CORE INTERACTIVITY
+  // --------------------------------------------------------------------------
+  const partnerSection = document.querySelector('.game-partner-section');
+  if (partnerSection) {
+    const cards = partnerSection.querySelectorAll('.partner-pillar-card');
+    const nodeBtns = partnerSection.querySelectorAll('.node-btn');
+    const coreIndexEl = document.getElementById('partner-core-index');
+    const coreTitleEl = document.getElementById('partner-core-title');
+    const coreDescEl = document.getElementById('partner-core-desc');
+
+    const activatePillar = (index) => {
+      const idxStr = String(index);
+
+      // Update cards active state
+      cards.forEach((card) => {
+        const cIdx = card.getAttribute('data-index');
+        if (cIdx === idxStr) {
+          card.classList.add('is-active');
+          const title = card.getAttribute('data-title') || '';
+          const desc = card.getAttribute('data-desc') || '';
+
+          if (coreIndexEl) {
+            coreIndexEl.textContent = `PILLAR ${cIdx.padStart(2, '0')} / 06`;
+          }
+          if (coreTitleEl) {
+            coreTitleEl.textContent = title;
+          }
+          if (coreDescEl) {
+            coreDescEl.textContent = desc;
+          }
+        } else {
+          card.classList.remove('is-active');
+        }
+      });
+
+      // Update node buttons
+      nodeBtns.forEach((btn) => {
+        const bIdx = btn.getAttribute('data-index');
+        const isActive = bIdx === idxStr;
+        btn.classList.toggle('is-active', isActive);
+        btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
+      });
+    };
+
+    // Event listeners on cards (click & hover)
+    cards.forEach((card) => {
+      const idx = card.getAttribute('data-index');
+      card.addEventListener('mouseenter', () => {
+        if (idx) activatePillar(idx);
+      });
+      card.addEventListener('click', () => {
+        if (idx) activatePillar(idx);
+      });
+      card.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          if (idx) activatePillar(idx);
+        }
+      });
+    });
+
+    // Event listeners on quick node buttons
+    nodeBtns.forEach((btn) => {
+      const idx = btn.getAttribute('data-index');
+      btn.addEventListener('click', () => {
+        if (idx) {
+          activatePillar(idx);
+          const targetCard = partnerSection.querySelector(`.partner-pillar-card[data-index="${idx}"]`);
+          if (targetCard && window.innerWidth <= 1024) {
+            targetCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          }
+        }
+      });
+    });
+  }
 });

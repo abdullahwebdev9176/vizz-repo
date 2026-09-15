@@ -198,8 +198,9 @@ Use the exact same color system and design tokens from the Vizz Web design syste
 | **11** | **Scalable Mobile Game Development Models Built Around Your Vision** | Dark (`--bg-dark`) | `<h2>` / `<h3>` | Split-Screen Studio Showcase with Holographic Telemetry Stage & 4 Architecture Cards |
 | **12** | **Build Mobile Games That Deliver More Than Entertainment** | Light (`--bg-light-alt`) | `<h2>` / `<h3>` | Cross-Industry Splide Slider (10 Sectors with Custom Icon Pods & Responsive Cards) |
 | **13** | **Perks Of Working With An Expert Game App Development Company** | Dark (`--bg-dark`) | `<h2>` / `<h3>` | Panoramic Game Systems Splide Carousel (15 Modules) with Real-Time Telemetry HUD Command Header |
-| **14** | **Frequently Asked Questions (FAQ)** | Light (`--bg-light-alt`) | `<h2>` / `<h3>` | Accessible accordion answering game dev timelines, IP ownership, costs |
-| **15** | **Bottom Consultation & Contact** | Dark (`--bg-dark`) | `<h2>` / `<h3>` | Direct contact channels & tailored proposal form |
+| **14** | **Your Trusted Partner for Innovative Custom Mobile Game Solutions** | Light (`--bg-light-alt`) | `<h2>` / `<h3>` | Asymmetric 2-Column Partner Architecture Deck (Interactive Holographic Core Stage + 6 Interactive Pillar Cards) |
+| **15** | **Frequently Asked Questions (FAQ)** | Dark (`--bg-dark`) | `<h2>` / `<h3>` | Accessible accordion answering game dev timelines, IP ownership, costs |
+| **16** | **Bottom Consultation & Contact** | Light (`--bg-light-alt`) | `<h2>` / `<h3>` | Direct contact channels & tailored proposal form |
 
 ---
 
