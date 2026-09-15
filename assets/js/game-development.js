@@ -479,7 +479,69 @@ document.addEventListener('DOMContentLoaded', () => {
       console.warn('[Splide] Error initializing #game-industries-slider:', err);
     }
   }
+
+  // --------------------------------------------------------------------------
+  // 10. SECTION 13: PERKS OF WORKING WITH AN EXPERT GAME DEV COMPANY SLIDER
+  // --------------------------------------------------------------------------
+  const perksSliderEl = document.getElementById('game-perks-slider');
+  const perksActiveTitleEl = document.getElementById('perks-active-title');
+  const perksHudCounterEl = document.getElementById('perks-hud-counter');
+
+  if (perksSliderEl && typeof Splide !== 'undefined') {
+    try {
+      const perksSplide = new Splide('#game-perks-slider', {
+        type: 'slide',
+        perPage: 3,
+        perMove: 1,
+        gap: '24px',
+        arrows: true,
+        pagination: true,
+        speed: 500,
+        drag: true,
+        snap: true,
+        flickPower: 400,
+        keyboard: true,
+        breakpoints: {
+          1200: {
+            perPage: 3,
+            gap: '20px',
+          },
+          991: {
+            perPage: 2,
+            gap: '18px',
+          },
+          640: {
+            perPage: 1,
+            gap: '14px',
+          },
+        },
+      });
+
+      // Update HUD telemetry readout on active slide change
+      const updatePerksHud = (index) => {
+        const slides = perksSliderEl.querySelectorAll('.splide__slide:not(.splide__slide--clone)');
+        if (slides && slides[index]) {
+          const card = slides[index].querySelector('.perk-module-card');
+          if (card) {
+            const title = card.getAttribute('data-title') || '';
+            const rawIndex = card.getAttribute('data-index') || (index + 1);
+            if (perksActiveTitleEl && title) {
+              perksActiveTitleEl.textContent = title;
+            }
+            if (perksHudCounterEl) {
+              perksHudCounterEl.textContent = `MODULE ${String(rawIndex).padStart(2, '0')} / 15`;
+            }
+          }
+        }
+      };
+
+      perksSplide.on('mounted move', () => {
+        updatePerksHud(perksSplide.index);
+      });
+
+      perksSplide.mount();
+    } catch (err) {
+      console.warn('[Splide] Error initializing #game-perks-slider:', err);
+    }
+  }
 });
-
-
-
