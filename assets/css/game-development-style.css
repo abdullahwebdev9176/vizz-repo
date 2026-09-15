@@ -982,4 +982,197 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   z-index: 2;
 }
 
+/* --------------------------------------------------------------------------
+   9. SECTION 4: WHAT KIND OF MOBILE GAME DO YOU WANT TO BUILD? (GENRES SLIDER)
+   -------------------------------------------------------------------------- */
+.game-genres-slider-section {
+  position: relative;
+  background-color: var(--bg-light-alt);
+  padding: var(--section-padding);
+  overflow: hidden;
+}
+
+.game-genres-slider {
+  position: relative;
+  z-index: 2;
+  padding: 10px 0 16px 0;
+}
+
+.game-genres-slider .splide__track {
+  overflow: hidden;
+  padding: 10px 0 16px 0;
+}
+
+.game-genres-slider .splide__list {
+  display: flex;
+}
+
+.game-genres-slider .splide__slide {
+  display: flex;
+  height: auto;
+  box-sizing: border-box;
+}
+
+/* Genre Card Item (Light Theme) */
+.genre-card-item {
+  background: var(--white-color);
+  border: 1px solid var(--border-light);
+  border-radius: var(--border-radius-card);
+  padding: 26px 22px;
+  box-shadow: var(--shadow-card);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.genre-card-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 0;
+  background: linear-gradient(180deg, var(--btn-primary) 0%, #00d2ff 100%);
+  transition: height 0.3s ease-in-out;
+}
+
+.genre-card-item:hover {
+  transform: translateY(-5px);
+  border-color: rgba(36, 143, 206, 0.45);
+  box-shadow: 0 16px 36px rgba(7, 21, 43, 0.08), 0 0 20px rgba(36, 143, 206, 0.12);
+}
+
+.genre-card-item:hover::before {
+  height: 100%;
+}
+
+.genre-card-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.genre-card-icon {
+  width: 48px;
+  height: 48px;
+  background: rgba(36, 143, 206, 0.08);
+  border: 1px solid rgba(36, 143, 206, 0.2);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--btn-primary);
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.genre-card-item:hover .genre-card-icon {
+  background: var(--btn-primary);
+  color: var(--white-color);
+  box-shadow: 0 6px 18px rgba(36, 143, 206, 0.35);
+  transform: scale(1.05);
+}
+
+.genre-card-title {
+  font-family: var(--font-family);
+  font-size: clamp(17px, 2.2vw, 19px);
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--text-dark);
+  margin: 0;
+}
+
+.genre-card-desc {
+  font-family: var(--font-family);
+  font-size: clamp(13.5px, 1.8vw, 14.5px);
+  line-height: 1.7;
+  color: var(--text-muted-light);
+  margin: 0;
+  flex-grow: 1;
+}
+
+/* Light Theme Splide Arrows */
+.game-genres-slider .splide__arrows {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.game-genres-slider .splide__arrow {
+  position: static;
+  transform: none;
+  width: 44px;
+  height: 44px;
+  background: var(--white-color);
+  border: 1px solid var(--border-light);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  opacity: 1;
+}
+
+.game-genres-slider .splide__arrow svg {
+  fill: var(--btn-primary);
+  width: 16px;
+  height: 16px;
+  transition: fill 0.25s ease;
+}
+
+.game-genres-slider .splide__arrow:hover:not(:disabled) {
+  background: var(--btn-primary);
+  border-color: var(--btn-primary);
+  box-shadow: 0 6px 20px rgba(0, 136, 255, 0.35);
+}
+
+.game-genres-slider .splide__arrow:hover:not(:disabled) svg {
+  fill: #ffffff;
+}
+
+.game-genres-slider .splide__arrow:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* Light Theme Splide Pagination */
+.game-genres-slider .splide__pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 18px;
+  padding: 0;
+  position: static;
+}
+
+.game-genres-slider .splide__pagination__page {
+  width: 10px;
+  height: 10px;
+  background: rgba(11, 26, 48, 0.2);
+  border-radius: 50%;
+  border: none;
+  margin: 0;
+  padding: 0;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.game-genres-slider .splide__pagination__page.is-active {
+  width: 24px;
+  border-radius: 8px;
+  background: var(--btn-primary);
+  box-shadow: 0 0 10px rgba(0, 180, 216, 0.4);
+}
+
+
 

@@ -100,4 +100,44 @@ document.addEventListener('DOMContentLoaded', () => {
       console.warn('[Splide] Error initializing #game-services-slider:', err);
     }
   }
+
+  // =========================================================================
+  // 4. GAME GENRES SPLIDE SLIDER (ACTIVE ON BOTH SCREENS)
+  // =========================================================================
+  const genresSliderElement = document.getElementById('game-genres-slider');
+  if (genresSliderElement && typeof Splide !== 'undefined') {
+    try {
+      const genresSplide = new Splide('#game-genres-slider', {
+        type: 'slide',
+        perPage: 3,
+        perMove: 1,
+        gap: '24px',
+        arrows: true,
+        pagination: true,
+        speed: 500,
+        drag: true,
+        snap: true,
+        flickPower: 400,
+        keyboard: true,
+        breakpoints: {
+          1200: {
+            perPage: 3,
+            gap: '20px',
+          },
+          991: {
+            perPage: 2,
+            gap: '18px',
+          },
+          640: {
+            perPage: 1,
+            gap: '14px',
+          },
+        },
+      });
+
+      genresSplide.mount();
+    } catch (err) {
+      console.warn('[Splide] Error initializing #game-genres-slider:', err);
+    }
+  }
 });
