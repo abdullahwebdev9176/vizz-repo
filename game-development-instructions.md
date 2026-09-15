@@ -192,9 +192,10 @@ Use the exact same color system and design tokens from the Vizz Web design syste
 | **5** | **Develop Cross-Platform Mobile Games** | Dark (`--bg-dark`) | `<h2>` / `<h3>` | 4 Key Platforms (iOS, Android, Cross-Platform, Mobile + Web) |
 | **6** | **Advanced AI Technologies** | Light (`--bg-light-alt`) | `<h2>` / `<h3>` | 5 Core AI Gaming Pillars Alternating Neural Pathway |
 | **7** | **AR & VR Game Experiences** | Dark (`--bg-dark`) | `<h2>` / `<h3>` | Dual Sci-Fi HUD Immersive Portals (Augmented & Virtual Reality) |
-| **8** | **Game Dev Process** | Light (`--bg-light-alt`) | `<h2>` / `<h3>` | Pre-production &rarr; Prototyping &rarr; Production &rarr; QA &rarr; Launch |
-| **9** | **Frequently Asked Questions (FAQ)** | Light (`--bg-light`) | `<h2>` / `<h3>` | Accessible accordion answering game dev timelines, IP ownership, costs |
-| **10** | **Bottom Consultation & Contact** | Dark (`--bg-dark`) | `<h2>` / `<h3>` | Direct contact channels & tailored proposal form |
+| **8** | **Monetization & Business Results** | Light (`--bg-light-alt`) | `<h2>` / `<h3>` | Interactive Monetization Engine Console (Split Tech Selector + Holographic Live Stage) |
+| **9** | **Game Dev Process** | Dark (`--bg-dark`) | `<h2>` / `<h3>` | Pre-production &rarr; Prototyping &rarr; Production &rarr; QA &rarr; Launch |
+| **10** | **Frequently Asked Questions (FAQ)** | Light (`--bg-light`) | `<h2>` / `<h3>` | Accessible accordion answering game dev timelines, IP ownership, costs |
+| **11** | **Bottom Consultation & Contact** | Dark (`--bg-dark`) | `<h2>` / `<h3>` | Direct contact channels & tailored proposal form |
 
 ---
 

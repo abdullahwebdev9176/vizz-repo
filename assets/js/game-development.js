@@ -140,4 +140,80 @@ document.addEventListener('DOMContentLoaded', () => {
       console.warn('[Splide] Error initializing #game-genres-slider:', err);
     }
   }
+
+  // =========================================================================
+  // 5. INTERACTIVE MONETIZATION ENGINE CONSOLE CONTROLLER
+  // =========================================================================
+  const monetizationEngine = document.getElementById('monetization-engine');
+
+  if (monetizationEngine) {
+    const tabs = Array.from(monetizationEngine.querySelectorAll('.monetization-tab'));
+    const panels = Array.from(monetizationEngine.querySelectorAll('.monetization-stage-panel'));
+    const prevBtns = monetizationEngine.querySelectorAll('.stage-nav-btn.btn-prev');
+    const nextBtns = monetizationEngine.querySelectorAll('.stage-nav-btn.btn-next');
+    let currentIndex = 0;
+
+    function activateIndex(index) {
+      if (index < 0) index = tabs.length - 1;
+      if (index >= tabs.length) index = 0;
+      currentIndex = index;
+
+      // Update Tabs
+      tabs.forEach((tab, i) => {
+        const isActive = i === currentIndex;
+        tab.classList.toggle('is-active', isActive);
+        tab.setAttribute('aria-selected', isActive ? 'true' : 'false');
+        if (isActive && window.innerWidth < 992) {
+          tab.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        }
+      });
+
+      // Update Stage Panels
+      panels.forEach((panel, i) => {
+        const isActive = i === currentIndex;
+        if (isActive) {
+          panel.removeAttribute('hidden');
+          panel.classList.add('is-active');
+        } else {
+          panel.setAttribute('hidden', '');
+          panel.classList.remove('is-active');
+        }
+      });
+    }
+
+    // Tab Clicks & Hover Option
+    tabs.forEach((tab, i) => {
+      tab.addEventListener('click', () => {
+        activateIndex(i);
+      });
+
+      // Accessible Keyboard Navigation
+      tab.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
+          e.preventDefault();
+          activateIndex(currentIndex + 1);
+          tabs[currentIndex]?.focus();
+        } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
+          e.preventDefault();
+          activateIndex(currentIndex - 1);
+          tabs[currentIndex]?.focus();
+        }
+      });
+    });
+
+    // Prev / Next Buttons
+    prevBtns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        activateIndex(currentIndex - 1);
+      });
+    });
+
+    nextBtns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        activateIndex(currentIndex + 1);
+      });
+    });
+  }
 });
+
+
