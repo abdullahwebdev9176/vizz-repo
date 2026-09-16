@@ -2560,6 +2560,9 @@ b {
 }
 
 @media (max-width: 767px) {
+  .liveops-control-hub {
+    gap: 12px;
+}
 
   .sim-col-left,
   .sim-col-right {
@@ -4324,23 +4327,6 @@ b {
   margin: 0;
 }
 
-/* Bottom Laser Line */
-.model-card-laser {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--btn-primary) 0%, #00d2ff 100%);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.model-card-item:hover .model-card-laser,
-.model-card-item.is-active .model-card-laser {
-  opacity: 1;
-}
-
 /* --------------------------------------------------------------------------
    17. SECTION 12: MOBILE GAMES ACROSS INDUSTRIES (SPLIDE CAROUSEL)
    -------------------------------------------------------------------------- */
@@ -4996,7 +4982,7 @@ b {
   display: grid !important;
   grid-template-columns: repeat(3, 1fr) !important;
   gap: 24px !important;
-  transform: none !important;
+
   margin-top: 40px !important;
   width: 100% !important;
   height: auto !important;
@@ -5006,7 +4992,7 @@ b {
   display: grid !important;
   grid-template-columns: repeat(5, 1fr) !important;
   gap: 20px !important;
-  transform: none !important;
+
   margin-top: 40px !important;
   width: 100% !important;
   height: auto !important;
@@ -5016,7 +5002,7 @@ b {
   display: grid !important;
   grid-template-columns: repeat(4, 1fr) !important;
   gap: 24px !important;
-  transform: none !important;
+
   margin-top: 48px !important;
   width: 100% !important;
   height: auto !important;
@@ -5025,13 +5011,12 @@ b {
 #partner-pillars-slider .splide__slide,
 #game-tech-slider .splide__slide,
 #game-cost-slider .splide__slide {
-  width: 100% !important;
-  max-width: 100% !important;
-  margin: 0 !important;
-  height: 100% !important;
-  flex: none !important;
-  display: flex !important;
-  box-sizing: border-box !important;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  height: 100%;
+  display: flex;
+  box-sizing: border-box;
 }
 
 #partner-pillars-slider .splide__slide .partner-pillar-card,
@@ -5129,6 +5114,8 @@ b {
   #game-cost-slider .splide__track {
     overflow: hidden !important;
     position: relative !important;
+    width: 100% !important;
+    touch-action: pan-y;
   }
 
   #partner-pillars-slider .splide__list.partner-pillars-grid,
@@ -5145,7 +5132,6 @@ b {
   #partner-pillars-slider .splide__slide,
   #game-tech-slider .splide__slide,
   #game-cost-slider .splide__slide {
-    width: auto !important;
     max-width: none !important;
     flex: 0 0 auto !important;
     height: auto !important;
@@ -5181,6 +5167,18 @@ b {
 }
 
 @media (max-width: 767px) {
+
+  .monetization-section,
+  .liveops-section,
+  .game-process-section,
+  .perk-section,
+  .game-cost-section,
+  .game-models-section,
+  .game-industries-section,
+  .faq-section {
+    padding: 60px 0;
+  }
+
   /* HIDE SLIDER ARROWS ON MOBILE (Touch Gestures + Pagination) */
 
 
@@ -5236,9 +5234,14 @@ b {
   }
 
   .pod-top-row {
+    flex-direction: column;
     justify-content: center;
     gap: 12px;
     width: 100%;
+  }
+
+  .pod-index {
+    display: none;
   }
 
   .pod-title {
@@ -5951,6 +5954,29 @@ b {
 }
 
 @media (max-width: 575px) {
+  .service-section-cta {
+    margin-bottom: 0;
+  }
+
+  .monetization-section,
+  .liveops-section,
+  .game-process-section,
+  .perk-section,
+  .game-cost-section,
+  .game-models-section,
+  .game-industries-section,
+  .faq-section {
+    padding: 50px 0;
+  }
+
+  :root {
+    --section-padding: 50px 0;
+  }
+
+  .section-header-center {
+    margin: 0 auto;
+  }
+
   .slide-card-body {
     align-items: center;
   }
@@ -5966,5 +5992,9 @@ b {
 
   .faq-answer-content p {
     font-size: 13.5px;
+  }
+
+  .game-industries-slider {
+    margin-top: 25px;
   }
 }
