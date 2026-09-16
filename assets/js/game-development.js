@@ -568,59 +568,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // --------------------------------------------------------------------------
-  // 11. SECTION 14: TRUSTED PARTNER ARCHITECTURE CORE INTERACTIVITY
-  // --------------------------------------------------------------------------
-  const partnerSection = document.querySelector('.game-partner-section');
-  if (partnerSection) {
-    const cards = partnerSection.querySelectorAll('.partner-pillar-card');
-    const coreIndexEl = document.getElementById('partner-core-index');
-    const coreTitleEl = document.getElementById('partner-core-title');
-    const coreDescEl = document.getElementById('partner-core-desc');
 
-    const activatePillar = (index) => {
-      const idxStr = String(index);
-
-      // Update cards active state
-      cards.forEach((card) => {
-        const cIdx = card.getAttribute('data-index');
-        if (cIdx === idxStr) {
-          card.classList.add('is-active');
-          const title = card.getAttribute('data-title') || '';
-          const desc = card.getAttribute('data-desc') || '';
-
-          if (coreIndexEl) {
-            coreIndexEl.textContent = `PILLAR ${cIdx.padStart(2, '0')} / 06`;
-          }
-          if (coreTitleEl) {
-            coreTitleEl.textContent = title;
-          }
-          if (coreDescEl) {
-            coreDescEl.textContent = desc;
-          }
-        } else {
-          card.classList.remove('is-active');
-        }
-      });
-    };
-
-    // Event listeners on cards (click & hover)
-    cards.forEach((card) => {
-      const idx = card.getAttribute('data-index');
-      card.addEventListener('mouseenter', () => {
-        if (idx) activatePillar(idx);
-      });
-      card.addEventListener('click', () => {
-        if (idx) activatePillar(idx);
-      });
-      card.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          if (idx) activatePillar(idx);
-        }
-      });
-    });
-  }
 
   // --------------------------------------------------------------------------
   // SECTION 6: ADVANCED AI TECHNOLOGIES (MOBILE GAME AI SIMULATOR ARENA)
