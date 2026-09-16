@@ -551,7 +551,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const partnerSection = document.querySelector('.game-partner-section');
   if (partnerSection) {
     const cards = partnerSection.querySelectorAll('.partner-pillar-card');
-    const nodeBtns = partnerSection.querySelectorAll('.node-btn');
     const coreIndexEl = document.getElementById('partner-core-index');
     const coreTitleEl = document.getElementById('partner-core-title');
     const coreDescEl = document.getElementById('partner-core-desc');
@@ -580,14 +579,6 @@ document.addEventListener('DOMContentLoaded', () => {
           card.classList.remove('is-active');
         }
       });
-
-      // Update node buttons
-      nodeBtns.forEach((btn) => {
-        const bIdx = btn.getAttribute('data-index');
-        const isActive = bIdx === idxStr;
-        btn.classList.toggle('is-active', isActive);
-        btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
-      });
     };
 
     // Event listeners on cards (click & hover)
@@ -603,20 +594,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();
           if (idx) activatePillar(idx);
-        }
-      });
-    });
-
-    // Event listeners on quick node buttons
-    nodeBtns.forEach((btn) => {
-      const idx = btn.getAttribute('data-index');
-      btn.addEventListener('click', () => {
-        if (idx) {
-          activatePillar(idx);
-          const targetCard = partnerSection.querySelector(`.partner-pillar-card[data-index="${idx}"]`);
-          if (targetCard && window.innerWidth <= 1024) {
-            targetCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-          }
         }
       });
     });
