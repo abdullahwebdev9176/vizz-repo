@@ -62,6 +62,75 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // =========================================================================
+  // 2.5 SECTION 2: END-TO-END CAPABILITIES IMAGE SLIDER (SPLIDE)
+  // =========================================================================
+  const expSliderElement = document.getElementById('game-experience-slider');
+  if (expSliderElement && typeof Splide !== 'undefined') {
+    try {
+      const expSplide = new Splide('#game-experience-slider', {
+        type: 'loop',
+        perPage: 3,
+        perMove: 1,
+        gap: '24px',
+        arrows: false,
+        pagination: true,
+        speed: 600,
+        easing: 'cubic-bezier(0.16, 1, 0.3, 1)',
+        drag: true,
+        snap: true,
+        keyboard: true,
+        breakpoints: {
+          1200: {
+            perPage: 3,
+            gap: '20px',
+          },
+          991: {
+            perPage: 2,
+            gap: '18px',
+          },
+          575: {
+            perPage: 1,
+            gap: '14px',
+          },
+        },
+      });
+
+      const prevBtn = document.getElementById('exp-slider-prev');
+      const nextBtn = document.getElementById('exp-slider-next');
+      const counterCurrent = document.querySelector('#exp-slider-counter .count-current');
+
+      const updateCounter = (index) => {
+        if (counterCurrent) {
+          const totalSlides = 13;
+          const slideNum = ((index % totalSlides) + totalSlides) % totalSlides + 1;
+          counterCurrent.textContent = slideNum < 10 ? `0${slideNum}` : `${slideNum}`;
+        }
+      };
+
+      if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+          expSplide.go('<');
+        });
+      }
+
+      if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+          expSplide.go('>');
+        });
+      }
+
+      expSplide.on('move', (newIndex) => {
+        updateCounter(newIndex);
+      });
+
+      expSplide.mount();
+      updateCounter(0);
+    } catch (err) {
+      console.warn('Game experience slider initialization warning:', err);
+    }
+  }
+
+  // =========================================================================
   // 3. GAME SERVICES SPLIDE SLIDER (ACTIVE ON BOTH SCREENS)
   // =========================================================================
   const servicesSliderElement = document.getElementById('game-services-slider');
