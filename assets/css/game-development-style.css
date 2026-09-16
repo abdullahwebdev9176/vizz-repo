@@ -968,7 +968,7 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   }
 
   .capabilities-slider-controls {
-    align-self: flex-start;
+    align-self: flex-end;
   }
 }
 
@@ -1207,7 +1207,7 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 /* Splide Arrows */
 .game-services-slider .splide__arrows {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   gap: 16px;
   margin-top: 28px;
@@ -1409,7 +1409,7 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 /* Light Theme Splide Arrows */
 .game-genres-slider .splide__arrows {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   gap: 16px;
   margin-top: 28px;
@@ -3876,7 +3876,7 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 /* Splide Arrows (Light Theme Game Cockpit Styling) */
 .game-process-slider .splide__arrows {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   gap: 16px;
   margin-top: 30px;
@@ -4495,7 +4495,7 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 /* Splide Arrows (Light Theme Game Styling) */
 .game-industries-slider .splide__arrows {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   gap: 16px;
   margin-top: 30px;
@@ -4807,7 +4807,7 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 /* Splide Arrows (Dark Theme Futuristic Styling) */
 .game-perks-slider .splide__arrows {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   gap: 16px;
   margin-top: 32px;
