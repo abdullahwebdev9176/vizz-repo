@@ -5854,6 +5854,9 @@ b {
     .tech-deck-blade {
       min-height: auto;
     }
+    .pillar-badge, .blade-code-tag {
+      display: none;
+    }
 }
 
 @media (max-width: 575px) {
@@ -5913,12 +5916,6 @@ b {
   
     .pillar-card-top {
       margin-bottom: 14px;
-    }
-  
-    .pillar-badge {
-      font-size: 10px;
-      padding: 3px 8px;
-      letter-spacing: 1px;
     }
   
     .pillar-icon-box {
