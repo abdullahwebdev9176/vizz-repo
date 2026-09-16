@@ -211,28 +211,56 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // =========================================================================
-  // 5. INTERACTIVE MONETIZATION ENGINE CONSOLE CONTROLLER
+  // 5. INTERACTIVE MONETIZATION ENGINE CONSOLE / ACCORDION CONTROLLER
   // =========================================================================
   const monetizationEngine = document.getElementById('monetization-engine');
 
   if (monetizationEngine) {
+    const items = Array.from(monetizationEngine.querySelectorAll('.monetization-item'));
     const tabs = Array.from(monetizationEngine.querySelectorAll('.monetization-tab'));
     const panels = Array.from(monetizationEngine.querySelectorAll('.monetization-stage-panel'));
     const prevBtns = monetizationEngine.querySelectorAll('.stage-nav-btn.btn-prev');
     const nextBtns = monetizationEngine.querySelectorAll('.stage-nav-btn.btn-next');
     let currentIndex = 0;
 
-    function activateIndex(index) {
+    function activateIndex(index, allowToggle = false) {
+      const isMobile = window.innerWidth <= 991;
+
+      // On mobile accordion: toggle collapse if currently active item is clicked again
+      if (isMobile && allowToggle && currentIndex === index) {
+        const activeItem = items[index];
+        const activeTab = tabs[index];
+        const activePanel = panels[index];
+        if (activeItem && activeItem.classList.contains('is-active')) {
+          activeItem.classList.remove('is-active');
+          if (activeTab) {
+            activeTab.classList.remove('is-active');
+            activeTab.setAttribute('aria-selected', 'false');
+          }
+          if (activePanel) {
+            activePanel.classList.remove('is-active');
+            activePanel.setAttribute('hidden', '');
+          }
+          currentIndex = -1;
+          return;
+        }
+      }
+
       if (index < 0) index = tabs.length - 1;
       if (index >= tabs.length) index = 0;
       currentIndex = index;
+
+      // Update Items
+      items.forEach((item, i) => {
+        item.classList.toggle('is-active', i === currentIndex);
+      });
 
       // Update Tabs
       tabs.forEach((tab, i) => {
         const isActive = i === currentIndex;
         tab.classList.toggle('is-active', isActive);
         tab.setAttribute('aria-selected', isActive ? 'true' : 'false');
-        if (isActive && window.innerWidth < 992) {
+        if (isActive && !isMobile) {
           tab.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
         }
       });
@@ -248,12 +276,16 @@ document.addEventListener('DOMContentLoaded', () => {
           panel.classList.remove('is-active');
         }
       });
+
+      if (isMobile && currentIndex >= 0 && items[currentIndex]) {
+        items[currentIndex].scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
     }
 
-    // Tab Clicks & Hover Option
+    // Tab Clicks & Keyboard
     tabs.forEach((tab, i) => {
       tab.addEventListener('click', () => {
-        activateIndex(i);
+        activateIndex(i, true);
       });
 
       // Accessible Keyboard Navigation
@@ -273,13 +305,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // Prev / Next Buttons
     prevBtns.forEach((btn) => {
       btn.addEventListener('click', () => {
-        activateIndex(currentIndex - 1);
+        const nextIdx = currentIndex <= 0 ? tabs.length - 1 : currentIndex - 1;
+        activateIndex(nextIdx);
       });
     });
 
     nextBtns.forEach((btn) => {
       btn.addEventListener('click', () => {
-        activateIndex(currentIndex + 1);
+        const nextIdx = currentIndex >= tabs.length - 1 ? 0 : currentIndex + 1;
+        activateIndex(nextIdx);
       });
     });
   }
@@ -691,6 +725,102 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
     }
+  });
+
+  // =========================================================================
+  // 14. MOBILE-ONLY SPLIDE SLIDERS (SECTIONS 14, 15, 16)
+  // Mount on mobile/tablet (<= 991px), destroy completely on desktop (> 991px)
+  // =========================================================================
+  function initMobileSlider(selector, options) {
+    const el = document.querySelector(selector);
+    if (!el || typeof Splide === 'undefined') return;
+
+    let instance = null;
+    const mediaQuery = window.matchMedia('(max-width: 991px)');
+
+    function checkMedia(mq) {
+      if (mq.matches) {
+        if (!instance) {
+          try {
+            instance = new Splide(selector, options);
+            instance.mount();
+          } catch (err) {
+            console.warn(`[Splide] Error initializing mobile slider for ${selector}:`, err);
+          }
+        }
+      } else {
+        if (instance) {
+          try {
+            instance.destroy(true);
+          } catch (err) {
+            console.warn(`[Splide] Error destroying mobile slider for ${selector}:`, err);
+          }
+          instance = null;
+        }
+      }
+    }
+
+    if (mediaQuery.addEventListener) {
+      mediaQuery.addEventListener('change', checkMedia);
+    } else {
+      mediaQuery.addListener(checkMedia);
+    }
+
+    checkMedia(mediaQuery);
+  }
+
+  // Section 14: Partner Pillars Slider
+  initMobileSlider('#partner-pillars-slider', {
+    type: 'slide',
+    perPage: 2,
+    perMove: 1,
+    gap: '20px',
+    arrows: false,
+    pagination: true,
+    speed: 500,
+    drag: true,
+    breakpoints: {
+      767: {
+        perPage: 1,
+        gap: '16px',
+      },
+    },
+  });
+
+  // Section 15: Game Tech Stack Slider
+  initMobileSlider('#game-tech-slider', {
+    type: 'slide',
+    perPage: 2,
+    perMove: 1,
+    gap: '20px',
+    arrows: false,
+    pagination: true,
+    speed: 500,
+    drag: true,
+    breakpoints: {
+      767: {
+        perPage: 1,
+        gap: '16px',
+      },
+    },
+  });
+
+  // Section 16: Cost Factors Grid Slider
+  initMobileSlider('#game-cost-slider', {
+    type: 'slide',
+    perPage: 2,
+    perMove: 1,
+    gap: '18px',
+    arrows: false,
+    pagination: true,
+    speed: 500,
+    drag: true,
+    breakpoints: {
+      767: {
+        perPage: 1,
+        gap: '14px',
+      },
+    },
   });
 });
 

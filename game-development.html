@@ -1671,9 +1671,8 @@
 
         <!-- Interactive Monetization Engine Console -->
         <div class="monetization-engine" id="monetization-engine">
-          
-          <!-- Left: Strategy Selector Navigation Rack -->
-          <nav class="monetization-nav-rack" role="tablist" aria-label="Game Monetization Strategies">
+          <!-- Monetization Strategy Item 1 -->
+          <div class="monetization-item is-active" data-index="0">
             <button type="button" class="monetization-tab is-active" role="tab" aria-selected="true" aria-controls="monetization-panel-1" id="tab-monetization-1" data-index="0">
               <span class="tab-index" aria-hidden="true">01</span>
               <span class="tab-icon-wrap" aria-hidden="true">
@@ -1691,76 +1690,6 @@
               </span>
             </button>
 
-            <button type="button" class="monetization-tab" role="tab" aria-selected="false" aria-controls="monetization-panel-2" id="tab-monetization-2" data-index="1">
-              <span class="tab-index" aria-hidden="true">02</span>
-              <span class="tab-icon-wrap" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                  <line x1="19" y1="5" x2="19" y2="19"></line>
-                </svg>
-              </span>
-              <span class="tab-label">Rewarded Advertising</span>
-              <span class="tab-arrow" aria-hidden="true">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
-              </span>
-            </button>
-
-            <button type="button" class="monetization-tab" role="tab" aria-selected="false" aria-controls="monetization-panel-3" id="tab-monetization-3" data-index="2">
-              <span class="tab-index" aria-hidden="true">03</span>
-              <span class="tab-icon-wrap" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path>
-                </svg>
-              </span>
-              <span class="tab-label">Subscriptions</span>
-              <span class="tab-arrow" aria-hidden="true">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
-              </span>
-            </button>
-
-            <button type="button" class="monetization-tab" role="tab" aria-selected="false" aria-controls="monetization-panel-4" id="tab-monetization-4" data-index="3">
-              <span class="tab-index" aria-hidden="true">04</span>
-              <span class="tab-icon-wrap" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-                  <path d="M7 11V7a5 5 0 0 1 9.9-1"></path>
-                </svg>
-              </span>
-              <span class="tab-label">Freemium</span>
-              <span class="tab-arrow" aria-hidden="true">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
-              </span>
-            </button>
-
-            <button type="button" class="monetization-tab" role="tab" aria-selected="false" aria-controls="monetization-panel-5" id="tab-monetization-5" data-index="4">
-              <span class="tab-index" aria-hidden="true">05</span>
-              <span class="tab-icon-wrap" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="8" cy="8" r="6"></circle>
-                  <path d="M18.09 10.37A6 6 0 1 1 10.34 18"></path>
-                  <path d="M7 6h1v4H7z"></path>
-                  <path d="M17 14h1v4h-1z"></path>
-                </svg>
-              </span>
-              <span class="tab-label">Virtual Economies</span>
-              <span class="tab-arrow" aria-hidden="true">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
-              </span>
-            </button>
-          </nav>
-
-          <!-- Right: Holographic Live Stage Viewport -->
-          <div class="monetization-stage-viewport">
-            
-            <!-- PANEL 1: In-App Purchases (Active) -->
             <article class="monetization-stage-panel is-active" id="monetization-panel-1" role="tabpanel" aria-labelledby="tab-monetization-1">
               <div class="stage-hud-header">
                 <div class="stage-status-badge">
@@ -1811,8 +1740,26 @@
                 </a>
               </div>
             </article>
+          </div>
 
-            <!-- PANEL 2: Rewarded Advertising -->
+          <!-- Monetization Strategy Item 2 -->
+          <div class="monetization-item" data-index="1">
+            <button type="button" class="monetization-tab" role="tab" aria-selected="false" aria-controls="monetization-panel-2" id="tab-monetization-2" data-index="1">
+              <span class="tab-index" aria-hidden="true">02</span>
+              <span class="tab-icon-wrap" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                  <line x1="19" y1="5" x2="19" y2="19"></line>
+                </svg>
+              </span>
+              <span class="tab-label">Rewarded Advertising</span>
+              <span class="tab-arrow" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </span>
+            </button>
+
             <article class="monetization-stage-panel" id="monetization-panel-2" role="tabpanel" aria-labelledby="tab-monetization-2" hidden>
               <div class="stage-hud-header">
                 <div class="stage-status-badge">
@@ -1862,8 +1809,25 @@
                 </a>
               </div>
             </article>
+          </div>
 
-            <!-- PANEL 3: Subscriptions -->
+          <!-- Monetization Strategy Item 3 -->
+          <div class="monetization-item" data-index="2">
+            <button type="button" class="monetization-tab" role="tab" aria-selected="false" aria-controls="monetization-panel-3" id="tab-monetization-3" data-index="2">
+              <span class="tab-index" aria-hidden="true">03</span>
+              <span class="tab-icon-wrap" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path>
+                </svg>
+              </span>
+              <span class="tab-label">Subscriptions</span>
+              <span class="tab-arrow" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </span>
+            </button>
+
             <article class="monetization-stage-panel" id="monetization-panel-3" role="tabpanel" aria-labelledby="tab-monetization-3" hidden>
               <div class="stage-hud-header">
                 <div class="stage-status-badge">
@@ -1912,8 +1876,26 @@
                 </a>
               </div>
             </article>
+          </div>
 
-            <!-- PANEL 4: Freemium -->
+          <!-- Monetization Strategy Item 4 -->
+          <div class="monetization-item" data-index="3">
+            <button type="button" class="monetization-tab" role="tab" aria-selected="false" aria-controls="monetization-panel-4" id="tab-monetization-4" data-index="3">
+              <span class="tab-index" aria-hidden="true">04</span>
+              <span class="tab-icon-wrap" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                  <path d="M7 11V7a5 5 0 0 1 9.9-1"></path>
+                </svg>
+              </span>
+              <span class="tab-label">Freemium</span>
+              <span class="tab-arrow" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </span>
+            </button>
+
             <article class="monetization-stage-panel" id="monetization-panel-4" role="tabpanel" aria-labelledby="tab-monetization-4" hidden>
               <div class="stage-hud-header">
                 <div class="stage-status-badge">
@@ -1963,8 +1945,28 @@
                 </a>
               </div>
             </article>
+          </div>
 
-            <!-- PANEL 5: Virtual Economies -->
+          <!-- Monetization Strategy Item 5 -->
+          <div class="monetization-item" data-index="4">
+            <button type="button" class="monetization-tab" role="tab" aria-selected="false" aria-controls="monetization-panel-5" id="tab-monetization-5" data-index="4">
+              <span class="tab-index" aria-hidden="true">05</span>
+              <span class="tab-icon-wrap" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="8" cy="8" r="6"></circle>
+                  <path d="M18.09 10.37A6 6 0 1 1 10.34 18"></path>
+                  <path d="M7 6h1v4H7z"></path>
+                  <path d="M17 14h1v4h-1z"></path>
+                </svg>
+              </span>
+              <span class="tab-label">Virtual Economies</span>
+              <span class="tab-arrow" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </span>
+            </button>
+
             <article class="monetization-stage-panel" id="monetization-panel-5" role="tabpanel" aria-labelledby="tab-monetization-5" hidden>
               <div class="stage-hud-header">
                 <div class="stage-status-badge">
@@ -2016,7 +2018,6 @@
                 </a>
               </div>
             </article>
-
           </div>
 
         </div>
@@ -3338,10 +3339,11 @@
         </div>
 
         <!-- Partner Pillars Grid (6 Cards) -->
-        <div class="partner-pillars-grid">
-
-          <!-- Card 1: Strategy Before Code -->
-          <article class="partner-pillar-card" data-index="1" data-title="Strategy Before Code" data-desc="We start with your business objectives, players, gameplay vision, and technical requirements before writing the first line of code." tabindex="0">
+        <div class="splide partner-pillars-slider" id="partner-pillars-slider" aria-label="Game Development Partner Pillars Slider">
+          <div class="splide__track">
+            <div class="splide__list partner-pillars-grid">
+              <div class="splide__slide">
+                <article class="partner-pillar-card" data-index="1" data-title="Strategy Before Code" data-desc="We start with your business objectives, players, gameplay vision, and technical requirements before writing the first line of code." tabindex="0">
               <div class="pillar-card-top">
                 <span class="pillar-badge">PILLAR 01</span>
                 <div class="pillar-icon-box" aria-hidden="true">
@@ -3358,9 +3360,9 @@
               </p>
               <div class="pillar-bottom-laser" aria-hidden="true"></div>
             </article>
-
-            <!-- Card 2: Completely Custom -->
-            <article class="partner-pillar-card" data-index="2" data-title="Completely Custom" data-desc="Your game is built around your idea, audience, mechanics, visual identity, business model, and long-term product goals." tabindex="0">
+              </div>
+              <div class="splide__slide">
+                <article class="partner-pillar-card" data-index="2" data-title="Completely Custom" data-desc="Your game is built around your idea, audience, mechanics, visual identity, business model, and long-term product goals." tabindex="0">
               <div class="pillar-card-top">
                 <span class="pillar-badge">PILLAR 02</span>
                 <div class="pillar-icon-box" aria-hidden="true">
@@ -3375,9 +3377,9 @@
               </p>
               <div class="pillar-bottom-laser" aria-hidden="true"></div>
             </article>
-
-            <!-- Card 3: End-to-End Capabilities -->
-            <article class="partner-pillar-card" data-index="3" data-title="End-to-End Capabilities" data-desc="From concept and design to development, testing, launch, monetization, LiveOps, and support, we cover the complete game development lifecycle." tabindex="0">
+              </div>
+              <div class="splide__slide">
+                <article class="partner-pillar-card" data-index="3" data-title="End-to-End Capabilities" data-desc="From concept and design to development, testing, launch, monetization, LiveOps, and support, we cover the complete game development lifecycle." tabindex="0">
               <div class="pillar-card-top">
                 <span class="pillar-badge">PILLAR 03</span>
                 <div class="pillar-icon-box" aria-hidden="true">
@@ -3393,9 +3395,9 @@
               </p>
               <div class="pillar-bottom-laser" aria-hidden="true"></div>
             </article>
-
-            <!-- Card 4: Performance-Focused -->
-            <article class="partner-pillar-card" data-index="4" data-title="Performance-Focused" data-desc="We build with mobile performance in mind, optimizing gameplay, assets, memory, loading, networking, compatibility, and overall responsiveness." tabindex="0">
+              </div>
+              <div class="splide__slide">
+                <article class="partner-pillar-card" data-index="4" data-title="Performance-Focused" data-desc="We build with mobile performance in mind, optimizing gameplay, assets, memory, loading, networking, compatibility, and overall responsiveness." tabindex="0">
               <div class="pillar-card-top">
                 <span class="pillar-badge">PILLAR 04</span>
                 <div class="pillar-icon-box" aria-hidden="true">
@@ -3410,9 +3412,9 @@
               </p>
               <div class="pillar-bottom-laser" aria-hidden="true"></div>
             </article>
-
-            <!-- Card 5: Scalable Architecture -->
-            <article class="partner-pillar-card" data-index="5" data-title="Scalable Architecture" data-desc="Your game should have room to grow. We create flexible technical foundations that support new players, content, features, platforms, and future expansion." tabindex="0">
+              </div>
+              <div class="splide__slide">
+                <article class="partner-pillar-card" data-index="5" data-title="Scalable Architecture" data-desc="Your game should have room to grow. We create flexible technical foundations that support new players, content, features, platforms, and future expansion." tabindex="0">
               <div class="pillar-card-top">
                 <span class="pillar-badge">PILLAR 05</span>
                 <div class="pillar-icon-box" aria-hidden="true">
@@ -3430,9 +3432,9 @@
               </p>
               <div class="pillar-bottom-laser" aria-hidden="true"></div>
             </article>
-
-            <!-- Card 6: Long-Term Support -->
-            <article class="partner-pillar-card" data-index="6" data-title="Long-Term Support" data-desc="We stay involved beyond launch with maintenance, updates, optimization, new features, analytics, troubleshooting, and continuous technical support." tabindex="0">
+              </div>
+              <div class="splide__slide">
+                <article class="partner-pillar-card" data-index="6" data-title="Long-Term Support" data-desc="We stay involved beyond launch with maintenance, updates, optimization, new features, analytics, troubleshooting, and continuous technical support." tabindex="0">
               <div class="pillar-card-top">
                 <span class="pillar-badge">PILLAR 06</span>
                 <div class="pillar-icon-box" aria-hidden="true">
@@ -3448,7 +3450,9 @@
               </p>
               <div class="pillar-bottom-laser" aria-hidden="true"></div>
             </article>
-
+              </div>
+            </div>
+          </div>
         </div>
 
         <!-- Section CTA Action -->
@@ -3487,10 +3491,11 @@
         </div>
 
         <!-- 5-Blade Cyber Tech Server Deck -->
-        <div class="tech-cyber-deck">
-
-          <!-- BLADE 01: Game Engines -->
-          <article class="tech-deck-blade is-active" data-blade="1" data-summary="Game Engines: Unity, Unreal Engine &amp; Godot 2D/3D Production Pipelines" tabindex="0">
+        <div class="splide game-tech-slider" id="game-tech-slider" aria-label="Latest Game Development Tools and Technologies Slider">
+          <div class="splide__track">
+            <div class="splide__list tech-cyber-deck">
+              <div class="splide__slide">
+                <article class="tech-deck-blade is-active" data-blade="1" data-summary="Game Engines: Unity, Unreal Engine &amp; Godot 2D/3D Production Pipelines" tabindex="0">
             <div class="blade-ambient-light" aria-hidden="true"></div>
             <div class="blade-top-bar">
               <span class="blade-code-tag">SYS.01 // CORE</span>
@@ -3525,9 +3530,9 @@
 
             <div class="blade-laser-bottom" aria-hidden="true"></div>
           </article>
-
-          <!-- BLADE 02: Mobile Platforms -->
-          <article class="tech-deck-blade" data-blade="2" data-summary="Mobile Platforms: Native iOS, Android &amp; Unified Cross-Platform Deployment" tabindex="0">
+              </div>
+              <div class="splide__slide">
+                <article class="tech-deck-blade" data-blade="2" data-summary="Mobile Platforms: Native iOS, Android &amp; Unified Cross-Platform Deployment" tabindex="0">
             <div class="blade-ambient-light" aria-hidden="true"></div>
             <div class="blade-top-bar">
               <span class="blade-code-tag">SYS.02 // TARGET</span>
@@ -3561,9 +3566,9 @@
 
             <div class="blade-laser-bottom" aria-hidden="true"></div>
           </article>
-
-          <!-- BLADE 03: Programming -->
-          <article class="tech-deck-blade" data-blade="3" data-summary="Programming: High-Performance C#, C++, Java, Kotlin, Swift &amp; Backend APIs" tabindex="0">
+              </div>
+              <div class="splide__slide">
+                <article class="tech-deck-blade" data-blade="3" data-summary="Programming: High-Performance C#, C++, Java, Kotlin, Swift &amp; Backend APIs" tabindex="0">
             <div class="blade-ambient-light" aria-hidden="true"></div>
             <div class="blade-top-bar">
               <span class="blade-code-tag">SYS.03 // LOGIC</span>
@@ -3613,9 +3618,9 @@
 
             <div class="blade-laser-bottom" aria-hidden="true"></div>
           </article>
-
-          <!-- BLADE 04: Cloud & Infrastructure -->
-          <article class="tech-deck-blade" data-blade="4" data-summary="Cloud &amp; Infrastructure: Distributed Databases, Servers, APIs &amp; Analytics" tabindex="0">
+              </div>
+              <div class="splide__slide">
+                <article class="tech-deck-blade" data-blade="4" data-summary="Cloud &amp; Infrastructure: Distributed Databases, Servers, APIs &amp; Analytics" tabindex="0">
             <div class="blade-ambient-light" aria-hidden="true"></div>
             <div class="blade-top-bar">
               <span class="blade-code-tag">SYS.04 // CLOUD</span>
@@ -3660,9 +3665,9 @@
 
             <div class="blade-laser-bottom" aria-hidden="true"></div>
           </article>
-
-          <!-- BLADE 05: Advanced Technologies -->
-          <article class="tech-deck-blade" data-blade="5" data-summary="Advanced Technologies: AI, Machine Learning, XR/VR, Vision &amp; Real-Time Multiplayer" tabindex="0">
+              </div>
+              <div class="splide__slide">
+                <article class="tech-deck-blade" data-blade="5" data-summary="Advanced Technologies: AI, Machine Learning, XR/VR, Vision &amp; Real-Time Multiplayer" tabindex="0">
             <div class="blade-ambient-light" aria-hidden="true"></div>
             <div class="blade-top-bar">
               <span class="blade-code-tag">SYS.05 // NEXTGEN</span>
@@ -3708,7 +3713,9 @@
 
             <div class="blade-laser-bottom" aria-hidden="true"></div>
           </article>
-
+              </div>
+            </div>
+          </div>
         </div>
 
         <!-- Section CTA Action -->
@@ -3742,10 +3749,11 @@
         </div>
 
         <!-- 16 Factors Unique Grid Layout -->
-        <div class="cost-factors-grid">
-
-          <!-- 01: Game genre -->
-          <div class="cost-factor-pod">
+        <div class="splide game-cost-slider" id="game-cost-slider" aria-label="Mobile Game Development Cost Factors Slider">
+          <div class="splide__track">
+            <div class="splide__list cost-factors-grid">
+              <div class="splide__slide">
+                <div class="cost-factor-pod">
             <div class="pod-ambient-glow" aria-hidden="true"></div>
             <div class="pod-top-row">
               <span class="pod-index">01</span>
@@ -3762,9 +3770,9 @@
             <h3 class="pod-title">Game genre</h3>
             <div class="pod-accent-line" aria-hidden="true"></div>
           </div>
-
-          <!-- 02: Gameplay mechanics -->
-          <div class="cost-factor-pod">
+              </div>
+              <div class="splide__slide">
+                <div class="cost-factor-pod">
             <div class="pod-ambient-glow" aria-hidden="true"></div>
             <div class="pod-top-row">
               <span class="pod-index">02</span>
@@ -3778,9 +3786,9 @@
             <h3 class="pod-title">Gameplay mechanics</h3>
             <div class="pod-accent-line" aria-hidden="true"></div>
           </div>
-
-          <!-- 03: 2D or 3D development -->
-          <div class="cost-factor-pod">
+              </div>
+              <div class="splide__slide">
+                <div class="cost-factor-pod">
             <div class="pod-ambient-glow" aria-hidden="true"></div>
             <div class="pod-top-row">
               <span class="pod-index">03</span>
@@ -3795,9 +3803,9 @@
             <h3 class="pod-title">2D or 3D development</h3>
             <div class="pod-accent-line" aria-hidden="true"></div>
           </div>
-
-          <!-- 04: Number of levels -->
-          <div class="cost-factor-pod">
+              </div>
+              <div class="splide__slide">
+                <div class="cost-factor-pod">
             <div class="pod-ambient-glow" aria-hidden="true"></div>
             <div class="pod-top-row">
               <span class="pod-index">04</span>
@@ -3812,9 +3820,9 @@
             <h3 class="pod-title">Number of levels</h3>
             <div class="pod-accent-line" aria-hidden="true"></div>
           </div>
-
-          <!-- 05: Characters and animation -->
-          <div class="cost-factor-pod">
+              </div>
+              <div class="splide__slide">
+                <div class="cost-factor-pod">
             <div class="pod-ambient-glow" aria-hidden="true"></div>
             <div class="pod-top-row">
               <span class="pod-index">05</span>
@@ -3828,9 +3836,9 @@
             <h3 class="pod-title">Characters and animation</h3>
             <div class="pod-accent-line" aria-hidden="true"></div>
           </div>
-
-          <!-- 06: Art and visual complexity -->
-          <div class="cost-factor-pod">
+              </div>
+              <div class="splide__slide">
+                <div class="cost-factor-pod">
             <div class="pod-ambient-glow" aria-hidden="true"></div>
             <div class="pod-top-row">
               <span class="pod-index">06</span>
@@ -3847,9 +3855,9 @@
             <h3 class="pod-title">Art and visual complexity</h3>
             <div class="pod-accent-line" aria-hidden="true"></div>
           </div>
-
-          <!-- 07: Multiplayer requirements -->
-          <div class="cost-factor-pod">
+              </div>
+              <div class="splide__slide">
+                <div class="cost-factor-pod">
             <div class="pod-ambient-glow" aria-hidden="true"></div>
             <div class="pod-top-row">
               <span class="pod-index">07</span>
@@ -3865,9 +3873,9 @@
             <h3 class="pod-title">Multiplayer requirements</h3>
             <div class="pod-accent-line" aria-hidden="true"></div>
           </div>
-
-          <!-- 08: Backend infrastructure -->
-          <div class="cost-factor-pod">
+              </div>
+              <div class="splide__slide">
+                <div class="cost-factor-pod">
             <div class="pod-ambient-glow" aria-hidden="true"></div>
             <div class="pod-top-row">
               <span class="pod-index">08</span>
@@ -3883,9 +3891,9 @@
             <h3 class="pod-title">Backend infrastructure</h3>
             <div class="pod-accent-line" aria-hidden="true"></div>
           </div>
-
-          <!-- 09: AI functionality -->
-          <div class="cost-factor-pod">
+              </div>
+              <div class="splide__slide">
+                <div class="cost-factor-pod">
             <div class="pod-ambient-glow" aria-hidden="true"></div>
             <div class="pod-top-row">
               <span class="pod-index">09</span>
@@ -3907,9 +3915,9 @@
             <h3 class="pod-title">AI functionality</h3>
             <div class="pod-accent-line" aria-hidden="true"></div>
           </div>
-
-          <!-- 10: AR or VR functionality -->
-          <div class="cost-factor-pod">
+              </div>
+              <div class="splide__slide">
+                <div class="cost-factor-pod">
             <div class="pod-ambient-glow" aria-hidden="true"></div>
             <div class="pod-top-row">
               <span class="pod-index">10</span>
@@ -3926,9 +3934,9 @@
             <h3 class="pod-title">AR or VR functionality</h3>
             <div class="pod-accent-line" aria-hidden="true"></div>
           </div>
-
-          <!-- 11: Number of platforms -->
-          <div class="cost-factor-pod">
+              </div>
+              <div class="splide__slide">
+                <div class="cost-factor-pod">
             <div class="pod-ambient-glow" aria-hidden="true"></div>
             <div class="pod-top-row">
               <span class="pod-index">11</span>
@@ -3942,9 +3950,9 @@
             <h3 class="pod-title">Number of platforms</h3>
             <div class="pod-accent-line" aria-hidden="true"></div>
           </div>
-
-          <!-- 12: Third-party integrations -->
-          <div class="cost-factor-pod">
+              </div>
+              <div class="splide__slide">
+                <div class="cost-factor-pod">
             <div class="pod-ambient-glow" aria-hidden="true"></div>
             <div class="pod-top-row">
               <span class="pod-index">12</span>
@@ -3958,9 +3966,9 @@
             <h3 class="pod-title">Third-party integrations</h3>
             <div class="pod-accent-line" aria-hidden="true"></div>
           </div>
-
-          <!-- 13: Monetization features -->
-          <div class="cost-factor-pod">
+              </div>
+              <div class="splide__slide">
+                <div class="cost-factor-pod">
             <div class="pod-ambient-glow" aria-hidden="true"></div>
             <div class="pod-top-row">
               <span class="pod-index">13</span>
@@ -3975,9 +3983,9 @@
             <h3 class="pod-title">Monetization features</h3>
             <div class="pod-accent-line" aria-hidden="true"></div>
           </div>
-
-          <!-- 14: Supported devices -->
-          <div class="cost-factor-pod">
+              </div>
+              <div class="splide__slide">
+                <div class="cost-factor-pod">
             <div class="pod-ambient-glow" aria-hidden="true"></div>
             <div class="pod-top-row">
               <span class="pod-index">14</span>
@@ -3991,9 +3999,9 @@
             <h3 class="pod-title">Supported devices</h3>
             <div class="pod-accent-line" aria-hidden="true"></div>
           </div>
-
-          <!-- 15: Testing requirements -->
-          <div class="cost-factor-pod">
+              </div>
+              <div class="splide__slide">
+                <div class="cost-factor-pod">
             <div class="pod-ambient-glow" aria-hidden="true"></div>
             <div class="pod-top-row">
               <span class="pod-index">15</span>
@@ -4007,9 +4015,9 @@
             <h3 class="pod-title">Testing requirements</h3>
             <div class="pod-accent-line" aria-hidden="true"></div>
           </div>
-
-          <!-- 16: Post-launch support -->
-          <div class="cost-factor-pod">
+              </div>
+              <div class="splide__slide">
+                <div class="cost-factor-pod">
             <div class="pod-ambient-glow" aria-hidden="true"></div>
             <div class="pod-top-row">
               <span class="pod-index">16</span>
@@ -4025,7 +4033,9 @@
             <h3 class="pod-title">Post-launch support</h3>
             <div class="pod-accent-line" aria-hidden="true"></div>
           </div>
-
+              </div>
+            </div>
+          </div>
         </div>
 
         <!-- Section Bottom CTA Actions -->
