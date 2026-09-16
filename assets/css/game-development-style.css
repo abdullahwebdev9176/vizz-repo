@@ -4623,3 +4623,218 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
     min-height: auto;
   }
 }
+
+/* ==========================================================================
+   SECTION 16: HOW MUCH DOES MOBILE GAME DEVELOPMENT COST? (game-cost-section)
+   ========================================================================== */
+.game-cost-section {
+  background-color: var(--bg-light-alt);
+  padding: clamp(60px, 8vw, 100px) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle ambient tech radial glow */
+.game-cost-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1000px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(36, 143, 206, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Header */
+.cost-header-center {
+  text-align: center;
+  max-width: 820px;
+  margin: 0 auto 50px;
+  position: relative;
+  z-index: 2;
+}
+
+.cost-header-center .section-title {
+  margin-bottom: 14px;
+}
+
+.cost-header-center .section-subtitle {
+  font-family: var(--font-family);
+  font-size: clamp(16px, 2vw, 19px);
+  color: var(--text-muted-light);
+  font-weight: 500;
+  margin: 0;
+}
+
+/* 16 Factors Unique Grid */
+.cost-factors-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Factor Pod Card */
+.cost-factor-pod {
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: var(--border-radius-card);
+  padding: 26px 22px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 160px;
+  box-shadow: 0 4px 16px rgba(7, 21, 43, 0.03);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: default;
+}
+
+.cost-factor-pod:hover {
+  background: #ffffff;
+  border-color: var(--btn-primary);
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(36, 143, 206, 0.14);
+}
+
+/* Ambient corner glow on hover */
+.pod-ambient-glow {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(36, 143, 206, 0.14) 0%, transparent 70%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.cost-factor-pod:hover .pod-ambient-glow {
+  opacity: 1;
+}
+
+/* Pod Top Row */
+.pod-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.pod-index {
+  font-family: var(--font-family);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: var(--btn-primary);
+  background: rgba(36, 143, 206, 0.1);
+  padding: 4px 10px;
+  border-radius: 6px;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.cost-factor-pod:hover .pod-index {
+  background: var(--btn-primary);
+  color: #ffffff;
+}
+
+.pod-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(36, 143, 206, 0.08);
+  border: 1px solid rgba(36, 143, 206, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--btn-primary);
+  transition: all 0.35s ease;
+}
+
+.cost-factor-pod:hover .pod-icon {
+  background: var(--btn-primary);
+  color: #ffffff;
+  border-color: var(--btn-primary);
+  transform: scale(1.06);
+  box-shadow: 0 4px 14px rgba(36, 143, 206, 0.35);
+}
+
+/* Pod Title */
+.pod-title {
+  font-family: var(--font-family);
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 0;
+  line-height: 1.35;
+  transition: color 0.3s ease;
+}
+
+.cost-factor-pod:hover .pod-title {
+  color: var(--btn-primary);
+}
+
+/* Accent Laser Line */
+.pod-accent-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--btn-primary) 0%, #38bdf8 100%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.cost-factor-pod:hover .pod-accent-line {
+  opacity: 1;
+}
+
+/* Desktop-First Responsive Breakpoints */
+@media (max-width: 1200px) {
+  .cost-factors-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 991px) {
+  .cost-factors-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .cost-factor-pod {
+    padding: 22px 18px;
+    min-height: 150px;
+  }
+
+  .pod-title {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 575px) {
+  .cost-factors-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .cost-factor-pod {
+    padding: 20px 16px;
+    min-height: auto;
+  }
+
+  .cost-header-center {
+    margin-bottom: 35px;
+  }
+}
+
+
