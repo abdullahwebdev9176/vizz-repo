@@ -1297,7 +1297,7 @@ b {
   justify-content: flex-end;
   align-items: center;
   gap: 16px;
-  margin-top: 28px;
+  margin-top: 0;
 }
 
 .game-genres-slider .splide__arrow {
@@ -3554,7 +3554,7 @@ b {
   justify-content: flex-end;
   align-items: center;
   gap: 16px;
-  margin-top: 30px;
+  margin-top: 0;
 }
 
 .game-process-slider .splide__arrow {
@@ -4153,7 +4153,7 @@ b {
   justify-content: flex-end;
   align-items: center;
   gap: 16px;
-  margin-top: 30px;
+  margin-top: 0;
 }
 
 .game-industries-slider .splide__arrow {
@@ -5683,6 +5683,12 @@ b {
     .pod-title {
       font-size: 16px;
     }
+    .node-index, .node-indicator {
+      display: none;
+    }
+    .liveops-control-hub {
+      gap: 12px;
+  }
 }
 
 @media (max-width: 900px) {
@@ -5712,10 +5718,6 @@ b {
       margin-top: 36px;
       gap: 14px;
     }
-
-  .liveops-control-hub {
-      gap: 12px;
-  }
   
     .sim-col-left,
     .sim-col-right {
@@ -5860,6 +5862,9 @@ b {
 }
 
 @media (max-width: 575px) {
+  .btn-primary-pill, .btn-secondary-pill {
+    width: 100%;
+}
   .game-experience-section {
       padding: 50px 0 45px;
     }
@@ -5881,6 +5886,7 @@ b {
   
     .capability-title {
       font-size: 15px;
+      text-align: center;
     }
   
     .experience-bottom-actions {
