@@ -407,31 +407,9 @@ document.addEventListener('DOMContentLoaded', () => {
         },
       });
 
-      const progressFill = document.getElementById('tracker-progress-fill');
-      const currentName = document.getElementById('tracker-current-name');
-      const levelBadge = document.getElementById('tracker-level-badge');
       const slideCards = Array.from(processSliderElement.querySelectorAll('.process-slide-card'));
 
-      function updateProcessHUD(slideIndex) {
-        const activeCard = slideCards[slideIndex];
-        if (!activeCard) return;
-
-        const step = parseInt(activeCard.getAttribute('data-step'), 10) || (slideIndex + 1);
-        const title = activeCard.getAttribute('data-title') || '';
-        const percent = activeCard.getAttribute('data-percent') || `${step * 10}`;
-
-        if (progressFill) {
-          progressFill.style.width = `${percent}%`;
-        }
-        if (currentName) {
-          currentName.textContent = title;
-        }
-        if (levelBadge) {
-          const formattedStep = step < 10 ? `0${step}` : `${step}`;
-          levelBadge.textContent = `STAGE ${formattedStep} / 10`;
-        }
-
-        // Highlight active card
+      function updateProcessActiveCard(slideIndex) {
         slideCards.forEach((c, idx) => {
           c.classList.toggle('is-active', idx === slideIndex);
         });
@@ -439,13 +417,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Sync on mount and move
       processSplide.on('mounted move', (newIndex) => {
-        updateProcessHUD(typeof newIndex === 'number' ? newIndex : processSplide.index);
+        updateProcessActiveCard(typeof newIndex === 'number' ? newIndex : processSplide.index);
       });
 
-      // Hover on card to focus & sync HUD
+      // Hover on card to focus
       slideCards.forEach((card, idx) => {
         card.addEventListener('mouseenter', () => {
-          updateProcessHUD(idx);
+          updateProcessActiveCard(idx);
         });
       });
 
@@ -553,8 +531,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // 10. SECTION 13: PERKS OF WORKING WITH AN EXPERT GAME DEV COMPANY SLIDER
   // --------------------------------------------------------------------------
   const perksSliderEl = document.getElementById('game-perks-slider');
-  const perksActiveTitleEl = document.getElementById('perks-active-title');
-  const perksHudCounterEl = document.getElementById('perks-hud-counter');
 
   if (perksSliderEl && typeof Splide !== 'undefined') {
     try {
@@ -584,28 +560,6 @@ document.addEventListener('DOMContentLoaded', () => {
             gap: '14px',
           },
         },
-      });
-
-      // Update HUD telemetry readout on active slide change
-      const updatePerksHud = (index) => {
-        const slides = perksSliderEl.querySelectorAll('.splide__slide:not(.splide__slide--clone)');
-        if (slides && slides[index]) {
-          const card = slides[index].querySelector('.perk-module-card');
-          if (card) {
-            const title = card.getAttribute('data-title') || '';
-            const rawIndex = card.getAttribute('data-index') || (index + 1);
-            if (perksActiveTitleEl && title) {
-              perksActiveTitleEl.textContent = title;
-            }
-            if (perksHudCounterEl) {
-              perksHudCounterEl.textContent = `MODULE ${String(rawIndex).padStart(2, '0')} / 15`;
-            }
-          }
-        }
-      };
-
-      perksSplide.on('mounted move', () => {
-        updatePerksHud(perksSplide.index);
       });
 
       perksSplide.mount();

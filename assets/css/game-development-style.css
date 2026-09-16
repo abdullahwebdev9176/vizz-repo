@@ -3667,88 +3667,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   z-index: 1;
 }
 
-/* Interactive Gamified Progress Tracker HUD */
-.process-tracker-hud {
-  background: var(--white-color);
-  border: 1px solid var(--border-light);
-  border-radius: var(--border-radius-card);
-  padding: 20px 26px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02);
-  margin: 36px auto 38px;
-  max-width: 920px;
-  position: relative;
-  z-index: 2;
-  transition: all 0.3s ease;
-}
-
-.tracker-info-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-bottom: 14px;
-}
-
-.tracker-status {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.tracker-pulsing-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--btn-primary);
-  box-shadow: 0 0 8px var(--btn-primary);
-  animation: pulseDot 2s infinite ease-in-out;
-}
-
-.tracker-tag {
-  font-family: var(--font-family);
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--text-muted-light);
-  letter-spacing: 0.8px;
-}
-
-.tracker-current-name {
-  font-family: var(--font-family);
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--btn-primary);
-  letter-spacing: 0.2px;
-}
-
-.tracker-level-badge {
-  font-family: var(--font-family);
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--btn-primary);
-  background: rgba(0, 180, 216, 0.08);
-  border: 1px solid rgba(0, 180, 216, 0.2);
-  padding: 4px 12px;
-  border-radius: var(--border-radius-pill);
-  letter-spacing: 0.8px;
-}
-
-.tracker-progress-track {
-  width: 100%;
-  height: 8px;
-  background: rgba(0, 180, 216, 0.1);
-  border-radius: 6px;
-  overflow: hidden;
-  position: relative;
-}
-
-.tracker-progress-fill {
-  height: 100%;
-  background: linear-gradient(90deg, var(--btn-primary) 0%, #00d2ff 100%);
-  border-radius: 6px;
-  box-shadow: 0 0 10px rgba(0, 180, 216, 0.4);
-  transition: width 0.45s cubic-bezier(0.16, 1, 0.3, 1);
-}
 
 /* Splide Process Slider */
 .game-process-slider {
@@ -4600,78 +4518,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   z-index: 2;
 }
 
-/* Telemetry HUD Command Header */
-.perks-telemetry-hud {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: rgba(14, 34, 70, 0.7);
-  border: 1px solid rgba(0, 180, 216, 0.25);
-  border-radius: 12px;
-  padding: 14px 24px;
-  margin-bottom: 32px;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-}
-
-.perks-hud-status {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-family: var(--font-family);
-}
-
-.hud-pulsing-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: var(--color-cyan-light);
-  box-shadow: 0 0 10px var(--color-cyan-light);
-  animation: hudDotPulse 1.8s infinite ease-in-out;
-  flex-shrink: 0;
-}
-
-@keyframes hudDotPulse {
-  0%, 100% {
-    transform: scale(1);
-    opacity: 1;
-    box-shadow: 0 0 10px var(--color-cyan-light);
-  }
-  50% {
-    transform: scale(1.3);
-    opacity: 0.6;
-    box-shadow: 0 0 18px var(--color-cyan-light);
-  }
-}
-
-.hud-label {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.hud-active-title {
-  font-size: clamp(13px, 1.6vw, 15px);
-  font-weight: 700;
-  color: var(--color-cyan-light);
-  transition: color 0.3s ease;
-}
-
-.perks-hud-counter {
-  font-family: var(--font-family);
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  color: var(--color-cyan-light);
-  background: rgba(36, 143, 206, 0.18);
-  border: 1px solid rgba(0, 180, 216, 0.35);
-  padding: 6px 14px;
-  border-radius: 20px;
-  white-space: nowrap;
-}
 
 /* Splide Slider Container */
 .game-perks-slider {
@@ -4883,19 +4729,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   box-shadow: 0 0 12px rgba(56, 189, 248, 0.6);
 }
 
-/* Responsive HUD Adjustments */
-@media (max-width: 768px) {
-  .perks-telemetry-hud {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-    padding: 12px 18px;
-  }
-
-  .perks-hud-counter {
-    align-self: flex-start;
-  }
-}
 
 /* ==========================================================================
    SECTION 14: YOUR TRUSTED PARTNER FOR CUSTOM GAME SOLUTIONS (LIGHT)
