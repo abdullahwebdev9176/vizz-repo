@@ -600,6 +600,67 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // --------------------------------------------------------------------------
+  // SECTION 6: ADVANCED AI TECHNOLOGIES (MOBILE GAME AI SIMULATOR ARENA)
+  // --------------------------------------------------------------------------
+  const aiSimSection = document.querySelector('.ai-games-section');
+  if (aiSimSection) {
+    const simChips = aiSimSection.querySelectorAll('.ai-sim-chip');
+    const screenOverlays = aiSimSection.querySelectorAll('.game-screen-overlay');
+
+    const activateSimChip = (chipNum) => {
+      const chipNumStr = String(chipNum);
+
+      // Update AI Chips state
+      simChips.forEach((chip) => {
+        const cNum = chip.getAttribute('data-chip');
+        const isActive = cNum === chipNumStr;
+        chip.classList.toggle('is-active', isActive);
+        chip.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+      });
+
+      // Update Game Screen Overlays
+      screenOverlays.forEach((overlay) => {
+        const overlayId = `game-overlay-${chipNumStr}`;
+        const isActive = overlay.id === overlayId;
+        overlay.classList.toggle('is-active', isActive);
+        overlay.setAttribute('aria-hidden', isActive ? 'false' : 'true');
+      });
+    };
+
+    simChips.forEach((chip) => {
+      const chipNum = chip.getAttribute('data-chip');
+
+      // Click to activate
+      chip.addEventListener('click', () => {
+        if (chipNum) {
+          activateSimChip(chipNum);
+          if (window.innerWidth <= 991) {
+            const phoneStage = aiSimSection.querySelector('.sim-phone-stage');
+            if (phoneStage) {
+              phoneStage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+          }
+        }
+      });
+
+      // Hover to activate on desktop
+      chip.addEventListener('mouseenter', () => {
+        if (chipNum && window.innerWidth > 991) {
+          activateSimChip(chipNum);
+        }
+      });
+
+      // Keyboard accessibility (Enter / Space)
+      chip.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          if (chipNum) activateSimChip(chipNum);
+        }
+      });
+    });
+  }
+
+  // --------------------------------------------------------------------------
   // 12. SECTION 15: 5-BLADE CYBER TECH SERVER DECK INTERACTIVITY
   // --------------------------------------------------------------------------
   const techSection = document.querySelector('.game-tech-section');
