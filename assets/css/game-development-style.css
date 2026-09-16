@@ -695,12 +695,7 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   background: var(--btn-primary);
   border-color: var(--btn-primary);
   color: #ffffff;
-  transform: translateY(-2px) scale(1.05);
   box-shadow: 0 6px 18px rgba(0, 136, 255, 0.35);
-}
-
-.slider-arrow-btn:active {
-  transform: translateY(0) scale(0.95);
 }
 
 .slider-counter {
@@ -754,7 +749,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 }
 
 .capability-slide-card:hover {
-  transform: translateY(-8px);
   border-color: rgba(0, 180, 216, 0.5);
   box-shadow: 0 18px 40px rgba(0, 136, 255, 0.16);
 }
@@ -1136,7 +1130,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 }
 
 .service-card-item:hover {
-  transform: translateY(-5px);
   border-color: rgba(0, 180, 216, 0.45);
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4), 0 0 25px rgba(36, 143, 206, 0.18);
 }
@@ -1351,7 +1344,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 }
 
 .genre-card-item:hover {
-  transform: translateY(-5px);
   border-color: rgba(36, 143, 206, 0.45);
   box-shadow: 0 16px 36px rgba(7, 21, 43, 0.08), 0 0 20px rgba(36, 143, 206, 0.12);
 }
@@ -1567,7 +1559,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 }
 
 .platform-card:hover {
-  transform: translateY(-5px);
   border-color: rgba(0, 180, 216, 0.45);
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4), 0 0 25px rgba(36, 143, 206, 0.18);
 }
@@ -1684,7 +1675,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 }
 
 .ai-sim-chip:hover {
-  transform: translateY(-4px);
   border-color: rgba(0, 180, 216, 0.5);
   box-shadow: 0 12px 30px rgba(0, 136, 255, 0.12);
 }
@@ -1693,7 +1683,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   background: linear-gradient(145deg, #ffffff 0%, #f0f7ff 100%);
   border-color: var(--btn-primary);
   box-shadow: 0 16px 36px rgba(0, 136, 255, 0.18), 0 0 0 1px rgba(0, 180, 216, 0.3);
-  transform: translateY(-4px);
 }
 
 .chip-header {
@@ -1784,7 +1773,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   width: 32px;
   height: 2px;
   background: rgba(0, 136, 255, 0.15);
-  transform: translateY(-50%);
   pointer-events: none;
 }
 
@@ -2126,19 +2114,7 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 .npc-actor-2 {
   bottom: 35%;
   left: 25px;
-  animation: npcFloat2 3.5s infinite ease-in-out;
 }
-
-@keyframes npcFloat1 {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
-}
-
-@keyframes npcFloat2 {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(6px); }
-}
-
 .actor-dot {
   width: 12px;
   height: 12px;
@@ -2583,7 +2559,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 }
 
 .arvr-portal-card:hover {
-  transform: translateY(-6px);
   border-color: rgba(0, 180, 216, 0.6);
   box-shadow: 0 24px 50px rgba(0, 0, 0, 0.5), 0 0 35px rgba(36, 143, 206, 0.22);
 }
@@ -2817,7 +2792,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 .monetization-tab:hover {
   border-color: rgba(36, 143, 206, 0.35);
   box-shadow: 0 4px 16px rgba(36, 143, 206, 0.08);
-  transform: translateY(-2px);
 }
 
 .monetization-tab.is-active {
@@ -2942,17 +2916,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 
 .monetization-stage-panel[hidden] {
   display: none !important;
-}
-
-@keyframes stageFadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(12px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 /* Stage HUD Header */
@@ -3133,7 +3096,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   color: #ffffff;
   border-color: var(--btn-primary);
   box-shadow: 0 4px 12px rgba(36, 143, 206, 0.35);
-  transform: translateY(-2px);
 }
 
 .stage-quick-cta {
@@ -3398,13 +3360,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 .wing-right .liveops-node:hover,
 .wing-right .liveops-node.is-active {
   transform: translateX(-4px);
-}
-
-@media screen and (max-width: 991px) {
-  .wing-right .liveops-node:hover,
-  .wing-right .liveops-node.is-active {
-    transform: translateY(-2px);
-  }
 }
 
 .liveops-node:hover .node-icon,
@@ -3707,7 +3662,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 }
 
 .process-slide-card:hover {
-  transform: translateY(-5px);
   border-color: rgba(36, 143, 206, 0.45);
   box-shadow: 0 14px 32px rgba(36, 143, 206, 0.12), 0 4px 10px rgba(0, 0, 0, 0.03);
 }
@@ -4126,11 +4080,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4), 0 0 25px rgba(0, 180, 216, 0.22);
 }
 
-@media screen and (max-width: 991px) {
-  .model-card-item:hover {
-    transform: translateY(-3px);
-  }
-}
 
 /* Numerical Circuit Indicator */
 .model-card-indicator {
@@ -4326,7 +4275,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 }
 
 .industry-slide-card:hover {
-  transform: translateY(-5px);
   border-color: rgba(36, 143, 206, 0.45);
   box-shadow: 0 14px 32px rgba(36, 143, 206, 0.12), 0 4px 10px rgba(0, 0, 0, 0.03);
 }
@@ -4556,7 +4504,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 }
 
 .perk-module-card:hover {
-  transform: translateY(-6px);
   border-color: var(--color-cyan-light);
   background: rgba(14, 34, 70, 0.85);
   box-shadow: 0 20px 45px rgba(0, 210, 255, 0.16);
@@ -4969,7 +4916,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 
 .partner-pillar-card:hover,
 .partner-pillar-card.is-active {
-  transform: translateY(-5px);
   border-color: var(--btn-primary);
   box-shadow: 0 16px 36px rgba(36, 143, 206, 0.14);
 }
@@ -5184,7 +5130,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 
 .tech-deck-blade:hover,
 .tech-deck-blade.is-active {
-  transform: translateY(-8px);
   border-color: var(--color-cyan-light);
   background: linear-gradient(180deg, rgba(20, 46, 96, 0.92) 0%, rgba(12, 30, 66, 0.95) 100%);
   box-shadow: 0 24px 50px rgba(0, 210, 255, 0.18);
@@ -5449,7 +5394,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 .cost-factor-pod:hover {
   background: #ffffff;
   border-color: var(--btn-primary);
-  transform: translateY(-6px);
   box-shadow: 0 16px 36px rgba(36, 143, 206, 0.14);
 }
 
