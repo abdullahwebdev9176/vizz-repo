@@ -61,7 +61,9 @@
 /* --------------------------------------------------------------------------
    3. BASE RESETS & MOBILE-FIRST TYPOGRAPHY
    -------------------------------------------------------------------------- */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -94,7 +96,12 @@ img {
 }
 
 /* Headings Typography */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-family);
   color: var(--text-dark);
   font-weight: 700;
@@ -103,7 +110,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Text Elements Typography */
-p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
+p,
+span,
+a,
+li,
+label,
+input,
+textarea,
+button,
+select,
+small,
+strong,
+em,
+b {
   font-family: var(--font-family);
 }
 
@@ -209,8 +228,8 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 .hero-section {
   position: relative;
   background-color: var(--bg-dark);
-  background-image: linear-gradient(135deg, rgba(7, 21, 43, 0.94) 0%, rgba(11, 27, 54, 0.9) 50%, rgba(8, 29, 63, 0.96) 100%), 
-                    url('../images/hero-img.webp');
+  background-image: linear-gradient(135deg, rgba(7, 21, 43, 0.94) 0%, rgba(11, 27, 54, 0.9) 50%, rgba(8, 29, 63, 0.96) 100%),
+    url('../images/hero-img.webp');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -328,6 +347,7 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -860,10 +880,13 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 }
 
 @keyframes pillPulse {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: scale(1);
     opacity: 1;
   }
+
   50% {
     transform: scale(1.4);
     opacity: 0.5;
@@ -952,12 +975,20 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 
   .capabilities-header-wrapper {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 16px;
   }
 
+  .hero-col-1 {
+    text-align: center;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
   .capabilities-slider-controls {
-    align-self: flex-end;
+    align-self: center;
   }
 }
 
@@ -1801,15 +1832,35 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 }
 
 @keyframes laserFlowRight {
-  0% { left: 0%; opacity: 0; }
-  50% { opacity: 1; }
-  100% { left: 100%; opacity: 0; }
+  0% {
+    left: 0%;
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
 }
 
 @keyframes laserFlowLeft {
-  0% { right: 0%; opacity: 0; }
-  50% { opacity: 1; }
-  100% { right: 100%; opacity: 0; }
+  0% {
+    right: 0%;
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    right: 100%;
+    opacity: 0;
+  }
 }
 
 .ai-sim-chip.is-active .laser-pulse {
@@ -1839,8 +1890,17 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 }
 
 @keyframes phoneBreathing {
-  0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.8; }
-  50% { transform: translate(-50%, -50%) scale(1.08); opacity: 1; }
+
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.8;
+  }
+
+  50% {
+    transform: translate(-50%, -50%) scale(1.08);
+    opacity: 1;
+  }
 }
 
 .phone-mockup-chassis {
@@ -1932,11 +1992,11 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   position: absolute;
   inset: 0;
   background-image:
-    radial-gradient(1px 1px at 20px 30px, #ffffff, rgba(0,0,0,0)),
-    radial-gradient(1px 1px at 40px 70px, #00b4d8, rgba(0,0,0,0)),
-    radial-gradient(1px 1px at 90px 40px, #ffffff, rgba(0,0,0,0)),
-    radial-gradient(1px 1px at 160px 120px, #00d2ff, rgba(0,0,0,0)),
-    radial-gradient(1px 1px at 230px 80px, #ffffff, rgba(0,0,0,0));
+    radial-gradient(1px 1px at 20px 30px, #ffffff, rgba(0, 0, 0, 0)),
+    radial-gradient(1px 1px at 40px 70px, #00b4d8, rgba(0, 0, 0, 0)),
+    radial-gradient(1px 1px at 90px 40px, #ffffff, rgba(0, 0, 0, 0)),
+    radial-gradient(1px 1px at 160px 120px, #00d2ff, rgba(0, 0, 0, 0)),
+    radial-gradient(1px 1px at 230px 80px, #ffffff, rgba(0, 0, 0, 0));
   background-repeat: repeat;
   background-size: 200px 200px;
   opacity: 0.6;
@@ -1973,8 +2033,17 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 }
 
 @keyframes shieldPulse {
-  0%, 100% { transform: scale(1); opacity: 0.8; }
-  50% { transform: scale(1.15); opacity: 1; }
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+
+  50% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
 }
 
 .player-core-dot {
@@ -2088,9 +2157,20 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   border-radius: 50%;
 }
 
-.pill-dot.green { background: #10b981; box-shadow: 0 0 6px #10b981; }
-.pill-dot.cyan { background: #00b4d8; box-shadow: 0 0 6px #00b4d8; }
-.pill-dot.purple { background: #9d4edd; box-shadow: 0 0 6px #9d4edd; }
+.pill-dot.green {
+  background: #10b981;
+  box-shadow: 0 0 6px #10b981;
+}
+
+.pill-dot.cyan {
+  background: #00b4d8;
+  box-shadow: 0 0 6px #00b4d8;
+}
+
+.pill-dot.purple {
+  background: #9d4edd;
+  box-shadow: 0 0 6px #9d4edd;
+}
 
 /* Overlay 1: NPC Actors */
 .npc-actor {
@@ -2110,6 +2190,7 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   bottom: 35%;
   left: 25px;
 }
+
 .actor-dot {
   width: 12px;
   height: 12px;
@@ -2147,9 +2228,19 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   margin-top: 4px;
 }
 
-.actor-name { color: #cbd5e1; }
-.actor-state.text-cyan { color: #00b4d8; font-weight: 700; }
-.actor-state.text-green { color: #10b981; font-weight: 700; }
+.actor-name {
+  color: #cbd5e1;
+}
+
+.actor-state.text-cyan {
+  color: #00b4d8;
+  font-weight: 700;
+}
+
+.actor-state.text-green {
+  color: #10b981;
+  font-weight: 700;
+}
 
 /* Overlay 2: DDA Balancer */
 .dda-balance-badge {
@@ -2189,8 +2280,13 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 }
 
 @keyframes meterPulse {
-  0% { width: 70%; }
-  100% { width: 85%; }
+  0% {
+    width: 70%;
+  }
+
+  100% {
+    width: 85%;
+  }
 }
 
 .dda-val {
@@ -2218,8 +2314,13 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 }
 
 @keyframes lootGlow {
-  0% { box-shadow: 0 0 6px rgba(157, 78, 221, 0.3); }
-  100% { box-shadow: 0 0 16px rgba(157, 78, 221, 0.7); }
+  0% {
+    box-shadow: 0 0 6px rgba(157, 78, 221, 0.3);
+  }
+
+  100% {
+    box-shadow: 0 0 16px rgba(157, 78, 221, 0.7);
+  }
 }
 
 .loot-star {
@@ -2263,14 +2364,30 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   animation: barEqualize 1.2s infinite ease-in-out alternate;
 }
 
-.s-bar:nth-child(2) { animation-delay: 0.2s; }
-.s-bar:nth-child(3) { animation-delay: 0.4s; }
-.s-bar:nth-child(4) { animation-delay: 0.1s; }
-.s-bar:nth-child(5) { animation-delay: 0.3s; }
+.s-bar:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.s-bar:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.s-bar:nth-child(4) {
+  animation-delay: 0.1s;
+}
+
+.s-bar:nth-child(5) {
+  animation-delay: 0.3s;
+}
 
 @keyframes barEqualize {
-  0% { transform: scaleY(0.7); }
-  100% { transform: scaleY(1); }
+  0% {
+    transform: scaleY(0.7);
+  }
+
+  100% {
+    transform: scaleY(1);
+  }
 }
 
 .stream-stat {
@@ -2443,6 +2560,7 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 }
 
 @media (max-width: 767px) {
+
   .sim-col-left,
   .sim-col-right {
     grid-template-columns: 1fr;
@@ -2931,10 +3049,13 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 }
 
 @keyframes pulseDot {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: scale(1);
     opacity: 1;
   }
+
   50% {
     transform: scale(1.4);
     opacity: 0.6;
@@ -2992,6 +3113,7 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -3431,13 +3553,23 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 }
 
 @keyframes rotateClockwise {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes rotateCounterClockwise {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(-360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-360deg);
+  }
 }
 
 /* Rotating Radar Sweep Line */
@@ -3548,15 +3680,39 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   animation: freqJump 1.2s infinite ease-in-out alternate;
 }
 
-.freq-bar.b1 { height: 40%; animation-delay: 0.1s; }
-.freq-bar.b2 { height: 80%; animation-delay: 0.3s; }
-.freq-bar.b3 { height: 100%; animation-delay: 0.5s; }
-.freq-bar.b4 { height: 60%; animation-delay: 0.2s; }
-.freq-bar.b5 { height: 30%; animation-delay: 0.4s; }
+.freq-bar.b1 {
+  height: 40%;
+  animation-delay: 0.1s;
+}
+
+.freq-bar.b2 {
+  height: 80%;
+  animation-delay: 0.3s;
+}
+
+.freq-bar.b3 {
+  height: 100%;
+  animation-delay: 0.5s;
+}
+
+.freq-bar.b4 {
+  height: 60%;
+  animation-delay: 0.2s;
+}
+
+.freq-bar.b5 {
+  height: 30%;
+  animation-delay: 0.4s;
+}
 
 @keyframes freqJump {
-  0% { transform: scaleY(0.3); }
-  100% { transform: scaleY(1); }
+  0% {
+    transform: scaleY(0.3);
+  }
+
+  100% {
+    transform: scaleY(1);
+  }
 }
 
 /* --------------------------------------------------------------------------
@@ -3958,10 +4114,23 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 }
 
 @keyframes portalScan {
-  0% { top: -5%; opacity: 0; }
-  10% { opacity: 0.8; }
-  90% { opacity: 0.8; }
-  100% { top: 105%; opacity: 0; }
+  0% {
+    top: -5%;
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 0.8;
+  }
+
+  90% {
+    opacity: 0.8;
+  }
+
+  100% {
+    top: 105%;
+    opacity: 0;
+  }
 }
 
 /* Bottom Telemetry Highlights Dock */
@@ -4475,9 +4644,9 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   overflow: hidden;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
-              border-color 0.35s ease,
-              box-shadow 0.35s ease,
-              background 0.35s ease;
+    border-color 0.35s ease,
+    box-shadow 0.35s ease,
+    background 0.35s ease;
 }
 
 .perk-module-card:hover {
@@ -4672,7 +4841,7 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   left: 0;
   right: 0;
   height: 100%;
-  background-image: 
+  background-image:
     radial-gradient(circle at 15% 25%, rgba(36, 143, 206, 0.05) 0%, transparent 45%),
     radial-gradient(circle at 85% 75%, rgba(0, 210, 255, 0.05) 0%, transparent 45%);
   pointer-events: none;
@@ -4701,8 +4870,8 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   overflow: hidden;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.03);
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
-              border-color 0.35s ease,
-              box-shadow 0.35s ease;
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -5002,16 +5171,18 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   .pillar-card-desc {
     font-size: 14px;
   }
-}
 
-@media (max-width: 767px) {
-  /* HIDE SLIDER ARROWS ON MOBILE (Touch Gestures + Pagination) */
   .splide__arrows,
   .splide__arrow,
   .capabilities-slider-controls,
   .slider-arrow-btn {
     display: none !important;
   }
+}
+
+@media (max-width: 767px) {
+  /* HIDE SLIDER ARROWS ON MOBILE (Touch Gestures + Pagination) */
+
 
   /* MOBILE TEXT CENTER ALIGNMENT ACROSS CARDS & HEADINGS */
   .partner-pillar-card {
@@ -5246,9 +5417,9 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   -webkit-backdrop-filter: blur(14px);
   box-shadow: 0 14px 36px rgba(0, 0, 0, 0.3);
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
-              border-color 0.35s ease,
-              box-shadow 0.35s ease,
-              background 0.35s ease;
+    border-color 0.35s ease,
+    box-shadow 0.35s ease,
+    background 0.35s ease;
   cursor: pointer;
 }
 
@@ -5780,6 +5951,10 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
 }
 
 @media (max-width: 575px) {
+  .slide-card-body {
+    align-items: center;
+  }
+
   .faq-question-btn {
     font-size: 14px;
     padding: 14px 16px;
@@ -5793,6 +5968,3 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
     font-size: 13.5px;
   }
 }
-
-
-
