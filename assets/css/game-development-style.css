@@ -748,11 +748,6 @@ p, span, a, li, label, input, textarea, button, select, small, strong, em, b {
   user-select: none;
 }
 
-.capability-slide-card:hover {
-  border-color: rgba(0, 180, 216, 0.5);
-  box-shadow: 0 18px 40px rgba(0, 136, 255, 0.16);
-}
-
 /* Slide Image Stage */
 .slide-image-wrapper {
   position: relative;
