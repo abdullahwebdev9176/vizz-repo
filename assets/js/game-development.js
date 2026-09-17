@@ -32,36 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // =========================================================================
-  // 2. HERO SECTION INLINE READ MORE / READ LESS TOGGLE
-  // =========================================================================
-  const heroReadMoreBtn = document.getElementById('hero-read-more-btn');
-  const heroMoreContent = document.getElementById('hero-more-content');
-  const heroDesc1 = document.getElementById('hero-desc-1');
-  const heroDesc2 = document.getElementById('hero-desc-2');
-
-  if (heroReadMoreBtn && heroMoreContent && heroDesc1 && heroDesc2) {
-    heroReadMoreBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      const isExpanded = heroReadMoreBtn.getAttribute('aria-expanded') === 'true';
-      const textSpan = heroReadMoreBtn.querySelector('.read-more-text');
-
-      if (isExpanded) {
-        // Collapse content
-        heroDesc1.appendChild(heroReadMoreBtn);
-        heroMoreContent.style.display = 'none';
-        heroReadMoreBtn.setAttribute('aria-expanded', 'false');
-        if (textSpan) textSpan.textContent = 'Read More';
-      } else {
-        // Expand content
-        heroMoreContent.style.display = 'block';
-        heroDesc2.appendChild(heroReadMoreBtn);
-        heroReadMoreBtn.setAttribute('aria-expanded', 'true');
-        if (textSpan) textSpan.textContent = 'Read Less';
-      }
-    });
-  }
-
-  // =========================================================================
   // 2.5 SECTION 2: END-TO-END CAPABILITIES IMAGE SLIDER (SPLIDE)
   // =========================================================================
   const expSliderElement = document.getElementById('game-experience-slider');
