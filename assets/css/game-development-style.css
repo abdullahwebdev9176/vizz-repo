@@ -6243,8 +6243,54 @@ b {
     }
   
     .cost-factor-pod {
-      padding: 20px 16px;
-      min-height: auto;
+      padding: 18px 10px;
+      min-height: 125px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .cost-factor-pod .pod-top-row {
+      margin-bottom: 10px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .cost-factor-pod .pod-icon {
+      width: 40px;
+      height: 40px;
+      margin: 0 auto;
+    }
+
+    .cost-factor-pod .pod-icon svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .cost-factor-pod .pod-title {
+      font-size: 13.5px;
+      line-height: 1.35;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    .game-cost-slider .splide__pagination {
+      gap: 6px;
+      flex-wrap: wrap;
+      max-width: 320px;
+      margin: 20px auto 0 auto;
+    }
+
+    .game-cost-slider .splide__pagination__page {
+      width: 7px;
+      height: 7px;
+    }
+
+    .game-cost-slider .splide__pagination__page.is-active {
+      width: 18px;
     }
   
     .cost-header-center {

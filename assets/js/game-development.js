@@ -778,20 +778,32 @@ document.addEventListener('DOMContentLoaded', () => {
     },
   });
 
-  // Section 16: Cost Factors Grid Slider
+  // Section 16: Cost Factors Grid Slider (2 items per slide on mobile)
   initMobileSlider('#game-cost-slider', {
     type: 'slide',
     perPage: 2,
     perMove: 1,
-    gap: '18px',
+    gap: '16px',
     arrows: false,
     pagination: true,
     speed: 500,
     drag: true,
     breakpoints: {
+      991: {
+        perPage: 3,
+        gap: '12px',
+      },
       767: {
-        perPage: 1,
-        gap: '14px',
+        perPage: 2,
+        gap: '12px',
+      },
+      480: {
+        perPage: 2,
+        gap: '10px',
+      },
+      360: {
+        perPage: 2,
+        gap: '8px',
       },
     },
   });
