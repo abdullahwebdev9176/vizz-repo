@@ -229,7 +229,7 @@ b {
   position: relative;
   background-color: var(--bg-dark);
   background-image: linear-gradient(135deg, rgba(7, 21, 43, 0.94) 0%, rgba(11, 27, 54, 0.9) 50%, rgba(8, 29, 63, 0.96) 100%),
-    url('../images/games/game-hero-bg.jpg');
+    url('../images/game-development/game-hero-bg.jpg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -705,8 +705,6 @@ b {
   border-radius: 20px;
   overflow: hidden;
   border: 1px solid rgba(0, 136, 255, 0.15);
-  box-shadow: 0 6px 24px rgba(7, 21, 43, 0.05);
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   display: flex;
   flex-direction: column;
   height: 100%;
