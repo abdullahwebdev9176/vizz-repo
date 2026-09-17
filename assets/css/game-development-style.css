@@ -4893,7 +4893,6 @@ b {
 /* Card Hover & Focus States */
 .bento-card:hover,
 .bento-card.is-active {
-  transform: translateY(-5px);
   border-color: var(--accent-color);
   box-shadow: 0 22px 48px -10px var(--accent-glow), 0 0 0 1px var(--accent-color), inset 0 1px 0 rgba(255, 255, 255, 0.16);
   background: linear-gradient(180deg, rgba(18, 34, 68, 0.9) 0%, rgba(11, 22, 46, 0.98) 100%);
@@ -4996,7 +4995,6 @@ b {
 .bento-tile:hover {
   background: rgba(255, 255, 255, 0.09);
   border-color: var(--accent-color);
-  transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
 }
 
@@ -5052,7 +5050,6 @@ b {
   background: rgba(255, 255, 255, 0.08);
   border-color: rgba(255, 255, 255, 0.22);
   color: #ffffff;
-  transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
@@ -5179,7 +5176,7 @@ b {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 160px;
+  min-height: 141px;
   box-shadow: 0 4px 16px rgba(7, 21, 43, 0.03);
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   cursor: default;
