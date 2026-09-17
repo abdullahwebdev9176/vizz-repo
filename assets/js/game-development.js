@@ -8,13 +8,16 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   // =========================================================================
-  // 1. SMOOTH SCROLL HANDLER FOR LEAD FORM TRIGGERS
+  // 1. SMOOTH SCROLL HANDLER FOR LEAD FORM & BOTTOM CONTACT TRIGGERS
   // =========================================================================
-  const leadTriggers = document.querySelectorAll('a[href^="#lead-form"]');
+  const formTriggers = document.querySelectorAll('a[href^="#lead-form"], a[href^="#contact-us"], a[href^="#contact-form"]');
 
-  leadTriggers.forEach((anchor) => {
+  formTriggers.forEach((anchor) => {
     anchor.addEventListener('click', (e) => {
-      const targetElement = document.getElementById('lead-form');
+      const href = anchor.getAttribute('href');
+      if (!href || !href.startsWith('#')) return;
+      const targetId = href.replace('#', '');
+      const targetElement = document.getElementById(targetId);
       if (targetElement) {
         e.preventDefault();
         targetElement.scrollIntoView({
@@ -23,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // Focus first input for enhanced accessibility and conversion
-        const firstInput = targetElement.querySelector('input');
+        const firstInput = targetElement.querySelector('input, textarea');
         if (firstInput) {
           setTimeout(() => firstInput.focus(), 450);
         }
