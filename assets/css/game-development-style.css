@@ -5087,6 +5087,28 @@ b {
   opacity: 1;
 }
 
+.bento-chip-icon {
+  width: 16px;
+  height: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--accent-color);
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bento-chip-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.bento-chip:hover .bento-chip-icon {
+  transform: scale(1.15);
+  color: #ffffff;
+  filter: drop-shadow(0 0 6px var(--accent-color));
+}
+
 /* Bento Footer */
 .bento-card-footer {
   display: flex;
