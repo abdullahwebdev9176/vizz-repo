@@ -1795,7 +1795,7 @@ b {
     pointer-events: none;
     transform: translateX(10px);
     transition: opacity 0.3s ease 0.08s, transform 0.4s cubic-bezier(0.22, 1, 0.36, 1) 0.05s;
-    overflow: hidden !important;
+    overflow: visible !important;
   }
 
   .horizon-deck-wrapper .horizon-panel.is-active .horizon-expanded-stage {
@@ -1946,7 +1946,7 @@ b {
   transition: opacity 0.35s ease 0.1s, transform 0.35s cubic-bezier(0.25, 1, 0.5, 1) 0.1s;
   z-index: 2;
   text-align: left;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .horizon-panel.is-active .horizon-expanded-stage {
@@ -1957,15 +1957,19 @@ b {
 
 .horizon-stage-glow {
   position: absolute;
-  top: -40px;
-  right: -40px;
-  width: 200px;
-  height: 200px;
-  background: radial-gradient(circle, rgba(0, 180, 216, 0.2) 0%, transparent 70%);
+  top: -55px;
+  right: -55px;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 180, 216, 0.28) 0%, rgba(0, 180, 216, 0.14) 38%, rgba(0, 180, 216, 0.03) 58%, transparent 70%);
+  filter: blur(6px);
   pointer-events: none;
 }
 
 .horizon-stage-header {
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -2947,7 +2951,7 @@ b {
 .cost-card-image-wrap {
   position: relative;
   width: 100%;
-  height: 200px;
+  height: 240px;
   overflow: hidden;
   background: #061122;
 }
@@ -3539,7 +3543,7 @@ b {
 
   /* Section 11: Cost Slider */
   .cost-card-image-wrap {
-    height: 190px;
+    height: 210px;
   }
 
   /* Section 12: Why Choose Us */
