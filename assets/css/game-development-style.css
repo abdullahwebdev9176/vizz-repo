@@ -40,7 +40,7 @@
   --text-cyan: #248fce;
 
   /* UI Borders & Radii */
-  --border-radius-pill: 10px;
+  --border-radius-pill: 50px;
   --border-radius-card: 16px;
   --border-radius-card-sm: 12px;
   --border-radius-input: 8px;
@@ -168,19 +168,28 @@ b {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 46px;
-  padding: 10px 24px !important;
-  border-radius: var(--border-radius-pill) !important;
-  font-size: 13.5px !important;
-  font-weight: 500 !important;
+  gap: 10px;
+  min-height: 48px;
+  padding: 11px 28px !important;
+  border-radius: 50px !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
   font-family: var(--font-family) !important;
   text-decoration: none;
   cursor: pointer;
   box-shadow: var(--shadow-btn);
   transition: all 0.3s ease-in-out;
-  text-transform: uppercase;
-  letter-spacing: 0.3px;
+  text-transform: none !important;
+  letter-spacing: 0.2px;
   text-align: center;
+}
+
+.btn-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
 }
 
 .btn-primary-pill {
@@ -194,6 +203,13 @@ b {
   border: 1px solid var(--btn-color);
   box-shadow: 0 12px 30px rgba(0, 136, 255, 0.5);
   color: var(--btn-color) !important;
+}
+
+.btn-primary-pill:hover .btn-arrow,
+.btn-secondary-pill:hover .btn-arrow,
+.stage-quick-cta:hover .btn-arrow,
+.stage-quick-cta:hover svg {
+  transform: translateX(4px);
 }
 
 .btn-secondary-pill {
